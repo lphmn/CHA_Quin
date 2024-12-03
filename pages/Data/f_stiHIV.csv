@@ -1,0 +1,197 @@
+fips,location,value,indicator,year
+27087,Mahnomen,38,Chlamydia Count,2017
+27087,Mahnomen,42,Chlamydia Count,2018
+27087,Mahnomen,32,Chlamydia Count,2019
+27087,Mahnomen,22,Chlamydia Count,2020
+27087,Mahnomen,21,Chlamydia Count,2021
+27087,Mahnomen,23,Chlamydia Count,2022
+27087,Mahnomen,31,Chlamydia Count,2023
+27000,Minnesota,23528,Chlamydia Count,2017
+27000,Minnesota,23564,Chlamydia Count,2018
+27000,Minnesota,24535,Chlamydia Count,2019
+27000,Minnesota,21942,Chlamydia Count,2020
+27000,Minnesota,22578,Chlamydia Count,2021
+27000,Minnesota,22079,Chlamydia Count,2022
+27000,Minnesota,21767,Chlamydia Count,2023
+27107,Norman,12,Chlamydia Count,2017
+27107,Norman,4,Chlamydia Count,2018
+27107,Norman,12,Chlamydia Count,2019
+27107,Norman,16,Chlamydia Count,2020
+27107,Norman,14,Chlamydia Count,2021
+27107,Norman,14,Chlamydia Count,2022
+27107,Norman,13,Chlamydia Count,2023
+27119,Polk,60,Chlamydia Count,2017
+27119,Polk,70,Chlamydia Count,2018
+27119,Polk,67,Chlamydia Count,2019
+27119,Polk,54,Chlamydia Count,2020
+27119,Polk,59,Chlamydia Count,2021
+27119,Polk,61,Chlamydia Count,2022
+27119,Polk,87,Chlamydia Count,2023
+27087,Mahnomen,20,Gonorrhea Count,2017
+27087,Mahnomen,17,Gonorrhea Count,2018
+27087,Mahnomen,19,Gonorrhea Count,2019
+27087,Mahnomen,10,Gonorrhea Count,2020
+27087,Mahnomen,10,Gonorrhea Count,2021
+27087,Mahnomen,8,Gonorrhea Count,2022
+27087,Mahnomen,2,Gonorrhea Count,2023
+27000,Minnesota,6519,Gonorrhea Count,2017
+27000,Minnesota,7542,Gonorrhea Count,2018
+27000,Minnesota,8063,Gonorrhea Count,2019
+27000,Minnesota,10217,Gonorrhea Count,2020
+27000,Minnesota,9671,Gonorrhea Count,2021
+27000,Minnesota,8161,Gonorrhea Count,2022
+27000,Minnesota,7717,Gonorrhea Count,2023
+27107,Norman,0,Gonorrhea Count,2017
+27107,Norman,0,Gonorrhea Count,2018
+27107,Norman,1,Gonorrhea Count,2019
+27107,Norman,6,Gonorrhea Count,2020
+27107,Norman,3,Gonorrhea Count,2021
+27107,Norman,3,Gonorrhea Count,2022
+27107,Norman,1,Gonorrhea Count,2023
+27119,Polk,4,Gonorrhea Count,2017
+27119,Polk,17,Gonorrhea Count,2018
+27119,Polk,22,Gonorrhea Count,2019
+27119,Polk,18,Gonorrhea Count,2020
+27119,Polk,21,Gonorrhea Count,2021
+27119,Polk,21,Gonorrhea Count,2022
+27119,Polk,14,Gonorrhea Count,2023
+27087,Mahnomen,NA,Syphilis Count,2017
+27087,Mahnomen,NA,Syphilis Count,2018
+27087,Mahnomen,2,Syphilis Count,2019
+27087,Mahnomen,6,Syphilis Count,2020
+27087,Mahnomen,10,Syphilis Count,2021
+27087,Mahnomen,9,Syphilis Count,2022
+27087,Mahnomen,12,Syphilis Count,2023
+27000,Minnesota,NA,Syphilis Count,2017
+27000,Minnesota,NA,Syphilis Count,2018
+27000,Minnesota,1105,Syphilis Count,2019
+27000,Minnesota,1088,Syphilis Count,2020
+27000,Minnesota,1447,Syphilis Count,2021
+27000,Minnesota,1859,Syphilis Count,2022
+27000,Minnesota,1723,Syphilis Count,2023
+27107,Norman,NA,Syphilis Count,2017
+27107,Norman,NA,Syphilis Count,2018
+27107,Norman,0,Syphilis Count,2019
+27107,Norman,0,Syphilis Count,2020
+27107,Norman,1,Syphilis Count,2021
+27107,Norman,0,Syphilis Count,2022
+27107,Norman,0,Syphilis Count,2023
+27119,Polk,NA,Syphilis Count,2017
+27119,Polk,NA,Syphilis Count,2018
+27119,Polk,2,Syphilis Count,2019
+27119,Polk,2,Syphilis Count,2020
+27119,Polk,1,Syphilis Count,2021
+27119,Polk,5,Syphilis Count,2022
+27119,Polk,2,Syphilis Count,2023
+27087,Mahnomen,0,HIV Incidence,2017
+27087,Mahnomen,0,HIV Incidence,2018
+27087,Mahnomen,1,HIV Incidence,2019
+27087,Mahnomen,1,HIV Incidence,2020
+27087,Mahnomen,0,HIV Incidence,2021
+27087,Mahnomen,0,HIV Incidence,2022
+27087,Mahnomen,1,HIV Incidence,2023
+27000,Minnesota,284,HIV Incidence,2017
+27000,Minnesota,286,HIV Incidence,2018
+27000,Minnesota,275,HIV Incidence,2019
+27000,Minnesota,226,HIV Incidence,2020
+27000,Minnesota,298,HIV Incidence,2021
+27000,Minnesota,262,HIV Incidence,2022
+27000,Minnesota,324,HIV Incidence,2023
+27107,Norman,0,HIV Incidence,2017
+27107,Norman,1,HIV Incidence,2018
+27107,Norman,0,HIV Incidence,2019
+27107,Norman,0,HIV Incidence,2020
+27107,Norman,0,HIV Incidence,2021
+27107,Norman,0,HIV Incidence,2022
+27107,Norman,0,HIV Incidence,2023
+27119,Polk,3,HIV Incidence,2017
+27119,Polk,0,HIV Incidence,2018
+27119,Polk,1,HIV Incidence,2019
+27119,Polk,0,HIV Incidence,2020
+27119,Polk,1,HIV Incidence,2021
+27119,Polk,1,HIV Incidence,2022
+27119,Polk,1,HIV Incidence,2023
+27087,Mahnomen,0,HIV Non Aids Prevelance,2017
+27087,Mahnomen,0,HIV Non Aids Prevelance,2018
+27087,Mahnomen,1,HIV Non Aids Prevelance,2019
+27087,Mahnomen,1,HIV Non Aids Prevelance,2020
+27087,Mahnomen,1,HIV Non Aids Prevelance,2021
+27087,Mahnomen,1,HIV Non Aids Prevelance,2022
+27087,Mahnomen,1,HIV Non Aids Prevelance,2023
+27000,Minnesota,4751,HIV Non Aids Prevelance,2017
+27000,Minnesota,4937,HIV Non Aids Prevelance,2018
+27000,Minnesota,5094,HIV Non Aids Prevelance,2019
+27000,Minnesota,5247,HIV Non Aids Prevelance,2020
+27000,Minnesota,5475,HIV Non Aids Prevelance,2021
+27000,Minnesota,5615,HIV Non Aids Prevelance,2022
+27000,Minnesota,5767,HIV Non Aids Prevelance,2023
+27107,Norman,2,HIV Non Aids Prevelance,2017
+27107,Norman,3,HIV Non Aids Prevelance,2018
+27107,Norman,1,HIV Non Aids Prevelance,2019
+27107,Norman,1,HIV Non Aids Prevelance,2020
+27107,Norman,2,HIV Non Aids Prevelance,2021
+27107,Norman,5,HIV Non Aids Prevelance,2022
+27107,Norman,5,HIV Non Aids Prevelance,2023
+27119,Polk,8,HIV Non Aids Prevelance,2017
+27119,Polk,9,HIV Non Aids Prevelance,2018
+27119,Polk,10,HIV Non Aids Prevelance,2019
+27119,Polk,9,HIV Non Aids Prevelance,2020
+27119,Polk,11,HIV Non Aids Prevelance,2021
+27119,Polk,15,HIV Non Aids Prevelance,2022
+27119,Polk,19,HIV Non Aids Prevelance,2023
+27087,Mahnomen,0,Aids Prevelance,2017
+27087,Mahnomen,0,Aids Prevelance,2018
+27087,Mahnomen,0,Aids Prevelance,2019
+27087,Mahnomen,0,Aids Prevelance,2020
+27087,Mahnomen,0,Aids Prevelance,2021
+27087,Mahnomen,0,Aids Prevelance,2022
+27087,Mahnomen,1,Aids Prevelance,2023
+27000,Minnesota,4738,Aids Prevelance,2017
+27000,Minnesota,4044,Aids Prevelance,2018
+27000,Minnesota,4099,Aids Prevelance,2019
+27000,Minnesota,4175,Aids Prevelance,2020
+27000,Minnesota,4221,Aids Prevelance,2021
+27000,Minnesota,4190,Aids Prevelance,2022
+27000,Minnesota,4229,Aids Prevelance,2023
+27107,Norman,0,Aids Prevelance,2017
+27107,Norman,0,Aids Prevelance,2018
+27107,Norman,1,Aids Prevelance,2019
+27107,Norman,1,Aids Prevelance,2020
+27107,Norman,1,Aids Prevelance,2021
+27107,Norman,1,Aids Prevelance,2022
+27107,Norman,1,Aids Prevelance,2023
+27119,Polk,11,Aids Prevelance,2017
+27119,Polk,10,Aids Prevelance,2018
+27119,Polk,12,Aids Prevelance,2019
+27119,Polk,10,Aids Prevelance,2020
+27119,Polk,11,Aids Prevelance,2021
+27119,Polk,10,Aids Prevelance,2022
+27119,Polk,11,Aids Prevelance,2023
+27087,Mahnomen,0,HIV & Aids Prevelance,2017
+27087,Mahnomen,0,HIV & Aids Prevelance,2018
+27087,Mahnomen,1,HIV & Aids Prevelance,2019
+27087,Mahnomen,1,HIV & Aids Prevelance,2020
+27087,Mahnomen,1,HIV & Aids Prevelance,2021
+27087,Mahnomen,1,HIV & Aids Prevelance,2022
+27087,Mahnomen,2,HIV & Aids Prevelance,2023
+27000,Minnesota,9489,HIV & Aids Prevelance,2017
+27000,Minnesota,8981,HIV & Aids Prevelance,2018
+27000,Minnesota,9193,HIV & Aids Prevelance,2019
+27000,Minnesota,9422,HIV & Aids Prevelance,2020
+27000,Minnesota,9696,HIV & Aids Prevelance,2021
+27000,Minnesota,9805,HIV & Aids Prevelance,2022
+27000,Minnesota,9996,HIV & Aids Prevelance,2023
+27107,Norman,2,HIV & Aids Prevelance,2017
+27107,Norman,3,HIV & Aids Prevelance,2018
+27107,Norman,2,HIV & Aids Prevelance,2019
+27107,Norman,2,HIV & Aids Prevelance,2020
+27107,Norman,3,HIV & Aids Prevelance,2021
+27107,Norman,6,HIV & Aids Prevelance,2022
+27107,Norman,6,HIV & Aids Prevelance,2023
+27119,Polk,19,HIV & Aids Prevelance,2017
+27119,Polk,19,HIV & Aids Prevelance,2018
+27119,Polk,22,HIV & Aids Prevelance,2019
+27119,Polk,19,HIV & Aids Prevelance,2020
+27119,Polk,22,HIV & Aids Prevelance,2021
+27119,Polk,25,HIV & Aids Prevelance,2022
+27119,Polk,30,HIV & Aids Prevelance,2023

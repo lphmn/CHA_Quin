@@ -1,0 +1,63 @@
+# Understanding Our CHA
+
+## Rationale Behind Our Choices
+
+In today's world, we can easily experience information overload. The Census Bureau alone provides millions of data points available for public use. If we use all the available Census Bureau data, our Community Health Assessment (CHA) would not be meaningful because we would be overwhelmed with data. Additionally, relying solely on one data source like the Census Bureau would cause us to miss important details provided by other high-quality sources.
+
+Attempting to include data on every health topic from all public sources would create an overly extensive report, making it challenging to navigate and use effectively. This is why we concentrated on data required for our certification, sourcing highly reputable information, and incorporating local feedback to inform our CHA. We made a concerted effort to identify risk factors associated with our outcomes of interest, understanding that, while we cannot prevent all outcomes, addressing risk factors may help us achieve better results.
+
+The art of data involves reducing noise (achieving consistency or understanding the reasons for inconsistencies among different data sources). By reducing noise, we can better identify high-quality sources that provide the essential components for a comprehensive CHA. We aimed to select outcomes of interest that provide trend data (evaluated over multiple years) to track our historical performance and improvements in key areas. However, some outcomes are only shown for one year because they may be projected outcomes (based on statistical models) or the outcome definition changed over time, making it inappropriate/unreliable to display them over multiple years.
+
+We tried to use the most up-to-date publicly available data for the following reasons:
+
+-   **Reproducibility**: While some data for our CHA required a data request, most of the report relies on publicly available data. This allows other community health boards and researchers to reproduce our work if they wish, aiding in fact-checking our CHA.
+
+-   **Transparency**: Using publicly available data allows us to be as transparent as possible. We hope that our understanding of our community, as well as the community's understanding of itself, aligns with the information shared publicly by Federal and State agencies.
+
+-   **Efficiency**: By using publicly available data, we can save time and resources for our federal and state data stewards. They don't need to fulfill data requests for us, and it allows us to share the valuable work they've already done, rather than reinventing the wheel.
+
+An important note for our CHA is that, due to the small populations in our three counties, we can't always examine multiple factors at the same time. We know that health is affected by many things, but we don't always have detailed information or enough people to break down the data in many ways. For example, if we wanted to study lung cancer and compare it between men and women, we might not have enough data to do this accurately because there aren't enough people. While we might have enough data to look at rates of lung cancer for each county, we might not be able to analyze lung cancer rates by birth sex.
+
+## Data Interpretation
+
+When looking at data, it's easy to assume one event causes another. For example, a rooster crowing doesn't cause the sun to rise; they're just associated. This is similar to health risk factors and medical conditions. Just because two things happen together doesn't mean one causes the other.
+
+In health, many factors can influence conditions. For example, high rates of a health condition don't mean one specific factor is the cause. It could be due to a combination of lifestyle, environment, and genetics. By assessing how we are doing regarding multiple risk factors as well as the condition on interest, we can gain a comprehensive understanding and make better health decisions for our community.
+
+Just like the rooster and the sun, health risk factors might be associated with certain conditions, but they don't necessarily cause them directly. Recognizing these associations helps us develop more effective health strategies for our communities. By examining our community's health from multiple data sources, we can plan to maintain strengths and address weaknesses. The following terms should help in navigating and understanding the report more effectively.
+
+## Data Terms/Definations
+
+### Count
+
+-   A count represents the value of an observation. Counts are useful for assessing the economic impact of a community and determining if statistical analysis is reliable. According to @cdcStats2024Suppression, counts less than 16 are considered unstable, meaning the results should be interpreted with caution. However, counts below 16 are still important because they provide us with a sense of how a community is currently doing. Counts shouldn't be compared among different communities, but they can be used to assess the community.
+
+### Proportion
+
+-   A proportion is a type of ratio that compares a part to the whole. It is expressed as a fraction or percentage and helps us understand the relative size of a subset within a larger population. For example, if 20 out of 100 people in a community have a certain health condition, the proportion is 20%.
+
+### Crude vs. Age-Adjusted Prevalence
+
+-   Crude Prevalence: Shows the overall condition in the general population but can be misleading if age distribution varies between communities. For example, an aging population may have a higher crude prevalence of heart disease simply because older adults can be more prone to this condition.
+
+-   Age-Adjusted Prevalence: Use this for comparing different communities as it accounts for age differences. It's like comparing apples to apples instead of apples to oranges. By adjusting for age, we ensure a fair comparison between communities.
+
+### Importance of Age-Adjusted Prevalence
+
+Age-adjusted prevalence allows fair comparisons by considering age differences in populations.
+
+### Confidence Intervals (CI)
+
+CIs can be interpreted in two main ways.
+
+1.  When looking at only one community. If a community had a CI of 5%-8%, this would mean we are 95% sure that the true number is as low as 5% and as high as 8% or somewhere in between.
+
+2.  When comparing two communities.
+
+-   If a community has a CI of 5%-8% and another community has a CI of 6%-9% for the same topic, these two communities are similar, and we cannot say one is definitely higher or lower than the other because the values overlap (6% falls between 5%-8%)
+
+-   If a community has a CI of 5%-8% and another community has a CI of 10%-15%, these two communities would be significantly different because the values don't overlap (5%-8% and 10%-15%) so we can say with 95% confidence that these values are different.
+
+## CHA Design
+
+The CHA is organized into several chapters: **Introduction, Understanding Our CHA, Local Input, Population & Environmental Health, Health Indicators, References, and Together We Can Build A Better Future**. If this is your first time reading our CHA, we recommend going through the report in order. However, it's not mandatory to follow this sequence. The chapters are arranged to help navigate the extensive data effectively. We prioritize starting with our community partners' input to help determine local concerns. Understanding our community demographics and environmental health follows, as it is crucial for effective collaboration with local communities. The fourth chapter, Health Indicators, is shaped by local input and certification requirements. The final chapters provide references and a vision for building a better future together.

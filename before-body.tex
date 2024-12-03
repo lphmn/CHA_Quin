@@ -1,0 +1,30 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\cleardoublepage
+\thispagestyle{empty}
+{\centering
+\vspace*{1cm} % Adjust this value to move the title closer to the top
+{\Huge\bfseries $title$ \par}
+
+$if(subtitle)$
+\vspace{3ex}
+{\Large\bfseries $subtitle$ \par}
+$endif$
+ 
+$for(by-author)$
+\vspace{3ex} % Space between image and author
+{\Large Author: $by-author.name.literal$ \par}
+$endfor$
+\vspace{3ex} % Space between author and date
+{\Large Last Updated: $date$ \par}
+
+\vspace{6ex} % Space between subtitle and image
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{pages/Attachments/logo_PNM.png}
+\end{center}
+
+}
+$endif$
+% Thank you to Cameron Patrick for his great write up https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/

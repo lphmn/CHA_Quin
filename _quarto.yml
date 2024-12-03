@@ -1,0 +1,66 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Community Health Needs Assessment"
+  subtitle: "Polk Norman Mahnomen Community Health Services"
+  author: "Sarah Reese & Patrick Olson"
+  date: last-modified
+  downloads: [pdf]
+  search: TRUE
+  sidebar:
+    logo: "pages/Attachments/logo_PNM.png"
+
+  chapters:
+    - index.qmd
+    - pages/010_understandingCHA.qmd
+    - pages/020_localInput.qmd
+    - pages/030_popEnvironmentalHealth.qmd
+    - pages/040_comprehensiveHealthMetrics.qmd
+    - pages/900_references.qmd
+    - pages/901_missionStatement.qmd
+        
+        
+bibliography: references.bib
+
+format:
+  pdf:
+    documentclass: scrreprt #default https://quarto.org/docs/output-formats/pdf-basics.html#document-class
+    papersize: A4
+    classoption: landscape
+    geometry:
+      - inner=3cm
+      - outer=2.54cm
+      - top=2.54cm
+      - bottom=2.54cm
+      - headsep=10pt
+      - headheight=100pt
+      - footskip=33pt
+      - ignorehead
+      - ignorefoot
+      - heightrounded
+    mainfont: Times New Roman
+    toc: true
+    toc-depth: 3
+    colorlinks: true
+    number-sections: false
+    indent: true
+    template-partials:
+      - before-body.tex
+    include-in-header: headerFooter.tex
+    fig-pos: "H"
+    
+  html:
+     theme: cosmo
+     link-external-icon: true
+     link-external-newwindow: true
+     number-sections: false
+     
+execute:
+  echo: false
+
+# if this isn't set globally default for date: will be published
+published-title: "Last updated"  
+
+editor: visual

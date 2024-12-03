@@ -1,0 +1,1106 @@
+"yearspan","measurename","statecode","countycode","county","state","numerator","denominator","rawvalue","cilow","cihigh","measureid","chrreleaseyear","differflag","trendbreak","fips"
+"1997-1999","Premature death",0,0,"United States","US",3138165,NA,"7,705.20","7,693.70","7,716.60",1,NA,NA,NA,9
+"1998-2000","Premature death",0,0,"United States","US",3133298,NA,"7,615.00","7,603.70","7,626.30",1,NA,NA,NA,9
+"1999-2001","Premature death",0,0,"United States","US",3139234,NA,"7,568.70","7,557.50","7,579.80",1,NA,NA,NA,9
+"2000-2002","Premature death",0,0,"United States","US",3147222,NA,"7,535.00","7,524.00","7,546.10",1,NA,NA,NA,9
+"2001-2003","Premature death",0,0,"United States","US",3159913,NA,"7,498.80","7,487.80","7,509.80",1,NA,NA,NA,9
+"2002-2004","Premature death",0,0,"United States","US",3152636,NA,"7,411.40","7,400.50","7,422.30",1,NA,NA,NA,9
+"2003-2005","Premature death",0,0,"United States","US",3156264,NA,"7,345.00","7,334.20","7,355.80",1,NA,NA,NA,9
+"2004-2006","Premature death",0,0,"United States","US",3155908,NA,"7,274.58","7,263.79","7,285.36",1,2010,NA,1,9
+"2005-2007","Premature death",0,0,"United States","US",3171824,NA,"7,209.38","7,198.67","7,220.09",1,2011,NA,NA,9
+"2006-2008","Premature death",0,0,"United States","US",3187482,NA,"7,090.49","7,079.92","7,101.07",1,2012,NA,NA,9
+"2007-2009","Premature death",0,0,"United States","US",3206771,NA,"6,958.92","6,948.48","6,969.36",1,NA,NA,NA,9
+"2008-2010","Premature death",0,0,"United States","US",3226773,NA,"6,811.19","6,800.90","6,821.48",1,2013,NA,NA,9
+"2009-2011","Premature death",0,0,"United States","US",3251741,NA,"6,703.70","6,693.50","6,713.80",1,NA,NA,NA,9
+"2010-2012","Premature death",0,0,"United States","US",3293135,NA,"6,621.61","6,611.52","6,631.70",1,2015,NA,NA,9
+"2011-2013","Premature death",0,0,"United States","US",3362601,884075121,"6,605.30","6,595.20","6,615.30",1,2016,NA,NA,9
+"2012-2014","Premature death",0,0,"United States","US",3439572,890407742,"6,601.20","6,591.20","6,611.30",1,2017,NA,NA,9
+"2013-2015","Premature death",0,0,"United States","US",3537400,896862151,"6,658.11","6,648.04","6,668.19",1,NA,NA,NA,9
+"2014-2016","Premature death",0,0,"United States","US",3643483,902734268,"6,783.35","6,773.16","6,793.53",1,2018,NA,NA,9
+"2015-2017","Premature death",0,0,"United States","US",3745538,908266078,"6,900.63","6,890.35","6,910.91",1,2019,NA,NA,9
+"2016-2018","Premature death",0,0,"United States","US",3813889,912286150,"6,940.11","6,929.79","6,950.43",1,2020,NA,NA,9
+"2017-2019","Premature death",0,0,"United States","US",3854074,915437195,"6,906.64","6,896.35","6,916.93",1,2021,NA,NA,9
+"2018-2020","Premature death",0,0,"United States","US",4125218,917267406,"7,281.94","7,271.41","7,292.46",1,2022,NA,NA,9
+"2019-2021","Premature death",0,0,"United States","US",4535347,921750763,"7,971.51","7,960.52","7,982.50",1,2024,NA,1,9
+"1997-1999","Premature death",27,0,"Minnesota","MN",41651,NA,"5,846.30","5,770.70","5,921.90",1,NA,NA,NA,99
+"1998-2000","Premature death",27,0,"Minnesota","MN",41671,NA,"5,821.30","5,746.30","5,896.20",1,NA,NA,NA,99
+"1999-2001","Premature death",27,0,"Minnesota","MN",41702,NA,"5,736.60","5,663.10","5,810.10",1,NA,NA,NA,99
+"2000-2002","Premature death",27,0,"Minnesota","MN",41654,NA,"5,678.00","5,605.20","5,750.80",1,NA,NA,NA,99
+"2001-2003","Premature death",27,0,"Minnesota","MN",41462,NA,"5,589.10","5,517.40","5,660.80",1,NA,NA,NA,99
+"2002-2004","Premature death",27,0,"Minnesota","MN",41064,NA,"5,484.00","5,413.20","5,554.80",1,NA,NA,NA,99
+"2003-2005","Premature death",27,0,"Minnesota","MN",40703,NA,"5,355.50","5,286.00","5,425.00",1,NA,NA,NA,99
+"2004-2006","Premature death",27,0,"Minnesota","MN",40681,NA,"5,313.05","5,243.74","5,382.36",1,2010,NA,1,99
+"2005-2007","Premature death",27,0,"Minnesota","MN",40820,NA,"5,274.04","5,204.87","5,343.20",1,2011,NA,NA,99
+"2006-2008","Premature death",27,0,"Minnesota","MN",41422,NA,"5,256.63","5,187.45","5,325.82",1,2012,NA,NA,99
+"2007-2009","Premature death",27,0,"Minnesota","MN",42074,NA,"5,170.57","5,102.33","5,238.81",1,NA,NA,NA,99
+"2008-2010","Premature death",27,0,"Minnesota","MN",42774,NA,"5,126.25","5,058.40","5,194.11",1,2013,NA,NA,99
+"2009-2011","Premature death",27,0,"Minnesota","MN",NA,NA,"5,047.40","4,980.30","5,114.40",1,NA,NA,NA,99
+"2010-2012","Premature death",27,0,"Minnesota","MN",43953,NA,"5,038.05","4,970.74","5,105.36",1,2015,NA,NA,99
+"2011-2013","Premature death",27,0,"Minnesota","MN",45114,15128635,"5,071.10","5,003.50","5,138.80",1,2016,NA,NA,99
+"2012-2014","Premature death",27,0,"Minnesota","MN",45937,15226864,"5,071.20","5,003.40","5,139.10",1,2017,NA,NA,99
+"2013-2015","Premature death",27,0,"Minnesota","MN",47407,15321623,"5,116.67","5,048.62","5,184.73",1,NA,NA,NA,99
+"2014-2016","Premature death",27,0,"Minnesota","MN",48644,15404550,"5,171.14","5,102.66","5,239.62",1,2018,NA,NA,99
+"2015-2017","Premature death",27,0,"Minnesota","MN",50156,15505330,"5,257.91","5,188.97","5,326.85",1,2019,NA,NA,99
+"2016-2018","Premature death",27,0,"Minnesota","MN",51060,15601031,"5,278.51","5,209.48","5,347.55",1,2020,NA,NA,99
+"2017-2019","Premature death",27,0,"Minnesota","MN",52125,15691368,"5,314.26","5,245.08","5,383.44",1,2021,NA,NA,99
+"2018-2020","Premature death",27,0,"Minnesota","MN",55372,15742575,"5,586.03","5,515.29","5,656.77",1,2022,NA,NA,99
+"2019-2021","Premature death",27,0,"Minnesota","MN",60251,15839912,"6,116.79","6,042.50","6,191.09",1,2024,NA,1,99
+"1997-1999","Premature death",27,87,"Mahnomen","MN",75,NA,"10,826.60","7,595.00","14,968.70",1,NA,NA,NA,27087
+"1998-2000","Premature death",27,87,"Mahnomen","MN",71,NA,"9,339.60","6,489.10","13,016.10",1,NA,NA,NA,27087
+"1999-2001","Premature death",27,87,"Mahnomen","MN",72,NA,"7,731.00","5,402.40","10,723.20",1,NA,NA,NA,27087
+"2000-2002","Premature death",27,87,"Mahnomen","MN",68,NA,"7,592.10","5,163.20","10,768.20",1,NA,NA,NA,27087
+"2001-2003","Premature death",27,87,"Mahnomen","MN",76,NA,"9,839.00","6,856.40","13,678.40",1,NA,NA,NA,27087
+"2002-2004","Premature death",27,87,"Mahnomen","MN",71,NA,"11,177.70","7,771.00","15,569.80",1,NA,NA,NA,27087
+"2003-2005","Premature death",27,87,"Mahnomen","MN",66,NA,"10,526.50","7,331.50","14,640.80",1,NA,NA,NA,27087
+"2004-2006","Premature death",27,87,"Mahnomen","MN",66,NA,"9,854.77","7,621.68","12,537.69",1,2010,1,1,27087
+"2005-2007","Premature death",27,87,"Mahnomen","MN",76,NA,"9,582.41","7,549.85","11,993.82",1,2011,1,NA,27087
+"2006-2008","Premature death",27,87,"Mahnomen","MN",78,NA,"10,109.88","7,991.44","12,617.59",1,2012,1,NA,27087
+"2007-2009","Premature death",27,87,"Mahnomen","MN",88,NA,"11,342.29","9,096.85","13,974.02",1,NA,NA,NA,27087
+"2008-2010","Premature death",27,87,"Mahnomen","MN",88,NA,"11,978.79","9,607.34","14,758.20",1,2013,NA,NA,27087
+"2009-2011","Premature death",27,87,"Mahnomen","MN",NA,NA,"12,849.50","10,443.40","15,643.80",1,NA,NA,NA,27087
+"2010-2012","Premature death",27,87,"Mahnomen","MN",93,NA,"10,909.51","8,805.38","13,364.89",1,2015,NA,NA,27087
+"2011-2013","Premature death",27,87,"Mahnomen","MN",91,15286,"11,028.50","8,879.50","13,540.60",1,2016,NA,NA,27087
+"2012-2014","Premature death",27,87,"Mahnomen","MN",90,15317,"12,186.40","9,799.30","14,979.20",1,2017,NA,NA,27087
+"2013-2015","Premature death",27,87,"Mahnomen","MN",93,15233,"12,862.46","10,381.67","15,757.38",1,NA,NA,NA,27087
+"2014-2016","Premature death",27,87,"Mahnomen","MN",90,15182,"13,055.78","10,498.39","16,047.78",1,2018,NA,NA,27087
+"2015-2017","Premature death",27,87,"Mahnomen","MN",111,15241,"15,735.35","11,686.54","19,784.16",1,2019,NA,NA,27087
+"2016-2018","Premature death",27,87,"Mahnomen","MN",117,15288,"18,046.92","13,579.77","22,514.07",1,2020,NA,NA,27087
+"2017-2019","Premature death",27,87,"Mahnomen","MN",124,15326,"19,044.96","14,496.33","23,593.59",1,2021,NA,NA,27087
+"2018-2020","Premature death",27,87,"Mahnomen","MN",113,15219,"16,679.21","12,391.91","20,966.51",1,2022,NA,NA,27087
+"2019-2021","Premature death",27,87,"Mahnomen","MN",131,15167,"19,956.16","15,199.57","24,712.75",1,2024,NA,1,27087
+"1997-1999","Premature death",27,107,"Norman","MN",82,NA,"6,201.90","4,267.70","8,712.20",1,NA,NA,NA,27107
+"1998-2000","Premature death",27,107,"Norman","MN",77,NA,"5,993.10","4,010.10","8,613.40",1,NA,NA,NA,27107
+"1999-2001","Premature death",27,107,"Norman","MN",78,NA,"6,202.50","4,118.60","8,969.40",1,NA,NA,NA,27107
+"2000-2002","Premature death",27,107,"Norman","MN",88,NA,"8,355.50","5,833.80","11,597.70",1,NA,NA,NA,27107
+"2001-2003","Premature death",27,107,"Norman","MN",92,NA,"8,984.70","6,311.80","12,407.40",1,NA,NA,NA,27107
+"2002-2004","Premature death",27,107,"Norman","MN",91,NA,"9,408.80","6,598.60","13,011.30",1,NA,NA,NA,27107
+"2003-2005","Premature death",27,107,"Norman","MN",89,NA,"8,022.80","5,559.30","11,205.60",1,NA,NA,NA,27107
+"2004-2006","Premature death",27,107,"Norman","MN",91,NA,"7,347.10","5,915.43","9,020.61",1,2010,1,1,27107
+"2005-2007","Premature death",27,107,"Norman","MN",97,NA,"7,667.57","6,217.88","9,353.78",1,2011,1,NA,27107
+"2006-2008","Premature death",27,107,"Norman","MN",86,NA,"6,707.57","5,365.19","8,283.80",1,2012,1,NA,27107
+"2007-2009","Premature death",27,107,"Norman","MN",82,NA,"6,347.72","5,048.53","7,879.19",1,NA,NA,NA,27107
+"2008-2010","Premature death",27,107,"Norman","MN",79,NA,"5,698.78","4,511.78","7,102.38",1,2013,NA,NA,27107
+"2009-2011","Premature death",27,107,"Norman","MN",NA,NA,"6,801.80","5,455.30","8,380.10",1,NA,NA,NA,27107
+"2010-2012","Premature death",27,107,"Norman","MN",87,NA,"7,241.61","5,800.23","8,932.50",1,2015,NA,NA,27107
+"2011-2013","Premature death",27,107,"Norman","MN",85,17793,"7,694.00","6,145.70","9,513.70",1,2016,NA,NA,27107
+"2012-2014","Premature death",27,107,"Norman","MN",83,17623,"7,490.50","5,966.10","9,285.60",1,2017,NA,NA,27107
+"2013-2015","Premature death",27,107,"Norman","MN",88,17703,"7,061.30","5,663.37","8,699.71",1,NA,NA,NA,27107
+"2014-2016","Premature death",27,107,"Norman","MN",93,17680,"7,291.08","5,884.84","8,932.06",1,2018,NA,NA,27107
+"2015-2017","Premature death",27,107,"Norman","MN",106,17706,"9,177.68","6,385.24","11,970.13",1,2019,NA,NA,27107
+"2016-2018","Premature death",27,107,"Norman","MN",108,17579,"8,711.70","5,990.39","11,433.02",1,2020,NA,NA,27107
+"2017-2019","Premature death",27,107,"Norman","MN",112,17454,"8,270.44","5,677.14","10,863.73",1,2021,NA,NA,27107
+"2018-2020","Premature death",27,107,"Norman","MN",104,17200,"7,051.69","4,773.27","9,330.10",1,2022,NA,NA,27107
+"2019-2021","Premature death",27,107,"Norman","MN",102,17170,"7,267.77","4,878.27","9,657.27",1,2024,NA,1,27107
+"1997-1999","Premature death",27,119,"Polk","MN",386,NA,"7,089.20","6,021.90","8,156.40",1,NA,NA,NA,27119
+"1998-2000","Premature death",27,119,"Polk","MN",365,NA,"6,383.70","5,413.80","7,353.50",1,NA,NA,NA,27119
+"1999-2001","Premature death",27,119,"Polk","MN",369,NA,"6,100.80","5,181.60","7,020.00",1,NA,NA,NA,27119
+"2000-2002","Premature death",27,119,"Polk","MN",365,NA,"6,111.20","5,236.30","6,986.10",1,NA,NA,NA,27119
+"2001-2003","Premature death",27,119,"Polk","MN",355,NA,"6,830.50","5,822.70","7,838.20",1,NA,NA,NA,27119
+"2002-2004","Premature death",27,119,"Polk","MN",328,NA,"6,606.90","5,588.00","7,625.70",1,NA,NA,NA,27119
+"2003-2005","Premature death",27,119,"Polk","MN",298,NA,"6,587.20","5,510.10","7,664.40",1,NA,NA,NA,27119
+"2004-2006","Premature death",27,119,"Polk","MN",285,NA,"6,276.17","5,204.04","7,348.30",1,2010,1,1,27119
+"2005-2007","Premature death",27,119,"Polk","MN",295,NA,"6,687.00","5,559.88","7,814.12",1,2011,1,NA,27119
+"2006-2008","Premature death",27,119,"Polk","MN",311,NA,"6,026.78","5,023.07","7,030.49",1,2012,1,NA,27119
+"2007-2009","Premature death",27,119,"Polk","MN",326,NA,"5,787.74","4,842.90","6,732.58",1,NA,NA,NA,27119
+"2008-2010","Premature death",27,119,"Polk","MN",361,NA,"6,253.37","5,282.76","7,223.98",1,2013,NA,NA,27119
+"2009-2011","Premature death",27,119,"Polk","MN",NA,NA,"7,147.00","6,065.00","8,228.90",1,NA,NA,NA,27119
+"2010-2012","Premature death",27,119,"Polk","MN",384,NA,"7,570.17","6,437.25","8,703.09",1,2015,NA,NA,27119
+"2011-2013","Premature death",27,119,"Polk","MN",365,86438,"7,321.50","6,199.60","8,443.50",1,2016,NA,NA,27119
+"2012-2014","Premature death",27,119,"Polk","MN",350,86720,"7,324.70","6,193.10","8,456.30",1,2017,NA,NA,27119
+"2013-2015","Premature death",27,119,"Polk","MN",356,86849,"7,276.64","6,155.12","8,398.16",1,NA,NA,NA,27119
+"2014-2016","Premature death",27,119,"Polk","MN",371,86976,"7,470.78","6,320.08","8,621.48",1,2018,NA,NA,27119
+"2015-2017","Premature death",27,119,"Polk","MN",377,86904,"7,342.74","6,196.74","8,488.74",1,2019,NA,NA,27119
+"2016-2018","Premature death",27,119,"Polk","MN",378,86919,"6,793.66","5,720.84","7,866.49",1,2020,NA,NA,27119
+"2017-2019","Premature death",27,119,"Polk","MN",388,86626,"6,500.99","5,498.85","7,503.13",1,2021,NA,NA,27119
+"2018-2020","Premature death",27,119,"Polk","MN",423,85886,"6,250.81","5,309.44","7,192.18",1,2022,NA,NA,27119
+"2019-2021","Premature death",27,119,"Polk","MN",446,85321,"7,012.65","5,968.52","8,056.77",1,2024,NA,1,27119
+"2008","Uninsured adults",0,0,"United States","US",36121186,186148014,"0.19","","",3,NA,NA,NA,9
+"2009","Uninsured adults",0,0,"United States","US",38791372,187746677,"0.21","","",3,2012,NA,NA,9
+"2010","Uninsured adults",0,0,"United States","US",40754555,189379289,"0.22","","",3,2013,NA,NA,9
+"2011","Uninsured adults",0,0,"United States","US",40297670,190888983,"0.21","","",3,2014,NA,NA,9
+"2012","Uninsured adults",0,0,"United States","US",39791596,191640968,"0.21","","",3,2015,NA,NA,9
+"2013","Uninsured adults",0,0,"United States","US",39336439,192461143,"0.20","","",3,2016,NA,NA,9
+"2014","Uninsured adults",0,0,"United States","US",31701534,193600545,"0.16","","",3,2017,NA,NA,9
+"2015","Uninsured adults",0,0,"United States","US",25700940,194584952,"0.13","","",3,2018,NA,NA,9
+"2016","Uninsured adults",0,0,"United States","US",23533400,194808251,"0.12","","",3,2019,NA,NA,9
+"2017","Uninsured adults",0,0,"United States","US",23979301,195788599,"0.12","","",3,2020,NA,NA,9
+"2018","Uninsured adults",0,0,"United States","US",24386874,195883847,"0.12","","",3,2021,NA,NA,9
+"2019","Uninsured adults",0,0,"United States","US",25136272,195703724,"0.13","","",3,2022,NA,NA,9
+"2020","Uninsured adults",0,0,"United States","US",24218806,195681336,"0.12","","",3,2023,NA,NA,9
+"2021","Uninsured adults",0,0,"United States","US",23878505,197133424,"0.12","","",3,2024,NA,NA,9
+"2008","Uninsured adults",27,0,"Minnesota","MN",352742,3240689,"0.11","0.11","0.11",3,NA,NA,NA,99
+"2009","Uninsured adults",27,0,"Minnesota","MN",379937,3260403,"0.12","0.11","0.12",3,2012,NA,NA,99
+"2010","Uninsured adults",27,0,"Minnesota","MN",388267,3267415,"0.12","0.12","0.12",3,2013,NA,NA,99
+"2011","Uninsured adults",27,0,"Minnesota","MN",385099,3291165,"0.12","0.11","0.12",3,2014,NA,NA,99
+"2012","Uninsured adults",27,0,"Minnesota","MN",353644,3299224,"0.11","0.10","0.11",3,2015,NA,NA,99
+"2013","Uninsured adults",27,0,"Minnesota","MN",363386,3313705,"0.11","0.11","0.11",3,2016,NA,NA,99
+"2014","Uninsured adults",27,0,"Minnesota","MN",263713,3324671,"0.08","0.08","0.08",3,2017,NA,NA,99
+"2015","Uninsured adults",27,0,"Minnesota","MN",201096,3331441,"0.06","0.06","0.06",3,2018,NA,NA,99
+"2016","Uninsured adults",27,0,"Minnesota","MN",181003,3332959,"0.05","0.05","0.06",3,2019,NA,NA,99
+"2017","Uninsured adults",27,0,"Minnesota","MN",195025,3353569,"0.06","0.06","0.06",3,2020,NA,NA,99
+"2018","Uninsured adults",27,0,"Minnesota","MN",198068,3354680,"0.06","0.06","0.06",3,2021,NA,NA,99
+"2019","Uninsured adults",27,0,"Minnesota","MN",231346,3353288,"0.07","0.07","0.07",3,2022,NA,NA,99
+"2020","Uninsured adults",27,0,"Minnesota","MN",230989,3351918,"0.07","0.07","0.07",3,2023,NA,NA,99
+"2021","Uninsured adults",27,0,"Minnesota","MN",208310,3376245,"0.06","0.06","0.06",3,2024,NA,NA,99
+"2008","Uninsured adults",27,87,"Mahnomen","MN",455,2836,"0.16","0.14","0.18",3,NA,NA,NA,27087
+"2009","Uninsured adults",27,87,"Mahnomen","MN",448,2761,"0.16","0.14","0.18",3,2012,1,NA,27087
+"2010","Uninsured adults",27,87,"Mahnomen","MN",494,3021,"0.16","0.14","0.19",3,2013,1,NA,27087
+"2011","Uninsured adults",27,87,"Mahnomen","MN",521,3039,"0.17","0.15","0.20",3,2014,NA,NA,27087
+"2012","Uninsured adults",27,87,"Mahnomen","MN",488,2979,"0.16","0.14","0.19",3,2015,NA,NA,27087
+"2013","Uninsured adults",27,87,"Mahnomen","MN",485,2911,"0.17","0.14","0.19",3,2016,1,NA,27087
+"2014","Uninsured adults",27,87,"Mahnomen","MN",355,2873,"0.12","0.11","0.14",3,2017,NA,NA,27087
+"2015","Uninsured adults",27,87,"Mahnomen","MN",302,2825,"0.11","0.09","0.12",3,2018,NA,NA,27087
+"2016","Uninsured adults",27,87,"Mahnomen","MN",270,2776,"0.10","0.08","0.11",3,2019,NA,NA,27087
+"2017","Uninsured adults",27,87,"Mahnomen","MN",304,2836,"0.11","0.09","0.13",3,2020,NA,NA,27087
+"2018","Uninsured adults",27,87,"Mahnomen","MN",310,2798,"0.11","0.09","0.13",3,2021,NA,NA,27087
+"2019","Uninsured adults",27,87,"Mahnomen","MN",335,2780,"0.12","0.10","0.14",3,2022,NA,NA,27087
+"2020","Uninsured adults",27,87,"Mahnomen","MN",383,2879,"0.13","0.11","0.15",3,2023,NA,NA,27087
+"2021","Uninsured adults",27,87,"Mahnomen","MN",293,2548,"0.11","0.10","0.13",3,2024,NA,NA,27087
+"2008","Uninsured adults",27,107,"Norman","MN",565,3773,"0.15","0.13","0.17",3,NA,NA,NA,27107
+"2009","Uninsured adults",27,107,"Norman","MN",519,3509,"0.15","0.13","0.16",3,2012,NA,NA,27107
+"2010","Uninsured adults",27,107,"Norman","MN",519,3734,"0.14","0.12","0.16",3,2013,NA,NA,27107
+"2011","Uninsured adults",27,107,"Norman","MN",496,3763,"0.13","0.11","0.15",3,2014,NA,NA,27107
+"2012","Uninsured adults",27,107,"Norman","MN",431,3635,"0.12","0.10","0.13",3,2015,NA,NA,27107
+"2013","Uninsured adults",27,107,"Norman","MN",441,3647,"0.12","0.10","0.14",3,2016,1,NA,27107
+"2014","Uninsured adults",27,107,"Norman","MN",321,3640,"0.09","0.08","0.10",3,2017,NA,NA,27107
+"2015","Uninsured adults",27,107,"Norman","MN",275,3683,"0.07","0.06","0.09",3,2018,NA,NA,27107
+"2016","Uninsured adults",27,107,"Norman","MN",248,3614,"0.07","0.06","0.08",3,2019,NA,NA,27107
+"2017","Uninsured adults",27,107,"Norman","MN",262,3639,"0.07","0.06","0.08",3,2020,NA,NA,27107
+"2018","Uninsured adults",27,107,"Norman","MN",245,3524,"0.07","0.06","0.08",3,2021,NA,NA,27107
+"2019","Uninsured adults",27,107,"Norman","MN",269,3435,"0.08","0.07","0.09",3,2022,NA,NA,27107
+"2020","Uninsured adults",27,107,"Norman","MN",338,3441,"0.10","0.08","0.12",3,2023,NA,NA,27107
+"2021","Uninsured adults",27,107,"Norman","MN",277,3529,"0.08","0.07","0.09",3,2024,NA,NA,27107
+"2008","Uninsured adults",27,119,"Polk","MN",2191,17994,"0.12","0.11","0.14",3,NA,NA,NA,27119
+"2009","Uninsured adults",27,119,"Polk","MN",2179,17746,"0.12","0.11","0.14",3,2012,1,NA,27119
+"2010","Uninsured adults",27,119,"Polk","MN",2064,18184,"0.11","0.10","0.13",3,2013,1,NA,27119
+"2011","Uninsured adults",27,119,"Polk","MN",2247,18259,"0.12","0.11","0.14",3,2014,NA,NA,27119
+"2012","Uninsured adults",27,119,"Polk","MN",1914,18103,"0.11","0.09","0.12",3,2015,NA,NA,27119
+"2013","Uninsured adults",27,119,"Polk","MN",2021,18066,"0.11","0.10","0.13",3,2016,NA,NA,27119
+"2014","Uninsured adults",27,119,"Polk","MN",1562,18106,"0.09","0.07","0.10",3,2017,NA,NA,27119
+"2015","Uninsured adults",27,119,"Polk","MN",1088,17972,"0.06","0.05","0.07",3,2018,NA,NA,27119
+"2016","Uninsured adults",27,119,"Polk","MN",1012,17888,"0.06","0.05","0.07",3,2019,NA,NA,27119
+"2017","Uninsured adults",27,119,"Polk","MN",1152,17728,"0.06","0.05","0.08",3,2020,NA,NA,27119
+"2018","Uninsured adults",27,119,"Polk","MN",1071,17576,"0.06","0.05","0.07",3,2021,NA,NA,27119
+"2019","Uninsured adults",27,119,"Polk","MN",1126,17239,"0.07","0.06","0.07",3,2022,NA,NA,27119
+"2020","Uninsured adults",27,119,"Polk","MN",1514,16840,"0.09","0.07","0.11",3,2023,NA,NA,27119
+"2021","Uninsured adults",27,119,"Polk","MN",1224,16825,"0.07","0.06","0.08",3,2024,NA,NA,27119
+"2010","Primary care physicians",0,0,"United States","US",225687,309348193,"1,370.70","","",4,2013,NA,NA,9
+"2011","Primary care physicians",0,0,"United States","US",229978,311663358,"1,355.19","","",4,2014,NA,NA,9
+"2012","Primary care physicians",0,0,"United States","US",233862,313998379,"1,342.67","","",4,2015,NA,NA,9
+"2013","Primary care physicians",0,0,"United States","US",239500,316204908,"1,320.27","","",4,2016,NA,NA,9
+"2014","Primary care physicians",0,0,"United States","US",241227,318563456,"1,320.60","","",4,2017,NA,NA,9
+"2015","Primary care physicians",0,0,"United States","US",242608,320896618,"1,322.70","","",4,2018,NA,NA,9
+"2016","Primary care physicians",0,0,"United States","US",243738,323127513,"1,325.72","","",4,2019,NA,NA,9
+"2017","Primary care physicians",0,0,"United States","US",245809,325719178,"1,325.09","","",4,2020,NA,NA,9
+"2018","Primary care physicians",0,0,"United States","US",248034,327167434,"1,319.04","","",4,2021,NA,NA,9
+"2019","Primary care physicians",0,0,"United States","US",251126,328239523,"1,307.07","","",4,2022,NA,NA,9
+"2020","Primary care physicians",0,0,"United States","US",251647,329484123,"1,309.31","","",4,2023,NA,NA,9
+"2021","Primary care physicians",0,0,"United States","US",248730,331893745,"1,334.35","","",4,2024,NA,NA,9
+"2010","Primary care physicians",27,0,"Minnesota","MN",4660,5311147,"1,139.73","","",4,2013,NA,NA,99
+"2011","Primary care physicians",27,0,"Minnesota","MN",4788,5348562,"1,117.08","","",4,2014,NA,NA,99
+"2012","Primary care physicians",27,0,"Minnesota","MN",4834,5380285,"1,113.01","","",4,2015,NA,NA,99
+"2013","Primary care physicians",27,0,"Minnesota","MN",4940,5418521,"1,096.87","","",4,2016,NA,NA,99
+"2014","Primary care physicians",27,0,"Minnesota","MN",4941,5453109,"1,103.64","","",4,2017,NA,NA,99
+"2015","Primary care physicians",27,0,"Minnesota","MN",4942,5482435,"1,109.36","","",4,2018,NA,NA,99
+"2016","Primary care physicians",27,0,"Minnesota","MN",4921,5519952,"1,121.71","","",4,2019,NA,NA,99
+"2017","Primary care physicians",27,0,"Minnesota","MN",4988,5576606,"1,118.00","","",4,2020,NA,NA,99
+"2018","Primary care physicians",27,0,"Minnesota","MN",5022,5611179,"1,117.32","","",4,2021,NA,NA,99
+"2019","Primary care physicians",27,0,"Minnesota","MN",5119,5639632,"1,101.71","","",4,2022,NA,NA,99
+"2020","Primary care physicians",27,0,"Minnesota","MN",5098,5657342,"1,109.72","","",4,2023,NA,NA,99
+"2021","Primary care physicians",27,0,"Minnesota","MN",5033,5707390,"1,133.99","","",4,2024,NA,NA,99
+"2010","Primary care physicians",27,87,"Mahnomen","MN",2,5425,"2,712.50","","",4,2013,1,NA,27087
+"2011","Primary care physicians",27,87,"Mahnomen","MN",4,5490,"1,372.50","","",4,2014,1,NA,27087
+"2012","Primary care physicians",27,87,"Mahnomen","MN",5,5515,"1,103.00","","",4,2015,1,NA,27087
+"2013","Primary care physicians",27,87,"Mahnomen","MN",5,5482,"1,096.40","","",4,2016,1,NA,27087
+"2014","Primary care physicians",27,87,"Mahnomen","MN",2,5507,"2,753.50","","",4,2017,1,NA,27087
+"2015","Primary care physicians",27,87,"Mahnomen","MN",1,5430,"5,430.00","","",4,2018,1,NA,27087
+"2016","Primary care physicians",27,87,"Mahnomen","MN",1,5465,"5,465.00","","",4,2019,1,NA,27087
+"2017","Primary care physicians",27,87,"Mahnomen","MN",1,5596,"5,596.00","","",4,2020,NA,NA,27087
+"2018","Primary care physicians",27,87,"Mahnomen","MN",1,5519,"5,519.00","","",4,2021,NA,NA,27087
+"2019","Primary care physicians",27,87,"Mahnomen","MN",1,5527,"5,527.00","","",4,2022,NA,NA,27087
+"2020","Primary care physicians",27,87,"Mahnomen","MN",1,5473,"5,473.00","","",4,2023,NA,NA,27087
+"2021","Primary care physicians",27,87,"Mahnomen","MN",1,5414,"5,414.00","","",4,2024,NA,NA,27087
+"2010","Primary care physicians",27,107,"Norman","MN",1,6849,"6,849.00","","",4,2013,1,NA,27107
+"2011","Primary care physicians",27,107,"Norman","MN",1,6847,"6,847.00","","",4,2014,1,NA,27107
+"2012","Primary care physicians",27,107,"Norman","MN",2,6645,"3,322.50","","",4,2015,1,NA,27107
+"2013","Primary care physicians",27,107,"Norman","MN",2,6659,"3,329.50","","",4,2016,1,NA,27107
+"2014","Primary care physicians",27,107,"Norman","MN",1,6637,"6,637.00","","",4,2017,1,NA,27107
+"2015","Primary care physicians",27,107,"Norman","MN",0,6672,"","","",4,2018,1,NA,27107
+"2016","Primary care physicians",27,107,"Norman","MN",0,6579,"","","",4,2019,1,NA,27107
+"2017","Primary care physicians",27,107,"Norman","MN",0,6597,"","","",4,2020,NA,NA,27107
+"2018","Primary care physicians",27,107,"Norman","MN",0,6475,"","","",4,2021,NA,NA,27107
+"2019","Primary care physicians",27,107,"Norman","MN",0,6375,"","","",4,2022,NA,NA,27107
+"2020","Primary care physicians",27,107,"Norman","MN",0,6338,"","","",4,2023,NA,NA,27107
+"2021","Primary care physicians",27,107,"Norman","MN",0,6416,"","","",4,2024,NA,NA,27107
+"2010","Primary care physicians",27,119,"Polk","MN",16,31629,"1,976.81","","",4,2013,1,NA,27119
+"2011","Primary care physicians",27,119,"Polk","MN",17,31548,"1,855.76","","",4,2014,1,NA,27119
+"2012","Primary care physicians",27,119,"Polk","MN",19,31492,"1,657.47","","",4,2015,1,NA,27119
+"2013","Primary care physicians",27,119,"Polk","MN",17,31649,"1,861.71","","",4,2016,1,NA,27119
+"2014","Primary care physicians",27,119,"Polk","MN",16,31471,"1,966.94","","",4,2017,1,NA,27119
+"2015","Primary care physicians",27,119,"Polk","MN",16,31480,"1,967.50","","",4,2018,1,NA,27119
+"2016","Primary care physicians",27,119,"Polk","MN",14,31660,"2,261.43","","",4,2019,1,NA,27119
+"2017","Primary care physicians",27,119,"Polk","MN",14,31619,"2,258.50","","",4,2020,NA,NA,27119
+"2018","Primary care physicians",27,119,"Polk","MN",16,31529,"1,970.56","","",4,2021,NA,NA,27119
+"2019","Primary care physicians",27,119,"Polk","MN",16,31364,"1,960.25","","",4,2022,NA,NA,27119
+"2020","Primary care physicians",27,119,"Polk","MN",15,30900,"2,060.00","","",4,2023,NA,NA,27119
+"2021","Primary care physicians",27,119,"Polk","MN",17,30757,"1,809.24","","",4,2024,NA,NA,27119
+"2012","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,863.00","","",5,NA,NA,NA,9
+"2013","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,583.00","","",5,NA,NA,NA,9
+"2014","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,358.00","","",5,NA,NA,NA,9
+"2015","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,040.00","","",5,NA,NA,NA,9
+"2016","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,447.00","","",5,2019,NA,NA,9
+"2017","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,475.00","","",5,2020,NA,NA,9
+"2018","Preventable hospital stays",0,0,"United States","US",NA,NA,"4,236.00","","",5,2021,NA,NA,9
+"2019","Preventable hospital stays",0,0,"United States","US",NA,NA,"3,767.00","","",5,2022,NA,NA,9
+"2020","Preventable hospital stays",0,0,"United States","US",NA,NA,"2,809.00","","",5,2023,NA,NA,9
+"2021","Preventable hospital stays",0,0,"United States","US",NA,NA,"2,681.00","","",5,2024,NA,NA,9
+"2012","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"5,132.00","","",5,NA,NA,NA,99
+"2013","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"5,194.00","","",5,NA,NA,NA,99
+"2014","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"5,045.00","","",5,NA,NA,NA,99
+"2015","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"4,866.00","","",5,NA,NA,NA,99
+"2016","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"5,703.00","","",5,2019,NA,NA,99
+"2017","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"6,015.00","","",5,2020,NA,NA,99
+"2018","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"5,826.00","","",5,2021,NA,NA,99
+"2019","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"3,073.00","","",5,2022,NA,NA,99
+"2020","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"2,323.00","","",5,2023,NA,NA,99
+"2021","Preventable hospital stays",27,0,"Minnesota","MN",NA,NA,"2,225.00","","",5,2024,NA,NA,99
+"2012","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"8,705.00","","",5,NA,NA,NA,27087
+"2013","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"5,992.00","","",5,NA,NA,NA,27087
+"2014","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"5,844.00","","",5,NA,NA,NA,27087
+"2015","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"4,485.00","","",5,NA,NA,NA,27087
+"2016","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"4,353.00","","",5,2019,NA,NA,27087
+"2017","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"4,176.00","","",5,2020,NA,NA,27087
+"2018","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"6,155.00","","",5,2021,NA,NA,27087
+"2019","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"2,081.00","","",5,2022,NA,NA,27087
+"2020","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"2,157.00","","",5,2023,NA,NA,27087
+"2021","Preventable hospital stays",27,87,"Mahnomen","MN",NA,NA,"2,248.00","","",5,2024,NA,NA,27087
+"2012","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"4,763.00","","",5,NA,NA,NA,27107
+"2013","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"4,723.00","","",5,NA,NA,NA,27107
+"2014","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"3,768.00","","",5,NA,NA,NA,27107
+"2015","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"4,392.00","","",5,NA,NA,NA,27107
+"2016","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"5,135.00","","",5,2019,NA,NA,27107
+"2017","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"5,606.00","","",5,2020,NA,NA,27107
+"2018","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"5,029.00","","",5,2021,NA,NA,27107
+"2019","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"1,900.00","","",5,2022,NA,NA,27107
+"2020","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"1,218.00","","",5,2023,NA,NA,27107
+"2021","Preventable hospital stays",27,107,"Norman","MN",NA,NA,"1,592.00","","",5,2024,NA,NA,27107
+"2012","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"5,241.00","","",5,NA,NA,NA,27119
+"2013","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"5,041.00","","",5,NA,NA,NA,27119
+"2014","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"5,895.00","","",5,NA,NA,NA,27119
+"2015","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"5,475.00","","",5,NA,NA,NA,27119
+"2016","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"5,912.00","","",5,2019,NA,NA,27119
+"2017","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"6,056.00","","",5,2020,NA,NA,27119
+"2018","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"5,003.00","","",5,2021,NA,NA,27119
+"2019","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"2,225.00","","",5,2022,NA,NA,27119
+"2020","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"2,046.00","","",5,2023,NA,NA,27119
+"2021","Preventable hospital stays",27,119,"Polk","MN",NA,NA,"1,642.00","","",5,2024,NA,NA,27119
+"2002","Unemployment rate",0,0,"United States","US",8545537,146160908,"0.06","","",23,NA,NA,NA,9
+"2003","Unemployment rate",0,0,"United States","US",8876839,147005970,"0.06","","",23,NA,NA,NA,9
+"2004","Unemployment rate",0,0,"United States","US",8253480,148072054,"0.06","","",23,NA,NA,NA,9
+"2005","Unemployment rate",0,0,"United States","US",7706632,149390851,"0.05","","",23,NA,NA,NA,9
+"2006","Unemployment rate",0,0,"United States","US",7110621,151643612,"0.05","","",23,NA,NA,NA,9
+"2007","Unemployment rate",0,0,"United States","US",7190133,153578649,"0.05","","",23,NA,NA,NA,9
+"2008","Unemployment rate",0,0,"United States","US",9059301,155107229,"0.06","","",23,2010,NA,NA,9
+"2009","Unemployment rate",0,0,"United States","US",14430349,155127066,"0.09","","",23,2011,NA,NA,9
+"2010","Unemployment rate",0,0,"United States","US",15070190,155539710,"0.10","","",23,2012,NA,1,9
+"2011","Unemployment rate",0,0,"United States","US",14035614,155829711,"0.09","","",23,2013,NA,NA,9
+"2012","Unemployment rate",0,0,"United States","US",12698862,156391735,"0.08","","",23,2014,NA,NA,9
+"2013","Unemployment rate",0,0,"United States","US",11644257,156785419,"0.07","","",23,2015,NA,NA,9
+"2014","Unemployment rate",0,0,"United States","US",9795069,157364863,"0.06","","",23,2016,NA,NA,9
+"2015","Unemployment rate",0,0,"United States","US",8303325,157259320,"0.05","","",23,2017,NA,NA,9
+"2016","Unemployment rate",0,0,"United States","US",7729204,158741980,"0.05","","",23,2018,NA,NA,9
+"2017","Unemployment rate",0,0,"United States","US",6994555,160588786,"0.04","","",23,2019,NA,NA,9
+"2018","Unemployment rate",0,0,"United States","US",6296445,161640488,"0.04","","",23,2020,NA,NA,9
+"2019","Unemployment rate",0,0,"United States","US",5984808,163100055,"0.04","","",23,2021,NA,NA,9
+"2020","Unemployment rate",0,0,"United States","US",12933831,160611339,"0.08","","",23,2022,NA,NA,9
+"2021","Unemployment rate",0,0,"United States","US",8658797,161758594,"0.05","","",23,2023,NA,NA,9
+"2022","Unemployment rate",0,0,"United States","US",6014764,164781913,"0.04","","",23,2024,NA,NA,9
+"2002","Unemployment rate",27,0,"Minnesota","MN",128524,2859611,"0.04","","",23,NA,NA,NA,99
+"2003","Unemployment rate",27,0,"Minnesota","MN",140381,2874672,"0.05","","",23,NA,NA,NA,99
+"2004","Unemployment rate",27,0,"Minnesota","MN",134818,2880439,"0.05","","",23,NA,NA,NA,99
+"2005","Unemployment rate",27,0,"Minnesota","MN",117038,2879775,"0.04","","",23,NA,NA,NA,99
+"2006","Unemployment rate",27,0,"Minnesota","MN",115719,2887839,"0.04","","",23,NA,NA,NA,99
+"2007","Unemployment rate",27,0,"Minnesota","MN",132690,2906398,"0.05","","",23,NA,NA,NA,99
+"2008","Unemployment rate",27,0,"Minnesota","MN",158751,2925088,"0.05","","",23,2010,NA,NA,99
+"2009","Unemployment rate",27,0,"Minnesota","MN",228554,2941981,"0.08","","",23,2011,NA,NA,99
+"2010","Unemployment rate",27,0,"Minnesota","MN",217608,2938806,"0.07","","",23,2012,NA,1,99
+"2011","Unemployment rate",27,0,"Minnesota","MN",190793,2944341,"0.06","","",23,2013,NA,NA,99
+"2012","Unemployment rate",27,0,"Minnesota","MN",165093,2954956,"0.06","","",23,2014,NA,NA,99
+"2013","Unemployment rate",27,0,"Minnesota","MN",146431,2965683,"0.05","","",23,2015,NA,NA,99
+"2014","Unemployment rate",27,0,"Minnesota","MN",121627,2974105,"0.04","","",23,2016,NA,NA,99
+"2015","Unemployment rate",27,0,"Minnesota","MN",111506,3010372,"0.04","","",23,2017,NA,NA,99
+"2016","Unemployment rate",27,0,"Minnesota","MN",117046,3001146,"0.04","","",23,2018,NA,NA,99
+"2017","Unemployment rate",27,0,"Minnesota","MN",105768,3063608,"0.03","","",23,2019,NA,NA,99
+"2018","Unemployment rate",27,0,"Minnesota","MN",89340,3070229,"0.03","","",23,2020,NA,NA,99
+"2019","Unemployment rate",27,0,"Minnesota","MN",100496,3109661,"0.03","","",23,2021,NA,NA,99
+"2020","Unemployment rate",27,0,"Minnesota","MN",191143,3094711,"0.06","","",23,2022,NA,NA,99
+"2021","Unemployment rate",27,0,"Minnesota","MN",102968,3021361,"0.03","","",23,2023,NA,NA,99
+"2022","Unemployment rate",27,0,"Minnesota","MN",82583,3077508,"0.03","","",23,2024,NA,NA,99
+"2002","Unemployment rate",27,87,"Mahnomen","MN",163,2771,"0.06","","",23,NA,NA,NA,27087
+"2003","Unemployment rate",27,87,"Mahnomen","MN",145,2717,"0.05","","",23,NA,NA,NA,27087
+"2004","Unemployment rate",27,87,"Mahnomen","MN",154,2636,"0.06","","",23,NA,NA,NA,27087
+"2005","Unemployment rate",27,87,"Mahnomen","MN",140,2552,"0.05","","",23,NA,NA,NA,27087
+"2006","Unemployment rate",27,87,"Mahnomen","MN",138,2493,"0.06","","",23,NA,NA,NA,27087
+"2007","Unemployment rate",27,87,"Mahnomen","MN",164,2430,"0.07","","",23,NA,NA,NA,27087
+"2008","Unemployment rate",27,87,"Mahnomen","MN",174,2413,"0.07","","",23,2010,1,NA,27087
+"2009","Unemployment rate",27,87,"Mahnomen","MN",189,2437,"0.08","","",23,2011,1,NA,27087
+"2010","Unemployment rate",27,87,"Mahnomen","MN",207,2503,"0.08","","",23,2012,1,1,27087
+"2011","Unemployment rate",27,87,"Mahnomen","MN",189,2492,"0.08","","",23,2013,1,NA,27087
+"2012","Unemployment rate",27,87,"Mahnomen","MN",172,2485,"0.07","","",23,2014,1,NA,27087
+"2013","Unemployment rate",27,87,"Mahnomen","MN",138,2403,"0.06","","",23,2015,NA,NA,27087
+"2014","Unemployment rate",27,87,"Mahnomen","MN",131,2356,"0.06","","",23,2016,NA,NA,27087
+"2015","Unemployment rate",27,87,"Mahnomen","MN",130,2427,"0.05","","",23,2017,NA,NA,27087
+"2016","Unemployment rate",27,87,"Mahnomen","MN",137,2386,"0.06","","",23,2018,NA,NA,27087
+"2017","Unemployment rate",27,87,"Mahnomen","MN",117,2367,"0.05","","",23,2019,NA,NA,27087
+"2018","Unemployment rate",27,87,"Mahnomen","MN",106,2329,"0.05","","",23,2020,NA,NA,27087
+"2019","Unemployment rate",27,87,"Mahnomen","MN",109,2305,"0.05","","",23,2021,NA,NA,27087
+"2020","Unemployment rate",27,87,"Mahnomen","MN",286,2198,"0.13","","",23,2022,NA,NA,27087
+"2021","Unemployment rate",27,87,"Mahnomen","MN",127,2141,"0.06","","",23,2023,NA,NA,27087
+"2022","Unemployment rate",27,87,"Mahnomen","MN",109,2234,"0.05","","",23,2024,NA,NA,27087
+"2002","Unemployment rate",27,107,"Norman","MN",180,3767,"0.05","","",23,NA,NA,NA,27107
+"2003","Unemployment rate",27,107,"Norman","MN",198,3693,"0.05","","",23,NA,NA,NA,27107
+"2004","Unemployment rate",27,107,"Norman","MN",189,3746,"0.05","","",23,NA,NA,NA,27107
+"2005","Unemployment rate",27,107,"Norman","MN",168,3619,"0.05","","",23,NA,NA,NA,27107
+"2006","Unemployment rate",27,107,"Norman","MN",179,3601,"0.05","","",23,NA,NA,NA,27107
+"2007","Unemployment rate",27,107,"Norman","MN",181,3551,"0.05","","",23,NA,NA,NA,27107
+"2008","Unemployment rate",27,107,"Norman","MN",199,3536,"0.06","","",23,2010,1,NA,27107
+"2009","Unemployment rate",27,107,"Norman","MN",230,3596,"0.06","","",23,2011,1,NA,27107
+"2010","Unemployment rate",27,107,"Norman","MN",248,3603,"0.07","","",23,2012,1,1,27107
+"2011","Unemployment rate",27,107,"Norman","MN",243,3645,"0.07","","",23,2013,1,NA,27107
+"2012","Unemployment rate",27,107,"Norman","MN",207,3532,"0.06","","",23,2014,1,NA,27107
+"2013","Unemployment rate",27,107,"Norman","MN",190,3320,"0.06","","",23,2015,1,NA,27107
+"2014","Unemployment rate",27,107,"Norman","MN",163,3327,"0.05","","",23,2016,NA,NA,27107
+"2015","Unemployment rate",27,107,"Norman","MN",162,3435,"0.05","","",23,2017,NA,NA,27107
+"2016","Unemployment rate",27,107,"Norman","MN",167,3435,"0.05","","",23,2018,NA,NA,27107
+"2017","Unemployment rate",27,107,"Norman","MN",162,3408,"0.05","","",23,2019,NA,NA,27107
+"2018","Unemployment rate",27,107,"Norman","MN",145,3379,"0.04","","",23,2020,NA,NA,27107
+"2019","Unemployment rate",27,107,"Norman","MN",157,3284,"0.05","","",23,2021,NA,NA,27107
+"2020","Unemployment rate",27,107,"Norman","MN",208,3287,"0.06","","",23,2022,NA,NA,27107
+"2021","Unemployment rate",27,107,"Norman","MN",124,3154,"0.04","","",23,2023,NA,NA,27107
+"2022","Unemployment rate",27,107,"Norman","MN",114,3190,"0.04","","",23,2024,NA,NA,27107
+"2002","Unemployment rate",27,119,"Polk","MN",909,16231,"0.06","","",23,NA,NA,NA,27119
+"2003","Unemployment rate",27,119,"Polk","MN",851,16562,"0.05","","",23,NA,NA,NA,27119
+"2004","Unemployment rate",27,119,"Polk","MN",880,16634,"0.05","","",23,NA,NA,NA,27119
+"2005","Unemployment rate",27,119,"Polk","MN",759,16899,"0.04","","",23,NA,NA,NA,27119
+"2006","Unemployment rate",27,119,"Polk","MN",792,17063,"0.05","","",23,NA,NA,NA,27119
+"2007","Unemployment rate",27,119,"Polk","MN",765,16675,"0.05","","",23,NA,NA,NA,27119
+"2008","Unemployment rate",27,119,"Polk","MN",849,16893,"0.05","","",23,2010,NA,NA,27119
+"2009","Unemployment rate",27,119,"Polk","MN",1008,17149,"0.06","","",23,2011,1,NA,27119
+"2010","Unemployment rate",27,119,"Polk","MN",1137,17156,"0.07","","",23,2012,1,1,27119
+"2011","Unemployment rate",27,119,"Polk","MN",1216,17402,"0.07","","",23,2013,1,NA,27119
+"2012","Unemployment rate",27,119,"Polk","MN",1065,17535,"0.06","","",23,2014,1,NA,27119
+"2013","Unemployment rate",27,119,"Polk","MN",909,17120,"0.05","","",23,2015,1,NA,27119
+"2014","Unemployment rate",27,119,"Polk","MN",770,17194,"0.04","","",23,2016,NA,NA,27119
+"2015","Unemployment rate",27,119,"Polk","MN",731,17443,"0.04","","",23,2017,NA,NA,27119
+"2016","Unemployment rate",27,119,"Polk","MN",747,17158,"0.04","","",23,2018,NA,NA,27119
+"2017","Unemployment rate",27,119,"Polk","MN",722,17043,"0.04","","",23,2019,NA,NA,27119
+"2018","Unemployment rate",27,119,"Polk","MN",615,16786,"0.04","","",23,2020,NA,NA,27119
+"2019","Unemployment rate",27,119,"Polk","MN",665,16672,"0.04","","",23,2021,NA,NA,27119
+"2020","Unemployment rate",27,119,"Polk","MN",918,16403,"0.06","","",23,2022,NA,NA,27119
+"2021","Unemployment rate",27,119,"Polk","MN",599,15699,"0.04","","",23,2023,NA,NA,27119
+"2022","Unemployment rate",27,119,"Polk","MN",475,16045,"0.03","","",23,2024,NA,NA,27119
+"2002","Children in poverty",0,0,"United States","US",12132645,NA,"0.17","0.16","0.17",24,NA,NA,NA,9
+"2003","Children in poverty",0,0,"United States","US",12865806,NA,"0.18","0.17","0.18",24,NA,NA,NA,9
+"2004","Children in poverty",0,0,"United States","US",13041492,NA,"0.18","0.17","0.18",24,NA,NA,NA,9
+"2005","Children in poverty",0,0,"United States","US",13360273,NA,"0.19","0.18","0.19",24,NA,NA,NA,9
+"2006","Children in poverty",0,0,"United States","US",13285569,NA,"0.18","0.18","0.19",24,NA,NA,NA,9
+"2007","Children in poverty",0,0,"United States","US",13097100,NA,"0.18","0.18","0.18",24,2010,NA,NA,9
+"2008","Children in poverty",0,0,"United States","US",13240870,NA,"0.18","0.18","0.18",24,2011,NA,NA,9
+"2009","Children in poverty",0,0,"United States","US",14656962,NA,"0.20","0.20","0.20",24,NA,NA,NA,9
+"2010","Children in poverty",0,0,"United States","US",15749129,NA,"0.22","0.21","0.22",24,2012,NA,NA,9
+"2011","Children in poverty",0,0,"United States","US",16386500,NA,"0.23","0.22","0.23",24,2013,NA,NA,9
+"2012","Children in poverty",0,0,"United States","US",16396863,NA,"0.23","0.22","0.23",24,2014,NA,NA,9
+"2013","Children in poverty",0,0,"United States","US",16086960,NA,"0.22","0.22","0.22",24,2015,NA,NA,9
+"2014","Children in poverty",0,0,"United States","US",15686012,NA,"0.22","0.21","0.22",24,2016,NA,NA,9
+"2015","Children in poverty",0,0,"United States","US",15000273,NA,"0.21","0.20","0.21",24,2017,NA,NA,9
+"2016","Children in poverty",0,0,"United States","US",14115713,NA,"0.20","0.19","0.20",24,2018,NA,NA,9
+"2017","Children in poverty",0,0,"United States","US",13353202,NA,"0.18","0.18","0.19",24,2019,NA,NA,9
+"2018","Children in poverty",0,0,"United States","US",12997532,NA,"0.18","0.18","0.18",24,2020,NA,NA,9
+"2019","Children in poverty",0,0,"United States","US",12000470,NA,"0.17","0.17","0.17",24,2021,NA,NA,9
+"2020","Children in poverty",0,0,"United States","US",11204423,NA,"0.16","0.16","0.16",24,2022,NA,NA,9
+"2021","Children in poverty",0,0,"United States","US",12243219,NA,"0.17","0.17","0.17",24,2023,NA,NA,9
+"2022","Children in poverty",0,0,"United States","US",11582950,NA,"0.16","0.16","0.17",24,2024,NA,NA,9
+"2002","Children in poverty",27,0,"Minnesota","MN",109810,NA,"0.09","0.07","0.10",24,NA,NA,NA,99
+"2003","Children in poverty",27,0,"Minnesota","MN",125929,NA,"0.10","0.09","0.12",24,NA,NA,NA,99
+"2004","Children in poverty",27,0,"Minnesota","MN",130284,NA,"0.11","0.09","0.12",24,NA,NA,NA,99
+"2005","Children in poverty",27,0,"Minnesota","MN",139709,NA,"0.12","0.11","0.12",24,NA,NA,NA,99
+"2006","Children in poverty",27,0,"Minnesota","MN",148700,NA,"0.12","0.11","0.13",24,NA,NA,NA,99
+"2007","Children in poverty",27,0,"Minnesota","MN",148294,NA,"0.12","0.11","0.13",24,2010,NA,NA,99
+"2008","Children in poverty",27,0,"Minnesota","MN",141120,NA,"0.11","0.11","0.12",24,2011,NA,NA,99
+"2009","Children in poverty",27,0,"Minnesota","MN",172134,NA,"0.14","0.13","0.15",24,NA,NA,NA,99
+"2010","Children in poverty",27,0,"Minnesota","MN",189999,NA,"0.15","0.14","0.16",24,2012,NA,NA,99
+"2011","Children in poverty",27,0,"Minnesota","MN",192156,NA,"0.15","0.15","0.16",24,2013,NA,NA,99
+"2012","Children in poverty",27,0,"Minnesota","MN",183595,NA,"0.15","0.14","0.15",24,2014,NA,NA,99
+"2013","Children in poverty",27,0,"Minnesota","MN",176274,NA,"0.14","0.13","0.15",24,2015,NA,NA,99
+"2014","Children in poverty",27,0,"Minnesota","MN",186025,NA,"0.15","0.14","0.16",24,2016,NA,NA,99
+"2015","Children in poverty",27,0,"Minnesota","MN",165217,NA,"0.13","0.12","0.14",24,2017,NA,NA,99
+"2016","Children in poverty",27,0,"Minnesota","MN",158751,NA,"0.13","0.12","0.13",24,2018,NA,NA,99
+"2017","Children in poverty",27,0,"Minnesota","MN",149218,NA,"0.12","0.11","0.12",24,2019,NA,NA,99
+"2018","Children in poverty",27,0,"Minnesota","MN",147732,NA,"0.12","0.11","0.12",24,2020,NA,NA,99
+"2019","Children in poverty",27,0,"Minnesota","MN",140103,NA,"0.11","0.10","0.12",24,2021,NA,NA,99
+"2020","Children in poverty",27,0,"Minnesota","MN",121018,NA,"0.10","0.09","0.10",24,2022,NA,NA,99
+"2021","Children in poverty",27,0,"Minnesota","MN",138759,NA,"0.11","0.10","0.11",24,2023,NA,NA,99
+"2022","Children in poverty",27,0,"Minnesota","MN",138469,NA,"0.11","0.10","0.12",24,2024,NA,NA,99
+"2002","Children in poverty",27,87,"Mahnomen","MN",306,NA,"0.22","0.14","0.30",24,NA,NA,NA,27087
+"2003","Children in poverty",27,87,"Mahnomen","MN",323,NA,"0.24","0.16","0.32",24,NA,NA,NA,27087
+"2004","Children in poverty",27,87,"Mahnomen","MN",315,NA,"0.23","0.14","0.31",24,NA,NA,NA,27087
+"2005","Children in poverty",27,87,"Mahnomen","MN",395,NA,"0.29","0.21","0.37",24,NA,NA,NA,27087
+"2006","Children in poverty",27,87,"Mahnomen","MN",396,NA,"0.29","0.21","0.36",24,NA,NA,NA,27087
+"2007","Children in poverty",27,87,"Mahnomen","MN",401,NA,"0.31","0.22","0.40",24,2010,NA,NA,27087
+"2008","Children in poverty",27,87,"Mahnomen","MN",508,NA,"0.36","0.28","0.45",24,2011,NA,NA,27087
+"2009","Children in poverty",27,87,"Mahnomen","MN",499,NA,"0.35","0.25","0.45",24,NA,NA,NA,27087
+"2010","Children in poverty",27,87,"Mahnomen","MN",528,NA,"0.34","0.25","0.43",24,2012,NA,NA,27087
+"2011","Children in poverty",27,87,"Mahnomen","MN",592,NA,"0.37","0.29","0.46",24,2013,NA,NA,27087
+"2012","Children in poverty",27,87,"Mahnomen","MN",558,NA,"0.34","0.26","0.43",24,2014,NA,NA,27087
+"2013","Children in poverty",27,87,"Mahnomen","MN",624,NA,"0.38","0.30","0.47",24,2015,NA,NA,27087
+"2014","Children in poverty",27,87,"Mahnomen","MN",535,NA,"0.33","0.24","0.41",24,2016,NA,NA,27087
+"2015","Children in poverty",27,87,"Mahnomen","MN",555,NA,"0.34","0.27","0.42",24,2017,NA,NA,27087
+"2016","Children in poverty",27,87,"Mahnomen","MN",496,NA,"0.30","0.21","0.38",24,2018,NA,NA,27087
+"2017","Children in poverty",27,87,"Mahnomen","MN",568,NA,"0.33","0.24","0.42",24,2019,NA,NA,27087
+"2018","Children in poverty",27,87,"Mahnomen","MN",505,NA,"0.30","0.21","0.39",24,2020,NA,NA,27087
+"2019","Children in poverty",27,87,"Mahnomen","MN",573,NA,"0.34","0.26","0.41",24,2021,NA,NA,27087
+"2020","Children in poverty",27,87,"Mahnomen","MN",403,NA,"0.24","0.14","0.35",24,2022,NA,NA,27087
+"2021","Children in poverty",27,87,"Mahnomen","MN",498,NA,"0.30","0.21","0.39",24,2023,NA,NA,27087
+"2022","Children in poverty",27,87,"Mahnomen","MN",408,NA,"0.25","0.17","0.33",24,2024,NA,NA,27087
+"2002","Children in poverty",27,107,"Norman","MN",184,NA,"0.11","0.07","0.15",24,NA,NA,NA,27107
+"2003","Children in poverty",27,107,"Norman","MN",222,NA,"0.14","0.09","0.18",24,NA,NA,NA,27107
+"2004","Children in poverty",27,107,"Norman","MN",203,NA,"0.13","0.08","0.17",24,NA,NA,NA,27107
+"2005","Children in poverty",27,107,"Norman","MN",225,NA,"0.15","0.11","0.18",24,NA,NA,NA,27107
+"2006","Children in poverty",27,107,"Norman","MN",254,NA,"0.17","0.12","0.21",24,NA,NA,NA,27107
+"2007","Children in poverty",27,107,"Norman","MN",237,NA,"0.16","0.12","0.21",24,2010,NA,NA,27107
+"2008","Children in poverty",27,107,"Norman","MN",214,NA,"0.15","0.11","0.19",24,2011,NA,NA,27107
+"2009","Children in poverty",27,107,"Norman","MN",309,NA,"0.20","0.15","0.24",24,NA,NA,NA,27107
+"2010","Children in poverty",27,107,"Norman","MN",287,NA,"0.18","0.12","0.23",24,2012,NA,NA,27107
+"2011","Children in poverty",27,107,"Norman","MN",297,NA,"0.19","0.14","0.23",24,2013,NA,NA,27107
+"2012","Children in poverty",27,107,"Norman","MN",255,NA,"0.17","0.12","0.21",24,2014,NA,NA,27107
+"2013","Children in poverty",27,107,"Norman","MN",297,NA,"0.20","0.15","0.25",24,2015,NA,NA,27107
+"2014","Children in poverty",27,107,"Norman","MN",287,NA,"0.19","0.14","0.24",24,2016,NA,NA,27107
+"2015","Children in poverty",27,107,"Norman","MN",267,NA,"0.18","0.13","0.22",24,2017,NA,NA,27107
+"2016","Children in poverty",27,107,"Norman","MN",281,NA,"0.19","0.14","0.24",24,2018,NA,NA,27107
+"2017","Children in poverty",27,107,"Norman","MN",275,NA,"0.18","0.13","0.23",24,2019,NA,NA,27107
+"2018","Children in poverty",27,107,"Norman","MN",257,NA,"0.17","0.11","0.23",24,2020,NA,NA,27107
+"2019","Children in poverty",27,107,"Norman","MN",239,NA,"0.16","0.09","0.22",24,2021,NA,NA,27107
+"2020","Children in poverty",27,107,"Norman","MN",227,NA,"0.15","0.09","0.22",24,2022,NA,NA,27107
+"2021","Children in poverty",27,107,"Norman","MN",261,NA,"0.17","0.11","0.23",24,2023,NA,NA,27107
+"2022","Children in poverty",27,107,"Norman","MN",186,NA,"0.13","0.08","0.17",24,2024,NA,NA,27107
+"2002","Children in poverty",27,119,"Polk","MN",898,NA,"0.13","0.09","0.17",24,NA,NA,NA,27119
+"2003","Children in poverty",27,119,"Polk","MN",1039,NA,"0.15","0.10","0.19",24,NA,NA,NA,27119
+"2004","Children in poverty",27,119,"Polk","MN",1007,NA,"0.14","0.09","0.19",24,NA,NA,NA,27119
+"2005","Children in poverty",27,119,"Polk","MN",1006,NA,"0.15","0.11","0.18",24,NA,NA,NA,27119
+"2006","Children in poverty",27,119,"Polk","MN",1109,NA,"0.16","0.12","0.20",24,NA,NA,NA,27119
+"2007","Children in poverty",27,119,"Polk","MN",1097,NA,"0.16","0.12","0.21",24,2010,NA,NA,27119
+"2008","Children in poverty",27,119,"Polk","MN",1021,NA,"0.15","0.12","0.19",24,2011,NA,NA,27119
+"2009","Children in poverty",27,119,"Polk","MN",1202,NA,"0.17","0.13","0.21",24,NA,NA,NA,27119
+"2010","Children in poverty",27,119,"Polk","MN",1153,NA,"0.16","0.11","0.20",24,2012,NA,NA,27119
+"2011","Children in poverty",27,119,"Polk","MN",1478,NA,"0.20","0.16","0.24",24,2013,NA,NA,27119
+"2012","Children in poverty",27,119,"Polk","MN",1271,NA,"0.18","0.13","0.22",24,2014,NA,NA,27119
+"2013","Children in poverty",27,119,"Polk","MN",1256,NA,"0.17","0.13","0.22",24,2015,NA,NA,27119
+"2014","Children in poverty",27,119,"Polk","MN",1150,NA,"0.16","0.12","0.20",24,2016,NA,NA,27119
+"2015","Children in poverty",27,119,"Polk","MN",1178,NA,"0.16","0.12","0.20",24,2017,NA,NA,27119
+"2016","Children in poverty",27,119,"Polk","MN",1468,NA,"0.20","0.16","0.24",24,2018,NA,NA,27119
+"2017","Children in poverty",27,119,"Polk","MN",1004,NA,"0.13","0.09","0.18",24,2019,NA,NA,27119
+"2018","Children in poverty",27,119,"Polk","MN",1206,NA,"0.16","0.12","0.20",24,2020,NA,NA,27119
+"2019","Children in poverty",27,119,"Polk","MN",1052,NA,"0.14","0.09","0.19",24,2021,NA,NA,27119
+"2020","Children in poverty",27,119,"Polk","MN",892,NA,"0.12","0.07","0.17",24,2022,NA,NA,27119
+"2021","Children in poverty",27,119,"Polk","MN",1124,NA,"0.15","0.10","0.20",24,2023,NA,NA,27119
+"2022","Children in poverty",27,119,"Polk","MN",1030,NA,"0.14","0.09","0.19",24,2024,NA,NA,27119
+"2007","Sexually transmitted infections",0,0,"United States","US",2216748,598796968,"370.20","","",45,2010,NA,NA,9
+"2008","Sexually transmitted infections",0,0,"United States","US",2414122,602683251,"400.60","","",45,2011,NA,NA,9
+"2009","Sexually transmitted infections",0,0,"United States","US",1237631,303456034,"407.80","","",45,2012,NA,NA,9
+"2010","Sexually transmitted infections",0,0,"United States","US",1301473,308745538,"421.50","","",45,2013,NA,NA,9
+"2011","Sexually transmitted infections",0,0,"United States","US",1412791,311591917,"453.40","","",45,2014,NA,NA,9
+"2012","Sexually transmitted infections",0,0,"United States","US",1422976,313914040,"453.30","","",45,2015,NA,NA,9
+"2013","Sexually transmitted infections",0,0,"United States","US",1401906,313914040,"446.60","","",45,2016,NA,NA,9
+"2014","Sexually transmitted infections",0,0,"United States","US",1441789,316128839,"456.10","","",45,2017,NA,NA,9
+"2015","Sexually transmitted infections",0,0,"United States","US",1526658,318857056,"478.80","","",45,2018,NA,NA,9
+"2016","Sexually transmitted infections",0,0,"United States","US",1598354,321418820,"497.30","","",45,2019,NA,NA,9
+"2017","Sexually transmitted infections",0,0,"United States","US",1708569,325719178,"524.60","","",45,2020,NA,NA,9
+"2018","Sexually transmitted infections",0,0,"United States","US",1758668,325719178,"539.90","","",45,2021,NA,NA,9
+"2019","Sexually transmitted infections",0,0,"United States","US",1808703,328239523,"551.00","","",45,2022,NA,NA,9
+"2020","Sexually transmitted infections",0,0,"United States","US",1579885,328239523,"481.30","","",45,2023,NA,NA,9
+"2021","Sexually transmitted infections",0,0,"United States","US",1644416,331893745,"495.50","","",45,2024,NA,NA,9
+"2007","Sexually transmitted infections",27,0,"Minnesota","MN",13413,5167101,"259.60","","",45,2010,NA,NA,99
+"2008","Sexually transmitted infections",27,0,"Minnesota","MN",14351,5197621,"276.10","","",45,2011,NA,NA,99
+"2009","Sexually transmitted infections",27,0,"Minnesota","MN",14197,5219485,"272.00","","",45,2012,NA,NA,99
+"2010","Sexually transmitted infections",27,0,"Minnesota","MN",14630,5303925,"275.80","","",45,2013,NA,NA,99
+"2011","Sexually transmitted infections",27,0,"Minnesota","MN",16902,5344861,"316.20","","",45,2014,NA,NA,99
+"2012","Sexually transmitted infections",27,0,"Minnesota","MN",18056,5379139,"335.70","","",45,2015,NA,NA,99
+"2013","Sexually transmitted infections",27,0,"Minnesota","MN",18742,5379139,"348.40","","",45,2016,NA,NA,99
+"2014","Sexually transmitted infections",27,0,"Minnesota","MN",19907,5420380,"367.30","","",45,2017,NA,NA,99
+"2015","Sexually transmitted infections",27,0,"Minnesota","MN",21243,5457173,"389.30","","",45,2018,NA,NA,99
+"2016","Sexually transmitted infections",27,0,"Minnesota","MN",22685,5489594,"413.20","","",45,2019,NA,NA,99
+"2017","Sexually transmitted infections",27,0,"Minnesota","MN",23539,5576606,"422.10","","",45,2020,NA,NA,99
+"2018","Sexually transmitted infections",27,0,"Minnesota","MN",23569,5576606,"422.60","","",45,2021,NA,NA,99
+"2019","Sexually transmitted infections",27,0,"Minnesota","MN",24470,5639632,"433.90","","",45,2022,NA,NA,99
+"2020","Sexually transmitted infections",27,0,"Minnesota","MN",22114,5639632,"392.10","","",45,2023,NA,NA,99
+"2021","Sexually transmitted infections",27,0,"Minnesota","MN",22573,5707390,"395.50","","",45,2024,NA,NA,99
+"2007","Sexually transmitted infections",27,87,"Mahnomen","MN",6,5072,"118.30","","",45,2010,NA,NA,27087
+"2008","Sexually transmitted infections",27,87,"Mahnomen","MN",14,5128,"273.00","","",45,2011,NA,NA,27087
+"2009","Sexually transmitted infections",27,87,"Mahnomen","MN",17,5128,"331.50","","",45,2012,NA,NA,27087
+"2010","Sexually transmitted infections",27,87,"Mahnomen","MN",9,5413,"166.30","","",45,2013,NA,NA,27087
+"2011","Sexually transmitted infections",27,87,"Mahnomen","MN",13,5456,"238.30","","",45,2014,NA,NA,27087
+"2012","Sexually transmitted infections",27,87,"Mahnomen","MN",19,5536,"343.20","","",45,2015,NA,NA,27087
+"2013","Sexually transmitted infections",27,87,"Mahnomen","MN",15,5536,"271.00","","",45,2016,NA,NA,27087
+"2014","Sexually transmitted infections",27,87,"Mahnomen","MN",14,5532,"253.10","","",45,2017,NA,NA,27087
+"2015","Sexually transmitted infections",27,87,"Mahnomen","MN",47,5505,"853.80","","",45,2018,NA,NA,27087
+"2016","Sexually transmitted infections",27,87,"Mahnomen","MN",58,5457,"1,062.90","","",45,2019,NA,NA,27087
+"2017","Sexually transmitted infections",27,87,"Mahnomen","MN",38,5596,"679.10","","",45,2020,NA,NA,27087
+"2018","Sexually transmitted infections",27,87,"Mahnomen","MN",42,5596,"750.50","","",45,2021,NA,NA,27087
+"2019","Sexually transmitted infections",27,87,"Mahnomen","MN",32,5527,"579.00","","",45,2022,NA,NA,27087
+"2020","Sexually transmitted infections",27,87,"Mahnomen","MN",22,5527,"398.00","","",45,2023,NA,NA,27087
+"2021","Sexually transmitted infections",27,87,"Mahnomen","MN",21,5414,"387.90","","",45,2024,NA,NA,27087
+"2007","Sexually transmitted infections",27,107,"Norman","MN",3,6850,"43.80","","",45,2010,NA,NA,27107
+"2008","Sexually transmitted infections",27,107,"Norman","MN",6,6605,"90.80","","",45,2011,NA,NA,27107
+"2009","Sexually transmitted infections",27,107,"Norman","MN",9,6603,"136.30","","",45,2012,NA,NA,27107
+"2010","Sexually transmitted infections",27,107,"Norman","MN",3,6852,"43.80","","",45,2013,NA,NA,27107
+"2011","Sexually transmitted infections",27,107,"Norman","MN",4,6869,"58.20","","",45,2014,NA,NA,27107
+"2012","Sexually transmitted infections",27,107,"Norman","MN",5,6634,"75.40","","",45,2015,NA,NA,27107
+"2013","Sexually transmitted infections",27,107,"Norman","MN",12,6634,"180.90","","",45,2016,NA,NA,27107
+"2014","Sexually transmitted infections",27,107,"Norman","MN",2,6631,"30.20","","",45,2017,NA,NA,27107
+"2015","Sexually transmitted infections",27,107,"Norman","MN",11,6639,"165.70","","",45,2018,NA,NA,27107
+"2016","Sexually transmitted infections",27,107,"Norman","MN",13,6678,"194.70","","",45,2019,NA,NA,27107
+"2017","Sexually transmitted infections",27,107,"Norman","MN",12,6597,"181.90","","",45,2020,NA,NA,27107
+"2018","Sexually transmitted infections",27,107,"Norman","MN",4,6597,"60.60","","",45,2021,NA,NA,27107
+"2019","Sexually transmitted infections",27,107,"Norman","MN",12,6375,"188.20","","",45,2022,NA,NA,27107
+"2020","Sexually transmitted infections",27,107,"Norman","MN",16,6375,"251.00","","",45,2023,NA,NA,27107
+"2021","Sexually transmitted infections",27,107,"Norman","MN",14,6416,"218.20","","",45,2024,NA,NA,27107
+"2007","Sexually transmitted infections",27,119,"Polk","MN",25,31088,"80.40","","",45,2010,NA,NA,27119
+"2008","Sexually transmitted infections",27,119,"Polk","MN",44,30694,"143.40","","",45,2011,NA,NA,27119
+"2009","Sexually transmitted infections",27,119,"Polk","MN",38,30695,"123.80","","",45,2012,NA,NA,27119
+"2010","Sexually transmitted infections",27,119,"Polk","MN",40,31600,"126.60","","",45,2013,NA,NA,27119
+"2011","Sexually transmitted infections",27,119,"Polk","MN",62,31456,"197.10","","",45,2014,NA,NA,27119
+"2012","Sexually transmitted infections",27,119,"Polk","MN",71,31416,"226.00","","",45,2015,NA,NA,27119
+"2013","Sexually transmitted infections",27,119,"Polk","MN",58,31416,"184.60","","",45,2016,NA,NA,27119
+"2014","Sexually transmitted infections",27,119,"Polk","MN",81,31569,"256.60","","",45,2017,NA,NA,27119
+"2015","Sexually transmitted infections",27,119,"Polk","MN",85,31704,"268.10","","",45,2018,NA,NA,27119
+"2016","Sexually transmitted infections",27,119,"Polk","MN",69,31533,"218.80","","",45,2019,NA,NA,27119
+"2017","Sexually transmitted infections",27,119,"Polk","MN",60,31619,"189.80","","",45,2020,NA,NA,27119
+"2018","Sexually transmitted infections",27,119,"Polk","MN",70,31619,"221.40","","",45,2021,NA,NA,27119
+"2019","Sexually transmitted infections",27,119,"Polk","MN",66,31364,"210.40","","",45,2022,NA,NA,27119
+"2020","Sexually transmitted infections",27,119,"Polk","MN",54,31364,"172.20","","",45,2023,NA,NA,27119
+"2021","Sexually transmitted infections",27,119,"Polk","MN",59,30757,"191.80","","",45,2024,NA,NA,27119
+"2012","Mammography screening",0,0,"United States","US",NA,NA,"0.40","","",50,NA,NA,NA,9
+"2013","Mammography screening",0,0,"United States","US",NA,NA,"0.40","","",50,NA,NA,NA,9
+"2014","Mammography screening",0,0,"United States","US",NA,NA,"0.40","","",50,NA,NA,NA,9
+"2015","Mammography screening",0,0,"United States","US",NA,NA,"0.40","","",50,NA,NA,NA,9
+"2016","Mammography screening",0,0,"United States","US",NA,NA,"0.41","","",50,2019,NA,NA,9
+"2017","Mammography screening",0,0,"United States","US",NA,NA,"0.42","","",50,2020,NA,NA,9
+"2018","Mammography screening",0,0,"United States","US",NA,NA,"0.42","","",50,2021,NA,NA,9
+"2019","Mammography screening",0,0,"United States","US",NA,NA,"0.43","","",50,2022,NA,NA,9
+"2020","Mammography screening",0,0,"United States","US",NA,NA,"0.37","","",50,2023,NA,NA,9
+"2021","Mammography screening",0,0,"United States","US",NA,NA,"0.43","","",50,2024,NA,NA,9
+"2012","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.48","","",50,NA,NA,NA,99
+"2013","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.47","","",50,NA,NA,NA,99
+"2014","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.45","","",50,NA,NA,NA,99
+"2015","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.44","","",50,NA,NA,NA,99
+"2016","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.46","","",50,2019,NA,NA,99
+"2017","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.46","","",50,2020,NA,NA,99
+"2018","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.45","","",50,2021,NA,NA,99
+"2019","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.52","","",50,2022,NA,NA,99
+"2020","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.45","","",50,2023,NA,NA,99
+"2021","Mammography screening",27,0,"Minnesota","MN",NA,NA,"0.52","","",50,2024,NA,NA,99
+"2012","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.36","","",50,NA,NA,NA,27087
+"2013","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.39","","",50,NA,NA,NA,27087
+"2014","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.44","","",50,NA,NA,NA,27087
+"2015","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.35","","",50,NA,NA,NA,27087
+"2016","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.48","","",50,2019,NA,NA,27087
+"2017","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.33","","",50,2020,NA,NA,27087
+"2018","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.35","","",50,2021,NA,NA,27087
+"2019","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.40","","",50,2022,NA,NA,27087
+"2020","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.33","","",50,2023,NA,NA,27087
+"2021","Mammography screening",27,87,"Mahnomen","MN",NA,NA,"0.37","","",50,2024,NA,NA,27087
+"2012","Mammography screening",27,107,"Norman","MN",NA,NA,"0.53","","",50,NA,NA,NA,27107
+"2013","Mammography screening",27,107,"Norman","MN",NA,NA,"0.53","","",50,NA,NA,NA,27107
+"2014","Mammography screening",27,107,"Norman","MN",NA,NA,"0.46","","",50,NA,NA,NA,27107
+"2015","Mammography screening",27,107,"Norman","MN",NA,NA,"0.45","","",50,NA,NA,NA,27107
+"2016","Mammography screening",27,107,"Norman","MN",NA,NA,"0.51","","",50,2019,NA,NA,27107
+"2017","Mammography screening",27,107,"Norman","MN",NA,NA,"0.49","","",50,2020,NA,NA,27107
+"2018","Mammography screening",27,107,"Norman","MN",NA,NA,"0.45","","",50,2021,NA,NA,27107
+"2019","Mammography screening",27,107,"Norman","MN",NA,NA,"0.44","","",50,2022,NA,NA,27107
+"2020","Mammography screening",27,107,"Norman","MN",NA,NA,"0.49","","",50,2023,NA,NA,27107
+"2021","Mammography screening",27,107,"Norman","MN",NA,NA,"0.52","","",50,2024,NA,NA,27107
+"2012","Mammography screening",27,119,"Polk","MN",NA,NA,"0.46","","",50,NA,NA,NA,27119
+"2013","Mammography screening",27,119,"Polk","MN",NA,NA,"0.51","","",50,NA,NA,NA,27119
+"2014","Mammography screening",27,119,"Polk","MN",NA,NA,"0.50","","",50,NA,NA,NA,27119
+"2015","Mammography screening",27,119,"Polk","MN",NA,NA,"0.46","","",50,NA,NA,NA,27119
+"2016","Mammography screening",27,119,"Polk","MN",NA,NA,"0.43","","",50,2019,NA,NA,27119
+"2017","Mammography screening",27,119,"Polk","MN",NA,NA,"0.49","","",50,2020,NA,NA,27119
+"2018","Mammography screening",27,119,"Polk","MN",NA,NA,"0.47","","",50,2021,NA,NA,27119
+"2019","Mammography screening",27,119,"Polk","MN",NA,NA,"0.55","","",50,2022,NA,NA,27119
+"2020","Mammography screening",27,119,"Polk","MN",NA,NA,"0.50","","",50,2023,NA,NA,27119
+"2021","Mammography screening",27,119,"Polk","MN",NA,NA,"0.57","","",50,2024,NA,NA,27119
+"2008","Uninsured",0,0,"United States","US",42872800,258974869,"0.17","","",85,NA,NA,1,9
+"2009","Uninsured",0,0,"United States","US",45000889,260593564,"0.17","","",85,2012,NA,NA,9
+"2010","Uninsured",0,0,"United States","US",46556803,262403381,"0.18","","",85,2013,NA,NA,9
+"2011","Uninsured",0,0,"United States","US",45725534,263691942,"0.17","","",85,2014,NA,NA,9
+"2012","Uninsured",0,0,"United States","US",44960048,264246236,"0.17","","",85,2015,NA,NA,9
+"2013","Uninsured",0,0,"United States","US",44477970,264843216,"0.17","","",85,2016,NA,NA,9
+"2014","Uninsured",0,0,"United States","US",36013970,265987110,"0.14","","",85,2017,NA,NA,9
+"2015","Uninsured",0,0,"United States","US",29165227,267039414,"0.11","","",85,2018,NA,NA,9
+"2016","Uninsured",0,0,"United States","US",26749668,267259921,"0.10","","",85,2019,NA,NA,9
+"2017","Uninsured",0,0,"United States","US",27423485,268241109,"0.10","","",85,2020,NA,NA,9
+"2018","Uninsured",0,0,"United States","US",27954329,268046715,"0.10","","",85,2021,NA,NA,9
+"2019","Uninsured",0,0,"United States","US",28980723,267336463,"0.11","","",85,2022,NA,NA,9
+"2020","Uninsured",0,0,"United States","US",27895218,267068505,"0.10","","",85,2023,NA,NA,9
+"2021","Uninsured",0,0,"United States","US",27558913,269431290,"0.10","","",85,2024,NA,NA,9
+"2008","Uninsured",27,0,"Minnesota","MN",423662,4479768,"0.10","0.09","0.10",85,NA,NA,1,99
+"2009","Uninsured",27,0,"Minnesota","MN",460534,4504582,"0.10","0.10","0.10",85,2012,NA,NA,99
+"2010","Uninsured",27,0,"Minnesota","MN",468857,4534170,"0.10","0.10","0.11",85,2013,NA,NA,99
+"2011","Uninsured",27,0,"Minnesota","MN",462930,4552568,"0.10","0.10","0.10",85,2014,NA,NA,99
+"2012","Uninsured",27,0,"Minnesota","MN",419196,4559034,"0.09","0.09","0.09",85,2015,NA,NA,99
+"2013","Uninsured",27,0,"Minnesota","MN",433829,4572497,"0.09","0.09","0.10",85,2016,NA,NA,99
+"2014","Uninsured",27,0,"Minnesota","MN",308991,4586949,"0.07","0.06","0.07",85,2017,NA,NA,99
+"2015","Uninsured",27,0,"Minnesota","MN",237981,4596596,"0.05","0.05","0.05",85,2018,NA,NA,99
+"2016","Uninsured",27,0,"Minnesota","MN",220535,4602327,"0.05","0.05","0.05",85,2019,NA,NA,99
+"2017","Uninsured",27,0,"Minnesota","MN",235543,4631892,"0.05","0.05","0.05",85,2020,NA,NA,99
+"2018","Uninsured",27,0,"Minnesota","MN",238150,4636753,"0.05","0.05","0.05",85,2021,NA,NA,99
+"2019","Uninsured",27,0,"Minnesota","MN",268829,4632952,"0.06","0.06","0.06",85,2022,NA,NA,99
+"2020","Uninsured",27,0,"Minnesota","MN",274124,4632875,"0.06","0.06","0.06",85,2023,NA,NA,99
+"2021","Uninsured",27,0,"Minnesota","MN",247589,4672677,"0.05","0.05","0.06",85,2024,NA,NA,99
+"2008","Uninsured",27,87,"Mahnomen","MN",608,4286,"0.14","0.11","0.17",85,NA,NA,1,27087
+"2009","Uninsured",27,87,"Mahnomen","MN",602,4211,"0.14","0.13","0.16",85,2012,NA,NA,27087
+"2010","Uninsured",27,87,"Mahnomen","MN",655,4630,"0.14","0.12","0.16",85,2013,NA,NA,27087
+"2011","Uninsured",27,87,"Mahnomen","MN",695,4686,"0.15","0.13","0.17",85,2014,NA,NA,27087
+"2012","Uninsured",27,87,"Mahnomen","MN",641,4645,"0.14","0.12","0.15",85,2015,NA,NA,27087
+"2013","Uninsured",27,87,"Mahnomen","MN",640,4554,"0.14","0.12","0.16",85,2016,1,NA,27087
+"2014","Uninsured",27,87,"Mahnomen","MN",467,4518,"0.10","0.09","0.12",85,2017,NA,NA,27087
+"2015","Uninsured",27,87,"Mahnomen","MN",400,4439,"0.09","0.08","0.10",85,2018,NA,NA,27087
+"2016","Uninsured",27,87,"Mahnomen","MN",371,4433,"0.08","0.07","0.10",85,2019,NA,NA,27087
+"2017","Uninsured",27,87,"Mahnomen","MN",430,4534,"0.09","0.08","0.11",85,2020,NA,NA,27087
+"2018","Uninsured",27,87,"Mahnomen","MN",405,4476,"0.09","0.08","0.10",85,2021,NA,NA,27087
+"2019","Uninsured",27,87,"Mahnomen","MN",432,4457,"0.10","0.08","0.11",85,2022,NA,NA,27087
+"2020","Uninsured",27,87,"Mahnomen","MN",522,4557,"0.11","0.10","0.13",85,2023,NA,NA,27087
+"2021","Uninsured",27,87,"Mahnomen","MN",378,4050,"0.09","0.08","0.11",85,2024,NA,NA,27087
+"2008","Uninsured",27,107,"Norman","MN",690,5166,"0.13","0.11","0.16",85,NA,NA,1,27107
+"2009","Uninsured",27,107,"Norman","MN",675,5017,"0.14","0.12","0.15",85,2012,NA,NA,27107
+"2010","Uninsured",27,107,"Norman","MN",667,5364,"0.12","0.11","0.14",85,2013,NA,NA,27107
+"2011","Uninsured",27,107,"Norman","MN",631,5379,"0.12","0.10","0.13",85,2014,NA,NA,27107
+"2012","Uninsured",27,107,"Norman","MN",540,5160,"0.10","0.09","0.12",85,2015,NA,NA,27107
+"2013","Uninsured",27,107,"Norman","MN",550,5155,"0.11","0.09","0.12",85,2016,1,NA,27107
+"2014","Uninsured",27,107,"Norman","MN",398,5144,"0.08","0.07","0.09",85,2017,NA,NA,27107
+"2015","Uninsured",27,107,"Norman","MN",353,5189,"0.07","0.06","0.08",85,2018,NA,NA,27107
+"2016","Uninsured",27,107,"Norman","MN",315,5083,"0.06","0.05","0.07",85,2019,NA,NA,27107
+"2017","Uninsured",27,107,"Norman","MN",332,5156,"0.06","0.05","0.07",85,2020,NA,NA,27107
+"2018","Uninsured",27,107,"Norman","MN",306,5029,"0.06","0.05","0.07",85,2021,NA,NA,27107
+"2019","Uninsured",27,107,"Norman","MN",331,4929,"0.07","0.06","0.08",85,2022,NA,NA,27107
+"2020","Uninsured",27,107,"Norman","MN",427,4895,"0.09","0.07","0.10",85,2023,NA,NA,27107
+"2021","Uninsured",27,107,"Norman","MN",344,5040,"0.07","0.06","0.08",85,2024,NA,NA,27107
+"2008","Uninsured",27,119,"Polk","MN",2666,24678,"0.11","0.09","0.13",85,NA,NA,1,27119
+"2009","Uninsured",27,119,"Polk","MN",2817,25099,"0.11","0.10","0.12",85,2012,NA,NA,27119
+"2010","Uninsured",27,119,"Polk","MN",2496,25575,"0.10","0.09","0.11",85,2013,NA,NA,27119
+"2011","Uninsured",27,119,"Polk","MN",2688,25520,"0.11","0.09","0.12",85,2014,NA,NA,27119
+"2012","Uninsured",27,119,"Polk","MN",2328,25321,"0.09","0.08","0.10",85,2015,NA,NA,27119
+"2013","Uninsured",27,119,"Polk","MN",2533,25333,"0.10","0.09","0.11",85,2016,1,NA,27119
+"2014","Uninsured",27,119,"Polk","MN",1896,25387,"0.07","0.07","0.08",85,2017,NA,NA,27119
+"2015","Uninsured",27,119,"Polk","MN",1347,25249,"0.05","0.05","0.06",85,2018,NA,NA,27119
+"2016","Uninsured",27,119,"Polk","MN",1294,25262,"0.05","0.04","0.06",85,2019,NA,NA,27119
+"2017","Uninsured",27,119,"Polk","MN",1438,25199,"0.06","0.05","0.07",85,2020,NA,NA,27119
+"2018","Uninsured",27,119,"Polk","MN",1318,25004,"0.05","0.05","0.06",85,2021,NA,NA,27119
+"2019","Uninsured",27,119,"Polk","MN",1376,24725,"0.06","0.05","0.06",85,2022,NA,NA,27119
+"2020","Uninsured",27,119,"Polk","MN",1876,24209,"0.08","0.07","0.09",85,2023,NA,NA,27119
+"2021","Uninsured",27,119,"Polk","MN",1614,24328,"0.07","0.06","0.08",85,2024,NA,NA,27119
+"2010","Dentists",0,0,"United States","US",181949,309348193,"1,700.19","","",88,2013,NA,NA,9
+"2011","Dentists",0,0,"United States","US",187773,311663358,"1,659.79","","",88,NA,NA,NA,9
+"2012","Dentists",0,0,"United States","US",193579,313998379,"1,622.07","","",88,2014,NA,NA,9
+"2013","Dentists",0,0,"United States","US",199735,316204908,"1,583.12","","",88,2015,NA,NA,9
+"2014","Dentists",0,0,"United States","US",206424,318563456,"1,543.25","","",88,2016,NA,NA,9
+"2015","Dentists",0,0,"United States","US",210832,320896618,"1,522.05","","",88,2017,NA,NA,9
+"2016","Dentists",0,0,"United States","US",217660,323127513,"1,484.55","","",88,2018,NA,NA,9
+"2017","Dentists",0,0,"United States","US",222892,325719178,"1,461.33","","",88,2019,NA,NA,9
+"2018","Dentists",0,0,"United States","US",226154,327167434,"1,446.66","","",88,2020,NA,NA,9
+"2019","Dentists",0,0,"United States","US",233699,328239523,"1,404.54","","",88,2021,NA,NA,9
+"2020","Dentists",0,0,"United States","US",235535,329484123,"1,398.88","","",88,2022,NA,NA,9
+"2021","Dentists",0,0,"United States","US",240517,331893745,"1,379.92","","",88,2023,NA,NA,9
+"2022","Dentists",0,0,"United States","US",244838,333287557,"1,361.26","","",88,2024,NA,NA,9
+"2010","Dentists",27,0,"Minnesota","MN",3281,5311147,"1,618.76","","",88,2013,NA,NA,99
+"2011","Dentists",27,0,"Minnesota","MN",3366,5348562,"1,589.00","","",88,NA,NA,NA,99
+"2012","Dentists",27,0,"Minnesota","MN",3444,5380285,"1,562.22","","",88,2014,NA,NA,99
+"2013","Dentists",27,0,"Minnesota","MN",3544,5418521,"1,528.93","","",88,2015,NA,NA,99
+"2014","Dentists",27,0,"Minnesota","MN",3650,5453109,"1,494.00","","",88,2016,NA,NA,99
+"2015","Dentists",27,0,"Minnesota","MN",3721,5482435,"1,473.38","","",88,2017,NA,NA,99
+"2016","Dentists",27,0,"Minnesota","MN",3831,5519952,"1,440.86","","",88,2018,NA,NA,99
+"2017","Dentists",27,0,"Minnesota","MN",3949,5576606,"1,412.16","","",88,2019,NA,NA,99
+"2018","Dentists",27,0,"Minnesota","MN",4025,5611179,"1,394.08","","",88,2020,NA,NA,99
+"2019","Dentists",27,0,"Minnesota","MN",4215,5639632,"1,337.99","","",88,2021,NA,NA,99
+"2020","Dentists",27,0,"Minnesota","MN",4279,5657342,"1,322.12","","",88,2022,NA,NA,99
+"2021","Dentists",27,0,"Minnesota","MN",4366,5707390,"1,307.24","","",88,2023,NA,NA,99
+"2022","Dentists",27,0,"Minnesota","MN",4441,5717184,"1,287.36","","",88,2024,NA,NA,99
+"2010","Dentists",27,87,"Mahnomen","MN",0,5425,"","","",88,2013,1,NA,27087
+"2011","Dentists",27,87,"Mahnomen","MN",0,5490,"","","",88,NA,NA,NA,27087
+"2012","Dentists",27,87,"Mahnomen","MN",0,5515,"","","",88,2014,1,NA,27087
+"2013","Dentists",27,87,"Mahnomen","MN",0,5482,"","","",88,2015,1,NA,27087
+"2014","Dentists",27,87,"Mahnomen","MN",0,5507,"","","",88,2016,1,NA,27087
+"2015","Dentists",27,87,"Mahnomen","MN",0,5430,"","","",88,2017,1,NA,27087
+"2016","Dentists",27,87,"Mahnomen","MN",0,5465,"","","",88,2018,NA,NA,27087
+"2017","Dentists",27,87,"Mahnomen","MN",0,5596,"","","",88,2019,NA,NA,27087
+"2018","Dentists",27,87,"Mahnomen","MN",0,5519,"","","",88,2020,NA,NA,27087
+"2019","Dentists",27,87,"Mahnomen","MN",0,5527,"","","",88,2021,NA,NA,27087
+"2020","Dentists",27,87,"Mahnomen","MN",0,5473,"","","",88,2022,NA,NA,27087
+"2021","Dentists",27,87,"Mahnomen","MN",0,5414,"","","",88,2023,NA,NA,27087
+"2022","Dentists",27,87,"Mahnomen","MN",0,5328,"","","",88,2024,NA,NA,27087
+"2010","Dentists",27,107,"Norman","MN",3,6849,"2,283.00","","",88,2013,1,NA,27107
+"2011","Dentists",27,107,"Norman","MN",3,6847,"2,282.33","","",88,NA,NA,NA,27107
+"2012","Dentists",27,107,"Norman","MN",3,6645,"2,215.00","","",88,2014,1,NA,27107
+"2013","Dentists",27,107,"Norman","MN",3,6659,"2,219.67","","",88,2015,1,NA,27107
+"2014","Dentists",27,107,"Norman","MN",3,6637,"2,212.33","","",88,2016,1,NA,27107
+"2015","Dentists",27,107,"Norman","MN",4,6672,"1,668.00","","",88,2017,1,NA,27107
+"2016","Dentists",27,107,"Norman","MN",4,6579,"1,644.75","","",88,2018,NA,NA,27107
+"2017","Dentists",27,107,"Norman","MN",4,6597,"1,649.25","","",88,2019,NA,NA,27107
+"2018","Dentists",27,107,"Norman","MN",4,6475,"1,618.75","","",88,2020,NA,NA,27107
+"2019","Dentists",27,107,"Norman","MN",4,6375,"1,593.75","","",88,2021,NA,NA,27107
+"2020","Dentists",27,107,"Norman","MN",4,6338,"1,584.50","","",88,2022,NA,NA,27107
+"2021","Dentists",27,107,"Norman","MN",4,6416,"1,604.00","","",88,2023,NA,NA,27107
+"2022","Dentists",27,107,"Norman","MN",4,6377,"1,594.25","","",88,2024,NA,NA,27107
+"2010","Dentists",27,119,"Polk","MN",14,31629,"2,259.21","","",88,2013,1,NA,27119
+"2011","Dentists",27,119,"Polk","MN",14,31548,"2,253.43","","",88,NA,NA,NA,27119
+"2012","Dentists",27,119,"Polk","MN",15,31492,"2,099.47","","",88,2014,1,NA,27119
+"2013","Dentists",27,119,"Polk","MN",16,31649,"1,978.06","","",88,2015,1,NA,27119
+"2014","Dentists",27,119,"Polk","MN",16,31471,"1,966.94","","",88,2016,1,NA,27119
+"2015","Dentists",27,119,"Polk","MN",16,31480,"1,967.50","","",88,2017,1,NA,27119
+"2016","Dentists",27,119,"Polk","MN",16,31660,"1,978.75","","",88,2018,NA,NA,27119
+"2017","Dentists",27,119,"Polk","MN",16,31619,"1,976.19","","",88,2019,NA,NA,27119
+"2018","Dentists",27,119,"Polk","MN",16,31529,"1,970.56","","",88,2020,NA,NA,27119
+"2019","Dentists",27,119,"Polk","MN",16,31364,"1,960.25","","",88,2021,NA,NA,27119
+"2020","Dentists",27,119,"Polk","MN",16,30900,"1,931.25","","",88,2022,NA,NA,27119
+"2021","Dentists",27,119,"Polk","MN",14,30757,"2,196.93","","",88,2023,NA,NA,27119
+"2022","Dentists",27,119,"Polk","MN",14,30731,"2,195.07","","",88,2024,NA,NA,27119
+"2008","Uninsured children",0,0,"United States","US",7474541,76811911,"0.10","","",122,NA,NA,NA,9
+"2009","Uninsured children",0,0,"United States","US",6966974,77255216,"0.09","","",122,NA,NA,NA,9
+"2010","Uninsured children",0,0,"United States","US",6505941,76968561,"0.08","","",122,2013,NA,NA,9
+"2011","Uninsured children",0,0,"United States","US",6059050,76751902,"0.08","","",122,2014,NA,NA,9
+"2012","Uninsured children",0,0,"United States","US",5763259,76468844,"0.08","","",122,2015,NA,NA,9
+"2013","Uninsured children",0,0,"United States","US",5724661,76195404,"0.08","","",122,2016,NA,NA,9
+"2014","Uninsured children",0,0,"United States","US",4780337,76146139,"0.06","","",122,2017,NA,NA,9
+"2015","Uninsured children",0,0,"United States","US",3847430,76217025,"0.05","","",122,2018,NA,NA,9
+"2016","Uninsured children",0,0,"United States","US",3559597,76219054,"0.05","","",122,2019,NA,NA,9
+"2017","Uninsured children",0,0,"United States","US",3808383,76244403,"0.05","","",122,2020,NA,NA,9
+"2018","Uninsured children",0,0,"United States","US",3942743,75996420,"0.05","","",122,2021,NA,NA,9
+"2019","Uninsured children",0,0,"United States","US",4236101,75374000,"0.06","","",122,2022,NA,NA,9
+"2020","Uninsured children",0,0,"United States","US",4038715,74854414,"0.05","","",122,2023,NA,NA,9
+"2021","Uninsured children",0,0,"United States","US",4041291,75979898,"0.05","","",122,2024,NA,NA,9
+"2008","Uninsured children",27,0,"Minnesota","MN",78487,1303383,"0.06","0.06","0.06",122,NA,NA,NA,99
+"2009","Uninsured children",27,0,"Minnesota","MN",87415,1309088,"0.07","0.06","0.07",122,NA,NA,NA,99
+"2010","Uninsured children",27,0,"Minnesota","MN",88701,1330996,"0.07","0.06","0.07",122,2013,NA,NA,99
+"2011","Uninsured children",27,0,"Minnesota","MN",85362,1326378,"0.06","0.06","0.07",122,2014,NA,NA,99
+"2012","Uninsured children",27,0,"Minnesota","MN",72238,1323646,"0.05","0.05","0.06",122,2015,NA,NA,99
+"2013","Uninsured children",27,0,"Minnesota","MN",77832,1321767,"0.06","0.05","0.06",122,2016,NA,NA,99
+"2014","Uninsured children",27,0,"Minnesota","MN",49520,1324272,"0.04","0.03","0.04",122,2017,NA,NA,99
+"2015","Uninsured children",27,0,"Minnesota","MN",40427,1327450,"0.03","0.03","0.03",122,2018,NA,NA,99
+"2016","Uninsured children",27,0,"Minnesota","MN",42872,1331783,"0.03","0.03","0.04",122,2019,NA,NA,99
+"2017","Uninsured children",27,0,"Minnesota","MN",44293,1341353,"0.03","0.03","0.04",122,2020,NA,NA,99
+"2018","Uninsured children",27,0,"Minnesota","MN",43894,1345722,"0.03","0.03","0.04",122,2021,NA,NA,99
+"2019","Uninsured children",27,0,"Minnesota","MN",40954,1342620,"0.03","0.03","0.03",122,2022,NA,NA,99
+"2020","Uninsured children",27,0,"Minnesota","MN",46870,1340070,"0.03","0.03","0.04",122,2023,NA,NA,99
+"2021","Uninsured children",27,0,"Minnesota","MN",42794,1360293,"0.03","0.03","0.04",122,2024,NA,NA,99
+"2008","Uninsured children",27,87,"Mahnomen","MN",170,1531,"0.11","0.08","0.14",122,NA,NA,NA,27087
+"2009","Uninsured children",27,87,"Mahnomen","MN",168,1588,"0.11","0.08","0.13",122,NA,NA,NA,27087
+"2010","Uninsured children",27,87,"Mahnomen","MN",172,1689,"0.10","0.07","0.13",122,2013,NA,NA,27087
+"2011","Uninsured children",27,87,"Mahnomen","MN",185,1722,"0.11","0.08","0.13",122,2014,NA,NA,27087
+"2012","Uninsured children",27,87,"Mahnomen","MN",160,1726,"0.09","0.07","0.12",122,2015,NA,NA,27087
+"2013","Uninsured children",27,87,"Mahnomen","MN",165,1712,"0.10","0.07","0.12",122,2016,1,NA,27087
+"2014","Uninsured children",27,87,"Mahnomen","MN",119,1720,"0.07","0.05","0.09",122,2017,NA,NA,27087
+"2015","Uninsured children",27,87,"Mahnomen","MN",106,1697,"0.06","0.04","0.08",122,2018,NA,NA,27087
+"2016","Uninsured children",27,87,"Mahnomen","MN",106,1720,"0.06","0.04","0.08",122,2019,NA,NA,27087
+"2017","Uninsured children",27,87,"Mahnomen","MN",131,1759,"0.07","0.05","0.10",122,2020,NA,NA,27087
+"2018","Uninsured children",27,87,"Mahnomen","MN",101,1756,"0.06","0.04","0.08",122,2021,NA,NA,27087
+"2019","Uninsured children",27,87,"Mahnomen","MN",104,1762,"0.06","0.04","0.08",122,2022,NA,NA,27087
+"2020","Uninsured children",27,87,"Mahnomen","MN",146,1759,"0.08","0.05","0.11",122,2023,NA,NA,27087
+"2021","Uninsured children",27,87,"Mahnomen","MN",91,1574,"0.06","0.04","0.08",122,2024,NA,NA,27087
+"2008","Uninsured children",27,107,"Norman","MN",140,1476,"0.09","0.07","0.12",122,NA,NA,NA,27107
+"2009","Uninsured children",27,107,"Norman","MN",172,1653,"0.10","0.08","0.13",122,NA,NA,NA,27107
+"2010","Uninsured children",27,107,"Norman","MN",161,1718,"0.09","0.07","0.12",122,2013,NA,NA,27107
+"2011","Uninsured children",27,107,"Norman","MN",146,1700,"0.09","0.06","0.11",122,2014,NA,NA,27107
+"2012","Uninsured children",27,107,"Norman","MN",119,1610,"0.07","0.05","0.09",122,2015,NA,NA,27107
+"2013","Uninsured children",27,107,"Norman","MN",121,1602,"0.08","0.06","0.09",122,2016,1,NA,27107
+"2014","Uninsured children",27,107,"Norman","MN",86,1595,"0.05","0.04","0.07",122,2017,NA,NA,27107
+"2015","Uninsured children",27,107,"Norman","MN",87,1598,"0.05","0.04","0.07",122,2018,NA,NA,27107
+"2016","Uninsured children",27,107,"Norman","MN",73,1556,"0.05","0.03","0.06",122,2019,NA,NA,27107
+"2017","Uninsured children",27,107,"Norman","MN",72,1582,"0.05","0.03","0.06",122,2020,NA,NA,27107
+"2018","Uninsured children",27,107,"Norman","MN",66,1578,"0.04","0.03","0.05",122,2021,NA,NA,27107
+"2019","Uninsured children",27,107,"Norman","MN",67,1578,"0.04","0.03","0.06",122,2022,NA,NA,27107
+"2020","Uninsured children",27,107,"Norman","MN",95,1541,"0.06","0.04","0.08",122,2023,NA,NA,27107
+"2021","Uninsured children",27,107,"Norman","MN",73,1588,"0.05","0.03","0.06",122,2024,NA,NA,27107
+"2008","Uninsured children",27,119,"Polk","MN",531,7096,"0.07","0.06","0.09",122,NA,NA,NA,27119
+"2009","Uninsured children",27,119,"Polk","MN",641,7560,"0.08","0.06","0.11",122,NA,NA,NA,27119
+"2010","Uninsured children",27,119,"Polk","MN",486,7809,"0.06","0.05","0.08",122,2013,NA,NA,27119
+"2011","Uninsured children",27,119,"Polk","MN",485,7653,"0.06","0.05","0.08",122,2014,NA,NA,27119
+"2012","Uninsured children",27,119,"Polk","MN",452,7580,"0.06","0.04","0.08",122,2015,NA,NA,27119
+"2013","Uninsured children",27,119,"Polk","MN",556,7660,"0.07","0.06","0.09",122,2016,NA,NA,27119
+"2014","Uninsured children",27,119,"Polk","MN",362,7664,"0.05","0.04","0.06",122,2017,NA,NA,27119
+"2015","Uninsured children",27,119,"Polk","MN",279,7610,"0.04","0.03","0.05",122,2018,NA,NA,27119
+"2016","Uninsured children",27,119,"Polk","MN",303,7735,"0.04","0.03","0.05",122,2019,NA,NA,27119
+"2017","Uninsured children",27,119,"Polk","MN",310,7826,"0.04","0.03","0.05",122,2020,NA,NA,27119
+"2018","Uninsured children",27,119,"Polk","MN",271,7797,"0.03","0.03","0.04",122,2021,NA,NA,27119
+"2019","Uninsured children",27,119,"Polk","MN",267,7816,"0.03","0.02","0.04",122,2022,NA,NA,27119
+"2020","Uninsured children",27,119,"Polk","MN",389,7734,"0.05","0.03","0.07",122,2023,NA,NA,27119
+"2021","Uninsured children",27,119,"Polk","MN",408,7857,"0.05","0.04","0.07",122,2024,NA,NA,27119
+"2002","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"11.30","","",125,NA,1,NA,9
+"2003","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"11.30","","",125,NA,1,NA,9
+"2004","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"11.00","","",125,NA,1,NA,9
+"2005","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"12.00","","",125,NA,1,NA,9
+"2006","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"11.00","","",125,NA,1,NA,9
+"2007","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"11.60","","",125,NA,1,NA,9
+"2008","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"10.70","","",125,2013,1,NA,9
+"2009","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"9.50","","",125,NA,1,NA,9
+"2010","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"9.80","","",125,NA,1,NA,9
+"2011","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"9.60","","",125,2014,1,NA,9
+"2012","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"9.20","","",125,2017,NA,NA,9
+"2013","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"9.00","","",125,NA,NA,NA,9
+"2014","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"9.40","","",125,2019,NA,NA,9
+"2015","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"8.70","","",125,NA,NA,NA,9
+"2016","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"7.90","","",125,2021,NA,NA,9
+"2017","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"8.10","","",125,NA,NA,NA,9
+"2018","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"8.10","","",125,2022,NA,NA,9
+"2019","Air pollution - particulate matter",0,0,"United States","US",NA,NA,"7.80","","",125,2023,NA,NA,9
+"2002","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"8.90","","",125,NA,1,NA,99
+"2003","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.80","","",125,NA,1,NA,99
+"2004","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.70","","",125,NA,1,NA,99
+"2005","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"10.00","","",125,NA,1,NA,99
+"2006","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.30","","",125,NA,1,NA,99
+"2007","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.80","","",125,NA,1,NA,99
+"2008","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.40","","",125,2013,1,NA,99
+"2009","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.30","","",125,NA,1,NA,99
+"2010","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.10","","",125,NA,1,NA,99
+"2011","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"8.80","","",125,2014,1,NA,99
+"2012","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"9.30","","",125,2017,NA,NA,99
+"2013","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"8.60","","",125,NA,NA,NA,99
+"2014","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"6.90","","",125,2019,NA,NA,99
+"2015","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"7.30","","",125,NA,NA,NA,99
+"2016","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"6.30","","",125,2021,NA,NA,99
+"2017","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"6.60","","",125,NA,NA,NA,99
+"2018","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"6.90","","",125,2022,NA,NA,99
+"2019","Air pollution - particulate matter",27,0,"Minnesota","MN",NA,NA,"6.10","","",125,2023,NA,NA,99
+"2002","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.70","","",125,NA,1,NA,27087
+"2003","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.70","","",125,NA,1,NA,27087
+"2004","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"8.00","","",125,NA,1,NA,27087
+"2005","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"8.20","","",125,NA,1,NA,27087
+"2006","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.80","","",125,NA,1,NA,27087
+"2007","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.70","","",125,NA,1,NA,27087
+"2008","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"8.00","","",125,2013,1,NA,27087
+"2009","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"8.20","","",125,NA,1,NA,27087
+"2010","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.80","","",125,NA,1,NA,27087
+"2011","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.70","","",125,2014,1,NA,27087
+"2012","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"8.10","","",125,2017,NA,NA,27087
+"2013","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"7.40","","",125,NA,NA,NA,27087
+"2014","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"6.20","","",125,2019,NA,NA,27087
+"2015","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"6.70","","",125,NA,NA,NA,27087
+"2016","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"5.30","","",125,2021,NA,NA,27087
+"2017","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"6.20","","",125,NA,NA,NA,27087
+"2018","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"6.50","","",125,2022,NA,NA,27087
+"2019","Air pollution - particulate matter",27,87,"Mahnomen","MN",NA,NA,"5.60","","",125,2023,NA,NA,27087
+"2002","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.00","","",125,NA,1,NA,27107
+"2003","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"7.90","","",125,NA,1,NA,27107
+"2004","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.40","","",125,NA,1,NA,27107
+"2005","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.60","","",125,NA,1,NA,27107
+"2006","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.20","","",125,NA,1,NA,27107
+"2007","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.30","","",125,NA,1,NA,27107
+"2008","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.50","","",125,2013,1,NA,27107
+"2009","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.60","","",125,NA,1,NA,27107
+"2010","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.30","","",125,NA,1,NA,27107
+"2011","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.00","","",125,2014,1,NA,27107
+"2012","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"8.50","","",125,2017,NA,NA,27107
+"2013","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"7.50","","",125,NA,NA,NA,27107
+"2014","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"6.30","","",125,2019,NA,NA,27107
+"2015","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"7.10","","",125,NA,NA,NA,27107
+"2016","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"5.70","","",125,2021,NA,NA,27107
+"2017","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"6.80","","",125,NA,NA,NA,27107
+"2018","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"6.90","","",125,2022,NA,NA,27107
+"2019","Air pollution - particulate matter",27,107,"Norman","MN",NA,NA,"6.00","","",125,2023,NA,NA,27107
+"2002","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.20","","",125,NA,1,NA,27119
+"2003","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.40","","",125,NA,1,NA,27119
+"2004","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.70","","",125,NA,1,NA,27119
+"2005","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.70","","",125,NA,1,NA,27119
+"2006","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.40","","",125,NA,1,NA,27119
+"2007","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.50","","",125,NA,1,NA,27119
+"2008","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.60","","",125,2013,1,NA,27119
+"2009","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.90","","",125,NA,1,NA,27119
+"2010","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.60","","",125,NA,1,NA,27119
+"2011","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.30","","",125,2014,1,NA,27119
+"2012","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.90","","",125,2017,NA,NA,27119
+"2013","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"7.80","","",125,NA,NA,NA,27119
+"2014","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"6.90","","",125,2019,NA,NA,27119
+"2015","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"8.00","","",125,NA,NA,NA,27119
+"2016","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"6.80","","",125,2021,NA,NA,27119
+"2017","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"7.40","","",125,NA,NA,NA,27119
+"2018","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"7.60","","",125,2022,NA,NA,27119
+"2019","Air pollution - particulate matter",27,119,"Polk","MN",NA,NA,"6.70","","",125,2023,NA,NA,27119
+"2008","Alcohol-impaired driving deaths",0,0,"United States","US",12309,37423,"0.33","","",134,NA,NA,NA,9
+"2009","Alcohol-impaired driving deaths",0,0,"United States","US",11194,33883,"0.33","","",134,NA,NA,NA,9
+"2010","Alcohol-impaired driving deaths",0,0,"United States","US",10625,32999,"0.32","","",134,NA,NA,NA,9
+"2011","Alcohol-impaired driving deaths",0,0,"United States","US",10186,32479,"0.31","","",134,NA,NA,NA,9
+"2012","Alcohol-impaired driving deaths",0,0,"United States","US",10553,33782,"0.31","","",134,NA,NA,NA,9
+"2013","Alcohol-impaired driving deaths",0,0,"United States","US",10191,32893,"0.31","","",134,NA,NA,NA,9
+"2014","Alcohol-impaired driving deaths",0,0,"United States","US",9747,32744,"0.30","","",134,NA,NA,NA,9
+"2015","Alcohol-impaired driving deaths",0,0,"United States","US",10245,35485,"0.29","","",134,NA,NA,NA,9
+"2016","Alcohol-impaired driving deaths",0,0,"United States","US",9731,37461,"0.26","","",134,NA,NA,NA,9
+"2017","Alcohol-impaired driving deaths",0,0,"United States","US",9733,37133,"0.26","","",134,NA,NA,NA,9
+"2018","Alcohol-impaired driving deaths",0,0,"United States","US",9308,36560,"0.25","","",134,NA,NA,NA,9
+"2019","Alcohol-impaired driving deaths",0,0,"United States","US",9331,36096,"0.26","","",134,NA,NA,NA,9
+"2020","Alcohol-impaired driving deaths",0,0,"United States","US",10261,38824,"0.26","","",134,NA,NA,NA,9
+"2021","Alcohol-impaired driving deaths",0,0,"United States","US",11280,42939,"0.26","","",134,NA,NA,NA,9
+"2008","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",160,455,"0.35","","",134,NA,NA,NA,99
+"2009","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",125,421,"0.30","","",134,NA,NA,NA,99
+"2010","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",133,411,"0.32","","",134,NA,NA,NA,99
+"2011","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",124,368,"0.34","","",134,NA,NA,NA,99
+"2012","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",125,395,"0.32","","",134,NA,NA,NA,99
+"2013","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",107,387,"0.28","","",134,NA,NA,NA,99
+"2014","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",107,361,"0.30","","",134,NA,NA,NA,99
+"2015","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",131,411,"0.32","","",134,NA,NA,NA,99
+"2016","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",108,392,"0.28","","",134,NA,NA,NA,99
+"2017","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",107,357,"0.30","","",134,NA,NA,NA,99
+"2018","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",119,381,"0.31","","",134,NA,NA,NA,99
+"2019","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",103,364,"0.28","","",134,NA,NA,NA,99
+"2020","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",128,394,"0.32","","",134,NA,NA,NA,99
+"2021","Alcohol-impaired driving deaths",27,0,"Minnesota","MN",136,488,"0.28","","",134,NA,NA,NA,99
+"2008","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",1,2,"0.50","","",134,NA,NA,NA,27087
+"2009","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",2,2,"1.00","","",134,NA,NA,NA,27087
+"2010","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",3,3,"1.00","","",134,NA,NA,NA,27087
+"2011","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",NA,NA,"","","",134,NA,NA,NA,27087
+"2012","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",1,2,"0.50","","",134,NA,NA,NA,27087
+"2013","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",1,1,"1.00","","",134,NA,NA,NA,27087
+"2014","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",1,1,"1.00","","",134,NA,NA,NA,27087
+"2015","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",0,1,"0.00","","",134,NA,NA,NA,27087
+"2016","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",1,1,"1.00","","",134,NA,NA,NA,27087
+"2017","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",NA,NA,"","","",134,NA,NA,NA,27087
+"2018","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",NA,NA,"","","",134,NA,NA,NA,27087
+"2019","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",0,3,"0.00","","",134,NA,NA,NA,27087
+"2020","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",NA,NA,"","","",134,NA,NA,NA,27087
+"2021","Alcohol-impaired driving deaths",27,87,"Mahnomen","MN",1,1,"1.00","","",134,NA,NA,NA,27087
+"2008","Alcohol-impaired driving deaths",27,107,"Norman","MN",1,2,"0.50","","",134,NA,NA,NA,27107
+"2009","Alcohol-impaired driving deaths",27,107,"Norman","MN",0,1,"0.00","","",134,NA,NA,NA,27107
+"2010","Alcohol-impaired driving deaths",27,107,"Norman","MN",NA,NA,"","","",134,NA,NA,NA,27107
+"2011","Alcohol-impaired driving deaths",27,107,"Norman","MN",3,4,"0.75","","",134,NA,NA,NA,27107
+"2012","Alcohol-impaired driving deaths",27,107,"Norman","MN",NA,NA,"","","",134,NA,NA,NA,27107
+"2013","Alcohol-impaired driving deaths",27,107,"Norman","MN",1,3,"0.33","","",134,NA,NA,NA,27107
+"2014","Alcohol-impaired driving deaths",27,107,"Norman","MN",NA,NA,"","","",134,NA,NA,NA,27107
+"2015","Alcohol-impaired driving deaths",27,107,"Norman","MN",1,3,"0.33","","",134,NA,NA,NA,27107
+"2016","Alcohol-impaired driving deaths",27,107,"Norman","MN",2,2,"1.00","","",134,NA,NA,NA,27107
+"2017","Alcohol-impaired driving deaths",27,107,"Norman","MN",NA,NA,"","","",134,NA,NA,NA,27107
+"2018","Alcohol-impaired driving deaths",27,107,"Norman","MN",0,1,"0.00","","",134,NA,NA,NA,27107
+"2019","Alcohol-impaired driving deaths",27,107,"Norman","MN",1,1,"1.00","","",134,NA,NA,NA,27107
+"2020","Alcohol-impaired driving deaths",27,107,"Norman","MN",0,2,"0.00","","",134,NA,NA,NA,27107
+"2021","Alcohol-impaired driving deaths",27,107,"Norman","MN",NA,NA,"","","",134,NA,NA,NA,27107
+"2008","Alcohol-impaired driving deaths",27,119,"Polk","MN",3,8,"0.38","","",134,NA,NA,NA,27119
+"2009","Alcohol-impaired driving deaths",27,119,"Polk","MN",2,3,"0.67","","",134,NA,NA,NA,27119
+"2010","Alcohol-impaired driving deaths",27,119,"Polk","MN",1,7,"0.14","","",134,NA,NA,NA,27119
+"2011","Alcohol-impaired driving deaths",27,119,"Polk","MN",2,7,"0.29","","",134,NA,NA,NA,27119
+"2012","Alcohol-impaired driving deaths",27,119,"Polk","MN",5,7,"0.71","","",134,NA,NA,NA,27119
+"2013","Alcohol-impaired driving deaths",27,119,"Polk","MN",1,5,"0.20","","",134,NA,NA,NA,27119
+"2014","Alcohol-impaired driving deaths",27,119,"Polk","MN",0,3,"0.00","","",134,NA,NA,NA,27119
+"2015","Alcohol-impaired driving deaths",27,119,"Polk","MN",2,4,"0.50","","",134,NA,NA,NA,27119
+"2016","Alcohol-impaired driving deaths",27,119,"Polk","MN",2,6,"0.33","","",134,NA,NA,NA,27119
+"2017","Alcohol-impaired driving deaths",27,119,"Polk","MN",2,4,"0.50","","",134,NA,NA,NA,27119
+"2018","Alcohol-impaired driving deaths",27,119,"Polk","MN",1,3,"0.33","","",134,NA,NA,NA,27119
+"2019","Alcohol-impaired driving deaths",27,119,"Polk","MN",3,5,"0.60","","",134,NA,NA,NA,27119
+"2020","Alcohol-impaired driving deaths",27,119,"Polk","MN",0,2,"0.00","","",134,NA,NA,NA,27119
+"2021","Alcohol-impaired driving deaths",27,119,"Polk","MN",1,3,"0.33","","",134,NA,NA,NA,27119
+"2012","Flu vaccinations",0,0,"United States","US",NA,NA,"0.44","","",155,NA,NA,NA,9
+"2013","Flu vaccinations",0,0,"United States","US",NA,NA,"0.45","","",155,NA,NA,NA,9
+"2014","Flu vaccinations",0,0,"United States","US",NA,NA,"0.46","","",155,NA,NA,NA,9
+"2015","Flu vaccinations",0,0,"United States","US",NA,NA,"0.44","","",155,NA,NA,NA,9
+"2016","Flu vaccinations",0,0,"United States","US",NA,NA,"0.45","","",155,2019,NA,NA,9
+"2017","Flu vaccinations",0,0,"United States","US",NA,NA,"0.46","","",155,2020,NA,NA,9
+"2018","Flu vaccinations",0,0,"United States","US",NA,NA,"0.48","","",155,2021,NA,NA,9
+"2019","Flu vaccinations",0,0,"United States","US",NA,NA,"0.48","","",155,2022,NA,NA,9
+"2020","Flu vaccinations",0,0,"United States","US",NA,NA,"0.51","","",155,2023,NA,NA,9
+"2021","Flu vaccinations",0,0,"United States","US",NA,NA,"0.46","","",155,2024,NA,NA,9
+"2012","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.51","","",155,NA,NA,NA,99
+"2013","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.51","","",155,NA,NA,NA,99
+"2014","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.50","","",155,NA,NA,NA,99
+"2015","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.47","","",155,NA,NA,NA,99
+"2016","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.49","","",155,2019,NA,NA,99
+"2017","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.50","","",155,2020,NA,NA,99
+"2018","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.50","","",155,2021,NA,NA,99
+"2019","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.55","","",155,2022,NA,NA,99
+"2020","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.57","","",155,2023,NA,NA,99
+"2021","Flu vaccinations",27,0,"Minnesota","MN",NA,NA,"0.53","","",155,2024,NA,NA,99
+"2012","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.34","","",155,NA,NA,NA,27087
+"2013","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.31","","",155,NA,NA,NA,27087
+"2014","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.26","","",155,NA,NA,NA,27087
+"2015","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.21","","",155,NA,NA,NA,27087
+"2016","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.23","","",155,2019,NA,NA,27087
+"2017","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.18","","",155,2020,NA,NA,27087
+"2018","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.32","","",155,2021,NA,NA,27087
+"2019","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.34","","",155,2022,NA,NA,27087
+"2020","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.43","","",155,2023,NA,NA,27087
+"2021","Flu vaccinations",27,87,"Mahnomen","MN",NA,NA,"0.29","","",155,2024,NA,NA,27087
+"2012","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.18","","",155,NA,NA,NA,27107
+"2013","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.18","","",155,NA,NA,NA,27107
+"2014","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.23","","",155,NA,NA,NA,27107
+"2015","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.22","","",155,NA,NA,NA,27107
+"2016","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.21","","",155,2019,NA,NA,27107
+"2017","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.24","","",155,2020,NA,NA,27107
+"2018","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.26","","",155,2021,NA,NA,27107
+"2019","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.26","","",155,2022,NA,NA,27107
+"2020","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.27","","",155,2023,NA,NA,27107
+"2021","Flu vaccinations",27,107,"Norman","MN",NA,NA,"0.25","","",155,2024,NA,NA,27107
+"2012","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.50","","",155,NA,NA,NA,27119
+"2013","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.49","","",155,NA,NA,NA,27119
+"2014","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.48","","",155,NA,NA,NA,27119
+"2015","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.47","","",155,NA,NA,NA,27119
+"2016","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.50","","",155,2019,NA,NA,27119
+"2017","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.53","","",155,2020,NA,NA,27119
+"2018","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.52","","",155,2021,NA,NA,27119
+"2019","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.57","","",155,2022,NA,NA,27119
+"2020","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.61","","",155,2023,NA,NA,27119
+"2021","Flu vaccinations",27,119,"Polk","MN",NA,NA,"0.56","","",155,2024,NA,NA,27119
+"2010","School funding",0,0,"United States","US",NA,NA,"1,141.35","","",169,NA,NA,NA,9
+"2011","School funding",0,0,"United States","US",NA,NA,"862.90","","",169,NA,NA,NA,9
+"2012","School funding",0,0,"United States","US",NA,NA,"617.17","","",169,NA,NA,NA,9
+"2013","School funding",0,0,"United States","US",NA,NA,"387.33","","",169,NA,NA,NA,9
+"2014","School funding",0,0,"United States","US",NA,NA,"355.83","","",169,NA,NA,NA,9
+"2015","School funding",0,0,"United States","US",NA,NA,"461.05","","",169,NA,NA,NA,9
+"2016","School funding",0,0,"United States","US",NA,NA,"432.49","","",169,NA,NA,NA,9
+"2017","School funding",0,0,"United States","US",NA,NA,"502.46","","",169,NA,NA,NA,9
+"2018","School funding",0,0,"United States","US",NA,NA,"500.20","","",169,NA,NA,NA,9
+"2019","School funding",0,0,"United States","US",NA,NA,"735.09","","",169,NA,NA,NA,9
+"2020","School funding",0,0,"United States","US",NA,NA,"836.47","","",169,NA,NA,NA,9
+"2021","School funding",0,0,"United States","US",NA,NA,"634.04","","",169,2024,NA,NA,9
+"2010","School funding",27,0,"Minnesota","MN",NA,NA,"1,381.84","","",169,NA,NA,NA,99
+"2011","School funding",27,0,"Minnesota","MN",NA,NA,"1,277.93","","",169,NA,NA,NA,99
+"2012","School funding",27,0,"Minnesota","MN",NA,NA,"1,096.34","","",169,NA,NA,NA,99
+"2013","School funding",27,0,"Minnesota","MN",NA,NA,"1,307.88","","",169,NA,NA,NA,99
+"2014","School funding",27,0,"Minnesota","MN",NA,NA,"884.13","","",169,NA,NA,NA,99
+"2015","School funding",27,0,"Minnesota","MN",NA,NA,"1,326.90","","",169,NA,NA,NA,99
+"2016","School funding",27,0,"Minnesota","MN",NA,NA,"1,454.86","","",169,NA,NA,NA,99
+"2017","School funding",27,0,"Minnesota","MN",NA,NA,"1,475.23","","",169,NA,NA,NA,99
+"2018","School funding",27,0,"Minnesota","MN",NA,NA,"1,463.82","","",169,NA,NA,NA,99
+"2019","School funding",27,0,"Minnesota","MN",NA,NA,"1,524.10","","",169,NA,NA,NA,99
+"2020","School funding",27,0,"Minnesota","MN",NA,NA,"1,714.48","","",169,NA,NA,NA,99
+"2021","School funding",27,0,"Minnesota","MN",NA,NA,"1,501.71","","",169,2024,NA,NA,99
+"2010","School funding",27,87,"Mahnomen","MN",NA,NA,"-813.31","","",169,NA,NA,NA,27087
+"2011","School funding",27,87,"Mahnomen","MN",NA,NA,"-697.20","","",169,NA,NA,NA,27087
+"2012","School funding",27,87,"Mahnomen","MN",NA,NA,"-755.42","","",169,NA,NA,NA,27087
+"2013","School funding",27,87,"Mahnomen","MN",NA,NA,"-2,305.90","","",169,NA,NA,NA,27087
+"2014","School funding",27,87,"Mahnomen","MN",NA,NA,"-2,274.36","","",169,NA,NA,NA,27087
+"2015","School funding",27,87,"Mahnomen","MN",NA,NA,"-2,323.47","","",169,NA,NA,NA,27087
+"2016","School funding",27,87,"Mahnomen","MN",NA,NA,"292.84","","",169,NA,NA,NA,27087
+"2017","School funding",27,87,"Mahnomen","MN",NA,NA,"-935.35","","",169,NA,NA,NA,27087
+"2018","School funding",27,87,"Mahnomen","MN",NA,NA,"-131.63","","",169,NA,NA,NA,27087
+"2019","School funding",27,87,"Mahnomen","MN",NA,NA,"-997.66","","",169,NA,NA,NA,27087
+"2020","School funding",27,87,"Mahnomen","MN",NA,NA,"822.07","","",169,NA,NA,NA,27087
+"2021","School funding",27,87,"Mahnomen","MN",NA,NA,"846.54","","",169,2024,NA,NA,27087
+"2010","School funding",27,107,"Norman","MN",NA,NA,"859.64","","",169,NA,NA,NA,27107
+"2011","School funding",27,107,"Norman","MN",NA,NA,"1,198.11","","",169,NA,NA,NA,27107
+"2012","School funding",27,107,"Norman","MN",NA,NA,"1,266.06","","",169,NA,NA,NA,27107
+"2013","School funding",27,107,"Norman","MN",NA,NA,"-512.97","","",169,NA,NA,NA,27107
+"2014","School funding",27,107,"Norman","MN",NA,NA,"168.90","","",169,NA,NA,NA,27107
+"2015","School funding",27,107,"Norman","MN",NA,NA,"-257.93","","",169,NA,NA,NA,27107
+"2016","School funding",27,107,"Norman","MN",NA,NA,"-452.03","","",169,NA,NA,NA,27107
+"2017","School funding",27,107,"Norman","MN",NA,NA,"-1,918.22","","",169,NA,NA,NA,27107
+"2018","School funding",27,107,"Norman","MN",NA,NA,"-1,057.39","","",169,NA,NA,NA,27107
+"2019","School funding",27,107,"Norman","MN",NA,NA,"-1,136.45","","",169,NA,NA,NA,27107
+"2020","School funding",27,107,"Norman","MN",NA,NA,"-1,843.54","","",169,NA,NA,NA,27107
+"2021","School funding",27,107,"Norman","MN",NA,NA,"-7,544.42","","",169,2024,NA,NA,27107
+"2010","School funding",27,119,"Polk","MN",NA,NA,"1,062.82","","",169,NA,NA,NA,27119
+"2011","School funding",27,119,"Polk","MN",NA,NA,"641.35","","",169,NA,NA,NA,27119
+"2012","School funding",27,119,"Polk","MN",NA,NA,"545.23","","",169,NA,NA,NA,27119
+"2013","School funding",27,119,"Polk","MN",NA,NA,"555.65","","",169,NA,NA,NA,27119
+"2014","School funding",27,119,"Polk","MN",NA,NA,"918.82","","",169,NA,NA,NA,27119
+"2015","School funding",27,119,"Polk","MN",NA,NA,"1,029.17","","",169,NA,NA,NA,27119
+"2016","School funding",27,119,"Polk","MN",NA,NA,"-93.35","","",169,NA,NA,NA,27119
+"2017","School funding",27,119,"Polk","MN",NA,NA,"666.89","","",169,NA,NA,NA,27119
+"2018","School funding",27,119,"Polk","MN",NA,NA,"27.99","","",169,NA,NA,NA,27119
+"2019","School funding",27,119,"Polk","MN",NA,NA,"1,200.87","","",169,NA,NA,NA,27119
+"2020","School funding",27,119,"Polk","MN",NA,NA,"1,805.45","","",169,NA,NA,NA,27119
+"2021","School funding",27,119,"Polk","MN",NA,NA,"624.26","","",169,2024,NA,NA,27119

@@ -1,0 +1,440 @@
+{
+    "sources": [
+        {
+            "URL": "https://data.census.gov/table/DECENNIALPL2020.P1?g=040XX00US27$0500000",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        9,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "U.S. Census Bureau"
+                }
+            ],
+            "id": "decennialcensus2020P1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "Decennial Census, DEC Redistricting Data (PL 94-171), Table P1",
+            "title": "RACE",
+            "type": ""
+        },
+        {
+            "URL": "https://api.census.gov/data/2020/dec/dhc?get=group(P9)&ucgid=pseudo(0400000US27$0500000)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        9,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "U.S. Census Bureau"
+                }
+            ],
+            "id": "decennialcensus2020P9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "Decennial Census, DEC Demographic and Housing Characteristics, Table P9",
+            "title": "HISPANIC OR LATINO, AND NOT HISPANIC OR LATINO BY RACE.",
+            "type": ""
+        },
+        {
+            "URL": "https://data.census.gov/table/ACSST5Y2022.S0101?g=040XX00US27$0500000",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        9,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "U.S. Census Bureau"
+                }
+            ],
+            "id": "acs2022S0101",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "American Community Survey, ACS 5-Year Estimates Subject Tables, Table S0101",
+            "title": "Age and sex",
+            "type": ""
+        },
+        {
+            "URL": "https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        10,
+                        28
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program"
+                }
+            ],
+            "id": "cdc2022SVI",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html",
+            "title": "CDC/ATSDR social vulnerability index 2022 database u.s.",
+            "type": ""
+        },
+        {
+            "URL": "https://www.cdc.gov/places",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention"
+                }
+            ],
+            "id": "cdc2022PLACES",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 11/12/2024",
+            "title": "PLACES. Centers for disease control and prevention",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/communities/environment/tracking/docs/databrieffall2024.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mnhealthRadonSchoolDistrict2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 11/27/2024",
+            "title": "Data brief: Fall 2024",
+            "title-short": "Data brief",
+            "type": ""
+        },
+        {
+            "URL": "https://data.web.health.state.mn.us/radon",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mnhealthRadon",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 11/27/2024",
+            "title": "Radon",
+            "type": ""
+        },
+        {
+            "URL": "https://www.cdc.gov/united-states-cancer-statistics/technical-notes/suppression.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention"
+                }
+            ],
+            "id": "cdcStats2024Suppression",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Suppression of rates and counts",
+            "type": ""
+        },
+        {
+            "URL": "https://www.co.polk.mn.us/DocumentCenter/View/2073/Polk-County-Opioid-Funding-Prioritization-Survey-Results?bidId=",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Polk County"
+                }
+            ],
+            "id": "polkOpioid",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Polk county opioid funding prioritization",
+            "type": ""
+        },
+        {
+            "URL": "https://eclds.mn.gov/#thirdGradeEdStatus/orgId--999999000__groupType--state__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg60__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg54__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg44__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Early Childhood Longitudinal Data System"
+                }
+            ],
+            "id": "mdeThirdGradeProficiency",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "3rd grade proficiency",
+            "type": ""
+        },
+        {
+            "URL": "https://apps.deed.state.mn.us/lmi/laus/Default.aspx",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Employment and Economic Development"
+                }
+            ],
+            "id": "deedUnemploymentRate",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Local area unemployment statistics (LAUS) tool",
+            "type": ""
+        },
+        {
+            "URL": "https://mn.gov/deed/data/data-tools/county-profiles/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Employment and Economic Development"
+                }
+            ],
+            "id": "deedCountyProfiles",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Local area unemployment statistics (LAUS) tool",
+            "type": ""
+        },
+        {
+            "URL": "https://www.hungersolutions.org/wp-content/uploads/2023/02/Food-shelf-visits-2022-Presentation.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Hunger Solutions"
+                }
+            ],
+            "id": "foodShelf2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "2022 food shelf visits statistics report",
+            "type": ""
+        },
+        {
+            "URL": "https://www.minnesotatzd.org/regions",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Toward Zero Deaths"
+                }
+            ],
+            "id": "crashSite2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "TZD regions",
+            "type": ""
+        },
+        {
+            "URL": "https://mndatamaps.web.health.state.mn.us/interactive/wells.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "arsenic2008_2021",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Private wells - arsenic (2008-2021)",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/data/hcquality/pufs.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "puf2022",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Minnesota statewide quality reporting and measurement system public use file",
+            "type": ""
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}
