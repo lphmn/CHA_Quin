@@ -1,6 +1,22 @@
 # Local Input
 
 
+```{r}
+#| label: gb
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+#When testing and not rendering the report, the if statement returns true but when rendering as the report, the else executes
+if (file.exists("pages/Global/gb.R")) {
+  source("pages/Global/gb.R")
+  source("pages/Data/data.R")
+  svi <- read.csv("pages/Data/CDC_svi.csv")
+} else {
+  source("./Global/gb.R")
+  source("./Data/data.R")
+  svi <- read.csv("./Data/CDC_svi.csv")
+}
+```
 
 ## Polk, Norman, & Mahnomen 2022 Survey
 
@@ -46,7 +62,7 @@ About 8% survey respondents faced transportation issue and they reported to be f
 
 ## Polk County Opioid Funding Prioritization
 
-The Polk County Opioid Funding Prioritization Survey gathered input from community members to guide the allocation of over $3 million from the national opioid settlement. The survey, conducted from June 12 to July 24, 2023, received 137 responses, with a majority prioritizing prevention, treatment, and recovery support. Key areas identified for funding include primary prevention, community development, and treatment expansion. The survey also highlighted the importance of harm reduction strategies such as overdose reversal and social detox. The results will help shape the county's approach to addressing the opioid crisis over the next 18 years @polkOpioid. Please click on the following map to see the entire PDF report.
+The Polk County Opioid Funding Prioritization Survey gathered input from community members to guide the allocation of over \$3 million from the national opioid settlement. The survey, conducted from June 12 to July 24, 2023, received 137 responses, with a majority prioritizing prevention, treatment, and recovery support. Key areas identified for funding include primary prevention, community development, and treatment expansion. The survey also highlighted the importance of harm reduction strategies such as overdose reversal and social detox. The results will help shape the county's approach to addressing the opioid crisis over the next 18 years @polkOpioid. Please click on the following map to see the entire PDF report.
 
 [![](Attachments/mnMap_polk.png)](https://www.co.polk.mn.us/DocumentCenter/View/2073/Polk-County-Opioid-Funding-Prioritization-Survey-Results?bidId=)
 

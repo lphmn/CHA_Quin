@@ -1,0 +1,1330 @@
+# Population & Environmental Health
+
+```{r}
+#| label: gb
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+#When testing and not rendering the report, the if statement returns true but when rendering as the report, the else executes
+if (file.exists("pages/Global/gb.R")) {
+  source("pages/Global/gb.R")
+  source("pages/Data/data.R")
+  svi <- read.csv("pages/Data/CDC_svi.csv")
+} else {
+  source("./Global/gb.R")
+  source("./Data/data.R")
+  svi <- read.csv("./Data/CDC_svi.csv")
+}
+```
+
+The Population & Environmental Health section of the Community Health Assessment (CHA) for `{r} gbVal_chbExpLbl` offers a comprehensive overview of the population's demographics, socioeconomic status, and environmental factors. This section aims to present a general profile of the three counties.
+
+## Demographics
+
+```{r}
+#| label: svi2022
+#| include: false
+socioeconomicStatus  <- svi |> 
+  janitor::clean_names() |> 
+  dplyr::mutate(
+    personPerSqMile = e_totpop/area_sqmi
+    , county = sub(" County.*","",county) #Extract just the county name so everything before space county is pulled
+    ) |>
+  dplyr::arrange(desc(area_sqmi))
+  
+
+state_totalRow <- socioeconomicStatus |>
+    dplyr::summarise(
+      fips = gbVal[2] #State total will be 99 throughout the report
+      , county = "Minnesota"
+      , personPerSqMile = sum(e_totpop, na.rm = TRUE)/ sum(area_sqmi, na.rm = TRUE)
+      , e_totpop = sum(e_totpop, na.rm = TRUE)
+      , area_sqmi = sum(area_sqmi, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+  
+ chb_totalRow <- socioeconomicStatus |> 
+  gbFun_countyFilter(fips)  |> 
+    dplyr::summarise(
+      fips = gbVal[3] # CHB total will be 999 throughout the report
+      , county = "CHS"
+      , personPerSqMile = sum(e_totpop, na.rm = TRUE)/ sum(area_sqmi, na.rm = TRUE)
+      , e_totpop = sum(e_totpop, na.rm = TRUE)
+      , area_sqmi = sum(area_sqmi, na.rm = TRUE)
+    ) |> 
+   as.data.frame()
+ 
+ f_cdcSvi2022 <-
+   state_totalRow |> 
+   dplyr::bind_rows(chb_totalRow) |>  
+   dplyr::bind_rows(socioeconomicStatus) |> 
+   gbFun_countyFilter(fips) |> 
+   dplyr::mutate(
+     area_sqmi = formattable::comma(area_sqmi,2)
+     , personPerSqMile = formattable::comma(personPerSqMile,1)
+     , e_pov150 = formattable::comma(e_pov150,0)
+     , e_hburd = formattable::comma(e_hburd,0)
+     , e_nohsdp = formattable::comma(e_nohsdp,0)
+     , e_uninsur = formattable::comma(e_uninsur,0)
+     , e_age65 = formattable::comma(e_age65,0)
+     , e_crowd = formattable::comma(e_crowd,0)
+     ) 
+```
+
+According to @cdc2022SVI, the state of `{r} f_cdcSvi2022$county[1]` has a total land area of `{r} f_cdcSvi2022$area_sqmi[1]` per square mile. `{r} gbVal_chbAbbrLbl` area covers `{r} f_cdcSvi2022$area_sqmi[2]` square miles, with `{r} f_cdcSvi2022$county[3]` county having the largest land area (`{r} f_cdcSvi2022$area_sqmi[3]` square miles) followed by `{r} f_cdcSvi2022$county[4]` county (`{r} f_cdcSvi2022$area_sqmi[4]` square miles) and `{r} f_cdcSvi2022$county[5]` county (`{r} f_cdcSvi2022$area_sqmi[5]` square miles).
+
+`{r} f_cdcSvi2022$county[1]` has an average of `{r} f_cdcSvi2022$personPerSqMile[1]` people living in each square mile. In comparison, the `{r} gbVal_chbAbbrLbl` area has only `{r} f_cdcSvi2022$personPerSqMile[2]` people per square mile. Breaking it down further:
+
+-   `{r} f_cdcSvi2022$county[3]` has `{r} f_cdcSvi2022$personPerSqMile[3]` people per square mile
+
+-   `{r} f_cdcSvi2022$county[4]` has `{r} f_cdcSvi2022$personPerSqMile[4]` people per square mile
+
+-   `{r} f_cdcSvi2022$county[5]` has `{r} f_cdcSvi2022$personPerSqMile[5]` people per square mile
+
+This means that in these three counties, people are much more spread out compared to the state average. The population density, or the number of people per square mile, helps us understand how rural an area might be, although it is not the only factor. As shown on the following maps, Polk County has three Census Tracts that prevent it from being entirely rural.
+
+::: {#fig-ctyPopulationProfile layout-ncol="2"}
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png)](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
+
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCensusTract.png)](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/)
+
+Please click on either map above for the detailed rural report.
+:::
+
+### Population Size
+
+```{r}
+#| label: decennialPop2020
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+  df_decennialPop2020 <-  read.csv("https://api.census.gov/data/2020/dec/pl?get=group(P1)&ucgid=pseudo(0400000US27$0500000)") |>   
+  janitor::clean_names()  |> 
+  dplyr::mutate(
+    x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters
+    , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled
+    ) |>
+  dplyr::select(- dplyr::ends_with("na")) |> 
+  dplyr::select(1:11) |>   #only select first 12 columns 
+  dplyr::rename(
+    fips = 1
+    , tot_populationCt  = 3
+    , tot_oneRaceCt     = 4
+    , oneRace_whiteCt   = 5
+    , oneRace_BlackCt   = 6
+    , oneRace_AiAnCt    = 7
+    , oneRace_AsianCt   = 8
+    , oneRace_NhOpiCt   = 9
+    , oneRace_otherCt   = 10
+    , tot_twoPlusRaceCt = 11) |> 
+  dplyr::arrange(desc(tot_populationCt)) #This will arrange counties by population so the order can be indexed later
+  
+  state_totalRow <- df_decennialPop2020 |>
+    dplyr::summarise(
+      fips = 99 #State total will be 99 throughout the report
+      , name = "Minnesota"
+      , tot_populationCt = sum(tot_populationCt, na.rm = TRUE)
+      , tot_oneRaceCt = sum(tot_oneRaceCt, na.rm = TRUE)
+      , oneRace_whiteCt = sum(oneRace_whiteCt, na.rm = TRUE)
+      , oneRace_BlackCt = sum(oneRace_BlackCt, na.rm = TRUE)
+      , oneRace_AiAnCt = sum(oneRace_AiAnCt, na.rm = TRUE)
+      , oneRace_AsianCt = sum(oneRace_AsianCt, na.rm = TRUE)
+      , oneRace_NhOpiCt = sum(oneRace_NhOpiCt, na.rm = TRUE)
+      , oneRace_otherCt = sum(oneRace_otherCt, na.rm = TRUE)
+      , tot_twoPlusRaceCt = sum(tot_twoPlusRaceCt, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+  
+ chb_totalRow <- df_decennialPop2020 |> 
+  gbFun_countyFilter(fips)  |> 
+    dplyr::summarise(
+      fips = 999 # CHB total will be 999 throughout the report
+      , name = gbVal_chbAbbrLbl
+      , tot_populationCt = sum(tot_populationCt, na.rm = TRUE)
+      , tot_oneRaceCt = sum(tot_oneRaceCt, na.rm = TRUE)
+      , oneRace_whiteCt = sum(oneRace_whiteCt, na.rm = TRUE)
+      , oneRace_BlackCt = sum(oneRace_BlackCt, na.rm = TRUE)
+      , oneRace_AiAnCt = sum(oneRace_AiAnCt, na.rm = TRUE)
+      , oneRace_AsianCt = sum(oneRace_AsianCt, na.rm = TRUE)
+      , oneRace_NhOpiCt = sum(oneRace_NhOpiCt, na.rm = TRUE)
+      , oneRace_otherCt = sum(oneRace_otherCt, na.rm = TRUE)
+      , tot_twoPlusRaceCt = sum(tot_twoPlusRaceCt, na.rm = TRUE)
+    ) |> 
+   as.data.frame()
+ 
+ 
+  # Union the total row with the individual county data
+  f_decennialPop2020 <-
+    state_totalRow |> 
+    dplyr::bind_rows(chb_totalRow) |> 
+    dplyr::bind_rows(df_decennialPop2020) |> 
+    gbFun_countyFilter(fips) |> 
+    dplyr::mutate(
+      tot_statePct = ifelse(
+        is.na(tot_populationCt), NA,
+        #Formattable keeps the data type as well as displays with commas and decimals
+        # The scales package does not keep the data type when displaying the Vals
+        formattable::percent(tot_populationCt / tot_populationCt[1], digits = 2)
+      )
+      , tot_chbPct = ifelse(
+        dplyr::row_number() == 1, NA, 
+        ifelse(
+          is.na(tot_populationCt), NA,
+          formattable::percent(tot_populationCt / tot_populationCt[2], digits = 2)
+          )
+      )
+      , dplyr::mutate(dplyr::across(dplyr::ends_with("Ct"), ~ formattable::comma(., digits = 0)))
+      
+        ) |> 
+     dplyr::mutate(
+     tot_statePct = formattable::percent(tot_statePct, digits = 2)
+     , tot_chbPct = formattable::percent(tot_chbPct, digits = 2)
+     )
+    
+  #Remove the extra dataframes 
+  rm(df_decennialPop2020, state_totalRow, chb_totalRow)
+  
+```
+
+According to @decennialcensus2020P1, the state of Minnesota had a population of `{r} f_decennialPop2020$tot_populationCt[1]` people. `{r} gbVal_chbAbbrLbl` had a total residential population of `{r} f_decennialPop2020$tot_populationCt[2]`. This makes up `{r} f_decennialPop2020$tot_statePct[2]` of Minnesota's population (`{r} f_decennialPop2020$tot_populationCt[2]`/`{r} f_decennialPop2020$tot_populationCt[1]`).
+
+-   `{r} f_decennialPop2020$name[3]` county is the largest of the three counties, with a population of `{r} f_decennialPop2020$tot_populationCt[3]` residents. This represents `{r} f_decennialPop2020$tot_chbPct[3]` of the total population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) for the `{r} gbVal_chbAbbrLbl` area. In relation to the state of Minnesota, `{r} f_decennialPop2020$name[3]` county accounts for `{r} f_decennialPop2020$tot_statePct[3]` of the population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[1]`).
+
+-   `{r} f_decennialPop2020$name[4]` county has `{r} f_decennialPop2020$tot_populationCt[4]` residents, making up `{r} f_decennialPop2020$tot_chbPct[4]` (`{r} f_decennialPop2020$tot_populationCt[4]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area.
+
+-   `{r} f_decennialPop2020$name[5]` county is the smallest, with a population of `{r} f_decennialPop2020$tot_populationCt[5]` residents. This is `{r} f_decennialPop2020$tot_chbPct[5]` (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area, and `{r} f_decennialPop2020$tot_statePct[5]` of the state population (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[1]`).
+
+### Age Distribution
+
+```{r}
+#| label: fig-acsFiveEst2022AgeSex
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto
+
+  df_acsFiveEst2022AgeSex <-
+    read.csv("https://api.census.gov/data/2022/acs/acs5/subject?get=group(S0101)&ucgid=pseudo(0400000US27$0500000)") |>
+    janitor::clean_names()  |>
+     dplyr::mutate(
+       x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters
+       , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled
+      ) |> 
+    dplyr::select(- dplyr::ends_with("ea"), - dplyr::ends_with("ma")) |> 
+    dplyr::select(1:3, s0101_c01_032e,
+                  dplyr::matches("s0101_c03_00[2-9]e|s0101_c03_01[0-9]e"),
+                  dplyr::matches("s0101_c05_00[2-9]e|s0101_c05_01[0-9]e")
+    ) |>  
+    dplyr::rename_with(~ gsub("^[^_]*_c03_", "genderMale", .), dplyr::matches("_c03_")) |>
+    dplyr::rename_with(~ gsub("^[^_]*_c05_", "genderFemale", .), dplyr::matches("_c05_")) |>
+    dplyr::rename(
+      fips = 1
+      , tot_pop_est = 3
+      
+      , tot_medianAge_est = 4
+      , tot_sexMaleLe5_est = 5
+      , tot_sexMale5To9_est = 6
+      , tot_sexMale10To14_est = 7
+      , tot_sexMale15To19_est = 8
+      , tot_sexMale20To24_est = 9
+      , tot_sexMale25To29_est = 10
+      , tot_sexMale30To34_est = 11
+      , tot_sexMale35To39_est = 12
+      , tot_sexMale40To44_est = 13
+      , tot_sexMale45To49_est = 14
+      , tot_sexMale50To54_est = 15
+      , tot_sexMale55To59_est = 16
+      , tot_sexMale60To64_est = 17
+      , tot_sexMale65To69_est = 18
+      , tot_sexMale70To74_est = 19
+      , tot_sexMale75To79_est = 20
+      , tot_sexMale80To84_est = 21
+      , tot_sexMale85Plus_est = 22
+  
+      , tot_sexFemaleLe5_est = 23
+      , tot_sexFemale5To9_est = 24
+      , tot_sexFemale10To14_est = 25
+      , tot_sexFemale15To19_est = 26
+      , tot_sexFemale20To24_est = 27
+      , tot_sexFemale25To29_est = 28
+      , tot_sexFemale30To34_est = 29
+      , tot_sexFemale35To39_est = 30
+      , tot_sexFemale40To44_est = 31
+      , tot_sexFemale45To49_est = 32
+      , tot_sexFemale50To54_est = 33
+      , tot_sexFemale55To59_est = 34
+      , tot_sexFemale60To64_est = 35
+      , tot_sexFemale65To69_est = 36
+      , tot_sexFemale70To74_est = 37
+      , tot_sexFemale75To79_est = 38
+      , tot_sexFemale80To84_est = 39
+      , tot_sexFemale85Plus_est = 40
+    ) |> 
+   dplyr::arrange(desc(tot_pop_est)) #This will arrange counties by population so the order can be indexed later
+  
+  # Since median can't technically be recalculated without raw Vals, I pull the state API rather than recalculate the totals by adding up the county data
+  # This process is different than the decennial population estimate process because median can't be recalculated 
+  # Pulling the state API directly, the median age is 38.5 but the county calculated Val was 38.7.
+  state_totalRow <- 
+    read.csv("https://api.census.gov/data/2022/acs/acs5/subject?get=group(S0101)&ucgid=0400000US27") |> 
+    janitor::clean_names()  |>
+    dplyr::select(- dplyr::ends_with("ea"), - dplyr::ends_with("ma")) |> 
+    dplyr::select(1:3, s0101_c01_032e,
+                  dplyr::matches("s0101_c03_00[2-9]e|s0101_c03_01[0-9]e"),
+                  dplyr::matches("s0101_c05_00[2-9]e|s0101_c05_01[0-9]e")
+    ) |>  
+    dplyr::rename_with(~ gsub("^[^_]*_c03_", "sexMale", .), dplyr::matches("_c03_")) |>
+    dplyr::rename_with(~ gsub("^[^_]*_c05_", "sexFemale", .), dplyr::matches("_c05_")) |>
+    dplyr::rename(
+      fips = 1
+      , tot_pop_est = 3
+      , tot_medianAge_est = 4
+      
+      , tot_sexMaleLe5_est = 5
+      , tot_sexMale5To9_est = 6
+      , tot_sexMale10To14_est = 7
+      , tot_sexMale15To19_est = 8
+      , tot_sexMale20To24_est = 9
+      , tot_sexMale25To29_est = 10
+      , tot_sexMale30To34_est = 11
+      , tot_sexMale35To39_est = 12
+      , tot_sexMale40To44_est = 13
+      , tot_sexMale45To49_est = 14
+      , tot_sexMale50To54_est = 15
+      , tot_sexMale55To59_est = 16
+      , tot_sexMale60To64_est = 17
+      , tot_sexMale65To69_est = 18
+      , tot_sexMale70To74_est = 19
+      , tot_sexMale75To79_est = 20
+      , tot_sexMale80To84_est = 21
+      , tot_sexMale85Plus_est = 22
+  
+      , tot_sexFemaleLe5_est = 23
+      , tot_sexFemale5To9_est = 24
+      , tot_sexFemale10To14_est = 25
+      , tot_sexFemale15To19_est = 26
+      , tot_sexFemale20To24_est = 27
+      , tot_sexFemale25To29_est = 28
+      , tot_sexFemale30To34_est = 29
+      , tot_sexFemale35To39_est = 30
+      , tot_sexFemale40To44_est = 31
+      , tot_sexFemale45To49_est = 32
+      , tot_sexFemale50To54_est = 33
+      , tot_sexFemale55To59_est = 34
+      , tot_sexFemale60To64_est = 35
+      , tot_sexFemale65To69_est = 36
+      , tot_sexFemale70To74_est = 37
+      , tot_sexFemale75To79_est = 38
+      , tot_sexFemale80To84_est = 39
+      , tot_sexFemale85Plus_est = 40
+    ) |> 
+    dplyr::mutate(
+      fips = 99
+      , name = "Minnesota"
+    )
+      
+   chb_totalRow <-  df_acsFiveEst2022AgeSex |>
+     gbFun_countyFilter(fips) |> 
+     dplyr::summarise(
+       fips = 999 #State total will be 99 throughout the report
+       , name = gbVal_chbAbbrLbl
+       #Its not perfectly accurate but this is the best I can do to calculate median age without the raw data for combined CHB Its also prior to the tot_pop_est because if the tot_pop_est is before this step it messes up the calculation
+       , tot_medianAge_est = round(sum(tot_pop_est * tot_medianAge_est, na.rm = TRUE) / sum(tot_pop_est, na.rm = TRUE), 1)
+       , tot_pop_est = sum(tot_pop_est, na.rm = TRUE)
+       , tot_sexMaleLe5_est = sum(tot_sexMaleLe5_est, na.rm = TRUE)
+       , tot_sexMale5To9_est = sum(tot_sexMale5To9_est, na.rm = TRUE)
+       , tot_sexMale10To14_est = sum(tot_sexMale10To14_est, na.rm = TRUE)
+       , tot_sexMale15To19_est = sum(tot_sexMale15To19_est, na.rm = TRUE)
+       , tot_sexMale20To24_est = sum(tot_sexMale20To24_est, na.rm = TRUE)
+       , tot_sexMale25To29_est = sum(tot_sexMale25To29_est, na.rm = TRUE)
+       , tot_sexMale30To34_est = sum(tot_sexMale30To34_est, na.rm = TRUE)
+       , tot_sexMale35To39_est = sum(tot_sexMale35To39_est, na.rm = TRUE)
+       , tot_sexMale40To44_est = sum(tot_sexMale40To44_est, na.rm = TRUE)
+       , tot_sexMale45To49_est = sum(tot_sexMale45To49_est, na.rm = TRUE)
+       , tot_sexMale50To54_est = sum(tot_sexMale50To54_est, na.rm = TRUE)
+       , tot_sexMale55To59_est = sum(tot_sexMale55To59_est, na.rm = TRUE)
+       , tot_sexMale60To64_est = sum(tot_sexMale60To64_est, na.rm = TRUE)
+       , tot_sexMale65To69_est = sum(tot_sexMale65To69_est, na.rm = TRUE)
+       , tot_sexMale70To74_est = sum(tot_sexMale70To74_est, na.rm = TRUE)
+       , tot_sexMale75To79_est = sum(tot_sexMale75To79_est, na.rm = TRUE)
+       , tot_sexMale80To84_est = sum(tot_sexMale80To84_est, na.rm = TRUE)
+       , tot_sexMale85Plus_est = sum(tot_sexMale85Plus_est , na.rm = TRUE)
+
+       , tot_sexFemaleLe5_est = sum(tot_sexFemaleLe5_est, na.rm = TRUE)
+       , tot_sexFemale5To9_est = sum(tot_sexFemale5To9_est, na.rm = TRUE)
+       , tot_sexFemale10To14_est = sum(tot_sexFemale10To14_est, na.rm = TRUE)
+       , tot_sexFemale15To19_est = sum(tot_sexFemale15To19_est, na.rm = TRUE)
+       , tot_sexFemale20To24_est = sum(tot_sexFemale20To24_est, na.rm = TRUE)
+       , tot_sexFemale25To29_est = sum(tot_sexFemale25To29_est, na.rm = TRUE)
+       , tot_sexFemale30To34_est = sum(tot_sexFemale30To34_est, na.rm = TRUE)
+       , tot_sexFemale35To39_est = sum(tot_sexFemale35To39_est, na.rm = TRUE)
+       , tot_sexFemale40To44_est = sum(tot_sexFemale40To44_est, na.rm = TRUE)
+       , tot_sexFemale45To49_est = sum(tot_sexFemale45To49_est, na.rm = TRUE)
+       , tot_sexFemale50To54_est = sum(tot_sexFemale50To54_est, na.rm = TRUE)
+       , tot_sexFemale55To59_est = sum(tot_sexFemale55To59_est, na.rm = TRUE)
+       , tot_sexFemale60To64_est = sum(tot_sexFemale60To64_est, na.rm = TRUE)
+       , tot_sexFemale65To69_est = sum(tot_sexFemale65To69_est, na.rm = TRUE)
+       , tot_sexFemale70To74_est = sum(tot_sexFemale70To74_est, na.rm = TRUE)
+       , tot_sexFemale75To79_est = sum(tot_sexFemale75To79_est, na.rm = TRUE)
+       , tot_sexFemale80To84_est = sum(tot_sexFemale80To84_est, na.rm = TRUE)
+       , tot_sexFemale85Plus_est = sum(tot_sexFemale85Plus_est, na.rm = TRUE)
+       ) |> 
+     as.data.frame()
+   
+    # Union the total row with the individual county data
+  f_acsFiveEst2022AgeSex <- state_totalRow |> 
+    dplyr::bind_rows(chb_totalRow) |> 
+    dplyr::bind_rows(df_acsFiveEst2022AgeSex) |> 
+    gbFun_countyFilter(fips) #Apply county filter so only counties of interest are returned
+  
+  rm(df_acsFiveEst2022AgeSex, state_totalRow, chb_totalRow)
+
+```
+
+According to the @acs2022S0101, the median ages for the counties are:
+
+-   `{r} f_acsFiveEst2022AgeSex$name[3]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[3]` years
+
+-   `{r} f_acsFiveEst2022AgeSex$name[4]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[4]` years
+
+-   `{r} f_acsFiveEst2022AgeSex$name[5]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[5]` years
+
+For the state of Minnesota, the median age was `{r} f_acsFiveEst2022AgeSex$tot_medianAge[1]` years, and the combined median age for `{r} gbVal_chbAbbrLbl` area was `{r} f_acsFiveEst2022AgeSex$tot_medianAge[2]` years, though this figure should be interpreted with caution as it wasn't calculated from the raw data. Median age is used instead of the average age because it gives a clearer picture of the community's age. The median age is the middle point, so it isn't thrown off by very young or very old people. This way, we get a better idea of the typical age in the community. Mahnomen County has a younger population compared to Minnesota while Polk and Norman County have older populations compared to Minnesota with Polk county being the closest in age.
+
+### Sex Distribution
+
+The Age Sex Population Pyramids below illustrate a generally balanced distribution of males and females across most age groups. You can determine the balance by examining the horizontal solid black midpoint line: a longer line indicates a greater difference between the male and female populations within that age group. The Age Sex Population Pyramids are based on the @acs2022S0101 estimates. While there is a lot to examine, comparing Minnesota to the `{r} gbVal_chbAbbrLbl` area reveals that the midpoint line is similar, except for the age groups 25-29, 65-69, and 70-74.
+
+```{r}
+#| label: fig-AgeSexDistribution
+#| warning: false
+#| include: false
+
+if (knitr::is_html_output()) {
+  knitr::opts_chunk$set(fig.width = 12, fig.height = 3.5)
+} else {
+  knitr::opts_chunk$set(fig.width = 4, fig.height = 3.5)
+}
+
+  df_ageSex <- f_acsFiveEst2022AgeSex |>  
+  dplyr::select(-tot_medianAge_est) |>       #Remove tot_medianAge_est, not required but cleans up the fields
+  #Pivot longer will create a single column for all the categories
+  #Transpose the data for cols that start with tot_sex
+  tidyr::pivot_longer(
+    #I'm transposing data on the sexAge fields
+     cols = starts_with("tot_sex")  
+     # names_to will separate the groups and create labels for the new columns
+     # since there are two groups, age and sex,
+     # there needs to be two column names
+     # the order of the names_to makes a difference for how the data is labeled
+     # uncomment next line and see what happens
+     #names_to = c("age_group", "sex"),
+     , names_to = c("sex", "age_group")
+     # sex(.*) matches the first pattern and returns everything after it until a new pattern is found
+     # (Le5|5To9|10To14|15To19|20To24|25To29|30To34|35To39|40To44|45To49|50To54|55To59|60To64|65To69|70To74|7
+     # To79|80To84|85Plus) matches the second pattern and only returns it
+     , names_pattern = "sex(.*)(Le5|5To9|10To14|15To19|20To24|25To29|30To34|35To39|40To44|45To49|50To54|55To59|60To64|65To69|70To74|75To79|80To84|85Plus)"
+     # this defines the population total
+     , values_to = "population"
+   ) |>  
+  # Pivoting wider takes the sex column and creates two new columns while reducing the rows
+  # the Vals for the two new columns male and female comes from the population field
+  # However, if I pivot wider, than apyramid format doesn't align so I commented the step out
+  # The reason I left this is so I know that pivot wider can be used to get data in a different format
+  # tidyr::pivot_wider(names_from = sex, Vals_from = population) |>   
+  # Preparing age group data for pyramid
+  dplyr::mutate(
+    # orders the factor to the order we want
+    age_group = forcats::fct_relevel( 
+      # converts data type from character to factor so can be used in apryamid later
+      factor(
+        #This step renames the columns so they are more relatable for the public
+        dplyr::recode( 
+          age_group 
+          , Le5 = "0-4"
+          , `5To9` = "5-9"
+          , `10To14` = "10-14"
+          , `15To19` = "15-19"
+          , `20To24` = "20-24"
+          , `25To29` = "25-29"
+          , `30To34` = "30-34"
+          , `35To39` = "35-39"
+          , `40To44` = "40-44"
+          , `45To49` = "45-49"
+          , `50To54` = "50-54"
+          , `55To59` = "55-59"
+          , `60To64` = "60-64"
+          , `65To69` = "65-69"
+          , `70To74` = "70-74"
+          , `75To79` = "75-79"
+          , `80To84` = "80-84"
+          , `85Plus` = "85+"
+          )  
+        ),
+      # The order of the factor so the data can be displayed correctly 
+      "0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", 
+      "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", 
+      "65-69", "70-74", "75-79", "80-84", "85+" 
+      )    
+    ) 
+
+# Split the data by 'name'
+split_data <- split(df_ageSex, df_ageSex$name)
+
+# Order the split data based on 'tot_pop_est'
+# sapply applies a Fun to each element of the list split_data.
+# The Fun Fun(x) x$tot_pop_est[1] extracts the first Val of the tot_pop_est field from each group.
+# order returns the indices that would sort the numeric vector produced by sapply.
+# Since the Vals are negated, order will sort them in descending order of tot_pop_est.
+# This results in a numeric vector where each element corresponds to the negated tot_pop_est of each group.
+# The [] after split_data reorder the split_data list according to the indices provided by order.
+split_data <- split_data[order(sapply(split_data, function(x) -x$tot_pop_est[1]))] #The - means descending order
+
+# Initialize a list to store the plots
+plots <- list()
+
+# Iterate over each group and create the age pyramid plot
+# I tried using the dplry::map data but it didn't work so creating this process did the trick
+for (group_name in names(split_data)) {
+  
+   group_data <- split_data[[group_name]] |> 
+     dplyr::group_by(age_group) |> #Required to calculate midpoint so pyramid is easier to understand for non data people
+     dplyr::mutate(
+      female_pop = ifelse(sex == "Female", population, 0)
+      , male_pop = ifelse(sex == "Male", population, 0)
+      , midpoint = dplyr::case_when(
+        sum(female_pop) > sum(male_pop) ~ -sum(female_pop - male_pop) / 2
+        , sum(male_pop) > sum(female_pop) ~ sum(male_pop - female_pop) / 2
+        , TRUE ~ NA
+      )
+    ) |> 
+    dplyr::ungroup()
+  
+  
+  # Calculate the maximum population Val for dynamic nudging
+  max_population <- max(group_data$population)
+  nudge_amount <- dplyr::case_when(
+    max_population > 100000 ~ max_population * (-0.09)
+    , max_population > 10000 ~ max_population * (-0.08)
+    , max_population > 1000 ~ max_population * (-0.07)
+    , TRUE ~ max_population * (-0.05)
+    )  # Adjust the multiplier as needed
+  
+  # Create the age pyramid plot using ggplot2
+  plot <- ggplot2::ggplot(
+      group_data, 
+      # This sets up the aes for the plot, with negative Vals for females to create the pyramid effect.
+      ggplot2::aes(x = age_group, y = ifelse(sex == "Female", -population, population), fill = sex)
+    ) +
+    # Creates the bar plot.
+    ggplot2::geom_bar(stat = "identity", position = "stack") +
+    # Flips the coordinates to make the bars horizontal.
+    ggplot2::coord_flip() +
+    # Ensures the y-axis labels are positive. abs is base r to return absolute Val so the female Vals are positive and it is applied to the y axis 
+    # Fun is require to make labels in the comma format
+    ggplot2::scale_y_continuous(labels = function(x) scales::comma(abs(x))) +
+    ggplot2::scale_fill_manual(values = c("Female" = "pink", "Male" = "lightblue")) +  # Custom fill colors
+    ggplot2::theme_minimal() +
+    ggplot2::labs(
+      y = "Total"
+      , x = "Age categories"
+      , fill = "Sex"
+      , title = "Age Sex Population Pyramid"
+      , subtitle = group_name
+    ) +
+    ggplot2::theme(
+      axis.text = ggplot2::element_text(size = 18, face = "bold")
+      , axis.title = ggplot2::element_text(size = 18, face = "bold")
+      , legend.position = "bottom"  # Move the legend to the bottom
+      , plot.title = ggplot2::element_text(hjust = 0.5)  # Center the title
+      , plot.subtitle = ggplot2::element_text(hjust = 0.5)     # Center the subtitle
+    ) +
+    ggplot2::geom_text(
+      ggplot2::aes(label = scales::comma(population)) #Scales::comma will add commas to the lbl
+      , nudge_y = ifelse(group_data$sex == "Female", -nudge_amount, nudge_amount)
+      , size = 3
+      , color = "black"
+    )+
+    ggplot2::geom_segment(
+      ggplot2::aes(x = age_group, xend = age_group, y = 0, yend = midpoint),
+      linetype = "solid",
+      color = "black"
+    )  # Add dynamic midpoint line
+  
+  # Store the plot in the list
+  plots[[group_name]] <- plot
+}
+
+# Now 'plots' contains all the age pyramid plots for each group with the additional settings
+# For loop required otherwise if it is just printed a $ with list name will also be displayed
+for (plot in plots) {
+  print(plot)
+  }
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-AgeSexDistribution
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-AgeSexDistribution
+#| fig-width: 8
+#| fig-height: 6
+
+```
+:::
+
+### Race/Ethnicity
+
+Based on the @decennialcensus2020P1 data, the White population represents the highest percentage in both Minnesota and the `{r} gbVal_chbAbbrLbl` area. `{r} gbVal_chbAbbrLbl` has a higher percentage of American Indian and Alaska Native residents, with Mahnomen County having the highest percentage among the three counties. It's important to compare proportions rather than counts because proportions provide a relative measure that accounts for population size differences; Mahnomen County has more than double the percentage of residents identifying as Two or More Races compared to the state of Minnesota. The Black or African American and Asian population percentages are higher in Minnesota overall than the `{r} gbVal_chbAbbrLbl`. Additionally, Polk and Norman counties have similar racial demographic profiles.
+
+When looking at ethnicity data from the @decennialcensus2020P9, Polk County has a slightly higher Latino/Hispanic population compared to Minnesota overall, whereas Norman and Mahnomen counties have lower percentages of Latino/Hispanic residents.
+
+```{r}
+#| label: fig-raceEthnicity
+#| warning: false
+#| include: false
+
+df_decennialEthnicity2020 <- read.csv("https://api.census.gov/data/2020/dec/dhc?get=group(P9)&ucgid=pseudo(0400000US27$0500000)") |> 
+  janitor::clean_names() |>   
+  dplyr::mutate(
+    x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters
+    , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled
+    ) |>   
+  dplyr::select(1, 2, 3, 5) |> 
+  dplyr::rename(fips = x_geo_id, tot_population = p9_001n, hispanicLatino = p9_002n) |> 
+  dplyr::arrange(desc(tot_population)) #This will arrange counties by population so the order can be indexed later
+  
+  state_totalRow <- df_decennialEthnicity2020 |>
+    dplyr::summarise(
+      fips = gbVal[2] #State total will be 99 throughout the report
+      , name = "Minnesota"
+      , hispanicLatino = sum(hispanicLatino, na.rm = TRUE)
+      , tot_population = sum(tot_population, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+  
+ chb_totalRow <- df_decennialEthnicity2020 |> 
+  gbFun_countyFilter(fips)  |> 
+    dplyr::summarise(
+      fips = gbVal[3] # CHB total will be 999 throughout the report
+      , name = gbVal_chbAbbrLbl
+      , hispanicLatino = sum(hispanicLatino, na.rm = TRUE)
+      , tot_population = sum(tot_population, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+ 
+ 
+  # Union the total row with the individual county data
+  f_decenialEthnicity2020 <-
+    state_totalRow |> 
+    dplyr::bind_rows(chb_totalRow) |> 
+    dplyr::bind_rows(df_decennialEthnicity2020) |> 
+    gbFun_countyFilter(fips) |> 
+    dplyr::mutate(hispanicLatino = formattable::comma(hispanicLatino,0))
+    
+  #Remove the extra dataframes 
+  rm(df_decennialEthnicity2020, state_totalRow, chb_totalRow)
+
+
+f_decennialRaceEthnicity <-  f_decennialPop2020 |> 
+  dplyr::select(-tot_oneRaceCt, -tot_statePct, -tot_chbPct) |> 
+  dplyr::left_join(f_decenialEthnicity2020, dplyr::join_by(fips)) |> 
+  dplyr::rename(
+    name = name.x
+    , raceEthnicityR_AIAN = oneRace_AiAnCt #American Indian and Alaska Native
+    , raceEthnicityR_Asian = oneRace_AsianCt #Asian
+    , raceEthnicityR_BAF = oneRace_BlackCt #Black or African American
+    , raceEthnicityR_NHOPI = oneRace_NhOpiCt #Native Hawaiian and Other Pacific Islander
+    , raceEthnicityR_SOR = oneRace_otherCt #Some Other Race
+    , raceEthnicityR_TwoPlus = tot_twoPlusRaceCt #Two or More Races
+    , raceEthnicityR_White = oneRace_whiteCt
+    , raceEthnicityE_HL = hispanicLatino
+    ) |> 
+    dplyr::select(-fips, -name.y, -tot_population) |> 
+  
+  
+#Pivot longer will create a single column for all the categories
+  #Transpose the data for cols that start with race
+  tidyr::pivot_longer(
+    #I'm transposing data on the race fields
+     cols = starts_with("raceEthnicity") 
+     , names_to = "raceEthnicityCategory"
+     , values_to = "raceEthnicityCt"
+   ) |> 
+  dplyr::mutate(raceEthnicityCategory = gsub("raceEthnicity", "", raceEthnicityCategory)) |>  #Remove raceEthnicity at the beginning of the values for raceEthnicityCategory
+  dplyr::mutate( # The formatTable data type did not work with pivot_longer so data had to be converted back to number #Display is defined in ggplot
+      raceEthnicityCt = as.numeric(raceEthnicityCt)
+      , proportion = as.numeric(raceEthnicityCt / tot_populationCt)
+      )
+  
+
+
+split_data <- split(f_decennialRaceEthnicity, f_decennialRaceEthnicity$name) # Split the data by name
+split_data <- split_data[order(sapply(split_data, function(x) -x$tot_populationCt[1]))] #Order the state, chb, and counties from highest total to lowest
+split_data <- lapply(split_data, function(x) {x <- x |> dplyr::select(-tot_populationCt)  #Remove the tot_populationCt so graph doesn't display it
+  return(x) }) #Return cannot be on the same line as the Fun. It will return an error
+
+# Initialize a list to store the plots
+combined_charts <- list()
+
+for (group_name in names(split_data)) {
+  data_subset <- split_data[[group_name]]  # Extract the subset of data for the current group
+  
+  # Combine counts and proportions into one data frame
+  combined_data <- data_subset |>
+    tidyr::pivot_longer(cols = c(raceEthnicityCt, proportion), names_to = "metric", values_to = "metricValue") |> 
+    dplyr::group_by(name, metric) |>
+    dplyr::mutate(thresholdHjust = ifelse(metricValue >= max(metricValue) - max(metricValue) * 0.2 , 1.1, -0.2)) |> #By defining threshold here, I'm able to set it based on the group (Name) and facet(Metric) where if I try to declare it in ggplot2 I run into issues.
+    dplyr::ungroup()
+  
+  combined_chart <- ggplot2::ggplot(
+    combined_data, ggplot2::aes(
+      x = reorder( #since we can't reorder alphabetically, I had to convert strings to factors to so graph will order data correctly
+        raceEthnicityCategory
+        , -as.numeric(
+          factor(
+            raceEthnicityCategory
+            , levels = sort(
+              unique(raceEthnicityCategory)
+              )
+            )
+          )
+        )
+      , y = metricValue
+      , fill = raceEthnicityCategory
+    )
+    )+
+    ggplot2::geom_bar(stat = "identity") +  # Create a bar chart
+    ggplot2::coord_flip() +  # Flip coordinates to make it horizontal
+    ggplot2::facet_wrap(~ metric, scales = "free_x", labeller = ggplot2::labeller(metric = c(raceEthnicityCt = "Count", proportion = "Proportion"))) +  # Use facets to separate counts and proportions
+    ggplot2::labs(
+      title = paste(group_name, "by Race/Ethnicity")
+      , caption = "E_HL = Hispanic Or Latino Ethnicity\nR_AIAN = American Indian and Alaska Native Race\nR_Black = Black or African American Race\nR_NHOPI = Native Hawaiian and Other Pacific Islander Race\nR_SOR = Some Other Race\nR_TwoPlus = Two or More Races\nThe percentages don't add up to 100% because someone can be both Hispanic or Latino and belong to a race category\nThe race category percentages will total 100%"
+      ) +  # Add a title and Use HTML tags for bold and underline
+    ggplot2::theme_minimal() +  # Use a minimal theme for a cleaner look
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(
+        size = 14 #Title Font Size
+        , hjust = 0.5 # Center the title
+        , face = "bold"
+        )
+      #, plot.title.position = "plot"  # Position the title within the plot area
+      , legend.position = "none"  # Remove the legend
+      , axis.title.x = ggplot2::element_blank()  # Remove x-axis title
+      , axis.text.x = ggplot2::element_blank()  # Remove x-axis text
+      , axis.ticks.x = ggplot2::element_blank()  # Remove x-axis ticks
+      , axis.title.y = ggplot2::element_blank()  # Remove y-axis title
+      , panel.grid.major.x = ggplot2::element_blank()  # Remove major vertical gridlines
+      , panel.grid.major.y = ggplot2::element_blank()  # Remove major horizontal gridlines
+      , panel.grid.minor.x = ggplot2::element_blank()  # Remove minor vertical gridlines
+      , panel.grid.minor.y = ggplot2::element_blank()   # Remove minor horizontal gridlines
+      , strip.text = ggplot2::element_text(size = 14)  # Increase font size of facet labels
+      , plot.background = ggplot2::element_rect(color = "black", fill = NA, linewidth = 1)  # Add a border around entire plot including title
+      , plot.caption = ggplot2::element_text(hjust = 1, size = 10, face = "italic")  # Adjust caption position and style
+    ) + 
+    ggplot2::geom_text(  # Add text labels at the end of the bars
+      ggplot2::aes(
+        label = ifelse(
+          metric == "proportion"
+          , scales::percent(
+            metricValue,
+            accuracy = 0.01 # Two decimal points
+            )
+          , scales::comma(
+            metricValue,
+            accuracy = 1 # Zero decimal points
+            )
+          )
+        ,  hjust = thresholdHjust #Defining hjust in the aes will pass the thresholdHjust as an argument where if outside aes it has to be directly assigned and doesn't work
+        )
+      , position = ggplot2::position_dodge(width = 0.9)  # Adjust the position to dodge the bars
+      
+      , size = 5  # Adjust the size of the text
+    )
+  
+  # Store the combined chart in the list with the group name as the key
+  combined_charts[[group_name]] <- combined_chart
+}
+
+for (combined_chart in combined_charts) {
+  print(combined_chart)
+}
+
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-raceEthnicity
+#| fig-width: 8
+#| fig-height: 7
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-raceEthnicity
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+
+```
+:::
+
+<!-- ### Veteran Status -->
+
+<!-- ```{r} -->
+
+<!-- # df_acsVeteran5YrEst <- read.csv("https://api.census.gov/data/2022/acs/acs5/subject?get=group(S2101)&ucgid=pseudo(0400000US27$0500000)")  -->
+
+<!-- #   janitor::clean_names() |>    -->
+
+<!-- #   dplyr::mutate( -->
+
+<!-- #     x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters -->
+
+<!-- #     , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled -->
+
+<!-- #     ) |>    -->
+
+<!-- #   dplyr::select(1, 2, 3, 5) |>  -->
+
+<!-- #   dplyr::rename(fips = x_geo_id, tot_population = p9_001n, hispanicLatino = p9_002n) |>  -->
+
+<!-- #   dplyr::arrange(desc(tot_population)) #This will arrange counties by population so the order can be indexed later -->
+
+<!-- #  -->
+
+<!-- # ``` -->
+
+### County Demographic Profiles Census Bureau
+
+::: {layout-ncol="3"}
+[![](Attachments/mnMap_polk.png)](https://data.census.gov/profile/Polk_County,_Minnesota?g=050XX00US27119)
+
+[![](Attachments/mnMap_norman.png)](https://data.census.gov/profile/Norman_County,_Minnesota?g=050XX00US27107)
+
+[![](Attachments/mnMap_mahnomen.png)](https://data.census.gov/profile/Mahnomen_County,_Minnesota?g=050XX00US27087)
+
+Please click on the corresponding map above for detailed demographic profiles of the specific counties.
+:::
+
+## Socioeconomic Status
+
+Socioeconomic status (SES) encompasses various factors such as income, education, and employment, which collectively influence an individual's or community's quality of life. Higher SES often correlates with better access to healthcare, education, and other essential services, leading to improved health outcomes. Conversely, lower SES can be associated with increased health risks and limited access to resources. Understanding SES is crucial for identifying disparities and implementing targeted interventions to promote equity and well-being within communities.
+
+### CDC/ATSDR Social Vulnerability Index (SVI)
+
+The CDC/ATSDR Social Vulnerability Index (SVI) indicators are crucial because they help identify communities that might need extra help during emergencies like natural disasters or disease outbreaks. By understanding factors like poverty, lack of access to transportation, and crowded housing, we can better plan and provide support to those who are most at risk. The 2022 SVI developed by @cdc2022SVI uses estimates from the ACS 2018-2022. Before, we look at each counties SVI status, lets look at some of the indicators used to create the SVI scores. The SVI scale is 0 to 1 with 1 being the highest vulnerability.
+
+`{r} f_cdcSvi2022$county[3]` County has several notable statistics regarding its population and housing. There are approximately `{r} f_cdcSvi2022$e_pov150[3]` individuals below poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[3]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated `{r} f_cdcSvi2022$e_nohsdp[3]` residents aged 25 and older do not have a high school diploma. Polk County has about `{r} f_cdcSvi2022$e_uninsur[3]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[3]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[3]` households have more people than rooms available.
+
+`{r} f_cdcSvi2022$county[3]` County's SVI scores are as follows:
+
+-   Socioeconomic Status: `{r} f_cdcSvi2022$rpl_theme1[3]`
+
+-   Household Characteristics: `{r} f_cdcSvi2022$rpl_theme2[3]`
+
+-   Racial and Ethnic Minority Status: `{r} f_cdcSvi2022$rpl_theme3[3]`
+
+-   Housing Type/Transportation: `{r} f_cdcSvi2022$rpl_theme4[3]`
+
+-   Overall SVI: `{r} f_cdcSvi2022$rpl_themes[3]`
+
+`{r} f_cdcSvi2022$county[3]` County:
+
+-   High Housing Cost Burden: A significant portion of households with incomes under \$75,000 are spending more than 30% on housing, indicating financial strain.
+
+-   Education and Insurance Gaps: A notable number of residents lack a high school diploma and health insurance, which can limit economic opportunities and access to healthcare.
+
+-   Aging Population: With a large number of residents aged 65 and older, there may be increased demand for healthcare and senior services.
+
+-   High SVI Scores: The high scores in Housing Type/Transportation and Racial and Ethnic Minority Status suggest challenges in housing stability and potential disparities affecting minority groups.
+
+`{r} f_cdcSvi2022$county[4]` County also presents several key statistics. There are approximately `{r} f_cdcSvi2022$e_pov150[4]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[4]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated `{r} f_cdcSvi2022$e_nohsdp[4]` residents aged 25 and older do not have a high school diploma. Polk County also has about `{r} f_cdcSvi2022$e_uninsur[4]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[4]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[4]` households have more people than rooms available.
+
+`{r} f_cdcSvi2022$county[4]` County's SVI scores are as follows:
+
+-   Socioeconomic Status: `{r} f_cdcSvi2022$rpl_theme1[4]`
+
+-   Household Characteristics: `{r} f_cdcSvi2022$rpl_theme2[4]`
+
+-   Racial and Ethnic Minority Status: `{r} f_cdcSvi2022$rpl_theme3[4]`
+
+-   Housing Type/Transportation: `{r} f_cdcSvi2022$rpl_theme4[4]`
+
+-   Overall SVI: `{r} f_cdcSvi2022$rpl_themes[4]`
+
+`{r} f_cdcSvi2022$county[4]` County:
+
+-   Moderate Vulnerabilities: The scores indicate moderate levels of socioeconomic and housing vulnerabilities.
+
+-   Education and Insurance Needs: Similar to Polk County, there are gaps in education and health insurance coverage.
+
+-   Aging Population: The presence of a significant elderly population highlights the need for age-related services and support.
+
+`{r} f_cdcSvi2022$county[5]` County statistics are also noteworthy. There are approximately `{r} f_cdcSvi2022$e_pov150[5]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[5]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated`{r} f_cdcSvi2022$e_nohsdp[5]` residents aged 25 and older do not have a high school diploma. Polk County also has about `{r} f_cdcSvi2022$e_uninsur[5]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[5]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[5]` households have more people than rooms available.
+
+`{r} f_cdcSvi2022$county[5]` County's SVI scores are as follows:
+
+-   Socioeconomic Status: `{r} f_cdcSvi2022$rpl_theme1[5]`
+
+-   Household Characteristics: `{r} f_cdcSvi2022$rpl_theme2[5]`
+
+-   Racial and Ethnic Minority Status: `{r} f_cdcSvi2022$rpl_theme3[5]`
+
+-   Housing Type/Transportation: `{r} f_cdcSvi2022$rpl_theme4[5]`
+
+-   Overall SVI: `{r} f_cdcSvi2022$rpl_themes[5]`
+
+`{r} f_cdcSvi2022$county[5]` County:
+
+-   High Vulnerability: The highest SVI scores across all categories indicate severe vulnerabilities, particularly in socioeconomic status and racial/ethnic minority status.
+
+-   Significant Education and Insurance Gaps: A high number of residents lack a high school diploma and health insurance, exacerbating economic and health challenges.
+
+-   Aging Population: The elderly population, combined with other vulnerabilities, suggests a need for comprehensive support services.
+
+The SVI project is a great start at figuring out what areas to invest in related to socioeconomic factors. However, it is not the only area we looked at.
+
+### Minnesota Department of Education 3rd Grade Proficiency
+
+According to @mdeThirdGradeProficiency, Minnesota, Norman, and Polk experienced a decline in reading proficiency from 2022 to 2023 for third graders. Mahnomen County's data was suppressed due to small counts, but the negative percentage change in the 'not proficient' reading status indicates improvement in this area. Although interpreting a double negative is not as straight forward as interpreting being proficient , it suggests that Mahnomen has made progress in reading proficiency from 2022 to 2023. In terms of math proficiency, Minnesota, Polk, Norman, and Mahnomen all showed positive improvement from 2022 to 2023. Norman County had the largest increase, followed by Mahnomen. Each county has unique needs, and even small positive improvements is encouraging.
+
+```{r}
+#| label: fig-thirdGradeNotProReading
+#| warning: false
+#| include: false
+
+# Filter the data by 'measure'
+filtered_data <- f_mdeThirdGradeProficient |> 
+  dplyr::filter(subject == "reading", rating == "Not Proficient")
+
+# Create the plot
+gbFun_mdeThirdGradeProficiencyPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "3rd Grade Reading Proficiency: NOT PROFICIENT", "3rd Grade Reading Not Proficient")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-thirdGradeNotProReading
+#| fig-width: 8
+#| fig-height: 7
+#| warning: false
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-thirdGradeNotProReading
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+```{r}
+#| label: fig-thirdGradeProReading
+#| warning: false
+#| include: false
+
+# Filter the data by 'measure'
+filtered_data <- f_mdeThirdGradeProficient |> 
+  dplyr::filter(subject == "reading", rating == "Proficient")
+
+# Create the plot
+gbFun_mdeThirdGradeProficiencyPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "3rd Grade Reading Proficiency: PROFICIENT", "3rd Grade Reading Proficient")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-thirdGradeProReading
+#| fig-width: 8
+#| fig-height: 7
+#| warning: false
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-thirdGradeProReading
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+```{r}
+#| label: fig-thirdGradeNotProMath
+#| warning: false
+#| include: false
+
+# Filter the data by 'measure'
+filtered_data <- f_mdeThirdGradeProficient |> 
+  dplyr::filter(subject == "math", rating == "Not Proficient")
+
+# Create the plot
+gbFun_mdeThirdGradeProficiencyPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "3rd Grade Math Proficiency: NOT PROFICIENT", "3rd Grade Math Not Proficient")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-thirdGradeNotProMath
+#| fig-width: 8
+#| fig-height: 7
+#| warning: false
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-thirdGradeNotProMath
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+```{r}
+#| label: fig-thirdGradeProMath
+#| warning: false
+#| include: false
+
+# Filter the data by 'measure'
+filtered_data <- f_mdeThirdGradeProficient |> 
+  dplyr::filter(subject == "math", rating == "Proficient")
+
+# Create the plot
+gbFun_mdeThirdGradeProficiencyPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "3rd Grade Math Proficiency: PROFICIENT", "3rd Grade Math Proficient")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-thirdGradeProMath
+#| fig-width: 8
+#| fig-height: 7
+#| warning: false
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-thirdGradeProMath
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+### Minnesota Department of Employment and Economic Development Unemployment Rate
+
+Overall, the changes in unemployment rates between 2022 and 2023 are minimal, with most areas showing a slight increase of 0.1% or no change at all @deedUnemploymentRate. This stability suggests a relatively steady job market in our counties. For instance, Minnesota's unemployment rate increased marginally from 2.7% in 2022 to 2.8% in 2023, while Mahnomen's rate remained unchanged at 4.7%. Similarly, Norman and Polk counties experienced slight increases of 0.1%, indicating minor fluctuations in employment levels.
+
+It's important to note that there was a increase in unemployment rates in 2020, likely due to the economic impact of the COVID-19 pandemic. The pandemic led to widespread job losses and economic disruptions, which were reflected in higher unemployment rates across many regions. Since then, the job market has been gradually recovering, as evidenced by the relatively stable rates in recent years.
+
+```{r}
+#| label: fig-unemploymentRate
+#| warning: false
+#| include: false
+
+# Filter the data by 'measure'
+filtered_data <- f_unemploymentRateDEED 
+
+# Create the plot
+gbFun_deedUmemploymentPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Unemployment Rate")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-unemploymentRate
+#| fig-width: 8
+#| fig-height: 7
+#| warning: false
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-unemploymentRate
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+### County Profiles Department of Employment and Economic Development
+
+The Department of Employment and Economic Development offers a comprehensive breakdown of additional data on population, education, labor force, income and cost of living, industry employment, and commuting patterns. These profiles provide valuable insights into the economic landscape of our three counties, aiding in effective planning. According to the profiles, all three counties---Polk, Norman, and Mahnomen---are projected to experience a decline in labor force from 2025 to 2035 @deedCountyProfiles.
+
+::: {#fig-ctyProfile layout-ncol="3"}
+[![](Attachments/mnMap_polk.png)](https://mn.gov/deed/assets/101824_polk_tcm1045-407501.pdf)
+
+[![](Attachments/mnMap_norman.png)](https://mn.gov/deed/assets/101824_norman_tcm1045-407498.pdf)
+
+[![](Attachments/mnMap_mahnomen.png)](https://mn.gov/deed/assets/101824_mahnomen_tcm1045-407495.pdf)
+
+For detailed county profiles, please click on the corresponding map above.
+:::
+
+### Hunger Solutions: Food Shelf Household Visits
+
+In 2022, food shelf visits in Polk, Norman, and Mahnomen counties reflected a need for food assistance.
+
+Polk County: Households made numerous visits to food shelves, highlighting the ongoing struggle with food insecurity in the area.
+
+Norman County: Similarly, there was a notable increase in food shelf visits, indicating that many families are facing economic challenges and require additional support.
+
+Mahnomen County: The county experienced a high number of food shelf visits, underscoring the severe need for food assistance among its residents.
+
+These trends align with the broader state data, which saw a record high of 5.5 million food shelf visits in Minnesota and was driven by rising food prices and increased demand from seniors, adults, and children @foodShelf2022.
+
+```{r}
+#| label: fig-foodShelf
+#| warning: false
+#| include: false
+
+# Filter the data by 'measure'
+filtered_data <- f_foodShelf |> 
+  dplyr::filter(measure == "Household")
+
+# Create the plot
+gbFun_foodShelfPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Household")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-foodShelf
+#| fig-width: 8
+#| fig-height: 7
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-foodShelf
+#| fig-width: 10
+#| fig-height: 7
+#| fig-align: center
+
+```
+:::
+
+### CDC Places
+
+The CDC project provides estimates for 7 different measure topics: health outcomes, prevention practices, disabilities, social need factors, risk behaviors, health statuses, and social determinants of health. To limit information overload, selected topics were chosen based on local input. For these measures when looking to compare to the state as well as amongst the counties, please use the age-adjusted values. However, if you are just interested in looking at one county, the CHS, or the state at a time and not compare it them to other locations, please use either the crude or age-adjusted prevalence @cdc2022PLACES.
+
+-   Feeling socially isolated among adults was not significantly different between the counties, CHS, or Minnesota, based on the age-adjusted 95% confidence interval.
+
+-   However, Mahnomen County had significantly higher age-adjusted prevalence for food insecurity, food stamp usage, and housing insecurity in the past 12 months among adults compared to Polk County, Norman County, and the state of Minnesota.
+
+```{r}
+#| label: fig-socialNeedIsolated
+#| warning: false
+#| include: false
+
+# Filter the data by 'measureid'
+filtered_data <- f_places2022 |> 
+  dplyr::filter(measureid == "ISOLATION")
+
+# Create the plot
+gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-socialNeedIsolated
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-socialNeedIsolated
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+```
+:::
+
+```{r}
+#| label: fig-socialNeedFoodInsecurity
+#| warning: false
+#| include: false
+
+# Filter the data by 'measureid'
+filtered_data <- f_places2022 |> 
+  dplyr::filter(measureid == "FOODINSECU")
+
+# Create the plot
+gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme) 
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-socialNeedFoodInsecurity
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-socialNeedFoodInsecurity
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+```
+:::
+
+```{r}
+#| label: fig-socialNeedFoodStamp
+#| warning: false
+#| include: false
+
+# Filter the data by 'measureid'
+filtered_data <- f_places2022 |> 
+  dplyr::filter(measureid == "FOODSTAMP")
+
+# Create the plot
+gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme) 
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-socialNeedFoodStamp
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-socialNeedFoodStamp
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+```
+:::
+
+```{r}
+#| label: fig-socialNeedHouseInsecurity
+#| warning: false
+#| include: false
+
+# Filter the data by 'measureid'
+filtered_data <- f_places2022 |> 
+  dplyr::filter(measureid == "HOUSINSECU")
+
+# Create the plot
+gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-socialNeedHouseInsecurity
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-socialNeedHouseInsecurity
+#| fig-width: 10
+#| fig-height: 6
+#| fig-align: center
+
+```
+:::
+
+## Environmental Health
+
+Certain environments can contain factors that impact our health. We may be unaware of the potential risks in our homes, workplaces, schools, or other areas in our communities, which could increase our chances of developing medical conditions. Lack of awareness can be detrimental to our health. The following environmental indicators are not meant to alarm but to educate us about the environmental factors we may encounter in our communities, helping us become more informed and proactive.
+
+### Minnesota Department of Health Tickborne Disease Risk
+
+As shown on the following map, Polk, Norman, and Mahnomen are identified as high-risk areas for tickborne diseases, including Lyme disease. During tick season, we should be proactive in preventative measures, such as using tick repellents and performing regular tick checks, to reduce the risk of infection. Our high-risk area underscores the importance of awareness to be proactive in our health practices. By staying informed and vigilant, we can better protect ourselves and our communities. Remember, early detection and prompt removal of ticks can lower the chances of disease transmission.
+
+::: {#fig-tickborneRisk}
+[![](Attachments/popEnvironmentalHealth/mnMap_countyTickBorneRisk.png)](https://www.health.state.mn.us/diseases/lyme/highrisk.html)
+
+For more resources, please click anywhere on the map
+:::
+
+### Minnesota Department of Health Private Wells Arsenic
+
+Arsenic can be found in drinking water @arsenic2008_2021. Testing is vital in learning if your water has arsenic. MDH recommendation is to test a private well at least once for arsenic. Chronic arsenic exposure has shown to be a risk factor for some cancers and also can impact a child's development @arsenic2008_2021.
+
+From 2008 to 2021, 58.9% (399 out of 465) of wells tested in Polk County had arsenic levels greater than 2 µg/L, and 20.8% (141 out of 465) exceeded 10 µg/L. Norman County had higher percentages, with 73.6% (131 out of 178) of wells testing above 2 µg/L and 42.7% (76 out of 178) exceeding 10 µg/L. Mahnomen County showed similar results to Norman County, with 77.5% of wells testing above 2 µg/L and 41.9% exceeding 10 µg/L, based on a total of 267 tests @arsenic2008_2021.
+
+::: {#fig-privateWellsAs}
+[![](Attachments/popEnvironmentalHealth/mnMap_countyAs10ugLDML.png)](https://mndatamaps.web.health.state.mn.us/interactive/wells.html)
+
+For more resources, please click anywhere on any of the maps
+:::
+
+### Minnesota Department of Health Radon
+
+From 2010 to 2020 @mnhealthRadon, Minnesota averaged 93.5 radon tests per 10,000 properties each year. In comparison, Mahnomen had 28.8 tests, Norman had 50.4, and Polk had 38.7 tests per 10,000 properties annually.
+
+Regarding radon levels, 40.3% of properties tested in Minnesota had radon levels of 4 pCi/L or higher. In Polk, 70% of properties tested had high radon levels, while Norman had 56.6%, and Mahnomen had 57.7%.
+
+A possible area to improve radon testing is for our school districts. According to a 2024 data brief report by the MDH @mnhealthRadonSchoolDistrict2024, no school district in Polk, Norman, or Mahnomen county tested for radon from 2018 to 2022.
+
+::: {#fig-radon}
+[![](Attachments/popEnvironmentalHealth/mnMap_countyRn4pCiL.png)](https://mndatamaps.web.health.state.mn.us/interactive/radon.html)
+
+For more resources, please click anywhere on any of the maps
+:::
+
+::: {#fig-radonSchool}
+[![](Attachments/popEnvironmentalHealth/mnMap_countyRnSchoolDistrict.png)](https://www.health.state.mn.us/communities/environment/tracking/docs/databrieffall2024.pdf)
+
+For more resources, please click anywhere on any of the maps
+:::
+
+### Toward Zero Deaths Fatal/Serious Injury Crashes
+
+It is important to know any potential high crash areas in our counties. It is very encouraging that we don't see any red, purple, or blue on the maps developed by @crashSite2023. It is even for a five-year time period, and we still don't see alarming signs of concern resulting in serious injury or death. This may reflect the effectiveness of our local road safety measures and community awareness. Continuing to prioritize safe driving practices will help maintain and improve these outcomes.
+
+::: {#fig-seriousCrash layout-ncol="3"}
+[![](Attachments/popEnvironmentalHealth/countyMahnomenMap_crashes2019_2023.png)](https://www.minnesotatzd.org/regions/westcentral)
+
+[![](Attachments\popEnvironmentalHealth\countyNormanMap_crashes2019_2023.png)](https://www.minnesotatzd.org/regions/northwest)
+
+[![](Attachments\popEnvironmentalHealth\countypolkMap_crashes2019_2023.png)](https://www.minnesotatzd.org/regions/northwest)
+
+For more resources, please click anywhere on any of the maps
+:::
