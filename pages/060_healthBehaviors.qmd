@@ -269,9 +269,8 @@ gbFun_kidsCountMomSmokePlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
 ::: {.content-visible when-format="pdf"}
 ```{r}
 #| ref.label: fig-kidsCountPctMomsSmoke
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
+#| fig-width: 12
+#| fig-height: 5
 #| warning: false
 
 ```
@@ -303,149 +302,9 @@ gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
 ::: {.content-visible when-format="pdf"}
 ```{r}
 #| ref.label: fig-riskFactorSmoking
-#| fig-width: 8
-#| fig-height: 6
+#| fig-width: 9
+#| fig-height: 5
 #| fig-align: center
-
-```
-:::
-
-```{r}
-#| label: fig-chlamydia
-#| warning: false
-#| include: false
-
-# Filter the data by 'vaccine'
-filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "Chlamydia Count", fips != 27000) #Count data gets overwhlemed by state
-
-# Create the plot
-gbFun_mdhStiHIV(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Chlamydia Cases", "Count")
-
-```
-
-::: {.content-visible when-format="html"}
-```{r}
-#| ref.label: fig-chlamydia
-#| fig-width: 8
-#| fig-height: 8
-#| warning: false
-
-```
-:::
-
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-chlamydia
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
-#| warning: false
-
-```
-:::
-
-```{r}
-#| label: fig-gonorrhea
-#| warning: false
-#| include: false
-
-# Filter the data by 'vaccine'
-filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "Gonorrhea Count", fips != 27000) #Count data gets overwhlemed by state
-
-# Create the plot
-gbFun_mdhStiHIV(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Gonorrhea Cases", "Count")
-
-```
-
-::: {.content-visible when-format="html"}
-```{r}
-#| ref.label: fig-gonorrhea
-#| fig-width: 8
-#| fig-height: 8
-#| warning: false
-
-```
-:::
-
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-gonorrhea
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
-#| warning: false
-
-```
-:::
-
-```{r}
-#| label: fig-syphilis
-#| warning: false
-#| include: false
-
-# Filter the data by 'vaccine'
-filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "Syphilis Count", fips != 27000) #Count data gets overwhlemed by state
-
-# Create the plot
-gbFun_mdhStiHIV(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Syphilis Cases", "Count")
-
-```
-
-::: {.content-visible when-format="html"}
-```{r}
-#| ref.label: fig-syphilis
-#| fig-width: 8
-#| fig-height: 8
-#| warning: false
-
-```
-:::
-
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-syphilis
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
-#| warning: false
-
-```
-:::
-
-```{r}
-#| label: fig-HIV&AidsPrevelance
-#| warning: false
-#| include: false
-
-# Filter the data by 'vaccine'
-filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "HIV & Aids Prevelance", fips != 27000) #Count data gets overwhlemed by state
-
-# Create the plot
-gbFun_mdhStiHIV(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "HIV & Aids Prevelance", "Prevelance")
-
-```
-
-::: {.content-visible when-format="html"}
-```{r}
-#| ref.label: fig-HIV&AidsPrevelance
-#| fig-width: 8
-#| fig-height: 8
-#| warning: false
-
-```
-:::
-
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-HIV&AidsPrevelance
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
-#| warning: false
 
 ```
 :::
