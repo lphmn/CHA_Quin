@@ -2,7 +2,7 @@
 
 Please reach out if you have any questions. Below are some extra community resources.
 
-::: {#fig-ctyPopulationProfile layout-ncol=3}
+::: {#fig-ctyPopulationProfile layout-ncol="3"}
 [![](Attachments/mnMap_polk.png)](https://allumacares.org/resources/client-forms/polk-county-resource-directory/)
 
 [![](Attachments/mnMap_norman.png)](https://allumacares.org/mahnomen-county-resource-directory/)

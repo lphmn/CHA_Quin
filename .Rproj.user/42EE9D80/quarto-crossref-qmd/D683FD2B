@@ -3,20 +3,6 @@
         {
             "file": "pages/030_popEnvironmentalHealth.qmd",
             "type": "fig",
-            "id": "ctyPopulationProfile",
-            "suffix": "",
-            "title": "Please click on either map above for the detailed rural report."
-        },
-        {
-            "file": "pages/030_popEnvironmentalHealth.qmd",
-            "type": "fig",
-            "id": "seriousCrash",
-            "suffix": "",
-            "title": "For more resources, please click anywhere on any of the maps"
-        },
-        {
-            "file": "pages/030_popEnvironmentalHealth.qmd",
-            "type": "fig",
             "id": "privateWellsAs",
             "suffix": "",
             "title": "For more resources, please click anywhere on any of the maps"
@@ -31,16 +17,23 @@
         {
             "file": "pages/030_popEnvironmentalHealth.qmd",
             "type": "fig",
-            "id": "radonSchool",
+            "id": "ctyProfile",
+            "suffix": "",
+            "title": "For detailed county profiles, please click on the corresponding map above."
+        },
+        {
+            "file": "pages/030_popEnvironmentalHealth.qmd",
+            "type": "fig",
+            "id": "seriousCrash",
             "suffix": "",
             "title": "For more resources, please click anywhere on any of the maps"
         },
         {
             "file": "pages/030_popEnvironmentalHealth.qmd",
             "type": "fig",
-            "id": "ctyProfile",
+            "id": "ctyPopulationProfile",
             "suffix": "",
-            "title": "For detailed county profiles, please click on the corresponding map above."
+            "title": "Please click on either map above for the detailed rural report."
         },
         {
             "file": "pages/030_popEnvironmentalHealth.qmd",

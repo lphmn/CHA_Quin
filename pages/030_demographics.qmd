@@ -1,0 +1,781 @@
+# Demographics
+
+```{r}
+#| label: gb
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+#When testing and not rendering the report, the if statement returns true but when rendering as the report, the else executes
+if (file.exists("pages/Global/gb.R")) {
+  source("pages/Global/gb.R")
+  source("pages/Data/data.R")
+} else {
+  source("./Global/gb.R")
+  source("./Data/data.R")
+}
+
+mn_fips <- gbVal[2]
+chb_fips <- gbVal[3]
+
+```
+
+The state of `{r} f_cdcSvi2022$county[1]` has a total land area of `{r} f_cdcSvi2022$area_sqmi[1]` per square (sq) mile. `{r} gbVal_chbAbbrLbl` area covers `{r} f_cdcSvi2022$area_sqmi[2]` sq miles, with `{r} f_cdcSvi2022$county[3]` county having the largest land area (`{r} f_cdcSvi2022$area_sqmi[3]` sq miles) followed by `{r} f_cdcSvi2022$county[4]` county (`{r} f_cdcSvi2022$area_sqmi[4]` sq miles) and `{r} f_cdcSvi2022$county[5]` county (`{r} f_cdcSvi2022$area_sqmi[5]` sq miles) @cdc2022SVI.
+
+`{r} f_cdcSvi2022$county[1]` has an average of `{r} f_cdcSvi2022$personPerSqMile[1]` people living in each sq mile. In comparison, the `{r} gbVal_chbAbbrLbl` area has only `{r} f_cdcSvi2022$personPerSqMile[2]` people per sq mile. Breaking it down further:
+
+-   `{r} f_cdcSvi2022$county[3]` has `{r} f_cdcSvi2022$personPerSqMile[3]` people per sq mile
+-   `{r} f_cdcSvi2022$county[4]` has `{r} f_cdcSvi2022$personPerSqMile[4]` people per sq mile
+-   `{r} f_cdcSvi2022$county[5]` has `{r} f_cdcSvi2022$personPerSqMile[5]` people per sq mile
+
+This means that in these three counties, people are much more spread out compared to the state average. The population density, or the number of people per sq mile, helps us understand how rural an area might be, although it is not the only factor. As shown on the following maps, Polk County has three Census Tracts that prevent it from being entirely rural.
+
+::: {#fig-ruralMapHTML .content-visible when-format="html" layout-ncol="2"}
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png){fig-align="center" width="449"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
+
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCensusTract.png){fig-align="center" width="449"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/)
+
+Please click on either map above for the detailed rural report.
+:::
+
+::: {#fig-ruralMapPDF .content-visible when-format="pdf" layout-ncol="2"}
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png){fig-align="center" width="300"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
+
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCensusTract.png){fig-align="center" width="300"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/)
+
+Please click on either map above for the detailed rural report.
+:::
+
+## Population Size
+
+```{r}
+#| label: decennialPop2020
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+  df_decennialPop2020 <-  read.csv("https://api.census.gov/data/2020/dec/pl?get=group(P1)&ucgid=pseudo(0400000US27$0500000)") |>   
+  janitor::clean_names()  |> 
+  dplyr::mutate(
+    x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters
+    , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled
+    ) |>
+  dplyr::select(- dplyr::ends_with("na")) |> 
+  dplyr::select(1:11) |>   #only select first 12 columns 
+  dplyr::rename(
+    fips = 1
+    , tot_populationCt  = 3
+    , tot_oneRaceCt     = 4
+    , oneRace_whiteCt   = 5
+    , oneRace_BlackCt   = 6
+    , oneRace_AiAnCt    = 7
+    , oneRace_AsianCt   = 8
+    , oneRace_NhOpiCt   = 9
+    , oneRace_otherCt   = 10
+    , tot_twoPlusRaceCt = 11) |> 
+  dplyr::arrange(desc(tot_populationCt)) #This will arrange counties by population so the order can be indexed later
+  
+  state_totalRow <- df_decennialPop2020 |>
+    dplyr::summarise(
+      fips = 99 #State total will be 99 throughout the report
+      , name = "Minnesota"
+      , tot_populationCt = sum(tot_populationCt, na.rm = TRUE)
+      , tot_oneRaceCt = sum(tot_oneRaceCt, na.rm = TRUE)
+      , oneRace_whiteCt = sum(oneRace_whiteCt, na.rm = TRUE)
+      , oneRace_BlackCt = sum(oneRace_BlackCt, na.rm = TRUE)
+      , oneRace_AiAnCt = sum(oneRace_AiAnCt, na.rm = TRUE)
+      , oneRace_AsianCt = sum(oneRace_AsianCt, na.rm = TRUE)
+      , oneRace_NhOpiCt = sum(oneRace_NhOpiCt, na.rm = TRUE)
+      , oneRace_otherCt = sum(oneRace_otherCt, na.rm = TRUE)
+      , tot_twoPlusRaceCt = sum(tot_twoPlusRaceCt, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+  
+ chb_totalRow <- df_decennialPop2020 |> 
+  gbFun_countyFilter(fips)  |> 
+    dplyr::summarise(
+      fips = 999 # CHB total will be 999 throughout the report
+      , name = gbVal_chbAbbrLbl
+      , tot_populationCt = sum(tot_populationCt, na.rm = TRUE)
+      , tot_oneRaceCt = sum(tot_oneRaceCt, na.rm = TRUE)
+      , oneRace_whiteCt = sum(oneRace_whiteCt, na.rm = TRUE)
+      , oneRace_BlackCt = sum(oneRace_BlackCt, na.rm = TRUE)
+      , oneRace_AiAnCt = sum(oneRace_AiAnCt, na.rm = TRUE)
+      , oneRace_AsianCt = sum(oneRace_AsianCt, na.rm = TRUE)
+      , oneRace_NhOpiCt = sum(oneRace_NhOpiCt, na.rm = TRUE)
+      , oneRace_otherCt = sum(oneRace_otherCt, na.rm = TRUE)
+      , tot_twoPlusRaceCt = sum(tot_twoPlusRaceCt, na.rm = TRUE)
+    ) |> 
+   as.data.frame()
+ 
+ 
+  # Union the total row with the individual county data
+  f_decennialPop2020 <-
+    state_totalRow |> 
+    dplyr::bind_rows(chb_totalRow) |> 
+    dplyr::bind_rows(df_decennialPop2020) |> 
+    gbFun_countyFilter(fips) |> 
+    dplyr::mutate(
+      tot_statePct = ifelse(
+        is.na(tot_populationCt), NA,
+        #Formattable keeps the data type as well as displays with commas and decimals
+        # The scales package does not keep the data type when displaying the Vals
+        formattable::percent(tot_populationCt / tot_populationCt[1], digits = 2)
+      )
+      , tot_chbPct = ifelse(
+        dplyr::row_number() == 1, NA, 
+        ifelse(
+          is.na(tot_populationCt), NA,
+          formattable::percent(tot_populationCt / tot_populationCt[2], digits = 2)
+          )
+      )
+      , dplyr::mutate(dplyr::across(dplyr::ends_with("Ct"), ~ formattable::comma(., digits = 0)))
+      
+        ) |> 
+     dplyr::mutate(
+     tot_statePct = formattable::percent(tot_statePct, digits = 2)
+     , tot_chbPct = formattable::percent(tot_chbPct, digits = 2)
+     )
+    
+  #Remove the extra dataframes 
+  rm(df_decennialPop2020, state_totalRow, chb_totalRow)
+  
+```
+
+The population of individuals age 65 and older is expected to grow over the next 10 years. This shifting demographic may result in shortages related to workforce, long term care housing, and supportive services.
+
+The state of Minnesota had a population of `{r} f_decennialPop2020$tot_populationCt[1]` people. `{r} gbVal_chbAbbrLbl` had a total residential population of `{r} f_decennialPop2020$tot_populationCt[2]`. This makes up `{r} f_decennialPop2020$tot_statePct[2]` of Minnesota's population (`{r} f_decennialPop2020$tot_populationCt[2]`/`{r} f_decennialPop2020$tot_populationCt[1]`) @decennialcensus2020P1.
+
+-   `{r} f_decennialPop2020$name[3]` county is the largest of the three counties, with a population of `{r} f_decennialPop2020$tot_populationCt[3]` residents. This represents `{r} f_decennialPop2020$tot_chbPct[3]` of the total population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) for the `{r} gbVal_chbAbbrLbl` area. In relation to the state of Minnesota, `{r} f_decennialPop2020$name[3]` county accounts for `{r} f_decennialPop2020$tot_statePct[3]` of the population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[1]`) @decennialcensus2020P1.
+
+-   `{r} f_decennialPop2020$name[4]` county has `{r} f_decennialPop2020$tot_populationCt[4]` residents, making up `{r} f_decennialPop2020$tot_chbPct[4]` (`{r} f_decennialPop2020$tot_populationCt[4]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area @decennialcensus2020P1.
+
+-   `{r} f_decennialPop2020$name[5]` county is the smallest, with a population of `{r} f_decennialPop2020$tot_populationCt[5]` residents. This is `{r} f_decennialPop2020$tot_chbPct[5]` (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area, and `{r} f_decennialPop2020$tot_statePct[5]` of the state population (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[1]`) @decennialcensus2020P1.
+
+## Age Distribution
+
+```{r}
+#| label: fig-acsFiveEst2022AgeSex
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto
+
+  df_acsFiveEst2022AgeSex <-
+    read.csv("https://api.census.gov/data/2022/acs/acs5/subject?get=group(S0101)&ucgid=pseudo(0400000US27$0500000)") |>
+    janitor::clean_names()  |>
+     dplyr::mutate(
+       x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters
+       , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled
+      ) |> 
+    dplyr::select(- dplyr::ends_with("ea"), - dplyr::ends_with("ma")) |> 
+    dplyr::select(1:3, s0101_c01_032e,
+                  dplyr::matches("s0101_c03_00[2-9]e|s0101_c03_01[0-9]e"),
+                  dplyr::matches("s0101_c05_00[2-9]e|s0101_c05_01[0-9]e")
+    ) |>  
+    dplyr::rename_with(~ gsub("^[^_]*_c03_", "genderMale", .), dplyr::matches("_c03_")) |>
+    dplyr::rename_with(~ gsub("^[^_]*_c05_", "genderFemale", .), dplyr::matches("_c05_")) |>
+    dplyr::rename(
+      fips = 1
+      , tot_pop_est = 3
+      
+      , tot_medianAge_est = 4
+      , tot_sexMaleLe5_est = 5
+      , tot_sexMale5To9_est = 6
+      , tot_sexMale10To14_est = 7
+      , tot_sexMale15To19_est = 8
+      , tot_sexMale20To24_est = 9
+      , tot_sexMale25To29_est = 10
+      , tot_sexMale30To34_est = 11
+      , tot_sexMale35To39_est = 12
+      , tot_sexMale40To44_est = 13
+      , tot_sexMale45To49_est = 14
+      , tot_sexMale50To54_est = 15
+      , tot_sexMale55To59_est = 16
+      , tot_sexMale60To64_est = 17
+      , tot_sexMale65To69_est = 18
+      , tot_sexMale70To74_est = 19
+      , tot_sexMale75To79_est = 20
+      , tot_sexMale80To84_est = 21
+      , tot_sexMale85Plus_est = 22
+  
+      , tot_sexFemaleLe5_est = 23
+      , tot_sexFemale5To9_est = 24
+      , tot_sexFemale10To14_est = 25
+      , tot_sexFemale15To19_est = 26
+      , tot_sexFemale20To24_est = 27
+      , tot_sexFemale25To29_est = 28
+      , tot_sexFemale30To34_est = 29
+      , tot_sexFemale35To39_est = 30
+      , tot_sexFemale40To44_est = 31
+      , tot_sexFemale45To49_est = 32
+      , tot_sexFemale50To54_est = 33
+      , tot_sexFemale55To59_est = 34
+      , tot_sexFemale60To64_est = 35
+      , tot_sexFemale65To69_est = 36
+      , tot_sexFemale70To74_est = 37
+      , tot_sexFemale75To79_est = 38
+      , tot_sexFemale80To84_est = 39
+      , tot_sexFemale85Plus_est = 40
+    ) |> 
+   dplyr::arrange(desc(tot_pop_est)) #This will arrange counties by population so the order can be indexed later
+  
+  # Since median can't technically be recalculated without raw Vals, I pull the state API rather than recalculate the totals by adding up the county data
+  # This process is different than the decennial population estimate process because median can't be recalculated 
+  # Pulling the state API directly, the median age is 38.5 but the county calculated Val was 38.7.
+  state_totalRow <- 
+    read.csv("https://api.census.gov/data/2022/acs/acs5/subject?get=group(S0101)&ucgid=0400000US27") |> 
+    janitor::clean_names()  |>
+    dplyr::select(- dplyr::ends_with("ea"), - dplyr::ends_with("ma")) |> 
+    dplyr::select(1:3, s0101_c01_032e,
+                  dplyr::matches("s0101_c03_00[2-9]e|s0101_c03_01[0-9]e"),
+                  dplyr::matches("s0101_c05_00[2-9]e|s0101_c05_01[0-9]e")
+    ) |>  
+    dplyr::rename_with(~ gsub("^[^_]*_c03_", "sexMale", .), dplyr::matches("_c03_")) |>
+    dplyr::rename_with(~ gsub("^[^_]*_c05_", "sexFemale", .), dplyr::matches("_c05_")) |>
+    dplyr::rename(
+      fips = 1
+      , tot_pop_est = 3
+      , tot_medianAge_est = 4
+      
+      , tot_sexMaleLe5_est = 5
+      , tot_sexMale5To9_est = 6
+      , tot_sexMale10To14_est = 7
+      , tot_sexMale15To19_est = 8
+      , tot_sexMale20To24_est = 9
+      , tot_sexMale25To29_est = 10
+      , tot_sexMale30To34_est = 11
+      , tot_sexMale35To39_est = 12
+      , tot_sexMale40To44_est = 13
+      , tot_sexMale45To49_est = 14
+      , tot_sexMale50To54_est = 15
+      , tot_sexMale55To59_est = 16
+      , tot_sexMale60To64_est = 17
+      , tot_sexMale65To69_est = 18
+      , tot_sexMale70To74_est = 19
+      , tot_sexMale75To79_est = 20
+      , tot_sexMale80To84_est = 21
+      , tot_sexMale85Plus_est = 22
+  
+      , tot_sexFemaleLe5_est = 23
+      , tot_sexFemale5To9_est = 24
+      , tot_sexFemale10To14_est = 25
+      , tot_sexFemale15To19_est = 26
+      , tot_sexFemale20To24_est = 27
+      , tot_sexFemale25To29_est = 28
+      , tot_sexFemale30To34_est = 29
+      , tot_sexFemale35To39_est = 30
+      , tot_sexFemale40To44_est = 31
+      , tot_sexFemale45To49_est = 32
+      , tot_sexFemale50To54_est = 33
+      , tot_sexFemale55To59_est = 34
+      , tot_sexFemale60To64_est = 35
+      , tot_sexFemale65To69_est = 36
+      , tot_sexFemale70To74_est = 37
+      , tot_sexFemale75To79_est = 38
+      , tot_sexFemale80To84_est = 39
+      , tot_sexFemale85Plus_est = 40
+    ) |> 
+    dplyr::mutate(
+      fips = 99
+      , name = "Minnesota"
+    )
+      
+   chb_totalRow <-  df_acsFiveEst2022AgeSex |>
+     gbFun_countyFilter(fips) |> 
+     dplyr::summarise(
+       fips = 999 #State total will be 99 throughout the report
+       , name = gbVal_chbAbbrLbl
+       #Its not perfectly accurate but this is the best I can do to calculate median age without the raw data for combined CHB Its also prior to the tot_pop_est because if the tot_pop_est is before this step it messes up the calculation
+       , tot_medianAge_est = round(sum(tot_pop_est * tot_medianAge_est, na.rm = TRUE) / sum(tot_pop_est, na.rm = TRUE), 1)
+       , tot_pop_est = sum(tot_pop_est, na.rm = TRUE)
+       , tot_sexMaleLe5_est = sum(tot_sexMaleLe5_est, na.rm = TRUE)
+       , tot_sexMale5To9_est = sum(tot_sexMale5To9_est, na.rm = TRUE)
+       , tot_sexMale10To14_est = sum(tot_sexMale10To14_est, na.rm = TRUE)
+       , tot_sexMale15To19_est = sum(tot_sexMale15To19_est, na.rm = TRUE)
+       , tot_sexMale20To24_est = sum(tot_sexMale20To24_est, na.rm = TRUE)
+       , tot_sexMale25To29_est = sum(tot_sexMale25To29_est, na.rm = TRUE)
+       , tot_sexMale30To34_est = sum(tot_sexMale30To34_est, na.rm = TRUE)
+       , tot_sexMale35To39_est = sum(tot_sexMale35To39_est, na.rm = TRUE)
+       , tot_sexMale40To44_est = sum(tot_sexMale40To44_est, na.rm = TRUE)
+       , tot_sexMale45To49_est = sum(tot_sexMale45To49_est, na.rm = TRUE)
+       , tot_sexMale50To54_est = sum(tot_sexMale50To54_est, na.rm = TRUE)
+       , tot_sexMale55To59_est = sum(tot_sexMale55To59_est, na.rm = TRUE)
+       , tot_sexMale60To64_est = sum(tot_sexMale60To64_est, na.rm = TRUE)
+       , tot_sexMale65To69_est = sum(tot_sexMale65To69_est, na.rm = TRUE)
+       , tot_sexMale70To74_est = sum(tot_sexMale70To74_est, na.rm = TRUE)
+       , tot_sexMale75To79_est = sum(tot_sexMale75To79_est, na.rm = TRUE)
+       , tot_sexMale80To84_est = sum(tot_sexMale80To84_est, na.rm = TRUE)
+       , tot_sexMale85Plus_est = sum(tot_sexMale85Plus_est , na.rm = TRUE)
+
+       , tot_sexFemaleLe5_est = sum(tot_sexFemaleLe5_est, na.rm = TRUE)
+       , tot_sexFemale5To9_est = sum(tot_sexFemale5To9_est, na.rm = TRUE)
+       , tot_sexFemale10To14_est = sum(tot_sexFemale10To14_est, na.rm = TRUE)
+       , tot_sexFemale15To19_est = sum(tot_sexFemale15To19_est, na.rm = TRUE)
+       , tot_sexFemale20To24_est = sum(tot_sexFemale20To24_est, na.rm = TRUE)
+       , tot_sexFemale25To29_est = sum(tot_sexFemale25To29_est, na.rm = TRUE)
+       , tot_sexFemale30To34_est = sum(tot_sexFemale30To34_est, na.rm = TRUE)
+       , tot_sexFemale35To39_est = sum(tot_sexFemale35To39_est, na.rm = TRUE)
+       , tot_sexFemale40To44_est = sum(tot_sexFemale40To44_est, na.rm = TRUE)
+       , tot_sexFemale45To49_est = sum(tot_sexFemale45To49_est, na.rm = TRUE)
+       , tot_sexFemale50To54_est = sum(tot_sexFemale50To54_est, na.rm = TRUE)
+       , tot_sexFemale55To59_est = sum(tot_sexFemale55To59_est, na.rm = TRUE)
+       , tot_sexFemale60To64_est = sum(tot_sexFemale60To64_est, na.rm = TRUE)
+       , tot_sexFemale65To69_est = sum(tot_sexFemale65To69_est, na.rm = TRUE)
+       , tot_sexFemale70To74_est = sum(tot_sexFemale70To74_est, na.rm = TRUE)
+       , tot_sexFemale75To79_est = sum(tot_sexFemale75To79_est, na.rm = TRUE)
+       , tot_sexFemale80To84_est = sum(tot_sexFemale80To84_est, na.rm = TRUE)
+       , tot_sexFemale85Plus_est = sum(tot_sexFemale85Plus_est, na.rm = TRUE)
+       ) |> 
+     as.data.frame()
+   
+    # Union the total row with the individual county data
+  f_acsFiveEst2022AgeSex <- state_totalRow |> 
+    dplyr::bind_rows(chb_totalRow) |> 
+    dplyr::bind_rows(df_acsFiveEst2022AgeSex) |> 
+    gbFun_countyFilter(fips) #Apply county filter so only counties of interest are returned
+  
+  rm(df_acsFiveEst2022AgeSex, state_totalRow, chb_totalRow)
+
+```
+
+According to the @acs2022S0101, the median ages for the counties are:
+
+-   `{r} f_acsFiveEst2022AgeSex$name[3]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[3]` years
+-   `{r} f_acsFiveEst2022AgeSex$name[4]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[4]` years
+-   `{r} f_acsFiveEst2022AgeSex$name[5]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[5]` years
+
+For the state of Minnesota, the median age was `{r} f_acsFiveEst2022AgeSex$tot_medianAge[1]` years, and the combined median age for `{r} gbVal_chbAbbrLbl` area was `{r} f_acsFiveEst2022AgeSex$tot_medianAge[2]` years, though this figure should be interpreted with caution as it wasn't calculated from the raw data. Median age is used instead of the average age because it gives a clearer picture of the community's age. The median age is the middle point, so it isn't thrown off by very young or very old people. This way, we get a better idea of the typical age in the community. Mahnomen County has a younger population compared to Minnesota while Polk and Norman County have older populations compared to Minnesota with Polk county being the closest in age.
+
+## Sex Distribution
+
+The Age Sex Population Pyramids below illustrate a generally balanced distribution of males and females across most age groups. You can determine the balance by examining the horizontal solid black midpoint line: a longer line indicates a greater difference between the male and female populations within that age group. The Age Sex Population Pyramids are based on the @acs2022S0101 estimates. While there is a lot to examine, comparing Minnesota to the `{r} gbVal_chbAbbrLbl` area reveals that the midpoint line is similar, except for the age groups 25-29, 65-69, and 70-74.
+
+```{r}
+#| label: fig-AgeSexDistribution
+#| warning: false
+#| include: false
+# Combine the plot and the tables side by side using cowplot
+
+ if (knitr::is_html_output()) {
+    f_acsFiveEst2022AgeSex
+   fontSize <- 18
+  } else {
+   f_acsFiveEst2022AgeSex <-  f_acsFiveEst2022AgeSex |>
+    dplyr::filter(fips %in% c(mn_fips, chb_fips))
+   fontSize <- 8
+  }
+
+  df_ageSex <- f_acsFiveEst2022AgeSex |>  
+  dplyr::select(-tot_medianAge_est) |>       #Remove tot_medianAge_est, not required but cleans up the fields
+  #Pivot longer will create a single column for all the categories
+  #Transpose the data for cols that start with tot_sex
+  tidyr::pivot_longer(
+    #I'm transposing data on the sexAge fields
+     cols = starts_with("tot_sex")  
+     # names_to will separate the groups and create labels for the new columns
+     # since there are two groups, age and sex,
+     # there needs to be two column names
+     # the order of the names_to makes a difference for how the data is labeled
+     # uncomment next line and see what happens
+     #names_to = c("age_group", "sex"),
+     , names_to = c("sex", "age_group")
+     # sex(.*) matches the first pattern and returns everything after it until a new pattern is found
+     # (Le5|5To9|10To14|15To19|20To24|25To29|30To34|35To39|40To44|45To49|50To54|55To59|60To64|65To69|70To74|7
+     # To79|80To84|85Plus) matches the second pattern and only returns it
+     , names_pattern = "sex(.*)(Le5|5To9|10To14|15To19|20To24|25To29|30To34|35To39|40To44|45To49|50To54|55To59|60To64|65To69|70To74|75To79|80To84|85Plus)"
+     # this defines the population total
+     , values_to = "population"
+   ) |>  
+  # Pivoting wider takes the sex column and creates two new columns while reducing the rows
+  # the Vals for the two new columns male and female comes from the population field
+  # However, if I pivot wider, than apyramid format doesn't align so I commented the step out
+  # The reason I left this is so I know that pivot wider can be used to get data in a different format
+  # tidyr::pivot_wider(names_from = sex, Vals_from = population) |>   
+  # Preparing age group data for pyramid
+  dplyr::mutate(
+    # orders the factor to the order we want
+    age_group = forcats::fct_relevel( 
+      # converts data type from character to factor so can be used in apryamid later
+      factor(
+        #This step renames the columns so they are more relatable for the public
+        dplyr::recode( 
+          age_group 
+          , Le5 = "0-4"
+          , `5To9` = "5-9"
+          , `10To14` = "10-14"
+          , `15To19` = "15-19"
+          , `20To24` = "20-24"
+          , `25To29` = "25-29"
+          , `30To34` = "30-34"
+          , `35To39` = "35-39"
+          , `40To44` = "40-44"
+          , `45To49` = "45-49"
+          , `50To54` = "50-54"
+          , `55To59` = "55-59"
+          , `60To64` = "60-64"
+          , `65To69` = "65-69"
+          , `70To74` = "70-74"
+          , `75To79` = "75-79"
+          , `80To84` = "80-84"
+          , `85Plus` = "85+"
+          )  
+        ),
+      # The order of the factor so the data can be displayed correctly 
+      "0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", 
+      "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", 
+      "65-69", "70-74", "75-79", "80-84", "85+" 
+      )    
+    ) 
+
+# Split the data by 'name'
+split_data <- split(df_ageSex, df_ageSex$name)
+
+# Order the split data based on 'tot_pop_est'
+# sapply applies a Fun to each element of the list split_data.
+# The Fun Fun(x) x$tot_pop_est[1] extracts the first Val of the tot_pop_est field from each group.
+# order returns the indices that would sort the numeric vector produced by sapply.
+# Since the Vals are negated, order will sort them in descending order of tot_pop_est.
+# This results in a numeric vector where each element corresponds to the negated tot_pop_est of each group.
+# The [] after split_data reorder the split_data list according to the indices provided by order.
+split_data <- split_data[order(sapply(split_data, function(x) -x$tot_pop_est[1]))] #The - means descending order
+
+# Initialize a list to store the plots
+plots <- list()
+
+# Iterate over each group and create the age pyramid plot
+# I tried using the dplry::map data but it didn't work so creating this process did the trick
+for (group_name in names(split_data)) {
+  
+   group_data <- split_data[[group_name]] |> 
+     dplyr::group_by(age_group) |> #Required to calculate midpoint so pyramid is easier to understand for non data people
+     dplyr::mutate(
+      female_pop = ifelse(sex == "Female", population, 0)
+      , male_pop = ifelse(sex == "Male", population, 0)
+      , midpoint = dplyr::case_when(
+        sum(female_pop) > sum(male_pop) ~ -sum(female_pop - male_pop) / 2
+        , sum(male_pop) > sum(female_pop) ~ sum(male_pop - female_pop) / 2
+        , TRUE ~ NA
+      )
+    ) |> 
+    dplyr::ungroup()
+  
+  
+  # Calculate the maximum population Val for dynamic nudging
+  max_population <- max(group_data$population)
+  nudge_amount <- dplyr::case_when(
+    max_population > 100000 ~ max_population * (-0.09)
+    , max_population > 10000 ~ max_population * (-0.08)
+    , max_population > 1000 ~ max_population * (-0.07)
+    , TRUE ~ max_population * (-0.05)
+    )  # Adjust the multiplier as needed
+  
+  # Create the age pyramid plot using ggplot2
+  plot <- ggplot2::ggplot(
+      group_data, 
+      # This sets up the aes for the plot, with negative Vals for females to create the pyramid effect.
+      ggplot2::aes(x = age_group, y = ifelse(sex == "Female", -population, population), fill = sex)
+    ) +
+    # Creates the bar plot.
+    ggplot2::geom_bar(stat = "identity", position = "stack") +
+    # Flips the coordinates to make the bars horizontal.
+    ggplot2::coord_flip() +
+    # Ensures the y-axis labels are positive. abs is base r to return absolute Val so the female Vals are positive and it is applied to the y axis 
+    # Fun is require to make labels in the comma format
+    ggplot2::scale_y_continuous(labels = function(x) scales::comma(abs(x))) +
+    ggplot2::scale_fill_manual(values = c("Female" = "pink", "Male" = "lightblue")) +  # Custom fill colors
+    ggplot2::theme_minimal() +
+    ggplot2::labs(
+      y = "Total"
+      , x = "Age categories"
+      , fill = "Sex"
+      , title = "Age Sex Population Pyramid"
+      , subtitle = group_name
+    ) + 
+    ggplot2::theme(
+      axis.text = ggplot2::element_text(size = fontSize, face = "bold")
+      , axis.title = ggplot2::element_text(size = fontSize, face = "bold")
+      , legend.position = "bottom"
+      , plot.title = ggplot2::element_text(hjust = 0.5)  # Center the title
+      , plot.subtitle = ggplot2::element_text(hjust = 0.5)     # Center the subtitle
+      ) +
+    ggplot2::geom_text(
+      ggplot2::aes(label = scales::comma(population)) #Scales::comma will add commas to the lbl
+      , nudge_y = ifelse(group_data$sex == "Female", -nudge_amount, nudge_amount)
+      , size = 3
+      , color = "black"
+    )+
+    ggplot2::geom_segment(
+      ggplot2::aes(x = age_group, xend = age_group, y = 0, yend = midpoint),
+      linetype = "solid",
+      color = "black"
+    )  # Add dynamic midpoint line
+  
+  # Store the plot in the list
+  plots[[group_name]] <- plot
+}
+
+# Now 'plots' contains all the age pyramid plots for each group with the additional settings
+# For loop required otherwise if it is just printed a $ with list name will also be displayed
+
+
+if (knitr::is_html_output()) {
+    for (plot in plots) {
+      print(plot)
+   }
+  } else {
+   combined_plot <- wrap_plots(plots, ncol = 2) + 
+  plot_layout(
+    widths = 8
+    , guides = "collect"
+    ) 
+   print(combined_plot)
+  }
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-AgeSexDistribution
+#| fig-height: 8
+#| fig-width: 8
+#| column: page-right
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-AgeSexDistribution
+#| fig-height: 5
+#| fig-width: 11
+#| fig-align: center
+
+```
+:::
+
+## Race/Ethnicity
+
+Based on the @decennialcensus2020P1 data, the White population represents the highest percentage in both Minnesota and the `{r} gbVal_chbAbbrLbl` area. `{r} gbVal_chbAbbrLbl` has a higher percentage of American Indian and Alaska Native residents, with Mahnomen County having the highest percentage among the three counties. The White Earth Nation contains 829,440 acres and encompasses all of Mahnomen County and portions of Becker, and Clearwater Counties. It's important to compare proportions rather than counts because proportions provide a relative measure that accounts for population size differences; Mahnomen County has more than double the percentage of residents identifying as Two or More Races compared to the state of Minnesota. The Black or African American and Asian population percentages are higher in Minnesota overall than the `{r} gbVal_chbAbbrLbl`. Additionally, Polk and Norman counties have similar racial demographic profiles.
+
+When looking at ethnicity data from the @decennialcensus2020P9, Polk County has a slightly higher Latino/Hispanic population compared to Minnesota overall, whereas Norman and Mahnomen counties have lower percentages of Latino/Hispanic residents.
+
+```{r}
+#| label: fig-raceEthnicity
+#| warning: false
+#| include: false
+
+df_decennialEthnicity2020 <- read.csv("https://api.census.gov/data/2020/dec/dhc?get=group(P9)&ucgid=pseudo(0400000US27$0500000)") |> 
+  janitor::clean_names() |>   
+  dplyr::mutate(
+    x_geo_id = as.integer(substr(x_geo_id, nchar(x_geo_id) - 4, nchar(x_geo_id))) # Only pull the last five characters
+    , name = sub(" County.*","",name) #Extract just the county name so everything before space county is pulled
+    ) |>   
+  dplyr::select(1, 2, 3, 5) |> 
+  dplyr::rename(fips = x_geo_id, tot_population = p9_001n, hispanicLatino = p9_002n) |> 
+  dplyr::arrange(desc(tot_population)) #This will arrange counties by population so the order can be indexed later
+  
+  state_totalRow <- df_decennialEthnicity2020 |>
+    dplyr::summarise(
+      fips = mn_fips 
+      , name = "Minnesota"
+      , hispanicLatino = sum(hispanicLatino, na.rm = TRUE)
+      , tot_population = sum(tot_population, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+  
+ chb_totalRow <- df_decennialEthnicity2020 |> 
+  gbFun_countyFilter(fips)  |> 
+    dplyr::summarise(
+      fips = chb_fips # CHB total will be 999 throughout the report
+      , name = gbVal_chbAbbrLbl
+      , hispanicLatino = sum(hispanicLatino, na.rm = TRUE)
+      , tot_population = sum(tot_population, na.rm = TRUE)
+      ) |> 
+   as.data.frame()
+ 
+ 
+  # Union the total row with the individual county data
+  f_decenialEthnicity2020 <-
+    state_totalRow |> 
+    dplyr::bind_rows(chb_totalRow) |> 
+    dplyr::bind_rows(df_decennialEthnicity2020) |> 
+    gbFun_countyFilter(fips) |> 
+    dplyr::mutate(hispanicLatino = formattable::comma(hispanicLatino,0))
+    
+  #Remove the extra dataframes 
+  rm(df_decennialEthnicity2020, state_totalRow, chb_totalRow)
+
+
+f_decennialRaceEthnicity <-  f_decennialPop2020 |> 
+  dplyr::select(-tot_oneRaceCt, -tot_statePct, -tot_chbPct) |> 
+  dplyr::left_join(f_decenialEthnicity2020, dplyr::join_by(fips)) |> 
+  dplyr::rename(
+    name = name.x
+    , raceEthnicityR_AIAN = oneRace_AiAnCt #American Indian and Alaska Native
+    , raceEthnicityR_Asian = oneRace_AsianCt #Asian
+    , raceEthnicityR_BAF = oneRace_BlackCt #Black or African American
+    , raceEthnicityR_NHOPI = oneRace_NhOpiCt #Native Hawaiian and Other Pacific Islander
+    , raceEthnicityR_SOR = oneRace_otherCt #Some Other Race
+    , raceEthnicityR_TwoPlus = tot_twoPlusRaceCt #Two or More Races
+    , raceEthnicityR_White = oneRace_whiteCt
+    , raceEthnicityE_HL = hispanicLatino
+    ) |> 
+    dplyr::select(-fips, -name.y, -tot_population) |> 
+  
+  
+#Pivot longer will create a single column for all the categories
+  #Transpose the data for cols that start with race
+  tidyr::pivot_longer(
+    #I'm transposing data on the race fields
+     cols = starts_with("raceEthnicity") 
+     , names_to = "raceEthnicityCategory"
+     , values_to = "raceEthnicityCt"
+   ) |> 
+  dplyr::mutate(raceEthnicityCategory = gsub("raceEthnicity", "", raceEthnicityCategory)) |>  #Remove raceEthnicity at the beginning of the values for raceEthnicityCategory
+  dplyr::mutate( # The formatTable data type did not work with pivot_longer so data had to be converted back to number #Display is defined in ggplot
+      raceEthnicityCt = as.numeric(raceEthnicityCt)
+      , proportion = as.numeric(raceEthnicityCt / tot_populationCt)
+      )
+  
+
+
+split_data <- split(f_decennialRaceEthnicity, f_decennialRaceEthnicity$name) # Split the data by name
+split_data <- split_data[order(sapply(split_data, function(x) -x$tot_populationCt[1]))] #Order the state, chb, and counties from highest total to lowest
+split_data <- lapply(split_data, function(x) {x <- x |> dplyr::select(-tot_populationCt)  #Remove the tot_populationCt so graph doesn't display it
+  return(x) }) #Return cannot be on the same line as the Fun. It will return an error
+
+# Initialize a list to store the plots
+combined_charts <- list()
+
+for (group_name in names(split_data)) {
+  data_subset <- split_data[[group_name]]  # Extract the subset of data for the current group
+  
+  # Combine counts and proportions into one data frame
+  combined_data <- data_subset |>
+    tidyr::pivot_longer(cols = c(raceEthnicityCt, proportion), names_to = "metric", values_to = "metricValue") |> 
+    dplyr::group_by(name, metric) |>
+    dplyr::mutate(thresholdHjust = ifelse(metricValue >= max(metricValue) - max(metricValue) * 0.2 , 1.1, -0.2)) |> #By defining threshold here, I'm able to set it based on the group (Name) and facet(Metric) where if I try to declare it in ggplot2 I run into issues.
+    dplyr::ungroup()
+  
+  combined_chart <- ggplot2::ggplot(
+    combined_data, ggplot2::aes(
+      x = reorder( #since we can't reorder alphabetically, I had to convert strings to factors to so graph will order data correctly
+        raceEthnicityCategory
+        , -as.numeric(
+          factor(
+            raceEthnicityCategory
+            , levels = sort(
+              unique(raceEthnicityCategory)
+              )
+            )
+          )
+        )
+      , y = metricValue
+      , fill = raceEthnicityCategory
+    )
+    )+
+    ggplot2::geom_bar(stat = "identity") +  # Create a bar chart
+    ggplot2::coord_flip() +  # Flip coordinates to make it horizontal
+    ggplot2::facet_wrap(~ metric, scales = "free_x", labeller = ggplot2::labeller(metric = c(raceEthnicityCt = "Count", proportion = "Proportion"))) +  # Use facets to separate counts and proportions
+    ggplot2::labs(
+      title = paste(group_name, "by Race/Ethnicity")
+      , caption = "E_HL = Hispanic Or Latino Ethnicity\nR_AIAN = American Indian and Alaska Native Race\nR_Black = Black or African American Race\nR_NHOPI = Native Hawaiian and Other Pacific Islander Race\nR_SOR = Some Other Race\nR_TwoPlus = Two or More Races\nThe percentages don't add up to 100% because someone can be both Hispanic or Latino and belong to a race category\nThe race category percentages will total 100%"
+      ) +  # Add a title and Use HTML tags for bold and underline
+    ggplot2::theme_minimal() +  # Use a minimal theme for a cleaner look
+    ggplot2::theme(
+      plot.title = ggplot2::element_text(
+        size = 14 #Title Font Size
+        , hjust = 0.5 # Center the title
+        , face = "bold"
+        )
+      #, plot.title.position = "plot"  # Position the title within the plot area
+      , legend.position = "none"  # Remove the legend
+      , axis.title.x = ggplot2::element_blank()  # Remove x-axis title
+      , axis.text.x = ggplot2::element_blank()  # Remove x-axis text
+      , axis.ticks.x = ggplot2::element_blank()  # Remove x-axis ticks
+      , axis.title.y = ggplot2::element_blank()  # Remove y-axis title
+      , panel.grid.major.x = ggplot2::element_blank()  # Remove major vertical gridlines
+      , panel.grid.major.y = ggplot2::element_blank()  # Remove major horizontal gridlines
+      , panel.grid.minor.x = ggplot2::element_blank()  # Remove minor vertical gridlines
+      , panel.grid.minor.y = ggplot2::element_blank()   # Remove minor horizontal gridlines
+      , strip.text = ggplot2::element_text(size = 14)  # Increase font size of facet labels
+      , plot.background = ggplot2::element_rect(color = "black", fill = NA, linewidth = 1)  # Add a border around entire plot including title
+      , plot.caption = ggplot2::element_text(hjust = 0, size = 10, face = "italic")  # Adjust caption position and style
+    ) + 
+    ggplot2::geom_text(  # Add text labels at the end of the bars
+      ggplot2::aes(
+        label = ifelse(
+          metric == "proportion"
+          , scales::percent(
+            metricValue,
+            accuracy = 0.01 # Two decimal points
+            )
+          , scales::comma(
+            metricValue,
+            accuracy = 1 # Zero decimal points
+            )
+          )
+        ,  hjust = thresholdHjust #Defining hjust in the aes will pass the thresholdHjust as an argument where if outside aes it has to be directly assigned and doesn't work
+        )
+      , position = ggplot2::position_dodge(width = 0.9)  # Adjust the position to dodge the bars
+      
+      , size = 5  # Adjust the size of the text
+    )
+  
+  # Store the combined chart in the list with the group name as the key
+  combined_charts[[group_name]] <- combined_chart
+}
+
+
+
+if (knitr::is_html_output()) {
+    for (combined_chart in combined_charts) {
+      print(combined_chart)
+      }
+  } else {
+   combined_plot <- wrap_plots(combined_charts, ncol = 2) + 
+  plot_layout(
+    widths = 12
+    , guides = "collect"
+    ) 
+   print(combined_plot)
+  }
+
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-raceEthnicity
+#| fig-width: 8
+#| fig-height: 8
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-raceEthnicity
+#| fig-width: 18
+#| fig-height: 12
+
+```
+:::
+
+## County Demographic Profiles Census Bureau
+
+::: {.content-visible when-format="html" layout-ncol="3"}
+[![](Attachments/mnMap_polk.png)](https://data.census.gov/profile/Polk_County,_Minnesota?g=050XX00US27119)
+
+[![](Attachments/mnMap_norman.png)](https://data.census.gov/profile/Norman_County,_Minnesota?g=050XX00US27107)
+
+[![](Attachments/mnMap_mahnomen.png)](https://data.census.gov/profile/Mahnomen_County,_Minnesota?g=050XX00US27087)
+
+Please click on the corresponding map above for more detailed demographic information.
+:::
+
+::: {.content-visible when-format="pdf" layout-ncol="3"}
+[![](Attachments/mnMap_polk.png)](https://data.census.gov/profile/Polk_County,_Minnesota?g=050XX00US27119)
+
+[![](Attachments/mnMap_norman.png)](https://data.census.gov/profile/Norman_County,_Minnesota?g=050XX00US27107)
+
+[![](Attachments/mnMap_mahnomen.png)](https://data.census.gov/profile/Mahnomen_County,_Minnesota?g=050XX00US27087)
+
+If you are reading this online please click on the corresponding map above for more detailed demographic profiles. If you are reading this on paper, please use the URL's when you have access to a computer Polk URL: https://data.census.gov/profile/Polk_County,\_Minnesota?g=050XX00US27119 Norman URL: https://data.census.gov/profile/Norman_County,\_Minnesota?g=050XX00US27107 Mahnomen URL: https://data.census.gov/profile/Mahnomen_County,\_Minnesota?g=050XX00US27087
+:::

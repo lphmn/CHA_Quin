@@ -38,9 +38,9 @@ gbVal_shapeScheme <- c(
   , 24 #Triangle with a border (can be filled with a color)
 )
 
-gbVal_chbExpLbl <- "Polk, Norman, and Mahnomen Community Health Services (CHS)" # More detailed label
+gbVal_chbExpLbl <- "Polk-Norman-Mahnomen Community Health Services (CHS)" # More detailed label
 
-gbVal_chbAbbrLbl <- "Polk, Norman, and Mahnomen CHS" # Less detailed label
+gbVal_chbAbbrLbl <- "Polk-Norman-Mahnomen CHS" # Less detailed label
 
 # This is where I define what county(ies) are the drivers for this CHA process
 # It is based off the MN County FIPS code
@@ -56,6 +56,9 @@ gbVal = c(
   , 27087   #Polk
 )
 
+# Create an empty plot as a spacer use in cowplot for creating gap between plot and table
+spacer <- ggplot2::ggplot() + ggplot2::theme_void()
+
 
 # Functions ---------------------------------------------------------------
 
@@ -64,7 +67,7 @@ gbFun_countyFilter <- function(df, column)
   df |> dplyr::filter({{ column }} %in% gbVal)
 }
 
-# Function Plot CDC Places ------------------------------------------------
+# Function Plot CDC Places*** ------------------------------------------------
 # Function to create the plot for each location
 # It will create a plot than under it will be two tables than a caption
 
@@ -172,7 +175,7 @@ gbFun_CDCPlacesPlot <- function(data, colorScheme, shapeScheme) { #Not all measu
   print(final_plot)
 }
 
-# Function Plot County Health Ranking Years Potential Lost -------------------------------------
+# Function Plot County Health Ranking Years Potential Lost*** -------------------------------------
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
@@ -220,19 +223,24 @@ gbFun_CHRRYPLPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
       )+ # Define shapes
     ggplot2::scale_y_continuous(
       breaks = seq(0, maxValue, by = 3000)  # Increment by 1000
-      , labels = scales::comma  # Format y-axis values with commas
+      , labels = function(x) paste0("1:", x)  # Prepend "1:" to y-axis values
     ) +
     ggplot2::theme(
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
       )
   
   # Create a data table
   table_data <- data |>
     dplyr::filter(start_year == max(start_year)) |> 
     dplyr::arrange(fips) |>
-    dplyr::mutate(rawValue = formattable::comma(rawvalue,0)) |> 
+    dplyr::mutate(
+      rawValue = paste0("1:", rawvalue)
+      , cilow = paste0("1:", cilow)
+      , cihigh = paste0("1:", cihigh) 
+      ) |> 
     dplyr::select(
       "Date Range" = yearspan
       , location = county
@@ -240,10 +248,18 @@ gbFun_CHRRYPLPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
       , Value = rawValue
       , "Upper CI" = cihigh
     )
+  
+  
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
 
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
-
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
+  
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
     table_data,
@@ -256,9 +272,14 @@ gbFun_CHRRYPLPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
     ),
     t = 1, b = nrow(table_data), l = 1, r = ncol(table_data)
   )
-
+  
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
 
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -272,7 +293,7 @@ gbFun_CHRRYPLPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
   print(final_plot)
 }
 
-# Function Plot County Health Ranking PCP -------------------------------------
+# Function Plot County Health Ranking PCP*** -------------------------------------
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
@@ -328,25 +349,37 @@ gbFun_CHRRPCPPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
       name = NA
       , values = shapeScheme
     )+ # Define shapes
+    ggplot2::scale_y_continuous(
+       labels = function(x) paste0(x, ": 1")  # Append "1:" to y-axis values
+    ) +
     ggplot2::theme(
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
   table_data <- data |>
     dplyr::filter(start_year == max(start_year)) |> 
     dplyr::arrange(fips) |>
-    dplyr::mutate(rawValue = formattable::comma(rawvalue,0)) |> 
+    dplyr::mutate(rawValue = paste0(rawvalue, ": 1")) |> 
     dplyr::select(
       "Date Range" = yearspan
       , location = county
       , Value = rawValue
     )
   
+  
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -362,7 +395,12 @@ gbFun_CHRRPCPPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -376,7 +414,7 @@ gbFun_CHRRPCPPlot <- function(data, colorScheme, shapeScheme, titleName, yAxisTi
   print(final_plot)
 }
 
-# Function Plot County Health Ranking Dentist -------------------------------------
+# Function Plot County Health Ranking Dentist*** -------------------------------------
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
@@ -432,25 +470,37 @@ gbFun_CHRRDentistPlot <- function(data, colorScheme, shapeScheme, titleName, yAx
       name = NA
       , values = shapeScheme
     )+ # Define shapes
+    ggplot2::scale_y_continuous(
+      labels = function(x) paste0(x, ": 1")  # Append "1:" to y-axis values
+    ) +
     ggplot2::theme(
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
   table_data <- data |>
     dplyr::filter(start_year == max(start_year)) |> 
     dplyr::arrange(fips) |>
-    dplyr::mutate(rawValue = formattable::comma(rawvalue,0)) |> 
+    dplyr::mutate(rawValue = paste0(rawvalue, ": 1")) |>
     dplyr::select(
       "Date Range" = yearspan
       , location = county
       , Value = rawValue
     )
   
+  
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -466,7 +516,12 @@ gbFun_CHRRDentistPlot <- function(data, colorScheme, shapeScheme, titleName, yAx
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -649,73 +704,88 @@ gbFun_immunizationPlot <- function(data, colorScheme, shapeScheme, titleName) {
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
-    )
+      , legend.position = "bottom"
+      , panel.spacing = ggplot2::unit(1.5, "lines")  # Adjust the space between facet
+    ) +
+    ggplot2::facet_wrap(~vaccine, ncol = 2)
   
   # Create a data table
-  table_data <- data |>
-    dplyr::filter(year >= max(year)-1) |>
-    dplyr::arrange(fips, year) |>
-    dplyr::group_by(fips) |> 
-    dplyr::mutate(
-      percentageDifference = formattable::percent(
-        ifelse(
-          year == max(year)
-          , (percent[year == max(year)] - percent[year == min(year)]) # *100 I don't need to times by 100 since I wrap it in formttable
-          ,NA
-        )
-        , 1
-      )
-    ) |>
-    dplyr::ungroup() |> 
-     dplyr::mutate( 
-       !!vaccineName := formattable::percent(percent, 1)
-     ) |>   # Create a new column with the dynamic name
-    dplyr::select(
-      "Year" = year
-      , Location = location
-      , !!vaccineName
-      , "% Change" = percentageDifference
-    )
-  
-  # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
-  
-  # Add lines to the tables
-  table_data <- gtable::gtable_add_grob(
-    table_data,
-    grobs = grid::segmentsGrob(
-      x0 = grid::unit(0, "npc"),
-      y0 = grid::unit(0, "npc"),
-      x1 = grid::unit(1, "npc"),
-      y1 = grid::unit(0, "npc"),
-      gp = grid::gpar(lwd = 2)
-    ),
-    t = 1, b = nrow(table_data), l = 1, r = ncol(table_data)
-  )
-  
-  # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  # table_data <- data |>
+  #   dplyr::filter(year >= max(year)-1) |>
+  #   dplyr::arrange(fips, year) |>
+  #   dplyr::group_by(fips) |> 
+  #   dplyr::mutate(
+  #     percentageDifference = formattable::percent(
+  #       ifelse(
+  #         year == max(year)
+  #         , (percent[year == max(year)] - percent[year == min(year)]) # *100 I don't need to times by 100 since I wrap it in formttable
+  #         ,NA
+  #       )
+  #       , 1
+  #     )
+  #   ) |>
+  #   dplyr::ungroup() |> 
+  #    dplyr::mutate( 
+  #      !!vaccineName := formattable::percent(percent, 1)
+  #    ) |>   # Create a new column with the dynamic name
+  #   dplyr::select(
+  #     "Year" = year
+  #     , Location = location
+  #     , !!vaccineName
+  #     , "% Change" = percentageDifference
+  #   )
+  # 
+  # # Define a custom theme for the table
+  # custom_theme <- gridExtra::ttheme_default(
+  #   core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+  #   colhead = list(fg_params = list(fontsize = 8)),
+  #   rowhead = list(fg_params = list(fontsize = 8))
+  # )
+  # 
+  # # Create the table grobs
+  # table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
+  # 
+  # # Add lines to the tables
+  # table_data <- gtable::gtable_add_grob(
+  #   table_data,
+  #   grobs = grid::segmentsGrob(
+  #     x0 = grid::unit(0, "npc"),
+  #     y0 = grid::unit(0, "npc"),
+  #     x1 = grid::unit(1, "npc"),
+  #     y1 = grid::unit(0, "npc"),
+  #     gp = grid::gpar(lwd = 2)
+  #   ),
+  #   t = 1, b = nrow(table_data), l = 1, r = ncol(table_data)
+  # )
+  # 
+  # # Combine the plot and the tables side by side using cowplot
+  # if (knitr::is_html_output()) {
+  #   # Combine the plot and the tables side by side using cowplot
+  #   combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  # } else {
+  #   combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  # }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
-    "Minnesota Department of Health. (2015-2023). Immunizations query:Childhood immunizations.\nAccessed from MN Public Health Access Data portal https://data.web.health.state.mn.us/immunizations-query.\nRetrieved November 2024.",
+    "Minnesota Department of Health. (2015-2023). Immunizations query:Childhood immunizations.\nAccessed from MN Public Health Access Data portal https://data.web.health.state.mn.us/immunizations-query",
     x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
   )
   
   # Combine the plot, tables, and caption
-  final_plot <-  cowplot::plot_grid(combined, caption, ncol = 1, rel_heights = c(10, 1))
+  final_plot <-  cowplot::plot_grid(p, caption, ncol = 1, rel_heights = c(10, 1))
   
   print(final_plot)
 }
 
 
-# Function Plot Public Health Data Access Portal Dental Service -------------
+# Function Plot Public Health Data Access Portal Dental Service*** -------------
 
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
 gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) { 
-  lbName <- "Dental Services Recipients"
+  lbName <- "Recipients"
   minYr <- min(data$year)
   maxYr <- max(data$year)
   
@@ -763,6 +833,7 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -786,13 +857,20 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
     ) |>   # Create a new column with the dynamic name
     dplyr::select(
       "Year" = year
-      , geography = geography
+      , Location = geography
       , !!lbName
       , "% Change" = percentageDifference
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -808,12 +886,16 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
-    "Minnesota Department of Health. (2012-2020). Oral Health query:Medicaid dental service use.\n
-    Accessed from MN Public Health Access Data portal https://data.web.health.state.mn.us/medicaid-dental-service-use-query",
+    "Minnesota Department of Health. (2012-2020). Oral Health query:Medicaid dental service use.\nAccessed from MN Public Health Access Data portal https://data.web.health.state.mn.us/medicaid-dental-service-use-query",
     x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
   )
   
@@ -826,7 +908,7 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
 
 
 
-# Function Plot MDE Third Grade Proficiency -------------
+# Function Plot MDE Third Grade Proficiency*** -------------
   
   # Function to create the plot for each location
   # It will create a plot than under it will be one tables than a caption
@@ -877,9 +959,10 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
         labels = scales::percent  # Format y-axis values with geography
       ) +
       ggplot2::theme(
-        axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
-        , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
+        axis.text.y = ggplot2::element_text(face = "bold", size = 10)  # Make y-axis values bold
+        , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, size = 10)  # Rotate x-axis labels for better readability
         , legend.title = ggplot2::element_blank()  # Hide the legend title
+        , legend.position = "bottom"
       )
     
     # Create a data table
@@ -903,13 +986,20 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
       ) |>   # Create a new column with the dynamic name
       dplyr::select(
         "Year" = year
-        , Geography = location
+        , Location = location
         , !!lbName
         , "% Change" = percentageDifference
       )
     
+    # Define a custom theme for the table
+    custom_theme <- gridExtra::ttheme_default(
+      core = list(fg_params = list(fontsize = 7)),  # Adjust the font size here
+      colhead = list(fg_params = list(fontsize = 7)),
+      rowhead = list(fg_params = list(fontsize = 7))
+    )
+    
     # Create the table grobs
-    table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+    table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
     
     # Add lines to the tables
     table_data <- gtable::gtable_add_grob(
@@ -925,23 +1015,26 @@ gbFun_dentalPlot <- function(data, colorScheme, shapeScheme, titleName) {
     )
     
     # Combine the plot and the tables side by side using cowplot
-    final_plot <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+    if (knitr::is_html_output()) {
+      # Combine the plot and the tables side by side using cowplot
+      combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+    } else {
+      combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+    }
     
     # # Create the caption as a text grob
-    # caption <- grid::textGrob(
-    #   "Minnesota Early Childhood Longitudinal Data System. (2017-2020). Oral Health query:Medicaid dental service use.\n
-    # Accessed from MN Public Health Access Data portal https://data.web.health.state.mn.us/medicaid-dental-service-use-query.\n
-    # Retrieved November 2024.",
-    #   x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
-    # )
-    # 
-    # # Combine the plot, tables, and caption
-    # final_plot <-  cowplot::plot_grid(combined, caption, ncol = 1, rel_heights = c(10, 1))
+    caption <- grid::textGrob(
+      "Minnesota Early Childhood Longitudinal Data System. (2017-2023). 3rd Grade Proficiency. https://eclds.mn.gov/#thirdGradeEdStatus/"
+      , x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
+    )
+
+    # Combine the plot, tables, and caption
+    final_plot <-  cowplot::plot_grid(combined, caption, ncol = 1, rel_heights = c(10, 1))
     
     print(final_plot)
   }
 
-# Function Plot DEED Unemployment Rate -------------
+# Function Plot DEED Unemployment Rate*** -------------
 
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
@@ -995,6 +1088,7 @@ gbFun_deedUmemploymentPlot <- function(data, colorScheme, shapeScheme, titleName
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -1023,8 +1117,15 @@ gbFun_deedUmemploymentPlot <- function(data, colorScheme, shapeScheme, titleName
       , "% Change" = percentageDifference
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 7)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 7)),
+    rowhead = list(fg_params = list(fontsize = 7))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -1040,18 +1141,21 @@ gbFun_deedUmemploymentPlot <- function(data, colorScheme, shapeScheme, titleName
   )
   
   # Combine the plot and the tables side by side using cowplot
-  final_plot <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # # Create the caption as a text grob
-  # caption <- grid::textGrob(
-  #   "Minnesota Early Childhood Longitudinal Data System. (2017-2020). Oral Health query:Medicaid dental service use.\n
-  # Accessed from MN Public Health Access Data portal https://data.web.health.state.mn.us/medicaid-dental-service-use-query.\n
-  # Retrieved November 2024.",
-  #   x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
-  # )
-  # 
-  # # Combine the plot, tables, and caption
-  # final_plot <-  cowplot::plot_grid(combined, caption, ncol = 1, rel_heights = c(10, 1))
+  caption <- grid::textGrob(
+    "Minnesota Department of Employment and Economic Development (2015-2023). Minnesota Unemployment Statistics LAUS (Local Area Unemployment Statistics) Data.\nhttps://apps.deed.state.mn.us/lmi/laus/Default.aspx",
+    x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
+  )
+
+  # Combine the plot, tables, and caption
+  final_plot <-  cowplot::plot_grid(combined, caption, ncol = 1, rel_heights = c(10, 1))
   
   print(final_plot)
 }
@@ -1067,7 +1171,7 @@ gbFun_childTeenCheckupPlot <- function(data, colorScheme, shapeScheme, ageGroup)
     , "CTC Participation Ratio Ages 0-20 per EPSDT Schedule (Healthcare)-line 10\nEligible/Received one initial or periodic screening"
     , "CTC Total Eligibles Receiving Preventative Dental Services Ages 3-20 per EPSDT schedule (Line 12b/8)"
   )
-  titleLbl <- paste("ACCESS - Child and Teen Check-up / EPSDT Schedule (", data$ageGroup[1], " Years Old)")
+  titleLbl <- paste("Child and Teen Check-Up / EPSDT Schedule (", data$ageGroup[1], " Years Old)")
   minYr <- min(data$year)
   maxYr <- max(data$year)
   
@@ -1115,6 +1219,7 @@ gbFun_childTeenCheckupPlot <- function(data, colorScheme, shapeScheme, ageGroup)
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -1128,8 +1233,15 @@ gbFun_childTeenCheckupPlot <- function(data, colorScheme, shapeScheme, ageGroup)
       , Ratio = ratio
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -1145,7 +1257,12 @@ gbFun_childTeenCheckupPlot <- function(data, colorScheme, shapeScheme, ageGroup)
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(lbName, x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
@@ -1271,14 +1388,14 @@ gbFun_kidsCountMomSmokePlot <- function(data, colorScheme, shapeScheme) {
   print(final_plot)
 }
 
-# Function Plot Kids Count Percentage of Mothers Who Smoke -------------
+# Function Plot Kids Count PNC*** -------------
 
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
 gbFun_kidsCountMomPncPlot <- function(data, colorScheme, shapeScheme) { 
   titleName <- "Late or Inadequate Prenatal Care for Mothers"
-  tableName <- "Late or Inadequate PNC for Mothers"
+  tableName <- "Late/Inadequate\nPNC"
   minYr <- min(data$year)
   maxYr <- max(data$year)
   
@@ -1326,6 +1443,7 @@ gbFun_kidsCountMomPncPlot <- function(data, colorScheme, shapeScheme) {
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -1354,8 +1472,15 @@ gbFun_kidsCountMomPncPlot <- function(data, colorScheme, shapeScheme) {
       , "% Change" = percentageDifference
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -1371,7 +1496,12 @@ gbFun_kidsCountMomPncPlot <- function(data, colorScheme, shapeScheme) {
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -1490,14 +1620,14 @@ gbFun_mdhNASPlot <- function(data, colorScheme, shapeScheme) {
 }
 
 
-# Function Plot MDH Nonfatal Drug Overdose-------------
+# Function Plot MDH Nonfatal Drug Overdose***-------------
 
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
 gbFun_mdhNonfatalDrugPlot <- function(data, colorScheme, shapeScheme) { 
-  titleName <- "Nonfatal Drug Overdose"
-  tableRate <- "Age-Adjusted Rate per 1,000"
+  titleName <- "Nonfatal Drug Overdose Age-Adjusted Rate (per 1,000 Residents)"
+  tableRate <- "Age-Adjusted Rate"
   tableTotal <- "Count"
   minYr <- min(data$year)
   maxYr <- max(data$year)
@@ -1544,6 +1674,7 @@ gbFun_mdhNonfatalDrugPlot <- function(data, colorScheme, shapeScheme) {
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -1562,8 +1693,15 @@ gbFun_mdhNonfatalDrugPlot <- function(data, colorScheme, shapeScheme) {
       , !!tableRate
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -1579,7 +1717,12 @@ gbFun_mdhNonfatalDrugPlot <- function(data, colorScheme, shapeScheme) {
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -1706,7 +1849,7 @@ gbFun_mdhMss <- function(data, colorScheme, shapeScheme, titleName) {
   print(final_plot)
 }
 
-# Function Plot MDH HIV STI -------------
+# Function Plot MDH HIV STI*** -------------
 
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
@@ -1760,6 +1903,7 @@ gbFun_mdhStiHIV <- function(data, colorScheme, shapeScheme, titleName, tableName
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -1775,8 +1919,15 @@ gbFun_mdhStiHIV <- function(data, colorScheme, shapeScheme, titleName, tableName
       , !!lbName
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -1792,13 +1943,17 @@ gbFun_mdhStiHIV <- function(data, colorScheme, shapeScheme, titleName, tableName
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
-    "Minnesota Department of Health. (2024). STI Statistics. https://www.health.state.mn.us/diseases/stds/stats/index.html\n
-    Minnesota Department of Health. (2024). HIV/AIDS Statistics. https://www.health.state.mn.us/diseases/hiv/stats/index.html",
-    x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
+    "Minnesota Department of Health. (2024). STI Statistics. https://www.health.state.mn.us/diseases/stds/stats/index.html"
+    , x = 0, hjust = 0, gp = grid::gpar(fontsize = 10)
   )
   
   # Combine the plot, tables, and caption
@@ -1861,6 +2016,7 @@ gbFun_boardOfPharmacyPmpPlot <- function(data, colorScheme, shapeScheme, titleNa
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -1876,8 +2032,15 @@ gbFun_boardOfPharmacyPmpPlot <- function(data, colorScheme, shapeScheme, titleNa
       , !!lbName
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -1893,7 +2056,12 @@ gbFun_boardOfPharmacyPmpPlot <- function(data, colorScheme, shapeScheme, titleNa
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -2010,18 +2178,18 @@ gbFun_pufPlot <- function(data, colorScheme, shapeScheme, titleName, tableName) 
 }
 
 
-# Function Plot MDH Nonfatal Drug Overdose-------------
+# Function Plot MDH Fatal Drug Overdose-------------
 
 # Function to create the plot for each location
 # It will create a plot than under it will be one tables than a caption
 # titleName is required because the measure doesn't always match the data
 gbFun_mdhFatalDrugPlot <- function(data, colorScheme, shapeScheme) { 
-  titleName <- "Fatal Drug Overdose"
+  titleName <- "Number of Fatal Drug Overdoses by County of Residence"
   tableTotal <- "Total"
   minYr <- min(data$year)
   maxYr <- max(data$year)
   
-  p <- data |> dplyr::filter(year != 1) |> 
+  p <- data |> dplyr::filter(year != 1, fips != 27000) |> #State of MN overwhelms plot
     ggplot2::ggplot(
       ggplot2::aes(
         x = year  
@@ -2063,6 +2231,7 @@ gbFun_mdhFatalDrugPlot <- function(data, colorScheme, shapeScheme) {
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -2071,16 +2240,23 @@ gbFun_mdhFatalDrugPlot <- function(data, colorScheme, shapeScheme) {
     dplyr::arrange(fips, year) |>
     dplyr::mutate( 
       !!tableTotal := ct
-      , TimeRange = "2014-2023"
+      , "Time Range" = "2014-2023"
     ) |>   # Create a new column with the dynamic name
     dplyr::select(
-      TimeRange
+      "Time Range"
       , Location = location
       , !!tableTotal
     )
   
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -2096,7 +2272,12 @@ gbFun_mdhFatalDrugPlot <- function(data, colorScheme, shapeScheme) {
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
@@ -2109,3 +2290,134 @@ gbFun_mdhFatalDrugPlot <- function(data, colorScheme, shapeScheme) {
   
   print(final_plot)
 }
+
+# Function Plot MDH WIC Breastfeeding***-------------
+
+# Function to create the plot for each location
+# It will create a plot than under it will be one tables than a caption
+# titleName is required because the measure doesn't always match the data
+gbFun_mdhWicBFPlot <- function(data, colorScheme, shapeScheme) { 
+  titleName <- "P-N-M Breastfeeding Initiation and Duration Among Infants in the Minnesota WIC Program"
+  tableLbl <- "Pct"
+  minYr <- min(data$year)
+  maxYr <- max(data$year)
+  
+  p <- data |> dplyr::filter(measure != "# infants") |> 
+    dplyr::mutate(measureFc = factor(measure, levels = unique(measure))) |>  # Convert measure to factor
+    ggplot2::ggplot(
+      ggplot2::aes(
+        x = year  
+        , y = measureValue
+        , color = reorder(measureFc, measure) # Order by fip code
+        , shape = reorder(measureFc, measure) # Assign different shapes
+        , fill = reorder(measureFc, measure)  # Fill is required to fill shape's color
+        , group = reorder(measureFc, measure) # Required to connect the rawvalue dots
+      )
+    ) +
+    ggplot2::geom_point(size = 3) + # Adjust the size of the points
+    ggplot2::geom_line() +  # Connect the points with lines
+    ggplot2::labs(
+      title = titleName # Title passed in function
+      , x = ""
+      , y = ""
+      , color = ""
+    ) +
+    ggplot2::theme_minimal() +
+    #The name for color, fill, and shape have to be the same otherwise, 
+    # there will be legends for each of them
+    # I just set it to NA since this is easy to remember if I am not going to show the legend
+    ggplot2::scale_color_manual(
+      name = NA
+      , values = colorScheme
+    ) +
+    ggplot2::scale_fill_manual(
+      name = NA
+      ,values = colorScheme
+    ) + # Required to fill in some shapes
+    ggplot2::scale_shape_manual(
+      name = NA
+      , values = shapeScheme
+    )+ # Define shapes
+    ggplot2::scale_x_continuous(
+      breaks = seq(minYr, maxYr, by = 1)  # Ensure all years from 2015 to 2021 are shown
+    ) +
+    ggplot2::scale_y_continuous(
+      labels = scales::percent  # Format y-axis values with measureValues
+    ) +
+    ggplot2::theme(
+      axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
+      , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
+      , legend.title = ggplot2::element_blank()  # Hide the legend title
+    ) 
+  # Create a data table
+  table_data <- data |>
+    dplyr::filter(measure != "# infants", year >= max(year) -1) |>
+    dplyr::arrange(measureOrder, year) |>
+    dplyr::group_by(measure) |>
+    dplyr::mutate(
+      percentageDifference = formattable::percent(
+        ifelse(
+          year == max(year)
+          , (measureValue[year == max(year)] - measureValue[year == min(year)]) # *100 I don't need to times by 100 since I wrap it in formttable
+          ,NA
+        )
+        , 1
+      )
+    ) |>
+    dplyr::ungroup() |> 
+    dplyr::mutate( 
+      !!tableLbl := formattable::percent(measureValue,1)
+      , Measure = measure
+    ) |>   # Create a new column with the dynamic name
+    dplyr::select(
+      "Year" = year
+      , Measure
+      , !!tableLbl
+      , "% Change" = percentageDifference
+    )
+  
+  
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
+  # Create the table grobs
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
+  
+  # Add lines to the tables
+  table_data <- gtable::gtable_add_grob(
+    table_data,
+    grobs = grid::segmentsGrob(
+      x0 = grid::unit(0, "npc"),
+      y0 = grid::unit(0, "npc"),
+      x1 = grid::unit(1, "npc"),
+      y1 = grid::unit(0, "npc"),
+      gp = grid::gpar(lwd = 2)
+    ),
+    t = 1, b = nrow(table_data), l = 1, r = ncol(table_data)
+  )
+  
+  # Combine the plot and the tables side by side using cowplot
+  if (knitr::is_html_output()) {
+  # Combine the plot and the tables side by side using cowplot
+  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+} else {
+  combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+}
+  
+  # Create the caption as a text grob
+  caption <- grid::textGrob(
+    "Minnesota Department of Health. (2024). WIC Breastfeeding Summary. https://www.health.state.mn.us/people/wic/localagency/reports/bf/annual.html",
+    x = 0, hjust = 0, gp = grid::gpar(fontsize = 8)
+  )
+  
+  
+  # Combine the plot, tables, and caption
+  final_plot <-  cowplot::plot_grid(combined, caption, ncol = 1, rel_heights = c(10, 1))
+  
+  print(final_plot)
+}
+

@@ -1,0 +1,209 @@
+# Mental Health
+
+```{r}
+#| label: gb
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+#When testing and not rendering the report, the if statement returns true but when rendering as the report, the else executes
+if (file.exists("pages/Global/gb.R")) {
+  source("pages/Global/gb.R")
+  source("pages/Data/data.R")
+} else {
+  source("./Global/gb.R")
+  source("./Data/data.R")
+}
+```
+
+Our three counties and the state of Minnesota show that roughly 1 in every 3 to 4 people is projected to experience depression. This high ratio is also reflected in the Minnesota Student Survey responses from our 9th graders. When asked how often they have felt down, depressed, or hopeless over the past two weeks, about 1 in every 3 to 5 reported feeling this way. Mahnomen County had the highest percentage of 9th graders responding 'yes' to this question.
+
+A very encouraging sign is Polk, Norman, and Mahnomen counties appear to be doing well in screening for mental health and depression for patients 12-17 years of age. We are slightly lower than Minnesota but all three counties are over 80%. Early screening plays a crucial role in identifying and addressing mental health issues promptly, leading to better outcomes for our youth.
+
+In terms of community support, Mahnomen County saw a positive change of 12.3% in students feeling that the community cared for them "quite a bit" or "very much." Conversely, Polk County experienced a 13.5% decrease in this sentiment.
+
+The Minnesota Student Survey helps us identify early signs of possible problematic behavior in our youth. For instance, we can see that 60.8% of 11th graders in Polk County reported not using alcohol, marijuana, or drugs within the last year. Unfortunately, we currently lack data on how well Mahnomen and Norman Counties are doing in this area.
+
+Regarding social isolation, the feeling of being socially isolated among adults was not significantly different between the counties, PNM CHS, or Minnesota, based on the age-adjusted 95% confidence interval.
+
+```{r}
+#| label: fig-conditionDepression
+#| warning: false
+#| include: false
+
+# Filter the data by 'measureid'
+filtered_data <- f_places2022 |> 
+  dplyr::filter(measureid == "DEPRESSION")
+
+# Create the plot
+gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-conditionDepression
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-conditionDepression
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+```
+:::
+
+```{r}
+#| label: fig-mssDepression
+#| warning: false
+#| include: false
+
+# Filter the data by 'vaccine'
+filtered_data <- f_mss |> 
+  dplyr::filter(mss_topic == "% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days")
+
+# Create the plot
+gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Percentage of 9th graders reporting over the past two weeks, how often have you been\nbothered, feeling down, depressed or hopeless several days (MSS)")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-mssDepression
+#| fig-width: 8
+#| fig-height: 8
+#| warning: false
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-mssDepression
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+```{r}
+#| label: fig-pufAmh
+#| warning: false
+#| include: false
+
+# Filter the data by 'vaccine'
+filtered_data <- f_puf |> 
+  dplyr::filter(measure == "amh")
+
+# Create the plot
+gbFun_pufPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Adolescent Mental Health and/or Depression Screening", "Optimal Care Rate")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-pufAmh
+#| fig-width: 8
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-pufAmh
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+
+```
+:::
+
+```{r}
+#| label: fig-mssCommunityCare
+#| warning: false
+#| include: false
+
+# Filter the data by 'vaccine'
+filtered_data <- f_mss |> 
+  dplyr::filter(mss_topic == "% of 9th Graders community cared about them \"quite a bit\" or \"very much\"")
+
+# Create the plot
+gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Percentage of 9th graders in the PNM service area who reported that the community cared about them\n \"quite a bit\" or \"very much\" (MSS)")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-mssCommunityCare
+#| fig-width: 8
+#| fig-height: 8
+#| warning: false
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-mssCommunityCare
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+```{r}
+#| label: fig-mssDrugUse
+#| warning: false
+#| include: false
+
+# Filter the data by 'vaccine'
+filtered_data <- f_mss |> 
+  dplyr::filter(mss_topic == "% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year")
+
+# Create the plot
+gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "% of 11th graders in the PNM service area who have not used alcohol, marijuana, and/or drugs in the past year (MSS)")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-mssDrugUse
+#| fig-width: 8
+#| fig-height: 8
+#| warning: false
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-mssDrugUse
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: center
+#| warning: false
+
+```
+:::
+
+## Suicide
+
+Suicide is complex; there is no single cause of death by suicide. Suicide prevention efforts are based on evidence that most suicides are preventable, mental illness is treatable, and recovery is possible.
+
+In 2022, 860 Minnesotans died from suicide, the highest total ever, and preliminary data indicates 815 died in 2023. This translates to an age-adjusted rate of 14.8 and 14.1 per 100,000, respectively. Preliminary figures for 2023 are based on projections made using Minnesota death certificates finalized as of May 1, 2024. Continuing a persistent trend, males had a higher suicide rate than females in 2022 and 2023. In 2022 and 2023, American Indian or Alaska Natives had a higher suicide rate than the most populous racial or ethnic groups in Minnesota. The largest percentage of suicide deaths in 2023, 47%, involved a firearm. Like previous years, suicide rates in rural areas in 2023 tended to be higher than urban areas. (Data Brief: Suicide Up in 2022, Down in 2023 In 2022 (2024), Minnesota Department of Health) [Suicide 2021 data brief](https://www.health.state.mn.us/communities/suicide/documents/2023suicidedatabrief.pdf)
+
+::: {.content-visible when-format="pdf"}
+Suicide 2021 data brief URL https://www.health.state.mn.us/communities/suicide/documents/2023suicidedatabrief.pdf
+:::
+
+From 2016-2021, there were fifty reported deaths by suicide in Polk, Norman and Mahnomen counties -- making up 48% of the total deaths by suicide for the eight Northwest Minnesota county region. Firearms were the most common mechanism of injury accounting for suicide deaths. (Minnesota Department of Health)

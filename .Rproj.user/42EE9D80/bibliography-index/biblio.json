@@ -432,6 +432,222 @@
             "note": "Accessed 12/01/2024",
             "title": "Minnesota statewide quality reporting and measurement system public use file",
             "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "MDHasthma",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Asthma",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "MDHPHDAPAsthma",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Asthma",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/data/mchs/genstats/countytables/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "MDHcht",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 10/01/2024",
+            "title": "County health tables",
+            "type": ""
+        },
+        {
+            "URL": "https://datacenter.aecf.org/data/tables/11367-four-year-graduation-rate?loc=25&loct=2#detailed/5/3827-3913/false/1095,2048/any/22006,22007",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Kids Count"
+                }
+            ],
+            "id": "kidsCountGraduation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Four-year graduation rate in minnesota",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/data/mcrs/docs/prevresultable.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "MDHCancerPrevalence",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Cancer prevalence estimates by minnesota county",
+            "type": ""
+        },
+        {
+            "URL": "https://data.web.health.state.mn.us/cancer_all#maps",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "MDHCancerMap",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Cancer in minnesota",
+            "type": ""
+        },
+        {
+            "URL": "https://dementiadatahub.org/explore-data/map.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "NORC at the University of Chicago"
+                }
+            ],
+            "id": "dementia",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Dementia datahub",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/diseases/chronic/cdmortalitydata.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "NORC at the University of Chicago"
+                }
+            ],
+            "id": "mdhHD",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Heart disease, stroke, hypertension, and diabetes deaths in minnesota",
+            "type": ""
         }
     ],
     "project_biblios": [

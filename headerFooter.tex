@@ -3,8 +3,14 @@
 
 \pagestyle{scrheadings}
 
-\cohead{TOGETHER WE CAN build a better future!}
-\rohead{\includegraphics[width=4cm, height=4cm]{pages/Attachments/logo_PNM.png}}
+\rofoot{Community-Health-Assessment}
+% \rohead{\includegraphics[width=4cm, height=4cm]{pages/Attachments/logo_PNM.png}}
 
 % Ensure the header is on every page, including the first page of each chapter
 \renewcommand*{\chapterpagestyle}{scrheadings}
+
+% Adjust chapter title spacing
+\makeatletter
+\renewcommand*{\chapterheadstartvskip}{\vspace*{-0.5cm}} % Adjust this value to control the space before the chapter title
+\renewcommand*{\chapterheadendvskip}{\vspace*{0.5cm}}  % Adjust this value to control the space after the chapter title
+\makeatother

@@ -1,0 +1,60 @@
+# Health Behaviors
+
+```{r}
+#| label: gb
+#| include: false
+# include does not show output or code #| is a special syntax for Quarto 
+
+#When testing and not rendering the report, the if statement returns true but when rendering as the report, the else executes
+if (file.exists("pages/Global/gb.R")) {
+  source("pages/Global/gb.R")
+  source("pages/Data/data.R")
+} else {
+  source("./Global/gb.R")
+  source("./Data/data.R")
+}
+```
+
+
+### Childhood Immunizartions
+
+According to Minnesota Department of Health, childhood and adolescent vaccination rates decreased during the COVID-19 pandemic. Healthy People (HP) 2030 Goal is to increase vaccination rates. Infants and children need to get vaccinated to prevent diseases like hepatitis, measles, and pertussis. Teaching people about the importance of vaccines, sending vaccination reminders, and making it easier to get vaccines can help increase vaccination rates in children, adolescents, and adults. The following map and the next plot/table use the same data but just display it differently.
+
+Minnesota, Norman County, and Mahnomen County all experienced declines in vaccination rates for the seven vaccine series, DTaP, Hep A, Hep B, Hib, MMR, PCV, Polio, Rotovirus, and Varicella. Polk County improved their vaccination rate for Varicella, Rotovirus, Polio, MMR, Hep B, DTaP, and the seven vaccine series.
+
+[![](Attachments/mnMap_countyImmunizationTest.png)](https://data.web.health.state.mn.us/web/mndata/immunization_basic#countymap)
+
+```{r}
+#| label: fig-immunizationSevenVaccineSeries
+#| warning: false
+#| include: false
+
+# Filter the data by 'vaccine'
+filtered_data <- f_pHDAPImmunization |> 
+  dplyr::filter(vaccine == "Seven vaccine series")
+
+# Create the plot
+gbFun_immunizationPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Seven Vaccine Series")
+
+```
+
+::: {.content-visible when-format="html"}
+```{r}
+#| ref.label: fig-immunizationSevenVaccineSeries
+#| fig-width: 5
+#| fig-height: 8
+
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| ref.label: fig-immunizationSevenVaccineSeries
+##| fig-width: 11
+#| fig-height: 8
+#| warning: false
+
+```
+:::
+
+

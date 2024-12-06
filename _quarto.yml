@@ -3,9 +3,8 @@ project:
   output-dir: docs
 
 book:
-  title: "Community Health Needs Assessment"
-  subtitle: "Polk Norman Mahnomen Community Health Services"
-  author: "Sarah Reese & Patrick Olson"
+  title: "2022-2024 Community Health Assessment"
+  subtitle: "Polk-Norman-Mahnomen Community Health Services"
   date: last-modified
   downloads: [pdf]
   search: TRUE
@@ -15,9 +14,23 @@ book:
   chapters:
     - index.qmd
     - pages/010_understandingCHA.qmd
-    - pages/020_localInput.qmd
-    - pages/030_popEnvironmentalHealth.qmd
-    - pages/040_comprehensiveHealthMetrics.qmd
+    - pages/020_localAssessments.qmd
+    - pages/030_demographics.qmd
+    - pages/040_factorsInfluencingHealth.qmd
+    - pages/050_healthStatus.qmd 
+    # #   #  For example, in 2022, 25% of members (with enrollment in Medicare Advantage, MHCP, commercial, or who were Dually-Eligible) who resided in the three-county area had at least one preventive visit.
+    # #   # 2019- 28.1%, 2021- 28.7%, 2022 - 25.1% % enrolled with a least one preventive visit
+    # #   # To generate these results, we first identified ZIP codes within Polk, Norman, and Mahnomen counties (3-county-area) using a ZIP code to county crosswalk file from the University of Missouri Census Data Center (MCDC) from the 2020 Census. This table reflects the percentage of the population in a ZIP census tabulation area (zcta) that also resides in a corresponding county. When one zcta crosses multiple county lines, there  will be multiple counties assigned to the same zcta, with percentages that total 100%. These percentages were used as weights to estimate the number of members with enrollment in the MN APCD who reside in the three counties.
+    # #   # To identify preventive services, we used the intersection of the flags 'evaluation and management' and 'preventive visits' from the medical_claim_service_ln_flagging table provided to us by Onpoint, our data aggregator, for the years 2019, 2021, and 2022. We applied the same weights to estimate at least one preventive visit per member per year. We then divided the number of members who had at least one preventive visit over the number of members enrolled across counties and by county. In addition to stratifying by county, we also stratified these analyses by payer (commercial, Minnesota Health Care Programs (MHCP), traditional Medicare (2019 and 2021 only), Medicare Advantage, or Dual-Eligible beneficiaries),  and age category (child=ages 0-18; adult=ages 19-64; senior=ages 65+). Payer by age categories included in these analyses are: 1) children or adults in commercial coverage, 2) children or adults in MHCP programs, 3) seniors in traditional Medicare, Medicare Advantage, or who are Dual-Eligible.
+    # #   
+    - pages/060_healthBehaviors.qmd
+    # #   # Substance Use/Misuse (Drug Use) 
+    # #     # % of 11th graders in the PNM service area who have not used alcohol, marijuana, and/or drugs
+    # - pages/070_healthConditions.qmd
+    - pages/080_mentalHealth.qmd
+    # # # Health Conditions related to 
+    # #   # mental health related conditions A health condition is a broad term that includes all diseases and disorders.
+    - pages/090_environmentalHealth.qmd
     - pages/900_references.qmd
     - pages/901_missionStatement.qmd
         
@@ -30,7 +43,7 @@ format:
     papersize: A4
     classoption: landscape
     geometry:
-      - inner=3cm
+      - inner=1cm
       - outer=2.54cm
       - top=2.54cm
       - bottom=2.54cm
@@ -40,6 +53,7 @@ format:
       - ignorehead
       - ignorefoot
       - heightrounded
+      - showframe
     mainfont: Times New Roman
     toc: true
     toc-depth: 3
@@ -50,6 +64,7 @@ format:
       - before-body.tex
     include-in-header: headerFooter.tex
     fig-pos: "H"
+    #keep-tex: TRUE
     
   html:
      theme: cosmo
@@ -62,5 +77,7 @@ execute:
 
 # if this isn't set globally default for date: will be published
 published-title: "Last updated"  
+
+toc-title: "Table of Contents"
 
 editor: visual
