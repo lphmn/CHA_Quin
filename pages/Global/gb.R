@@ -589,6 +589,7 @@ gbFun_foodShelfPlot <- function(data, colorScheme, shapeScheme, titleName) {
       axis.text.y = ggplot2::element_text(face = "bold")  # Make y-axis values bold
       , axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)  # Rotate x-axis labels for better readability
       , legend.title = ggplot2::element_blank()  # Hide the legend title
+      , legend.position = "bottom"
     )
   
   # Create a data table
@@ -618,8 +619,16 @@ gbFun_foodShelfPlot <- function(data, colorScheme, shapeScheme, titleName) {
       , "% Difference" = percentageDifference
     )
   
+  
+  # Define a custom theme for the table
+  custom_theme <- gridExtra::ttheme_default(
+    core = list(fg_params = list(fontsize = 8)),  # Adjust the font size here
+    colhead = list(fg_params = list(fontsize = 8)),
+    rowhead = list(fg_params = list(fontsize = 8))
+  )
+  
   # Create the table grobs
-  table_data <- gridExtra::tableGrob(table_data, rows = NULL)
+  table_data <- gridExtra::tableGrob(table_data, rows = NULL, theme = custom_theme)
   
   # Add lines to the tables
   table_data <- gtable::gtable_add_grob(
@@ -635,7 +644,13 @@ gbFun_foodShelfPlot <- function(data, colorScheme, shapeScheme, titleName) {
   )
   
   # Combine the plot and the tables side by side using cowplot
-  combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))
+  if (knitr::is_html_output()) {
+    # Combine the plot and the tables side by side using cowplot
+    combined <- cowplot::plot_grid(p, table_data, ncol = 1, rel_widths = c(3, 2))  # HTML Output
+  } else {
+    combined <- cowplot::plot_grid(p, table_data, ncol = 2, rel_widths = c(3,  1))  # Add spacer with rel_widths
+  }
+  
   
   # Create the caption as a text grob
   caption <- grid::textGrob(
