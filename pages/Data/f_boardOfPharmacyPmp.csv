@@ -1,4 +1,4 @@
-fips,location,value,indicator,year
+fips,location,rate_perOneThousand,indicator,year
 27087,Polk,1905,prescription rate per 1000,2022
 27087,Polk,1813,prescription rate per 1000,2023
 27119,Mahnomen,2400,prescription rate per 1000,2022

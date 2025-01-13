@@ -1,18 +1,66 @@
+
 $if(has-frontmatter)$
 \frontmatter
 $endif$
 $if(title)$
+\newgeometry{top=0.25cm, bottom=0cm, left=0cm, right=0cm} % Adjust margins as needed
 \cleardoublepage
 \thispagestyle{empty}
-{\centering
-\vspace*{1cm} % Adjust this value to move the title closer to the top
-{\Huge\bfseries $title$ \par}
 
-$if(subtitle)$
+% Define colors
+\newcommand{\headerfooterbg}{\textcolor[HTML]{00295D}}
+\newcommand{\blackColor}{\textcolor[rgb]{1,1,1}}
+
+\newcommand{\pmnGreen}{\textcolor[HTML]{A9B849}}
+\newcommand{\pmnBlue}{\textcolor[HTML]{00295D}}
+
+\newfontfamily\titleFooterFont{Segoe Script} % Footer font defined here
+
+% Define a green color Commenting requires extra % $-- because it is latex and pandoc I'm keeping the code below if I 
+% ever need to create a box around a single line text 
+% $-- \newcommand{\greenbox}[1]{\setlength{\fboxrule}{2pt}\textcolor[HTML]{A9B849}{\fbox{\textcolor[HTML]{00295D}{#1}}}}
+
+% The greenbox was developed with the help of MS Copilot December 31 2024
+\newcommand{\greenbox}[4]{%
+  \setlength{\fboxrule}{2pt}%                                 % Set the thickness of the frame box rule to 2 points
+  \textcolor[HTML]{A9B849}{%                                  % Set the text color to green using its HTML hex code
+    \fbox{%                                                   % Create a framed box around the content
+      \begin{minipage}{0.35\textwidth}%                       % Create a minipage with a width of 35% of the text width
+        \centering%                                           % Center the content within the minipage
+        \textcolor[HTML]{00295D}{#1}\\%                       % Center the first argument and set its color to blue
+        \textcolor[HTML]{00295D}{#2}\\%                       % Center the second argument and set its color to blue
+        \textcolor[HTML]{00295D}{#3}\\%                       % Center the third argument and set its color to blue
+        \textcolor[HTML]{00295D}{#4}%                         % Center the fourth argument and set its color to blue
+      \end{minipage}%                                         % End the minipage environment
+    }%
+  }%
+}
+
+% Custom header layout if margin is changed before makebox I'll have to add hspace*{-Margin} to make rectangle go across entire screen
+\newcommand{\myHeader}{%
+    \noindent\makebox[0pt][l]{\pmnBlue{\rule{\paperwidth+ 4cm}{0.75cm}}} %The +4cm is to make sure it covers the entire page if not here the right side will have a tiny gap
+}
+
+% Custom footer layout
+\newcommand{\myFooter}{%
+    \noindent\hspace*{-2cm}\makebox[0pt][l]{\pmnBlue{\rule{\paperwidth + 4cm}{2cm}}}
+    \noindent\hspace*{2cm}\makebox[\textwidth]{\raisebox{0.75cm}{\blackColor{\hfill\Huge\bfseries\fontspec{Times New Roman} TOGETHER WE CAN\hfill}}\hspace{0.5cm}\raisebox{0.5cm}{\blackColor{\hfill\Huge\titleFooterFont{Prevent. Promote. Protect.} \hfill}}}
+}
+
+% Header for Title Page
+\myHeader
+
+{\centering
+\vspace*{6cm} % Adjust this value to move the title closer to the top
+
+{\Huge\bfseries Polk-Norman-Mahnomen\par}
+{\Huge\bfseries Community Health Services\par}
 \vspace{3ex}
-{\Large\bfseries $subtitle$ \par}
-$endif$
- 
+
+% Use the greenbox command to create a green-bordered rectangle around each argument
+\Huge\bfseries\greenbox{2022-2024}{COMMUNITY}{HEALTH}{ASSESSMENT}
+
+
 $for(by-author)$
 \vspace{3ex} % Space between image and author
 {\Large Author: $by-author.name.literal$ \par}
@@ -20,13 +68,26 @@ $endfor$
 \vspace{3ex} % Space between author and date
 {\Large Last Updated: $date$ \par}
 
-\vspace{40ex}
+\vfill
+
 \begin{minipage}{1\textwidth}
-  \raggedright
-  \hspace{10cm} % Adjust this value to pad the text to the center
-  {\Large Together We Can Build a Better Future \hspace{4cm} \includegraphics[width=4cm, height=4cm]{pages/Attachments/logo_PNM.png}}
+  \begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \includegraphics[width=6cm, height=6cm]{pages/Attachments/logo_PNM.png}
+  \end{minipage}
+  \begin{minipage}[t]{0.7\textwidth}
+    \centering
+    {\huge\bfseries\pmnBlue{FOR IMPLEMENTATION IN 2025-2029} \par}
+  \end{minipage}
 \end{minipage}
 
 }
+
+\vspace{0.25cm}
+
+% Footer for Title Page
+\myFooter
+
+\restoregeometry % Restore original margins
+
 $endif$
-% Thank you to Cameron Patrick for his great write up https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/

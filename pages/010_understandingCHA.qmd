@@ -1,4 +1,6 @@
-# Understanding Our CHA
+<!-- I am not a fan of putting unnumbered here but for it to appear in a pdf header {.unnumbered} is required  -->
+
+# Understanding Our CHA {.unnumbered}
 
 ## Rationale Behind Our Choices
 
@@ -43,7 +45,7 @@ Just like the rooster and the sun, health risk factors might be associated with 
 
 ### Count
 
--   A count represents the value of an observation. Counts are useful for assessing the economic impact of a community and determining if statistical analysis is reliable. According to @cdcStats2024Suppression, counts less than 16 are considered unstable, meaning the results should be interpreted with caution. However, counts below 16 are still important because they provide us with a sense of how a community is currently doing. Counts shouldn't be compared among different communities, but they can be used to assess the community.
+-   A count represents the value of an observation. Counts are useful for assessing the economic impact of a community and determining if statistical analysis is reliable. According to [@cdcStats2024Suppression], counts less than 16 are considered unstable, meaning the results should be interpreted with caution. However, counts below 16 are still important because they provide us with a sense of how a community is currently doing. Counts shouldn't be compared among different communities, but they can be used to assess the community.
 
 ### Proportion
 

@@ -1,0 +1,35 @@
+\usepackage{scrlayer-scrpage}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{xcolor}
+\usepackage{fontspec}
+
+\definecolor{footerbg}{HTML}{00295D} % Background color
+\definecolor{footerfg}{rgb}{1,1,1} % White text
+\newfontfamily\footerfont{Century Gothic} % Footer font defined here
+
+
+\newcommand{\mypage}{%
+    \begin{tikzpicture}[remember picture, overlay]
+    % I didn't inclue a header rectangle but if I ever do I don't want to redo this so I left the code
+        % $-- Header rectangle if xshift isn't defined there is a little white gap displayed
+        % $-- \fill[fill=headerfooterbg] (current page.north west) rectangle ([xshift = 12cm, yshift=-.5cm]current page.north east);
+        % Footer rectangle if xshift isn't defined there is a little white gap displayed
+        \fill[fill=footerbg] ([xshift=-1cm, yshift=-.5cm]current page.south west) rectangle ([xshift = 1cm, yshift=.5cm]current page.south east);
+    \end{tikzpicture}
+}%
+
+% Set up headers and footers using scrlayer-scrpage
+\clearpairofpagestyles
+\ifoot{\mypage \footerfont\color{footerfg}Page \thepage}
+\ofoot{\footerfont\color{footerfg}Polk-Norman-Mahnomen Community Health Services | Community Health Assessment}
+
+\pagestyle{scrheadings}
+
+% Ensure the header is on every page, including the first page of each chapter
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+% Adjust chapter title spacing
+\makeatletter
+\renewcommand*{\chapterheadstartvskip}{\vspace*{-0.6cm}} % Adjust this value to control the space before the chapter title
+\renewcommand*{\chapterheadendvskip}{\vspace*{0.4cm}}  % Adjust this value to control the space after the chapter title

@@ -15,7 +15,9 @@ if (file.exists("pages/Global/gb.R")) {
 }
 ```
 
-Our three counties and the state of Minnesota show that roughly 1 in every 3 to 4 people is projected to experience depression. This high ratio is also reflected in the Minnesota Student Survey responses from our 9th graders. When asked how often they have felt down, depressed, or hopeless over the past two weeks, about 1 in every 3 to 5 reported feeling this way. Mahnomen County had the highest percentage of 9th graders responding 'yes' to this question.
+## Depression/ Optimal Care for Depression/ Feeling Socially Isolated
+
+Our three counties and the state of Minnesota show that roughly 1 in every 3 to 4 people is projected to experience depression. This high ratio is also reflected in the Minnesota Student Survey responses from 9th grade students. When asked how often they have felt down, depressed, or hopeless over the past two weeks, about 1 in every 3 to 5 reported feeling this way. Mahnomen County had the highest percentage of 9th graders responding 'yes' to this question.
 
 A very encouraging sign is Polk, Norman, and Mahnomen counties appear to be doing well in screening for mental health and depression for patients 12-17 years of age. We are slightly lower than Minnesota but all three counties are over 80%. Early screening plays a crucial role in identifying and addressing mental health issues promptly, leading to better outcomes for our youth.
 
@@ -25,175 +27,548 @@ The Minnesota Student Survey helps us identify early signs of possible problemat
 
 Regarding social isolation, the feeling of being socially isolated among adults was not significantly different between the counties, PNM CHS, or Minnesota, based on the age-adjusted 95% confidence interval.
 
+::: {#fig-conditionDepression}
 ```{r}
-#| label: fig-conditionDepression
 #| warning: false
 #| include: false
 
 # Filter the data by 'measureid'
 filtered_data <- f_places2022 |> 
-  dplyr::filter(measureid == "DEPRESSION")
+  dplyr::filter(measureid == "DEPRESSION") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "\nLocation: "
+    , toolTipTextValue1 = locationname
+    , toolTipTextHeader2 = "\nPrevalence: "
+    , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
+  )
 
-# Create the plot
-gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
+filtered_ageAdjustedTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(prevelenceType = "Age-Adjusted") |> 
+    dplyr::select(prevelenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
 
+filtered_crudeTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(prevelenceType = "Crude") |> 
+    dplyr::select(prevelenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+  
+figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
+figSubcap <- "Data Source: @cdc2024Places"
+plotXCaption <- paste("Data Source:",cdc2024Places) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+
+#Table 
+colList <- list("Type", "Location", "Low CI", "Prevalence", "High CI") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotSingleYrPDF(filtered_data, "locationname", "locationid","data_value", "toolTipTextHeader1", 
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "data_value_type",
+    "low_confidence_limit", "high_confidence_limit", figCap_plotTitle, plotXCaption, "Prevalence",
+    gbVal_colorScheme, ifelse(knitr::is_html_output(), 10, 12)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-conditionDepression
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5 
 
+if (knitr::is_html_output()) {
+# Create the ggplot plot ggplot and then its wrapped within plotly function
+gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+::: panel-tabset
+#### Age Adjusted Prevalence
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+}
+```
+
+#### Crude Prevalence
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
+}
+```
+:::
+:::
+
+::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
+```{r}
+#| fig-width: 11
+#| fig-height: 3
+#| warning: false
+
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+gbFun_tablePDF(filtered_crudeTbl, colList)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-conditionDepression
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
+`{r} figSubcap`
 
-```
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
+::: {#fig-mssDepression}
 ```{r}
-#| label: fig-mssDepression
 #| warning: false
 #| include: false
 
-# Filter the data by 'vaccine'
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
+
 filtered_data <- f_mss |> 
-  dplyr::filter(mss_topic == "% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days")
+  dplyr::filter(mss_topic == "% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = location
+    , toolTipTextHeader3 = "\n9th Graders Feeling Depressed: "
+    , toolTipTextValue3 = scales::label_percent(accuracy = .01)(percentage)
+  )
 
-# Create the plot
-gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Percentage of 9th graders reporting over the past two weeks, how often have you been\nbothered, feeling down, depressed or hopeless several days (MSS)")
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-3)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)(percentage)) |>   
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+      year == maxYr ~ scales::label_percent(accuracy = .01)((percentage) - dplyr::first(percentage)) #Since there is only 2, most recent - next
+      , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired.  
+
+
+figCap_plotTitle <- "Percentage of 9th graders reporting over the past two weeks, how often have\nyou been bothered, feeling down, depressed or hopeless several days (MSS)"
+figSubcap <- "Data Source: @mdeMinnesotaStudentSurvey"
+plotXCaption <- paste("Data Source:", mdeMinnesotaStudentSurvey) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
+#Table
+colList <- list("Year", "Location", "9th Graders Feeling Depressed", "% Change") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "percentage", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
+    plotXCaption, "", minYr, maxYr, scaleYContinuous,
+    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-mssDepression
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-mssDepression
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
 #| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
 
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-pufAmh}
 ```{r}
-#| label: fig-pufAmh
 #| warning: false
 #| include: false
 
-# Filter the data by 'vaccine'
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
+
 filtered_data <- f_puf |> 
-  dplyr::filter(measure == "amh")
+  dplyr::filter(measure == "amh") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = location
+    , toolTipTextHeader3 = "\nOptimal Care Rate: "
+    , toolTipTextValue3 =  scales::label_number(accuracy = 0.01)(optimal_care_rate)
+  )
 
-# Create the plot
-gbFun_pufPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Adolescent Mental Health and/or Depression Screening", "Optimal Care Rate")
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
 
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year == maxYr)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_number(accuracy = 0.01)(optimal_care_rate)) |>   
+  dplyr::select(year, location, placeholder) # Ensure fields are ordered as desired.  
+
+
+figCap_plotTitle <- "Adolescent Mental Health and/or Depression Screening" 
+figSubcap <- "Data Source: @mdhPublicUseFiles2022"
+plotXCaption <- paste("Data Source:", mdhPublicUseFiles2022) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous =  scales::label_number(accuracy = 0.01)  # Format y-axis values with geography
+#Table
+colList <- list("Year", "Location", "Optimal Care Rate") # Using a list accommodates tables with different column lengths.
+
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "optimal_care_rate", "location", "fips", "toolTipTextHeader1", 
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3",
+    "toolTipTextValue3", figCap_plotTitle, plotXCaption, "", minYr, maxYr, scaleYContinuous,
+    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-pufAmh
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
+#| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-pufAmh
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
 
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-mssCommunityCare}
 ```{r}
-#| label: fig-mssCommunityCare
 #| warning: false
 #| include: false
 
-# Filter the data by 'vaccine'
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
+
 filtered_data <- f_mss |> 
-  dplyr::filter(mss_topic == "% of 9th Graders community cared about them \"quite a bit\" or \"very much\"")
+  dplyr::filter(mss_topic == "% of 9th Graders community cared about them \"quite a bit\" or \"very much\"") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = location
+    , toolTipTextHeader3 = "\n9th Graders Community Cared: "
+    , toolTipTextValue3 = scales::label_percent(accuracy = .01)(percentage)
+  )
 
-# Create the plot
-gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Percentage of 9th graders in the PNM service area who reported that the community cared about them\n \"quite a bit\" or \"very much\" (MSS)")
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
 
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-3)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)(percentage)) |>   
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+      year == maxYr ~ scales::label_percent(accuracy = .01)((percentage) - dplyr::first(percentage)) #Since there is only 2, most recent - next
+      , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired.  
+
+
+figCap_plotTitle <- "Percentage of 9th graders in the PNM service area who reported that\nthe community cared about them \"quite a bit\" or \"very much\" (MSS)"
+figSubcap <- "Data Source: @mdeMinnesotaStudentSurvey"
+plotXCaption <- paste("Data Source:", mdeMinnesotaStudentSurvey) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
+#Table
+colList <- list("Year", "Location", "9th Graders Community Cared", "% Change") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "percentage", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
+    plotXCaption, "", minYr, maxYr, scaleYContinuous,
+    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-mssCommunityCare
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-mssCommunityCare
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
 #| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
 
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-mssNoDrugUse}
 ```{r}
-#| label: fig-mssDrugUse
 #| warning: false
 #| include: false
 
-# Filter the data by 'vaccine'
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
+
 filtered_data <- f_mss |> 
-  dplyr::filter(mss_topic == "% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year")
+  dplyr::filter(mss_topic == "% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = location
+    , toolTipTextHeader3 = "\n11th Graders No Substance Use: "
+    , toolTipTextValue3 = scales::label_percent(accuracy = .01)(percentage)
+  )
 
-# Create the plot
-gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "% of 11th graders in the PNM service area who have not used alcohol, marijuana, and/or drugs in the past year (MSS)")
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
 
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-3)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)(percentage)) |>   
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+      year == maxYr ~ scales::label_percent(accuracy = .01)((percentage) - dplyr::first(percentage)) #Since there is only 2, most recent - next
+      , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired.  
+
+
+figCap_plotTitle <- "Percentage of 11th graders in the PNM service area who have not used\nalcohol, marijuana, and/or drugs in the past year (MSS)"
+figSubcap <- "Data Source: @mdeMinnesotaStudentSurvey"
+plotXCaption <- paste("Data Source:", mdeMinnesotaStudentSurvey) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
+#Table
+colList <- list("Year", "Location", "11th Graders No Substance Use", "% Change") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "percentage", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
+    plotXCaption, "", minYr, maxYr, scaleYContinuous,
+    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-mssDrugUse
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-mssDrugUse
-#| fig-width: 8
-#| fig-height: 6
-#| fig-align: center
 #| warning: false
-
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
 ```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
+```
+:::
+
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 ## Suicide
@@ -201,9 +576,5 @@ gbFun_mdhMss(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "% of 11th gra
 Suicide is complex; there is no single cause of death by suicide. Suicide prevention efforts are based on evidence that most suicides are preventable, mental illness is treatable, and recovery is possible.
 
 In 2022, 860 Minnesotans died from suicide, the highest total ever, and preliminary data indicates 815 died in 2023. This translates to an age-adjusted rate of 14.8 and 14.1 per 100,000, respectively. Preliminary figures for 2023 are based on projections made using Minnesota death certificates finalized as of May 1, 2024. Continuing a persistent trend, males had a higher suicide rate than females in 2022 and 2023. In 2022 and 2023, American Indian or Alaska Natives had a higher suicide rate than the most populous racial or ethnic groups in Minnesota. The largest percentage of suicide deaths in 2023, 47%, involved a firearm. Like previous years, suicide rates in rural areas in 2023 tended to be higher than urban areas. (Data Brief: Suicide Up in 2022, Down in 2023 In 2022 (2024), Minnesota Department of Health) [Suicide 2021 data brief](https://www.health.state.mn.us/communities/suicide/documents/2023suicidedatabrief.pdf)
-
-::: {.content-visible when-format="pdf"}
-Suicide 2021 data brief URL https://www.health.state.mn.us/communities/suicide/documents/2023suicidedatabrief.pdf
-:::
 
 From 2016-2021, there were fifty reported deaths by suicide in Polk, Norman and Mahnomen counties -- making up 48% of the total deaths by suicide for the eight Northwest Minnesota county region. Firearms were the most common mechanism of injury accounting for suicide deaths. (Minnesota Department of Health)

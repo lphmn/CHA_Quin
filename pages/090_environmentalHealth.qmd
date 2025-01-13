@@ -22,7 +22,7 @@ Certain environments can contain factors that impact our health. We may be unawa
 As shown on the following map, Polk, Norman, and Mahnomen are identified as high-risk areas for tickborne diseases, including Lyme disease. During tick season, we should be proactive in preventative measures, such as using tick repellents and performing regular tick checks, to reduce the risk of infection. Our high-risk area underscores the importance of awareness to be proactive in our health practices. By staying informed and vigilant, we can better protect ourselves and our communities. Remember, early detection and prompt removal of ticks can lower the chances of disease transmission.
 
 ::: {#fig-tickborneRisk}
-[![](Attachments/popEnvironmentalHealth/mnMap_countyTickBorneRisk.png)](https://www.health.state.mn.us/diseases/lyme/highrisk.html)
+[![](Attachments/popEnvironmentalHealth/mnMap_countyTickBorneRisk.png){fig-align="center" width="351"}](https://www.health.state.mn.us/diseases/lyme/highrisk.html)
 
 For more resources, please click anywhere on the map
 :::
@@ -31,24 +31,24 @@ For more resources, please click anywhere on the map
 
 Arsenic can be found in drinking water. Testing is vital in learning if your water has arsenic. The MDH recommendation is to test a private well at least once for arsenic. Chronic arsenic exposure has shown to be a risk factor for some cancers and also can impact a child's development .
 
-From 2008 to 2021, 58.9% (399 out of 465) of wells tested in Polk County had arsenic levels greater than 2 µg/L, and 20.8% (141 out of 465) exceeded 10 µg/L. Norman County had higher percentages, with 73.6% (131 out of 178) of wells testing above 2 µg/L and 42.7% (76 out of 178) exceeding 10 µg/L. Mahnomen County showed similar results to Norman County, with 77.5% of wells testing above 2 µg/L and 41.9% exceeding 10 µg/L, based on a total of 267 tests @arsenic2008_2021.
+From 2008 to 2021, 58.9% (399 out of 465) of wells tested in Polk County had arsenic levels greater than 2 µg/L, and 20.8% (141 out of 465) exceeded 10 µg/L. Norman County had higher percentages, with 73.6% (131 out of 178) of wells testing above 2 µg/L and 42.7% (76 out of 178) exceeding 10 µg/L. Mahnomen County showed similar results to Norman County, with 77.5% of wells testing above 2 µg/L and 41.9% exceeding 10 µg/L, based on a total of 267 tests [@mdhArsenic2008_2021].
 
 ::: {#fig-privateWellsAs}
-[![](Attachments/popEnvironmentalHealth/mnMap_countyAs10ugLDML.png)](https://mndatamaps.web.health.state.mn.us/interactive/wells.html)
+[![](Attachments/popEnvironmentalHealth/mnMap_countyAs10ugLDML.png){fig-align="center" width="351"}](https://mndatamaps.web.health.state.mn.us/interactive/wells.html)
 
-For more resources, please click anywhere on any of the maps
+For more resources, please click anywhere on the map
 :::
 
 ### Radon
 
 Radon levels are measured in picocuries per liter (pCi/L). There is no safe level of exposure. According to the EPA, the lifetime risk of lung cancer death from radon exposure at the action level of 4 picocuries per liter (pCi/L) is estimated to be 7 deaths per 1,000 people for never-smokers, and 62 deaths per 1,000 people for current smokers. The only way to know if you have a radon problem is to test for radon.
 
-From 2010 to 2020 @mnhealthRadon, Minnesota averaged 93.5 radon tests per 10,000 properties each year. In comparison, Mahnomen had 28.8 tests, Norman had 50.4, and Polk had 38.7 tests per 10,000 properties annually.
+From 2010 to 2020 [@mdhRadon], Minnesota averaged 93.5 radon tests per 10,000 properties each year. In comparison, Mahnomen had 28.8 tests, Norman had 50.4, and Polk had 38.7 tests per 10,000 properties annually.
 
 Regarding radon levels, 40.3% of properties tested in Minnesota had radon levels of 4 pCi/L or higher. In Polk, 70% of properties tested had high radon levels, while Norman had 56.6%, and Mahnomen had 57.7%.
 
 ::: {#fig-radon}
-[![](Attachments/popEnvironmentalHealth/mnMap_countyRn4pCiL.png)](https://mndatamaps.web.health.state.mn.us/interactive/radon.html)
+[![](Attachments/popEnvironmentalHealth/mnMap_countyRn4pCiL.png){fig-align="center" width="351"}](https://mndatamaps.web.health.state.mn.us/interactive/radon.html)
 
-For more resources, please click anywhere on any of the maps
+For more resources, please click anywhere on the map
 :::

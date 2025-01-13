@@ -1,28 +1,29 @@
-fips,geography,mss_topic,pct,year
-27119,Mahnomen ,% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year,NA,2022
+fips,location,mss_topic,percentage,year
+99,Minnesota,% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year,NA,2022
+27087,Mahnomen,% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year,NA,2022
 27107,Norman,% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year,NA,2022
-27087,Polk,% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year,0.608,2022
-27087,Polk,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.353,2016
-27087,Polk,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.409,2019
-27087,Polk,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.274,2022
-27119,Mahnomen,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.242,2016
-27119,Mahnomen,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.234,2019
-27119,Mahnomen,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.357,2022
+27119,Polk,% of 11th graders in the PNM service area who have not used alcohol: marijuana: and/or drugs in the past year,0.608,2022
+27119,Polk,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.353,2016
+27119,Polk,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.409,2019
+27119,Polk,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.274,2022
+27087,Mahnomen,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.242,2016
+27087,Mahnomen,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.234,2019
+27087,Mahnomen,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.357,2022
 99,Minnesota,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.404,2016
 99,Minnesota,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.38,2019
 99,Minnesota,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.277,2022
 27107,Norman,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",0.461,2016
 27107,Norman,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",NA,2019
 27107,Norman,"% of 9th Graders community cared about them ""quite a bit"" or ""very much""",NA,2022
-27119,Mahnomen,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.303,2016
-27119,Mahnomen,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.287,2019
-27119,Mahnomen,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.364,2022
+27087,Mahnomen,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.303,2016
+27087,Mahnomen,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.287,2019
+27087,Mahnomen,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.364,2022
 99,Minnesota,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.231,2016
 99,Minnesota,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.24,2019
 99,Minnesota,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.267,2022
 27107,Norman,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.222,2016
 27107,Norman,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,NA,2019
 27107,Norman,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,NA,2022
-27087,Polk,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.27,2016
-27087,Polk,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.206,2019
-27087,Polk,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.236,2022
+27119,Polk,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.27,2016
+27119,Polk,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.206,2019
+27119,Polk,% of 9th Graders reported over the past two weeks: how often have you been bothered: feeling down: depressed or hopeless several days,0.236,2022

@@ -1,6 +1,147 @@
 {
     "sources": [
         {
+            "URL": "https://data.census.gov/table/ACSST5Y2022.S0101?g=040XX00US27$0500000",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        9,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "U.S. Census Bureau"
+                }
+            ],
+            "id": "acs2022S0101",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "American Community Survey, ACS 5-Year Estimates Subject Tables, Table S0101",
+            "title": "Age and sex",
+            "type": ""
+        },
+        {
+            "URL": "https://www.cdc.gov/places",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention"
+                }
+            ],
+            "id": "cdc2024Places",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "PLACES: Local data for better health",
+            "title-short": "PLACES",
+            "type": ""
+        },
+        {
+            "URL": "https://www.cdc.gov/united-states-cancer-statistics/technical-notes/suppression.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention"
+                }
+            ],
+            "id": "cdcStats2024Suppression",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Suppression of rates and counts",
+            "type": ""
+        },
+        {
+            "URL": "https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        10,
+                        28
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program"
+                }
+            ],
+            "id": "cdc2022Svi",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "CDC/ATSDR social vulnerability index 2022 database u.s.",
+            "type": ""
+        },
+        {
+            "URL": "www.countyhealthrankings.org",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "University of Wisconsin Population Health Institute"
+                }
+            ],
+            "id": "countyHealthRankings2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "County health rankings & roadmaps",
+            "type": ""
+        },
+        {
             "URL": "https://data.census.gov/table/DECENNIALPL2020.P1?g=040XX00US27$0500000",
             "accessed": {
                 "date-parts": [
@@ -57,78 +198,102 @@
             "type": ""
         },
         {
-            "URL": "https://data.census.gov/table/ACSST5Y2022.S0101?g=040XX00US27$0500000",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        9,
-                        4
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "U.S. Census Bureau"
-                }
-            ],
-            "id": "acs2022S0101",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022
-                    ]
-                ]
-            },
-            "note": "American Community Survey, ACS 5-Year Estimates Subject Tables, Table S0101",
-            "title": "Age and sex",
-            "type": ""
-        },
-        {
-            "URL": "https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        10,
-                        28
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program"
-                }
-            ],
-            "id": "cdc2022SVI",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022
-                    ]
-                ]
-            },
-            "note": "https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html",
-            "title": "CDC/ATSDR social vulnerability index 2022 database u.s.",
-            "type": ""
-        },
-        {
-            "URL": "https://www.cdc.gov/places",
+            "URL": "https://www.hungersolutions.org/wp-content/uploads/2023/02/Food-shelf-visits-2022-Presentation.pdf",
             "accessed": {
                 "date-parts": [
                     [
                         2024,
                         11,
-                        12
+                        27
                     ]
                 ]
             },
             "author": [
                 {
-                    "literal": "Centers for Disease Control and Prevention"
+                    "literal": "Hunger Solutions"
                 }
             ],
-            "id": "cdc2022PLACES",
+            "id": "hungerSolutionsFoodShelf2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "2022 food shelf visits statistics report",
+            "type": ""
+        },
+        {
+            "URL": "https://www.hungersolutions.org/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Hunger Solutions"
+                }
+            ],
+            "id": "hungerSolutionsFoodShelfDataRequest",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Programs hunger solutions data request",
+            "type": ""
+        },
+        {
+            "URL": "https://datacenter.aecf.org/data/tables/11367-four-year-graduation-rate?loc=25&loct=2#detailed/5/3827-3913/false/1095,2048/any/22006,22007",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "The Annie E. Casey Foundation, KIDS COUNT Data Center"
+                }
+            ],
+            "id": "kidsCountGraduation",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Four-year graduation rate in minnesota",
+            "type": ""
+        },
+        {
+            "URL": "https://datacenter.aecf.org/data/tables/1822-births-to-mother-who-smoked-during-pregnancy?loc=25&loct=5#detailed/5/3827-3913/false/1095,2048,574,1729,37,871,870,573,869,133/any/3851",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "The Annie E. Casey Foundation, KIDS COUNT Data Center"
+                }
+            ],
+            "id": "kidsCountMothersWhoSmoked",
             "issued": {
                 "date-parts": [
                     [
@@ -136,12 +301,88 @@
                     ]
                 ]
             },
-            "note": "Accessed 11/12/2024",
-            "title": "PLACES. Centers for disease control and prevention",
+            "note": "Accessed 12/06/2024",
+            "title": "Births to mother who smoked during pregnancy in minnesota",
             "type": ""
         },
         {
-            "URL": "https://www.health.state.mn.us/communities/environment/tracking/docs/databrieffall2024.pdf",
+            "URL": "https://datacenter.aecf.org/data/tables/1823-births-to-mothers-who-received-late-or-inadequate-prenatal-care?loc=25&loct=5#detailed/5/3827-3913/false/1095,2048,574,1729,37,871,870,573,36,133/any/8841",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "The Annie E. Casey Foundation, KIDS COUNT Data Center"
+                }
+            ],
+            "id": "kidsCountPreNatalCare",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Births to mothers who received late or inadequate prenatal care in minnesota",
+            "type": ""
+        },
+        {
+            "URL": "https://eclds.mn.gov/#thirdGradeEdStatus/orgId--999999000__groupType--state__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg60__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg54__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg44__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Early Childhood Longitudinal Data System"
+                }
+            ],
+            "id": "mdeThirdGradeProficiency",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "3rd grade proficiency",
+            "type": ""
+        },
+        {
+            "URL": "https://public.education.mn.gov/MDEAnalytics/DataTopic.jsp?TOPICID=11",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Education"
+                }
+            ],
+            "id": "mdeMinnesotaStudentSurvey",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Minnesota student survey tables 2013-2022",
+            "type": ""
+        },
+        {
+            "URL": "https://mndatamaps.web.health.state.mn.us/interactive/wells.html",
             "accessed": {
                 "date-parts": [
                     [
@@ -156,7 +397,87 @@
                     "literal": "Minnesota Department of Health"
                 }
             ],
-            "id": "mnhealthRadonSchoolDistrict2024",
+            "id": "mdhArsenic2008_2021",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Private wells - arsenic (2008-2021)",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhAsthma",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Asthma",
+            "type": ""
+        },
+        {
+            "URL": "https://data.web.health.state.mn.us/cancer_all#maps",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhCancerMap",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Cancer in minnesota",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/data/mcrs/docs/prevresultable.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhCancerPrevalence",
             "issued": {
                 "date-parts": [
                     [
@@ -164,9 +485,243 @@
                     ]
                 ]
             },
-            "note": "Accessed 11/27/2024",
-            "title": "Data brief: Fall 2024",
-            "title-short": "Data brief",
+            "note": "Accessed 12/06/2024",
+            "title": "Cancer prevalence estimates by minnesota county",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/data/mchs/genstats/countytables/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhCountyHealthTables",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 10/01/2024",
+            "title": "County health tables",
+            "type": ""
+        },
+        {
+            "URL": "https://www2cdn.web.health.state.mn.us/communities/opioids/documents/countytotals.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhFatalDrugOverdose",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 10/01/2024",
+            "title": "COUNTY − LEVEL DRUG OVERDOSE DEATHS FROM 2014 − 2023",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/diseases/chronic/cdmortalitydata.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhHeartDisease",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Heart disease, stroke, hypertension, and diabetes deaths in minnesota",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/communities/opioids/documents/2023nasdatabrief.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhNeonatalAbstinenceSyndrome",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Neonatal abstinence syndrome (NAS) DATA BRIEF: STATEWIDE AND COUNTY TRENDS, 2016-2022",
+            "title-short": "Neonatal abstinence syndrome (NAS) DATA BRIEF",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/communities/opioids/data/nonfataldata.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhNonFatalDrugOverdose",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Nonfatal drug overdose dashboard",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhPHDAPAsthma",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Asthma. Accessed from MN public health access data portal",
+            "type": ""
+        },
+        {
+            "URL": "https://data.web.health.state.mn.us/medicaid-dental-service-use-query",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhPHDAPmedicaidDental2020",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Oral health query:medicaid dental service use. Accessed from MN public health access data portal",
+            "title-short": "Oral health query",
+            "type": ""
+        },
+        {
+            "URL": "https://data.web.health.state.mn.us/immunizations-query",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhPHDAPImmuizations",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Immunizations query:childhood immunizations. Accessed from MN public health access data portal",
+            "title-short": "Immunizations query",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/data/hcquality/pufs.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhPublicUseFiles2022",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Minnesota statewide quality reporting and measurement system public use file",
             "type": ""
         },
         {
@@ -185,7 +740,7 @@
                     "literal": "Minnesota Department of Health"
                 }
             ],
-            "id": "mnhealthRadon",
+            "id": "mdhRadon",
             "issued": {
                 "date-parts": [
                     [
@@ -198,7 +753,7 @@
             "type": ""
         },
         {
-            "URL": "https://www.cdc.gov/united-states-cancer-statistics/technical-notes/suppression.html",
+            "URL": "https://www.health.state.mn.us/diseases/stds/stats/index.html",
             "accessed": {
                 "date-parts": [
                     [
@@ -210,10 +765,90 @@
             },
             "author": [
                 {
-                    "literal": "Centers for Disease Control and Prevention"
+                    "literal": "Minnesota Department of Health"
                 }
             ],
-            "id": "cdcStats2024Suppression",
+            "id": "mdhStiStatistics",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 11/27/2024",
+            "title": "STI statistics",
+            "type": ""
+        },
+        {
+            "URL": "https://www.health.state.mn.us/people/wic/localagency/reports/bf/annual.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Health"
+                }
+            ],
+            "id": "mdhWomenInfantChildren",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 11/27/2024",
+            "title": "WIC breastfeeding summary",
+            "type": ""
+        },
+        {
+            "URL": "https://apps.deed.state.mn.us/lmi/laus/Default.aspx",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Employment and Economic Development"
+                }
+            ],
+            "id": "mnDeedUnemploymentRate",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/01/2024",
+            "title": "Local area unemployment statistics (LAUS) tool",
+            "type": ""
+        },
+        {
+            "URL": "https://mn.gov/deed/data/data-tools/county-profiles/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Department of Employment and Economic Development"
+                }
+            ],
+            "id": "mnDeedCountyProfiles",
             "issued": {
                 "date-parts": [
                     [
@@ -222,7 +857,87 @@
                 ]
             },
             "note": "Accessed 12/01/2024",
-            "title": "Suppression of rates and counts",
+            "title": "Local area unemployment statistics (LAUS) tool",
+            "type": ""
+        },
+        {
+            "URL": "https://mn.gov/boards/pharmacy-pmp/reports/data-dashboard.jsp",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Minnesota Board of Pharmacy"
+                }
+            ],
+            "id": "mnBoardOfPharmacyPMPDashboard",
+            "issued": {
+                "date-parts": []
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Prescription monitoring program data dashboard",
+            "type": ""
+        },
+        {
+            "URL": "https://dementiadatahub.org/explore-data/map.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "NORC at the University of Chicago"
+                }
+            ],
+            "id": "norcDementia",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Dementia datahub",
+            "type": ""
+        },
+        {
+            "URL": "",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Polk, Norman, & Mahnomen Community Health Services"
+                }
+            ],
+            "id": "pnmChildTeenCheckup",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 12/06/2024",
+            "title": "Child and teen checkups",
             "type": ""
         },
         {
@@ -254,110 +969,6 @@
             "type": ""
         },
         {
-            "URL": "https://eclds.mn.gov/#thirdGradeEdStatus/orgId--999999000__groupType--state__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg60__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg54__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg44__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Early Childhood Longitudinal Data System"
-                }
-            ],
-            "id": "mdeThirdGradeProficiency",
-            "issued": {
-                "date-parts": []
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "3rd grade proficiency",
-            "type": ""
-        },
-        {
-            "URL": "https://apps.deed.state.mn.us/lmi/laus/Default.aspx",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Employment and Economic Development"
-                }
-            ],
-            "id": "deedUnemploymentRate",
-            "issued": {
-                "date-parts": []
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "Local area unemployment statistics (LAUS) tool",
-            "type": ""
-        },
-        {
-            "URL": "https://mn.gov/deed/data/data-tools/county-profiles/",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Employment and Economic Development"
-                }
-            ],
-            "id": "deedCountyProfiles",
-            "issued": {
-                "date-parts": [
-                    [
-                        2024
-                    ]
-                ]
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "Local area unemployment statistics (LAUS) tool",
-            "type": ""
-        },
-        {
-            "URL": "https://www.hungersolutions.org/wp-content/uploads/2023/02/Food-shelf-visits-2022-Presentation.pdf",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Hunger Solutions"
-                }
-            ],
-            "id": "foodShelf2022",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022
-                    ]
-                ]
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "2022 food shelf visits statistics report",
-            "type": ""
-        },
-        {
             "URL": "https://www.minnesotatzd.org/regions",
             "accessed": {
                 "date-parts": [
@@ -373,7 +984,7 @@
                     "literal": "Toward Zero Deaths"
                 }
             ],
-            "id": "crashSite2023",
+            "id": "tzdCrashSite2023",
             "issued": {
                 "date-parts": [
                     [
@@ -383,270 +994,6 @@
             },
             "note": "Accessed 12/01/2024",
             "title": "TZD regions",
-            "type": ""
-        },
-        {
-            "URL": "https://mndatamaps.web.health.state.mn.us/interactive/wells.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "arsenic2008_2021",
-            "issued": {
-                "date-parts": []
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "Private wells - arsenic (2008-2021)",
-            "type": ""
-        },
-        {
-            "URL": "https://www.health.state.mn.us/data/hcquality/pufs.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "puf2022",
-            "issued": {
-                "date-parts": []
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "Minnesota statewide quality reporting and measurement system public use file",
-            "type": ""
-        },
-        {
-            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "MDHasthma",
-            "issued": {
-                "date-parts": [
-                    [
-                        2022
-                    ]
-                ]
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "Asthma",
-            "type": ""
-        },
-        {
-            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "MDHPHDAPAsthma",
-            "issued": {
-                "date-parts": []
-            },
-            "note": "Accessed 12/01/2024",
-            "title": "Asthma",
-            "type": ""
-        },
-        {
-            "URL": "https://www.health.state.mn.us/data/mchs/genstats/countytables/index.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "MDHcht",
-            "issued": {
-                "date-parts": []
-            },
-            "note": "Accessed 10/01/2024",
-            "title": "County health tables",
-            "type": ""
-        },
-        {
-            "URL": "https://datacenter.aecf.org/data/tables/11367-four-year-graduation-rate?loc=25&loct=2#detailed/5/3827-3913/false/1095,2048/any/22006,22007",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Kids Count"
-                }
-            ],
-            "id": "kidsCountGraduation",
-            "issued": {
-                "date-parts": [
-                    [
-                        2023
-                    ]
-                ]
-            },
-            "note": "Accessed 12/06/2024",
-            "title": "Four-year graduation rate in minnesota",
-            "type": ""
-        },
-        {
-            "URL": "https://www.health.state.mn.us/data/mcrs/docs/prevresultable.pdf",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "MDHCancerPrevalence",
-            "issued": {
-                "date-parts": [
-                    [
-                        2024
-                    ]
-                ]
-            },
-            "note": "Accessed 12/06/2024",
-            "title": "Cancer prevalence estimates by minnesota county",
-            "type": ""
-        },
-        {
-            "URL": "https://data.web.health.state.mn.us/cancer_all#maps",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "Minnesota Department of Health"
-                }
-            ],
-            "id": "MDHCancerMap",
-            "issued": {
-                "date-parts": [
-                    [
-                        2023
-                    ]
-                ]
-            },
-            "note": "Accessed 12/06/2024",
-            "title": "Cancer in minnesota",
-            "type": ""
-        },
-        {
-            "URL": "https://dementiadatahub.org/explore-data/map.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "NORC at the University of Chicago"
-                }
-            ],
-            "id": "dementia",
-            "issued": {
-                "date-parts": [
-                    [
-                        2024
-                    ]
-                ]
-            },
-            "note": "Accessed 12/06/2024",
-            "title": "Dementia datahub",
-            "type": ""
-        },
-        {
-            "URL": "https://www.health.state.mn.us/diseases/chronic/cdmortalitydata.html",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        11,
-                        27
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "NORC at the University of Chicago"
-                }
-            ],
-            "id": "mdhHD",
-            "issued": {
-                "date-parts": [
-                    [
-                        2024
-                    ]
-                ]
-            },
-            "note": "Accessed 12/06/2024",
-            "title": "Heart disease, stroke, hypertension, and diabetes deaths in minnesota",
             "type": ""
         }
     ],

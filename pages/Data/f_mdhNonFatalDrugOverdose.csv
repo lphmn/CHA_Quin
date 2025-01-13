@@ -1,11 +1,11 @@
-fips,location,year,ct,age_adjustedRatePer1000,category
-27087,Polk,2016,58,1.9,Nonfatal Drug Overdose
-27087,Polk,2017,53,1.7,Nonfatal Drug Overdose
-27087,Polk,2018,42,1.3,Nonfatal Drug Overdose
-27087,Polk,2019,36,1.1,Nonfatal Drug Overdose
-27087,Polk,2020,36,1.2,Nonfatal Drug Overdose
-27087,Polk,2021,39,1.3,Nonfatal Drug Overdose
-27087,Polk,2022,21,NA,Nonfatal Drug Overdose
+fips,location,year,valueCount,age_adjustedRatePer1000,category
+27119,Polk,2016,58,1.9,Nonfatal Drug Overdose
+27119,Polk,2017,53,1.7,Nonfatal Drug Overdose
+27119,Polk,2018,42,1.3,Nonfatal Drug Overdose
+27119,Polk,2019,36,1.1,Nonfatal Drug Overdose
+27119,Polk,2020,36,1.2,Nonfatal Drug Overdose
+27119,Polk,2021,39,1.3,Nonfatal Drug Overdose
+27119,Polk,2022,21,NA,Nonfatal Drug Overdose
 27107,Norman,2016,NA,NA,Nonfatal Drug Overdose
 27107,Norman,2017,13,NA,Nonfatal Drug Overdose
 27107,Norman,2018,8,NA,Nonfatal Drug Overdose
@@ -13,13 +13,13 @@ fips,location,year,ct,age_adjustedRatePer1000,category
 27107,Norman,2020,NA,NA,Nonfatal Drug Overdose
 27107,Norman,2021,6,NA,Nonfatal Drug Overdose
 27107,Norman,2022,NA,NA,Nonfatal Drug Overdose
-27119,Mahnomen,2016,60,13,Nonfatal Drug Overdose
-27119,Mahnomen,2017,43,9.2,Nonfatal Drug Overdose
-27119,Mahnomen,2018,30,6.2,Nonfatal Drug Overdose
-27119,Mahnomen,2019,31,6,Nonfatal Drug Overdose
-27119,Mahnomen,2020,42,9.1,Nonfatal Drug Overdose
-27119,Mahnomen,2021,46,9.8,Nonfatal Drug Overdose
-27119,Mahnomen,2022,25,NA,Nonfatal Drug Overdose
+27087,Mahnomen,2016,60,13,Nonfatal Drug Overdose
+27087,Mahnomen,2017,43,9.2,Nonfatal Drug Overdose
+27087,Mahnomen,2018,30,6.2,Nonfatal Drug Overdose
+27087,Mahnomen,2019,31,6,Nonfatal Drug Overdose
+27087,Mahnomen,2020,42,9.1,Nonfatal Drug Overdose
+27087,Mahnomen,2021,46,9.8,Nonfatal Drug Overdose
+27087,Mahnomen,2022,25,NA,Nonfatal Drug Overdose
 99,Minnesota,2016,8957,1.6,Nonfatal Drug Overdose
 99,Minnesota,2017,9494,1.7,Nonfatal Drug Overdose
 99,Minnesota,2018,8702,1.6,Nonfatal Drug Overdose

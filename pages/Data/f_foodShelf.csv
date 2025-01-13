@@ -1,4 +1,4 @@
-"county","measure","rawValue","year","fips"
+"location","measure","rawValue","year","fips"
 "Mahnomen","Child",766,2022,27087
 "Norman","Child",338,2022,27107
 "Polk","Child",4404,2022,27119

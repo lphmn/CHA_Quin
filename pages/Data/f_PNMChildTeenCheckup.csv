@@ -1,4 +1,4 @@
-fips,location,ageGroup,ratio,year
+fips,location,ageGroup,pct,year
 27119,Mahnomen,0-20,0.43,2019
 27119,Mahnomen,3-20,0.54,2019
 27119,Mahnomen,0-20,0.34,2020

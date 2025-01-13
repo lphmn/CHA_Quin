@@ -19,7 +19,7 @@ chb_fips <- gbVal[3]
 
 ```
 
-The state of `{r} f_cdcSvi2022$county[1]` has a total land area of `{r} f_cdcSvi2022$area_sqmi[1]` per square (sq) mile. `{r} gbVal_chbAbbrLbl` area covers `{r} f_cdcSvi2022$area_sqmi[2]` sq miles, with `{r} f_cdcSvi2022$county[3]` county having the largest land area (`{r} f_cdcSvi2022$area_sqmi[3]` sq miles) followed by `{r} f_cdcSvi2022$county[4]` county (`{r} f_cdcSvi2022$area_sqmi[4]` sq miles) and `{r} f_cdcSvi2022$county[5]` county (`{r} f_cdcSvi2022$area_sqmi[5]` sq miles) @cdc2022SVI.
+The state of `{r} f_cdcSvi2022$county[1]` has a total land area of `{r} f_cdcSvi2022$area_sqmi[1]` per square (sq) mile. `{r} gbVal_chbAbbrLbl` area covers `{r} f_cdcSvi2022$area_sqmi[2]` sq miles, with `{r} f_cdcSvi2022$county[3]` county having the largest land area (`{r} f_cdcSvi2022$area_sqmi[3]` sq miles) followed by `{r} f_cdcSvi2022$county[4]` county (`{r} f_cdcSvi2022$area_sqmi[4]` sq miles) and `{r} f_cdcSvi2022$county[5]` county (`{r} f_cdcSvi2022$area_sqmi[5]` sq miles) [@cdc2022Svi].
 
 `{r} f_cdcSvi2022$county[1]` has an average of `{r} f_cdcSvi2022$personPerSqMile[1]` people living in each sq mile. In comparison, the `{r} gbVal_chbAbbrLbl` area has only `{r} f_cdcSvi2022$personPerSqMile[2]` people per sq mile. Breaking it down further:
 
@@ -30,7 +30,7 @@ The state of `{r} f_cdcSvi2022$county[1]` has a total land area of `{r} f_cdcSvi
 This means that in these three counties, people are much more spread out compared to the state average. The population density, or the number of people per sq mile, helps us understand how rural an area might be, although it is not the only factor. As shown on the following maps, Polk County has three Census Tracts that prevent it from being entirely rural.
 
 ::: {#fig-ruralMapHTML .content-visible when-format="html" layout-ncol="2"}
-[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png){fig-align="center" width="449"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png){fig-align="center" width="440"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
 
 [![](Attachments/popEnvironmentalHealth/mnMap_ruralCensusTract.png){fig-align="center" width="449"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/)
 
@@ -38,7 +38,7 @@ Please click on either map above for the detailed rural report.
 :::
 
 ::: {#fig-ruralMapPDF .content-visible when-format="pdf" layout-ncol="2"}
-[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png){fig-align="center" width="300"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
+[![](Attachments/popEnvironmentalHealth/mnMap_ruralCounty.png){fig-align="center" width="285"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/9)
 
 [![](Attachments/popEnvironmentalHealth/mnMap_ruralCensusTract.png){fig-align="center" width="300"}](https://www.ruralmn.org/2020-state-of-rural-minnesota-report/)
 
@@ -142,13 +142,13 @@ Please click on either map above for the detailed rural report.
 
 The population of individuals age 65 and older is expected to grow over the next 10 years. This shifting demographic may result in shortages related to workforce, long term care housing, and supportive services.
 
-The state of Minnesota had a population of `{r} f_decennialPop2020$tot_populationCt[1]` people. `{r} gbVal_chbAbbrLbl` had a total residential population of `{r} f_decennialPop2020$tot_populationCt[2]`. This makes up `{r} f_decennialPop2020$tot_statePct[2]` of Minnesota's population (`{r} f_decennialPop2020$tot_populationCt[2]`/`{r} f_decennialPop2020$tot_populationCt[1]`) @decennialcensus2020P1.
+The state of Minnesota had a population of `{r} f_decennialPop2020$tot_populationCt[1]` people. `{r} gbVal_chbAbbrLbl` had a total residential population of `{r} f_decennialPop2020$tot_populationCt[2]`. This makes up `{r} f_decennialPop2020$tot_statePct[2]` of Minnesota's population (`{r} f_decennialPop2020$tot_populationCt[2]`/`{r} f_decennialPop2020$tot_populationCt[1]`) [@decennialcensus2020P1].
 
--   `{r} f_decennialPop2020$name[3]` county is the largest of the three counties, with a population of `{r} f_decennialPop2020$tot_populationCt[3]` residents. This represents `{r} f_decennialPop2020$tot_chbPct[3]` of the total population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) for the `{r} gbVal_chbAbbrLbl` area. In relation to the state of Minnesota, `{r} f_decennialPop2020$name[3]` county accounts for `{r} f_decennialPop2020$tot_statePct[3]` of the population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[1]`) @decennialcensus2020P1.
+-   `{r} f_decennialPop2020$name[3]` county is the largest of the three counties, with a population of `{r} f_decennialPop2020$tot_populationCt[3]` residents. This represents `{r} f_decennialPop2020$tot_chbPct[3]` of the total population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) for the `{r} gbVal_chbAbbrLbl` area. In relation to the state of Minnesota, `{r} f_decennialPop2020$name[3]` county accounts for `{r} f_decennialPop2020$tot_statePct[3]` of the population (`{r} f_decennialPop2020$tot_populationCt[3]` out of `{r} f_decennialPop2020$tot_populationCt[1]`) [@decennialcensus2020P1].
 
--   `{r} f_decennialPop2020$name[4]` county has `{r} f_decennialPop2020$tot_populationCt[4]` residents, making up `{r} f_decennialPop2020$tot_chbPct[4]` (`{r} f_decennialPop2020$tot_populationCt[4]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area @decennialcensus2020P1.
+-   `{r} f_decennialPop2020$name[4]` county has `{r} f_decennialPop2020$tot_populationCt[4]` residents, making up `{r} f_decennialPop2020$tot_chbPct[4]` (`{r} f_decennialPop2020$tot_populationCt[4]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area [@decennialcensus2020P1].
 
--   `{r} f_decennialPop2020$name[5]` county is the smallest, with a population of `{r} f_decennialPop2020$tot_populationCt[5]` residents. This is `{r} f_decennialPop2020$tot_chbPct[5]` (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area, and `{r} f_decennialPop2020$tot_statePct[5]` of the state population (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[1]`) @decennialcensus2020P1.
+-   `{r} f_decennialPop2020$name[5]` county is the smallest, with a population of `{r} f_decennialPop2020$tot_populationCt[5]` residents. This is `{r} f_decennialPop2020$tot_chbPct[5]` (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[2]`) of the `{r} gbVal_chbAbbrLbl` area, and `{r} f_decennialPop2020$tot_statePct[5]` of the state population (`{r} f_decennialPop2020$tot_populationCt[5]` out of `{r} f_decennialPop2020$tot_populationCt[1]`) [@decennialcensus2020P1].
 
 ## Age Distribution
 
@@ -335,7 +335,7 @@ The state of Minnesota had a population of `{r} f_decennialPop2020$tot_populatio
 
 ```
 
-According to the @acs2022S0101, the median ages for the counties are:
+According to the [@acs2022S0101], the median ages for the counties are:
 
 -   `{r} f_acsFiveEst2022AgeSex$name[3]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[3]` years
 -   `{r} f_acsFiveEst2022AgeSex$name[4]` County: `{r} f_acsFiveEst2022AgeSex$tot_medianAge[4]` years
@@ -345,7 +345,7 @@ For the state of Minnesota, the median age was `{r} f_acsFiveEst2022AgeSex$tot_m
 
 ## Sex Distribution
 
-The Age Sex Population Pyramids below illustrate a generally balanced distribution of males and females across most age groups. You can determine the balance by examining the horizontal solid black midpoint line: a longer line indicates a greater difference between the male and female populations within that age group. The Age Sex Population Pyramids are based on the @acs2022S0101 estimates. While there is a lot to examine, comparing Minnesota to the `{r} gbVal_chbAbbrLbl` area reveals that the midpoint line is similar, except for the age groups 25-29, 65-69, and 70-74.
+The Age Sex Population Pyramids below illustrate a generally balanced distribution of males and females across most age groups. You can determine the balance by examining the horizontal solid black midpoint line: a longer line indicates a greater difference between the male and female populations within that age group. The Age Sex Population Pyramids are based on the [@acs2022S0101] estimates. While there is a lot to examine, comparing Minnesota to the `{r} gbVal_chbAbbrLbl` area reveals that the midpoint line is similar, except for the age groups 25-29, 65-69, and 70-74.
 
 ```{r}
 #| label: fig-AgeSexDistribution
@@ -453,6 +453,7 @@ for (group_name in names(split_data)) {
         , sum(male_pop) > sum(female_pop) ~ sum(male_pop - female_pop) / 2
         , TRUE ~ NA
       )
+      , segmentColor = ifelse(sex == "Female", "white", "black")
     ) |> 
     dplyr::ungroup()
   
@@ -460,7 +461,7 @@ for (group_name in names(split_data)) {
   # Calculate the maximum population Val for dynamic nudging
   max_population <- max(group_data$population)
   nudge_amount <- dplyr::case_when(
-    max_population > 100000 ~ max_population * (-0.09)
+    max_population > 100000 ~ max_population * (-0.10)
     , max_population > 10000 ~ max_population * (-0.08)
     , max_population > 1000 ~ max_population * (-0.07)
     , TRUE ~ max_population * (-0.05)
@@ -479,19 +480,19 @@ for (group_name in names(split_data)) {
     # Ensures the y-axis labels are positive. abs is base r to return absolute Val so the female Vals are positive and it is applied to the y axis 
     # Fun is require to make labels in the comma format
     ggplot2::scale_y_continuous(labels = function(x) scales::comma(abs(x))) +
-    ggplot2::scale_fill_manual(values = c("Female" = "pink", "Male" = "lightblue")) +  # Custom fill colors
+    ggplot2::scale_fill_manual(values = c("Female" = "#00295D", "Male" =  "#A9B849")) +  # Custom fill colors
     ggplot2::theme_minimal() +
     ggplot2::labs(
       y = "Total"
-      , x = "Age categories"
-      , fill = "Sex"
+      , x = "Age Categories"
+      , fill = "Sex Assigned at Birth"
       , title = "Age Sex Population Pyramid"
       , subtitle = group_name
     ) + 
     ggplot2::theme(
       axis.text = ggplot2::element_text(size = fontSize, face = "bold")
       , axis.title = ggplot2::element_text(size = fontSize, face = "bold")
-      , legend.position = "bottom"
+      , legend.position = "bottom" #For pdf legend has to be defined again see end of code chunk
       , plot.title = ggplot2::element_text(hjust = 0.5)  # Center the title
       , plot.subtitle = ggplot2::element_text(hjust = 0.5)     # Center the subtitle
       ) +
@@ -499,32 +500,28 @@ for (group_name in names(split_data)) {
       ggplot2::aes(label = scales::comma(population)) #Scales::comma will add commas to the lbl
       , nudge_y = ifelse(group_data$sex == "Female", -nudge_amount, nudge_amount)
       , size = 3
-      , color = "black"
+      , color = ifelse(group_data$sex == "Female", "white", "black")
     )+
     ggplot2::geom_segment(
-      ggplot2::aes(x = age_group, xend = age_group, y = 0, yend = midpoint),
-      linetype = "solid",
-      color = "black"
+      ggplot2::aes(x = age_group, xend = age_group, y = 0, yend = midpoint)
+      , color = "red"
+      , linetype = "solid"
     )  # Add dynamic midpoint line
   
   # Store the plot in the list
   plots[[group_name]] <- plot
 }
 
-# Now 'plots' contains all the age pyramid plots for each group with the additional settings
+# Now 'plots' contain all the age pyramid plots for each group with the additional settings
 # For loop required otherwise if it is just printed a $ with list name will also be displayed
-
-
 if (knitr::is_html_output()) {
     for (plot in plots) {
       print(plot)
    }
   } else {
    combined_plot <- wrap_plots(plots, ncol = 2) + 
-  plot_layout(
-    widths = 8
-    , guides = "collect"
-    ) 
+  plot_layout(widths = 8, guides = "collect") &
+     ggplot2::theme(legend.position = "bottom")  # Ensures the legend is at the bottom
    print(combined_plot)
   }
 
@@ -552,9 +549,9 @@ if (knitr::is_html_output()) {
 
 ## Race/Ethnicity
 
-Based on the @decennialcensus2020P1 data, the White population represents the highest percentage in both Minnesota and the `{r} gbVal_chbAbbrLbl` area. `{r} gbVal_chbAbbrLbl` has a higher percentage of American Indian and Alaska Native residents, with Mahnomen County having the highest percentage among the three counties. The White Earth Nation contains 829,440 acres and encompasses all of Mahnomen County and portions of Becker, and Clearwater Counties. It's important to compare proportions rather than counts because proportions provide a relative measure that accounts for population size differences; Mahnomen County has more than double the percentage of residents identifying as Two or More Races compared to the state of Minnesota. The Black or African American and Asian population percentages are higher in Minnesota overall than the `{r} gbVal_chbAbbrLbl`. Additionally, Polk and Norman counties have similar racial demographic profiles.
+Based on the [@decennialcensus2020P1] data, the White population represents the highest percentage in both Minnesota and the `{r} gbVal_chbAbbrLbl` area. `{r} gbVal_chbAbbrLbl` has a higher percentage of American Indian and Alaska Native residents, with Mahnomen County having the highest percentage among the three counties. The White Earth Nation contains 829,440 acres and encompasses all of Mahnomen County and portions of Becker, and Clearwater Counties. It's important to compare proportions rather than counts because proportions provide a relative measure that accounts for population size differences; Mahnomen County has more than double the percentage of residents identifying as Two or More Races compared to the state of Minnesota. The Black or African American and Asian population percentages are higher in Minnesota overall than the `{r} gbVal_chbAbbrLbl`. Additionally, Polk and Norman counties have similar racial demographic profiles.
 
-When looking at ethnicity data from the @decennialcensus2020P9, Polk County has a slightly higher Latino/Hispanic population compared to Minnesota overall, whereas Norman and Mahnomen counties have lower percentages of Latino/Hispanic residents.
+When looking at ethnicity data from the [@decennialcensus2020P9], Polk County has a slightly higher Latino/Hispanic population compared to Minnesota overall, whereas Norman and Mahnomen counties have lower percentages of Latino/Hispanic residents.
 
 ```{r}
 #| label: fig-raceEthnicity
@@ -676,7 +673,7 @@ for (group_name in names(split_data)) {
     ggplot2::facet_wrap(~ metric, scales = "free_x", labeller = ggplot2::labeller(metric = c(raceEthnicityCt = "Count", proportion = "Proportion"))) +  # Use facets to separate counts and proportions
     ggplot2::labs(
       title = paste(group_name, "by Race/Ethnicity")
-      , caption = "E_HL = Hispanic Or Latino Ethnicity\nR_AIAN = American Indian and Alaska Native Race\nR_Black = Black or African American Race\nR_NHOPI = Native Hawaiian and Other Pacific Islander Race\nR_SOR = Some Other Race\nR_TwoPlus = Two or More Races\nThe percentages don't add up to 100% because someone can be both Hispanic or Latino and belong to a race category\nThe race category percentages will total 100%"
+      , caption = "E_HL = Hispanic Or Latino Ethnicity\nR_AIAN = American Indian and Alaska Native Race\nR_Black = Black or African American Race\nR_NHOPI = Native Hawaiian and Other Pacific Islander Race\nR_SOR = Some Other Race\nR_TwoPlus = Two or More Races\nPercentages won't add up to 100% because someone can be both Hispanic or Latino and belong to a race category\nThe race category percentages will total 100%"
       ) +  # Add a title and Use HTML tags for bold and underline
     ggplot2::theme_minimal() +  # Use a minimal theme for a cleaner look
     ggplot2::theme(
@@ -717,7 +714,8 @@ for (group_name in names(split_data)) {
       , position = ggplot2::position_dodge(width = 0.9)  # Adjust the position to dodge the bars
       
       , size = 5  # Adjust the size of the text
-    )
+    ) +
+    ggplot2::scale_fill_manual(values = gbVal_colorScheme)
   
   # Store the combined chart in the list with the group name as the key
   combined_charts[[group_name]] <- combined_chart
@@ -758,9 +756,9 @@ if (knitr::is_html_output()) {
 ```
 :::
 
-## County Demographic Profiles Census Bureau
+## County Demographic Profiles (More information)
 
-::: {.content-visible when-format="html" layout-ncol="3"}
+::: {#fig-censusCtyProfile layout-ncol="3"}
 [![](Attachments/mnMap_polk.png)](https://data.census.gov/profile/Polk_County,_Minnesota?g=050XX00US27119)
 
 [![](Attachments/mnMap_norman.png)](https://data.census.gov/profile/Norman_County,_Minnesota?g=050XX00US27107)
@@ -768,14 +766,4 @@ if (knitr::is_html_output()) {
 [![](Attachments/mnMap_mahnomen.png)](https://data.census.gov/profile/Mahnomen_County,_Minnesota?g=050XX00US27087)
 
 Please click on the corresponding map above for more detailed demographic information.
-:::
-
-::: {.content-visible when-format="pdf" layout-ncol="3"}
-[![](Attachments/mnMap_polk.png)](https://data.census.gov/profile/Polk_County,_Minnesota?g=050XX00US27119)
-
-[![](Attachments/mnMap_norman.png)](https://data.census.gov/profile/Norman_County,_Minnesota?g=050XX00US27107)
-
-[![](Attachments/mnMap_mahnomen.png)](https://data.census.gov/profile/Mahnomen_County,_Minnesota?g=050XX00US27087)
-
-If you are reading this online please click on the corresponding map above for more detailed demographic profiles. If you are reading this on paper, please use the URL's when you have access to a computer Polk URL: https://data.census.gov/profile/Polk_County,\_Minnesota?g=050XX00US27119 Norman URL: https://data.census.gov/profile/Norman_County,\_Minnesota?g=050XX00US27107 Mahnomen URL: https://data.census.gov/profile/Mahnomen_County,\_Minnesota?g=050XX00US27087
 :::

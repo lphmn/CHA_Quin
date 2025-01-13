@@ -1,37 +1,37 @@
-location,fips,ct,year
-Mahnomen ,27119,5,2014
-Mahnomen ,27119,0,2015
-Mahnomen ,27119,3,2016
-Mahnomen ,27119,5,2017
-Mahnomen ,27119,4,2018
-Mahnomen ,27119,2,2019
-Mahnomen ,27119,5,2020
-Mahnomen ,27119,10,2021
-Mahnomen ,27119,3,2022
-Mahnomen ,27119,6,2023
-Mahnomen ,27119,43,1
-Polk ,27087,5,2014
-Polk ,27087,5,2015
-Polk ,27087,3,2016
-Polk ,27087,2,2017
-Polk ,27087,2,2018
-Polk ,27087,6,2019
-Polk ,27087,3,2020
-Polk ,27087,5,2021
-Polk ,27087,3,2022
-Polk ,27087,0,2023
-Polk ,27087,34,1
-Norman ,27107,0,2014
-Norman ,27107,0,2015
-Norman ,27107,2,2016
-Norman ,27107,0,2017
-Norman ,27107,0,2018
-Norman ,27107,1,2019
-Norman ,27107,0,2020
-Norman ,27107,0,2021
-Norman ,27107,0,2022
-Norman ,27107,1,2023
-Norman ,27107,4,1
+location,fips,valueCount,year
+Mahnomen,27087,5,2014
+Mahnomen,27087,0,2015
+Mahnomen,27087,3,2016
+Mahnomen,27087,5,2017
+Mahnomen,27087,4,2018
+Mahnomen,27087,2,2019
+Mahnomen,27087,5,2020
+Mahnomen,27087,10,2021
+Mahnomen,27087,3,2022
+Mahnomen,27087,6,2023
+Mahnomen,27087,43,1
+Polk,27119,5,2014
+Polk,27119,5,2015
+Polk,27119,3,2016
+Polk,27119,2,2017
+Polk,27119,2,2018
+Polk,27119,6,2019
+Polk,27119,3,2020
+Polk,27119,5,2021
+Polk,27119,3,2022
+Polk,27119,0,2023
+Polk,27119,34,1
+Norman,27107,0,2014
+Norman,27107,0,2015
+Norman,27107,2,2016
+Norman,27107,0,2017
+Norman,27107,0,2018
+Norman,27107,1,2019
+Norman,27107,0,2020
+Norman,27107,0,2021
+Norman,27107,0,2022
+Norman,27107,1,2023
+Norman,27107,4,1
 Minnesota,27000,516,2014
 Minnesota,27000,583,2015
 Minnesota,27000,675,2016

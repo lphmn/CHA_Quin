@@ -78,7 +78,7 @@ Healthy People 2030 Goal: Increase social and community support. Ideally partner
 -   Significant Education and Insurance Gaps: A high number of residents lack a high school diploma and health insurance, exacerbating economic and health challenges.
 -   Aging Population: The elderly population, combined with other vulnerabilities, suggests a need for comprehensive support services.
 
-The SVI project is a great start at figuring out what areas to invest in related to socioeconomic factors @cdc2022SVI. However, it is not the only area we looked at.
+The SVI project is a great start at figuring out what areas to invest in related to socioeconomic factors [@cdc2022Svi]. However, it is not the only area we looked at.
 
 ### Education
 
@@ -86,124 +86,355 @@ Education can be an important predictor of lifelong health. Graduating from high
 
 Healthy People 2030 Goal: Increase educational opportunities and help children and adolescents do well in school. Higher educational attainment is associated with; higher incomes, better employment options, increased social supports, and greater opportunities for healthier choices, all factors that can improve health outcomes and increase life expectancy. Lower education levels are associated with; low health literacy and higher levels of risky behaviors.
 
-Minnesota, Norman, and Polk experienced a decline in reading proficiency from 2022 to 2023 for third graders. Mahnomen County's data was suppressed due to small counts, but the negative percentage change in the 'not proficient' reading status indicates improvement in this area. Although interpreting a double negative is not as straight forward as interpreting being proficient, it suggests that Mahnomen has made progress in reading proficiency from 2022 to 2023. In terms of math proficiency, Minnesota, Polk, Norman, and Mahnomen all showed positive improvement from 2022 to 2023. Norman County had the largest increase, followed by Mahnomen. Each county has unique needs, and even small positive improvements is encouraging @mdeThirdGradeProficiency.
+Minnesota, Norman, and Polk experienced a decline in reading proficiency from 2022 to 2023 for third graders. Mahnomen County's data was suppressed due to small counts, but the negative percentage change in the 'not proficient' reading status indicates improvement in this area. Although interpreting a double negative is not as straight forward as interpreting being proficient, it suggests that Mahnomen has made progress in reading proficiency from 2022 to 2023. In terms of math proficiency, Minnesota, Polk, Norman, and Mahnomen all showed positive improvement from 2022 to 2023. Norman County had the largest increase, followed by Mahnomen. Each county has unique needs, and even small positive improvements is encouraging [@mdeThirdGradeProficiency].
 
-In Norman County, the four-year graduation rate was 94.6% in 2021 and 91.6% in 2022. Polk County had graduation rates of 83.3% in 2021 and 84.3% in 2022. Mahnomen County's high school graduation rates were 62.8% in 2021 and 55.9% in 2022 @kidsCountGraduation. High graduation rates are crucial as they reflect the effectiveness of the education system in preparing students for future success. Graduating from high school opens up more opportunities for higher education and employment, which can lead to better economic stability and overall quality of life. Lower graduation rates highlight areas where additional support and resources may be needed to help students succeed.
+In Norman County, the four-year graduation rate was 94.6% in 2021 and 91.6% in 2022. Polk County had graduation rates of 83.3% in 2021 and 84.3% in 2022. Mahnomen County's high school graduation rates were 62.8% in 2021 and 55.9% in 2022 [@kidsCountGraduation]. High graduation rates are crucial as they reflect the effectiveness of the education system in preparing students for future success. Graduating from high school opens up more opportunities for higher education and employment, which can lead to better economic stability and overall quality of life. Lower graduation rates highlight areas where additional support and resources may be needed to help students succeed.
 
+::: {#fig-thirdGradeProReading}
 ```{r}
-#| label: fig-thirdGradeProReading
 #| warning: false
 #| include: false
 
-# Filter the data by 'measure'
-filtered_data <- f_mdeThirdGradeProficient |> 
-  dplyr::filter(subject == "reading", rating == "Proficient")
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-# Create the plot
-gbFun_mdeThirdGradeProficiencyPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "3rd Grade Reading Proficiency: PROFICIENT", "Reading Proficient")
+filtered_data <- f_mdeThirdGradeProficient |> 
+  dplyr::filter(subject == "reading", rating == "Proficient")  |>  
+  dplyr::group_by(location, fips) |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+      toolTipTextHeader1 = "Year: "
+      , toolTipTextValue1 = year
+      , toolTipTextHeader2 = "\nLocation: "
+      , toolTipTextValue2 = location
+      , toolTipTextHeader3 = "\nReading Proficiency: "
+      , toolTipTextValue3 = scales::label_percent(accuracy = .01)(percentage)
+     ) |> 
+  dplyr::ungroup()
+
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-1)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)((percentage))) |>  #I wanted to use formattable but DT strips format when converted to HTML Table 
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+      year == maxYr ~ scales::label_percent(accuracy = .01)((percentage) - dplyr::first(percentage)) #Since there is only 2, most recent - next
+      , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired. 
+
+figCap_plotTitle <- "3rd Grade Reading Proficiency: PROFICIENT"
+figSubcap <- "Data Source: @mdeThirdGradeProficiency"
+plotXCaption <- paste("Data Source:",mdeThirdGradeProficiency) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+# Plot
+scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
+#Table
+colList <- list("Year", "Location", "Reading Proficiency", "% Change") # Using a list accommodates tables with different column lengths.
+
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "percentage", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
+    plotXCaption, "", minYr, maxYr, scaleYContinuous, gbVal_colorScheme, gbVal_shapeScheme,
+    ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-thirdGradeProReading
 #| fig-width: 8
-#| fig-height: 7
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-thirdGradeProReading
-#| fig-width: 11
-#| fig-height: 4
 #| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
 
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-thirdGradeProMath}
 ```{r}
-#| label: fig-thirdGradeProMath
 #| warning: false
 #| include: false
 
-# Filter the data by 'measure'
-filtered_data <- f_mdeThirdGradeProficient |> 
-  dplyr::filter(subject == "math", rating == "Proficient")
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-# Create the plot
-gbFun_mdeThirdGradeProficiencyPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "3rd Grade Math Proficiency: PROFICIENT", "Math Proficient")
+filtered_data <- f_mdeThirdGradeProficient |> 
+  dplyr::filter(subject == "math", rating == "Proficient") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = location
+    , toolTipTextHeader3 = "\nMath Proficiency: "
+    , toolTipTextValue3 = scales::label_percent(accuracy = .01)(percentage)
+  )
+
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-1)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)(percentage)) |>   
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+      year == maxYr ~ scales::label_percent(accuracy = .01)((percentage) - dplyr::first(percentage)) #Since there is only 2, most recent - next
+      , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired.  
+
+
+figCap_plotTitle <- "3rd Grade Math Proficiency: PROFICIENT"
+figSubcap <- "Data Source: @mdeThirdGradeProficiency"
+plotXCaption <- paste("Data Source:",mdeThirdGradeProficiency) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
+#Table
+colList <- list("Year", "Location", "Math Proficiency", "% Change") # Using a list accommodates tables with different column lengths.
+
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "percentage", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
+    plotXCaption, "", minYr, maxYr, scaleYContinuous,
+    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-thirdGradeProMath
 #| fig-width: 8
-#| fig-height: 7
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-thirdGradeProMath
-#| fig-width: 11
-#| fig-height: 4
 #| warning: false
-
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
 ```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
+```
+:::
+
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 ### Economic Stability
 
 According to Healthy People 2030, people with steady employment are more likely to be healthy, but many people have trouble finding and keeping a job. People with disabilities, injuries, or physical conditions may be especially limited in their ability to work. In addition, many people with steady work still do not earn enough to afford the things they need to stay healthy (Healthy People 2030). Income shapes where we live, how stable our living arrangements are, what condition our home is in, what schools we attend, what types of recreation we take part in, and what kinds of foods we eat and more.
 
-Overall, the changes in unemployment rates between 2022 and 2023 are minimal, with most areas showing a slight increase of 0.1% or no change at all @deedUnemploymentRate. This stability suggests a relatively steady job market in our counties. For instance, Minnesota's unemployment rate increased marginally from 2.7% in 2022 to 2.8% in 2023, while Mahnomen's rate remained unchanged at 4.7%. Similarly, Norman and Polk counties experienced slight increases of 0.1%, indicating minor fluctuations in employment levels.
+Overall, the changes in unemployment rates between 2022 and 2023 are minimal, with most areas showing a slight increase of 0.1% or no change at all [@mnDeedUnemploymentRate]. This stability suggests a relatively steady job market in our counties. For instance, Minnesota's unemployment rate increased marginally from 2.7% in 2022 to 2.8% in 2023, while Mahnomen's rate remained unchanged at 4.7%. Similarly, Norman and Polk counties experienced slight increases of 0.1%, indicating minor fluctuations in employment levels.
 
 It's important to note that there was a increase in unemployment rates in 2020, likely due to the economic impact of the COVID-19 pandemic. The pandemic led to widespread job losses and economic disruptions, which were reflected in higher unemployment rates across many regions. Since then, the job market has been gradually recovering, as evidenced by the relatively stable rates in recent years.
 
+::: {#fig-unemploymentRate}
 ```{r}
-#| label: fig-unemploymentRate
 #| warning: false
 #| include: false
 
-# Filter the data by 'measure'
-filtered_data <- f_unemploymentRateDEED |> 
-  dplyr::filter(year > 2016)
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-# Create the plot
-gbFun_deedUmemploymentPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Unemployment Rate")
+filtered_data <- f_unemploymentRateDEED |> 
+  dplyr::filter(year >= max(year)-5) |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = location
+    , toolTipTextHeader3 = "\nUnemployment Rate: "
+    , toolTipTextValue3 = scales::label_percent(accuracy = .01)(rate)
+  )
+
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-1)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)(rate)) |>   
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+    year == maxYr ~ scales::label_percent(accuracy = .01)((rate) - dplyr::first(rate)) #Since there is only 2, most recent - next
+    , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired.
+
+
+figCap_plotTitle <- "Unemployment Rate"
+figSubcap <- "Data Source: @mnDeedUnemploymentRate"
+plotXCaption <- paste("Data Source:",mnDeedUnemploymentRate) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = scales::label_percent()  # Format y-axis values with
+#Table 
+colList <- list("Year", "Location", "Unemployment Rate", "% Change") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "rate", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3",
+    figCap_plotTitle, plotXCaption, "", minYr, maxYr, scaleYContinuous, gbVal_colorScheme,
+    gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-unemploymentRate
 #| fig-width: 8
-#| fig-height: 7
+#| fig-height: 5
 #| warning: false
+
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-unemploymentRate
-#| fig-width: 11
-#| fig-height: 4
 #| warning: false
+#| fig-width: 9
+#| fig-height: 5
 
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
 ```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
+```
+:::
+
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 ## Child Care
 
 Critical to promoting livable communities and promoting development needs for children. Quality child care is a critical component in helping our most vulnerable children get a good start in life, and allow parents/guardians to stay working. Through various community conversations, child care gaps exist in access, availability, and affordability of care. The Minnesota Department of Employment and Economic Development has a comprehensive report detailing these gaps. Refer to figures 4 & 5 on page 3 and tables 3 & 4 on page 4 [in the MN DEED report](https://mn.gov/deed/assets/Northwest-Minnesota-New_tcm1045-631741.pdf).
 
-## County Profiles Department of Employment and Economic Development
+## County Profiles (More Information)
 
-The Department of Employment and Economic Development offers a comprehensive breakdown of additional data on population, education, labor force, income and cost of living, industry employment, and commuting patterns. These profiles provide valuable insights into the economic landscape of our three counties, aiding in effective planning. According to the profiles, all three counties---Polk, Norman, and Mahnomen---are projected to experience a decline in labor force from 2025 to 2035 @deedCountyProfiles.
+The Department of Employment and Economic Development offers a comprehensive breakdown of additional data on population, education, labor force, income and cost of living, industry employment, and commuting patterns. These profiles provide valuable insights into the economic landscape of our three counties, aiding in effective planning. According to the profiles, all three counties---Polk, Norman, and Mahnomen---are projected to experience a decline in labor force from 2025 to 2035 [@mnDeedCountyProfiles].
 
 ::: {#fig-ctyProfile layout-ncol="3"}
 [![](Attachments/mnMap_polk.png)](https://mn.gov/deed/assets/101824_polk_tcm1045-407501.pdf)
@@ -219,7 +450,7 @@ For detailed county profiles, please click on the corresponding map above.
 
 The Office of Traffic Safety, a Division of the Minnesota Department of Public Safety, produces MN Motor Vehicle Crash Facts. Minnesota TZD is the state's cornerstone traffic safety program with an interdisciplinary approach to reducing traffic crashes, injuries, and deaths on Minnesota roads. There are TZD Coalitions in Polk and Norman Counties.
 
-It is important to know any potential high crash areas in our counties. It is very encouraging that we don't see any red, purple, or blue on the maps developed by @crashSite2023. It is even for a five-year time period, and we still don't see alarming signs of concern resulting in serious injury or death. This may reflect the effectiveness of our local road safety measures and community awareness. Continuing to prioritize safe driving practices will help maintain and improve these outcomes. The following maps show the location of fatal and serious injury crashes in each county. Information was put together by the Center for Transportation Studies at the University of Minnesota, as a part of MN Toward Zero Deaths (TZD).
+It is important to know any potential high crash areas in our counties. It is very encouraging that we don't see any red, purple, or blue on the maps developed by [@tzdCrashSite2023]. It is even for a five-year time period, and we still don't see alarming signs of concern resulting in serious injury or death. This may reflect the effectiveness of our local road safety measures and community awareness. Continuing to prioritize safe driving practices will help maintain and improve these outcomes. The following maps show the location of fatal and serious injury crashes in each county. Information was put together by the Center for Transportation Studies at the University of Minnesota, as a part of MN Toward Zero Deaths (TZD).
 
 ::: {#fig-seriousCrash layout-ncol="3"}
 [![](Attachments/popEnvironmentalHealth/countyMahnomenMap_crashes2019_2023.png){fig-align="center" width="288"}](https://www.minnesotatzd.org/regions/westcentral)
@@ -235,104 +466,376 @@ For more resources, please click anywhere on any of the maps
 
 Housing instability is a critical issue affecting many individuals and families. It encompasses a range of challenges, including difficulty paying rent, overcrowding, frequent moves, and the threat of eviction. These conditions can have profound impacts on physical and mental health, educational outcomes, and overall well-being. Addressing house insecurity is essential for creating stable, healthy communities and ensuring that everyone has a safe, affordable place to call home. The house insecurity age-adjusted prevalence highlight the disparities in house insecurity across our three counties and the state of Minnesota. Mahnomen County has the highest disparity with about 1 in every 5 people having a house insecurity where Minnesota, Polk, and Norman have about 1 in every 10 people.
 
+::: {#fig-socialNeedHouseInsecurity}
 ```{r}
-#| label: fig-socialNeedHouseInsecurity
 #| warning: false
 #| include: false
 
 # Filter the data by 'measureid'
 filtered_data <- f_places2022 |> 
-  dplyr::filter(measureid == "HOUSINSECU")
+  dplyr::filter(measureid == "HOUSINSECU") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "\nLocation: "
+    , toolTipTextValue1 = locationname
+    , toolTipTextHeader2 = "\nPrevalence: "
+    , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
+  )
 
-# Create the plot
-gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
+filtered_ageAdjustedTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
 
+filtered_crudeTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Crude") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+  
+figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
+figSubcap <- "Data Source: @cdc2024Places"
+plotXCaption <- paste("Data Source:",cdc2024Places) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+
+#Table 
+colList <- list("Type", "Location", "Low CI", "Prevalence", "High CI") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotSingleYrPDF(filtered_data, "locationname", "locationid","data_value", "toolTipTextHeader1", 
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "data_value_type",
+    "low_confidence_limit", "high_confidence_limit", figCap_plotTitle, plotXCaption, "Prevelance",
+    gbVal_colorScheme, ifelse(knitr::is_html_output(), 10, 12)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-socialNeedHouseInsecurity
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5 
 
+if (knitr::is_html_output()) {
+# Create the ggplot plot ggplot and then its wrapped within plotly function
+gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+::: panel-tabset
+#### Age Adjusted Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+}
+```
+
+#### Crude Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
+}
+```
+:::
+:::
+
+::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
+```{r}
+#| fig-width: 11
+#| fig-height: 3
+#| warning: false
+
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+gbFun_tablePDF(filtered_crudeTbl, colList)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-socialNeedHouseInsecurity
-#| fig-width: 11
-#| fig-height: 4
+`{r} figSubcap`
 
-```
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 ## Food Access
 
 Food access is a fundamental aspect of community health and well-being. It refers to the availability and affordability of nutritious food for all individuals, regardless of their socioeconomic status. Adequate food access ensures that people can obtain the necessary nutrients to maintain a healthy lifestyle, which is crucial for physical and mental health, academic performance, and overall quality of life. However, many communities face significant barriers to food access, including food deserts, economic constraints, and limited transportation options. Addressing these challenges is essential to promote equity and ensure that everyone has the opportunity to lead a healthy, fulfilling life. Mahnomen County had significantly higher age-adjusted prevalence for food insecurity and food stamp usage in the past 12 months among adults compared to Polk County, Norman County, and the state of Minnesota. Polk County, Norman County, and Minnesota were similar.
 
+::: {#fig-socialNeedFoodInsecurity}
 ```{r}
-#| label: fig-socialNeedFoodInsecurity
 #| warning: false
 #| include: false
 
 # Filter the data by 'measureid'
 filtered_data <- f_places2022 |> 
-  dplyr::filter(measureid == "FOODINSECU")
+  dplyr::filter(measureid == "FOODINSECU") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "\nLocation: "
+    , toolTipTextValue1 = locationname
+    , toolTipTextHeader2 = "\nPrevalence: "
+    , toolTipTextValue2 = paste0(formattable::comma(data_value,1), " (", formattable::comma(low_confidence_limit,1), "-", formattable::comma(high_confidence_limit,1), ")")
+  )
 
-# Create the plot
-gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme) 
+filtered_ageAdjustedTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+
+filtered_crudeTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Crude") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+  
+figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
+figSubcap <- "Data Source: @cdc2024Places"
+plotXCaption <- paste("Data Source:",cdc2024Places) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+#Table 
+colList <- list("Type", "Location", "Low CI", "Prevalence", "High CI") # Using a list accommodates tables with different column lengths.
+
+#
+#Define the plot here so it is only wrote once
+p <- gbFun_plotSingleYrPDF(filtered_data, "locationname", "locationid","data_value", "toolTipTextHeader1", 
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "data_value_type",
+    "low_confidence_limit", "high_confidence_limit", figCap_plotTitle, plotXCaption, "Prevalence",
+    gbVal_colorScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-socialNeedFoodInsecurity
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5 
 
+if (knitr::is_html_output()) {
+# Create the ggplot plot ggplot and then its wrapped within plotly function
+gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+::: panel-tabset
+#### Age Adjusted Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+}
+```
+
+#### Crude Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
+}
 ```
 :::
+:::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
 ```{r}
-#| ref.label: fig-socialNeedFoodInsecurity
 #| fig-width: 11
-#| fig-height: 4
+#| fig-height: 3
+#| warning: false
 
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+gbFun_tablePDF(filtered_crudeTbl, colList)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-socialNeedFoodStamp}
 ```{r}
-#| label: fig-socialNeedFoodStamp
 #| warning: false
 #| include: false
 
 # Filter the data by 'measureid'
 filtered_data <- f_places2022 |> 
-  dplyr::filter(measureid == "FOODSTAMP")
+  dplyr::filter(measureid == "FOODSTAMP") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "\nLocation: "
+    , toolTipTextValue1 = locationname
+    , toolTipTextHeader2 = "\nPrevalence: "
+    , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
+  )
 
-# Create the plot
-gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme) 
+filtered_ageAdjustedTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
 
+filtered_crudeTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Crude") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+  
+figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
+figSubcap <- "Data Source: @cdc2024Places"
+plotXCaption <- paste("Data Source:",cdc2024Places) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+#Table 
+colList <- list("Type", "Location", "Low CI", "Prevalence", "High CI") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotSingleYrPDF(filtered_data, "locationname", "locationid","data_value", "toolTipTextHeader1", 
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "data_value_type",
+    "low_confidence_limit", "high_confidence_limit", figCap_plotTitle, plotXCaption, "Prevelance",
+    gbVal_colorScheme, ifelse(knitr::is_html_output(), 10, 12)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-socialNeedFoodStamp
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5 
+if (knitr::is_html_output()) {
+# Create the ggplot plot ggplot and then its wrapped within plotly function
+gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+::: panel-tabset
+#### Age Adjusted Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+}
+```
+
+#### Crude Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
+}
+```
+:::
+:::
+
+::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
+```{r}
+#| fig-width: 11
+#| fig-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+gbFun_tablePDF(filtered_crudeTbl, colList)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-socialNeedFoodStamp
-#| fig-width: 11
-#| fig-height: 4
+`{r} figSubcap`
 
-```
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 ## Healthcare and Dental Access
@@ -361,139 +864,436 @@ This data suggests that, on average, Minnesota has 1,287 people per dentist, ind
 
 Even with potentially less access to primary care providers, the age-adjusted prevalence for having routine checkups is similar to the state average in Minnesota. About 3 out of 4 people are predicted to get their routine checkups. However, the consistency is not as strong for Medicaid beneficiaries receiving dental services. Assessing current performance is challenging due to lagging data and significant fluctuations in historical data.
 
+::: {#fig-yearPrimaryCarePhysiciansRatio}
 ```{r}
-#| label: fig-yearsPrimaryCarePhysicians
 #| warning: false
 #| include: false
 
-# Filter the data by 'measureid'
-filtered_data <- f_CHRR2024 |> 
-  dplyr::filter(measurename == "Primary care physicians")
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-# Create the plot
-gbFun_CHRRPCPPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Population Per Primary Care Providers", "Population to PCP Ratio")
+filtered_data <- f_CHRR2024 |>
+  dplyr::filter(measurename == "Primary care physicians", state != "US") |>
+  dplyr::mutate(year = as.numeric(sub("-.*", "", yearspan))) |>  # Convert timeframe (e.g., "2000-2002") to integer year
+  dplyr::arrange(desc(year)) |>
+  dplyr::filter(year >= max(year)-5) |>   # Select the 5 most recent year spans
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = county
+    , toolTipTextHeader3 = "\nRatio: "
+    , toolTipTextValue3 = ifelse(is.na(rawvalue),"--", paste0(rawvalue, ": 1"))
+  )
+
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year == maxYr)  |>
+  dplyr::arrange(fips) |>
+  dplyr::mutate(placeholder = ifelse(is.na(rawvalue), "--", paste0(rawvalue, ": 1"))) |>   
+  dplyr::select(yearspan, county, placeholder) # Ensure fields are ordered as desired.
+
+figCap_plotTitle <- "Population Per Primary Care Provider"
+figSubcap <- "Data Source: @countyHealthRankings2024"
+plotXCaption <- paste("Data Source:",countyHealthRankings2024) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = function(x) paste0(x, ": 1")  # Append "1:" to y-axis values
+#Table 
+colList <- list("Year", "Location", "Ratio") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "rawvalue", "county", "fips", "toolTipTextHeader1", "toolTipTextValue1",
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3",
+    figCap_plotTitle, plotXCaption, "Ratio", minYr, maxYr,
+    scaleYContinuous, gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-yearsPrimaryCarePhysicians
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-yearsPrimaryCarePhysicians
-#| fig-width: 11
-#| fig-height: 4
 #| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
 
+```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-yearDentistRatio}
 ```{r}
-#| label: fig-yearsDentists
 #| warning: false
 #| include: false
 
-# Filter the data by 'measureid'
-filtered_data <- f_CHRR2024 |> 
-  dplyr::filter(measurename == "Dentists")
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-# Create the plot
-gbFun_CHRRDentistPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Population Per Dentist", "Population to Dentist Ratio")
+filtered_data <- f_CHRR2024 |>
+  dplyr::filter(measurename == "Dentists", state != "US") |>
+  dplyr::mutate(year = as.numeric(sub("-.*", "", yearspan))) |>  # Convert timeframe (e.g., "2000-2002") to integer year
+  dplyr::arrange(desc(year)) |>
+  dplyr::filter(year >= max(year)-5) |>   # Select the 5 most recent year spans
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = county
+    , toolTipTextHeader3 = "\nRatio: "
+    , toolTipTextValue3 = ifelse(is.na(rawvalue), "--", paste0(rawvalue, ": 1"))
+  )
 
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year == maxYr)  |>
+  dplyr::arrange(fips) |>
+  dplyr::mutate(placeholder = ifelse(is.na(rawvalue), "--", paste0(rawvalue, ": 1"))) |>   
+  dplyr::select(yearspan, county, placeholder) # Ensure fields are ordered as desired.
+
+figCap_plotTitle <- "Population Per Dentist"
+figSubcap <- "Data Source: @countyHealthRankings2024"
+plotXCaption <- paste("Data Source:",countyHealthRankings2024) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+# Plot
+scaleYContinuous = function(x) paste0(x, ": 1")  # Append "1:" to y-axis values
+#Table 
+colList <- list("Year", "Location", "Ratio") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "rawvalue", "county", "fips", "toolTipTextHeader1", "toolTipTextValue1",
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3",
+    figCap_plotTitle, plotXCaption, "Ratio", minYr, maxYr, 
+    scaleYContinuous, gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-yearsDentists
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
+```
+:::
+
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
+```{r}
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+
+```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
 
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
-```{r}
-#| ref.label: fig-yearsDentists
-#| fig-width: 11
-#| fig-height: 4
-#| warning: false
+`{r} figSubcap`
 
-```
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
+::: {#fig-preventionRoutineCheckup}
 ```{r}
-#| label: fig-preventionRoutineCheckup
 #| warning: false
 #| include: false
 
 # Filter the data by 'measureid'
 filtered_data <- f_places2022 |> 
-  dplyr::filter(measureid == "CHECKUP")
+  dplyr::filter(measureid == "CHECKUP") |> 
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "\nLocation: "
+    , toolTipTextValue1 = locationname
+    , toolTipTextHeader2 = "\nPrevalence: "
+    , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
+  )
 
-# Create the plot
-gbFun_CDCPlacesPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme)
+filtered_ageAdjustedTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
 
+filtered_crudeTbl <- filtered_data |> 
+    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
+    dplyr::arrange(locationid, year) |>
+    dplyr::mutate(PrevalenceType = "Crude") |> 
+    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+  
+figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
+figSubcap <- "Data Source: @cdc2024Places"
+plotXCaption <- paste("Data Source:",cdc2024Places) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+#Table 
+colList <- list("Type", "Location", "Low CI", "Prevalence", "High CI") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotSingleYrPDF(filtered_data, "locationname", "locationid","data_value", "toolTipTextHeader1", 
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "data_value_type",
+    "low_confidence_limit", "high_confidence_limit", figCap_plotTitle, plotXCaption, "Prevelance",
+    gbVal_colorScheme, ifelse(knitr::is_html_output(), 10, 12)
+    )
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-preventionRoutineCheckup
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5 
+if (knitr::is_html_output()) {
+# Create the ggplot plot ggplot and then its wrapped within plotly function
+gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+::: panel-tabset
+#### Age Adjusted Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+}
+```
+
+#### Crude Prevalence
+
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  #Tables shouldn't be printed because the HTML table will display
+  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
+}
 ```
 :::
+:::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
 ```{r}
-#| ref.label: fig-preventionRoutineCheckup
 #| fig-width: 11
-#| fig-height: 4
+#| fig-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
+```
 
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+gbFun_tablePDF(filtered_crudeTbl, colList)
+}
+```
+
+```{r}
+#| tbl-width: 4
+#| tbl-height: 3
+#| warning: false
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+}
 ```
 :::
 
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
+:::
+
+::: {#fig-medicaidDentalService}
 ```{r}
-#| label: fig-dentalServices
 #| warning: false
 #| include: false
 
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
+filtered_data <- f_pHDAPDental |>
+  dplyr::filter(year >= max(year)-5) |>   # Select the 5 most recent year spans
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = geography
+    , toolTipTextHeader3 = "\nMediciad Dental Service Use: "
+    , toolTipTextValue3 = scales::label_percent(accuracy = .01)(dentalServicePercent)
+  )
 
-# Filter the data by 'vaccine'
-filtered_data <- f_pHDAPDental |> 
-  dplyr::select(fips,	geography,	year, dentalServicePercent) |> 
-  dplyr::filter(year > 2016)
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year >= maxYr-1)  |>
+  dplyr::arrange(fips, year) |>
+  dplyr::mutate(placeholder = scales::label_percent(accuracy = .01)(dentalServicePercent)) |>   
+  dplyr::group_by(fips) |>
+  dplyr::mutate(percentageChange = dplyr::case_when(
+      year == maxYr ~ scales::label_percent(accuracy = .01)((dentalServicePercent) - dplyr::first(dentalServicePercent)) #Since there is only 2, most recent - next
+      , TRUE ~ ""
+    )
+    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(year, geography, placeholder, percentageChange) # Ensure fields are ordered as desired.  
+
+figCap_plotTitle <- "Medicaid Dental Service Use"
+figSubcap <- "Data Source: @mdhPHDAPmedicaidDental2020"
+plotXCaption <- paste("Data Source:",mdhPHDAPmedicaidDental2020) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
 
 
-# Create the plot
-gbFun_dentalPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Medicaid Dental Service Use")
+# Plot
+scaleYContinuous = scales::label_percent() # Y axis format
+#Table 
+colList <- list("Year", "Location", "Medicaid Beneficiaries", "% Change") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "dentalServicePercent", "geography", "fips", "toolTipTextHeader1",
+    "toolTipTextValue1", "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", 
+    "toolTipTextValue3", figCap_plotTitle, plotXCaption, "", minYr, maxYr, 
+    scaleYContinuous, gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-dentalServices
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
+#| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-dentalServices
-#| fig-width: 11
-#| fig-height: 4
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
 
 ```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
+```
+:::
+
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 ## Years of Potential Lost
@@ -504,38 +1304,107 @@ There can be multiple reasons for why this is significantly higher in Mahnomen C
 
 The main point is that Mahnomen County's YPLL is alarmingly high, indicating a critical need for targeted interventions. Improving healthcare access, promoting healthy lifestyles, and addressing social determinants of health are essential steps to reduce premature deaths and improve overall community well-being. Addressing these issues requires a collaborative effort from local governments, healthcare providers, and community organizations. By focusing on preventive measures, early detection, and effective treatment of chronic conditions, we can work towards reducing the years of potential life lost and enhancing the quality of life for all of our residents.
 
+::: {#fig-yearsPotentialLifeLost}
 ```{r}
-#| label: fig-yearsPotentialLifeLost
 #| warning: false
 #| include: false
 
-# Filter the data by 'measureid'
-filtered_data <- f_CHRR2024 |> 
-  dplyr::filter(measurename == "Premature death")
+# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-# Create the plot
-gbFun_CHRRYPLPlot(filtered_data, gbVal_colorScheme, gbVal_shapeScheme, "Years of Potential Life Lost (Death < 75 Years of Age)", "Age Adjusted YPLL\nper 100,000 population")
+filtered_data <- f_CHRR2024 |> 
+  dplyr::filter(measurename == "Premature death", state != "US") |>
+  dplyr::mutate(year = as.numeric(sub("-.*", "", yearspan))) |>  # Convert timeframe (e.g., "2000-2002") to integer year
+  dplyr::arrange(desc(year)) |>
+  dplyr::filter(year >= max(year)-5) |>   # Select the 5 most recent year spans
+  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
+    toolTipTextHeader1 = "Year: "
+    , toolTipTextValue1 = year
+    , toolTipTextHeader2 = "\nLocation: "
+    , toolTipTextValue2 = county
+    , toolTipTextHeader3 = "\nYPLL (CI): "
+    , toolTipTextValue3 = paste0(formattable::comma(rawvalue,0), " (", formattable::comma(cilow,0), "-", formattable::comma(cihigh,0), ")")
+  )
+
+minYr <- unique(min(filtered_data$year))
+maxYr <- unique(max(filtered_data$year))
+
+# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
+filtered_dataTbl <- filtered_data |> 
+  dplyr::filter(year == maxYr)  |>
+  dplyr::arrange(fips) |>
+  dplyr::mutate(rawvalue = formattable::comma(rawvalue,0), cilow = formattable::comma(cilow,0), cihigh = formattable::comma(cihigh,0)) |>   
+  dplyr::select(yearspan, county, cilow, rawvalue, cihigh) # Ensure fields are ordered as desired.
+
+figCap_plotTitle <- "Years of Potential Life Lost (YPLL): Death < 75"
+figSubcap <- "Data Source: @countyHealthRankings2024"
+plotXCaption <- paste("Data Source:",countyHealthRankings2024) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
+
+# Plot
+scaleYContinuous = scales::label_comma()
+#Table 
+colList <- list("Date Range", "Location", "Lower CI", "YPLL", "Higher CI") # Using a list accommodates tables with different column lengths.
+
+#Define the plot here so it is only wrote once
+p <- gbFun_plotTrendPDF(
+    filtered_data, "year", "rawvalue", "county", "fips", "toolTipTextHeader1", "toolTipTextValue1",
+    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3",
+    figCap_plotTitle, plotXCaption, "Age Adjusted YPLL\nper 100,000 population", minYr, maxYr, 
+    scaleYContinuous, gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
+    )
 
 ```
+
+<div>
 
 ::: {.content-visible when-format="html"}
 ```{r}
-#| ref.label: fig-yearsPotentialLifeLost
 #| fig-width: 8
-#| fig-height: 8
+#| fig-height: 5
 #| warning: false
+if (knitr::is_html_output()) {
+  # Create the ggplot plot ggplot and then its wrapped within plotly function
+  gbFun_plotHTML(p, figCap_plotTitle)
+}
+```
 
+```{r}
+#| tbl-width: 8
+#| tbl-height: 4
+#| warning: false
+if (knitr::is_html_output()) {
+  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
+}
 ```
 :::
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
 ```{r}
-#| ref.label: fig-yearsPotentialLifeLost
-#| fig-width: 11
-#| fig-height: 5
 #| warning: false
+#| fig-width: 9
+#| fig-height: 5
+if (!knitr::is_html_output()) {
+# Plots have to be printed
+print(p)
+}
 
 ```
+
+```{r}
+#| warning: false
+#| tbl-width: 2
+#| tbl-height: 5
+if (!knitr::is_html_output()) {
+#Tables shouldn't be printed because the HTML table will display
+gbFun_tablePDF(filtered_dataTbl, colList)
+}
+```
+:::
+
+`{r} figSubcap`
+
+</div>
+
+`{r} figCap_plotTitle`
 :::
 
 <!-- Fruit and Vegetable Consumption - Can you grab the MSS data of students reporting "5+ fruits/vegetables in the past 7 days"? Physical Activity -- Can you grab the MSS data of students reporting "physically active"? -->
@@ -666,7 +1535,6 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 :::
 
 ::: {.content-visible when-format="pdf"}
-::: {layout-ncol="2"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |   8.9%    |   10.2%   |    9.2%    |
@@ -678,6 +1546,10 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 
 : Percent Who Lives with Anyone Who Drinks too much Alcohol {#tbl-ACES_1}
 
+\*Count \< 18 \_\_ No data available
+:::
+
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |   22.9%   |    25%    |   27.3%    |
@@ -692,7 +1564,7 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 \*Count \< 18 \_\_ No data available
 :::
 
-::: {layout-ncol="2"}
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |  5.4%\*   |  5.3%\*   |    8.1%    |
@@ -704,6 +1576,10 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 
 : Percent Who Lives with Anyone Using Illegal /Abusing Prescription Drugs {#tbl-ACES_3}
 
+\*Count \< 18 \_\_ No data available
+:::
+
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |   14.1%   |   16.5%   |   13.7%    |
@@ -715,6 +1591,10 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 
 : Percent with Verbally Abusive Adults at Home {#tbl-ACES_4}
 
+\*Count \< 18 \_\_ No data available
+:::
+
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |   11.9%   |   10.2%   |   11.1%    |
@@ -726,6 +1606,10 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 
 : Percent Physically Hurt by Household Adults {#tbl-ACES_5}
 
+\*Count \< 18 \_\_ No data available
+:::
+
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |  1.6%\*   |  3.9%\*   |   4.1%\*   |
@@ -737,6 +1621,10 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 
 : Percent With Family Member Who Pressured or Forced Sexual Activity {#tbl-ACES_6}
 
+\*Count \< 18 \_\_ No data available
+:::
+
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |  3.8%\*   |  6.0%\*   |   7.4%\*   |
@@ -748,6 +1636,10 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 
 : Percent With Non-Relative Who Pressured or Forced Sexual Activity. {#tbl-ACES_7}
 
+\*Count \< 18 \_\_ No data available
+:::
+
+::: {.content-visible when-format="pdf"}
 |    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
 |:---------------:|:----:|:---------:|:---------:|:----------:|
 |   Polk County   | 2019 |   7.7%    |   6.7%    |    8.5%    |
@@ -760,5 +1652,4 @@ Interpreting the data for Norman County and Mahnomen County is challenging due t
 : Percent with Parents/Adults in Home Who Physically Fought {#tbl-ACES_8}
 
 \*Count \< 18 \_\_ No data available
-:::
 :::
