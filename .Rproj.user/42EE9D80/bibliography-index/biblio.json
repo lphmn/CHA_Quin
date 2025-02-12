@@ -29,6 +29,34 @@
             "type": ""
         },
         {
+            "URL": "https://www.cdc.gov/aces/about/index.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        11,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Centers for Disease Control and Prevention"
+                }
+            ],
+            "id": "cdcAces",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 02/03/2025",
+            "title": "About adverse childhood experiences",
+            "type": ""
+        },
+        {
             "URL": "https://www.cdc.gov/places",
             "accessed": {
                 "date-parts": [
@@ -198,6 +226,34 @@
             "type": ""
         },
         {
+            "URL": "https://odphp.health.gov/healthypeople/priority-areas/social-determinants-health/literature-summaries/employment",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        1,
+                        29
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion"
+                }
+            ],
+            "id": "healthyPeople2023EconomicStability",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 01/29/2025",
+            "title": "Employment",
+            "type": ""
+        },
+        {
             "URL": "https://www.hungersolutions.org/wp-content/uploads/2023/02/Food-shelf-visits-2022-Presentation.pdf",
             "accessed": {
                 "date-parts": [
@@ -334,7 +390,7 @@
             "type": ""
         },
         {
-            "URL": "https://eclds.mn.gov/#thirdGradeEdStatus/orgId--999999000__groupType--state__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg60__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg54__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg44__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1",
+            "URL": "https://eclds.mn.gov/#thirdGradeEdStatus/orgId--999999000__groupType--state__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--F__SUBJECT--R__p--1/orgId--cOrg35__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--S__SUBJECT--R__p--1/orgId--cOrg45__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--S__SUBJECT--R__p--1/orgId--cOrg57__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--S__SUBJECT--R__p--1/orgId--cOrg63__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--S__SUBJECT--R__p--1/orgId--cOrg68__groupType--county__ECO_DEV_REGION--FOC_NONE__FISCAL_YEAR--2023__DISABILITY_TYPE--FOC_NONE__HOME_LANGUAGE--FOC_NONE__RACE_ETHTYPE--S__SUBJECT--R__p--1",
             "accessed": {
                 "date-parts": [
                     [
@@ -627,7 +683,7 @@
             "type": ""
         },
         {
-            "URL": "https://www.health.state.mn.us/diseases/asthma/index.html",
+            "URL": "https://data.web.health.state.mn.us/asthma-charts",
             "accessed": {
                 "date-parts": [
                     [
@@ -966,6 +1022,34 @@
             },
             "note": "Accessed 12/01/2024",
             "title": "Polk county opioid funding prioritization",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ruralhealthinfo.org/topics/frontier",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        12,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Rural Health Information Hub"
+                }
+            ],
+            "id": "rhiHubFrontier2024",
+            "issued": {
+                "date-parts": [
+                    [
+                        2024
+                    ]
+                ]
+            },
+            "note": "Accessed 2025-01-27",
+            "title": "Health and healthcare in frontier areas",
             "type": ""
         },
         {

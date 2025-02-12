@@ -1,25 +1,4 @@
 fips,location,year,valueCount,age_adjustedRatePer1000,category
-27119,Polk,2016,58,1.9,Nonfatal Drug Overdose
-27119,Polk,2017,53,1.7,Nonfatal Drug Overdose
-27119,Polk,2018,42,1.3,Nonfatal Drug Overdose
-27119,Polk,2019,36,1.1,Nonfatal Drug Overdose
-27119,Polk,2020,36,1.2,Nonfatal Drug Overdose
-27119,Polk,2021,39,1.3,Nonfatal Drug Overdose
-27119,Polk,2022,21,NA,Nonfatal Drug Overdose
-27107,Norman,2016,NA,NA,Nonfatal Drug Overdose
-27107,Norman,2017,13,NA,Nonfatal Drug Overdose
-27107,Norman,2018,8,NA,Nonfatal Drug Overdose
-27107,Norman,2019,NA,NA,Nonfatal Drug Overdose
-27107,Norman,2020,NA,NA,Nonfatal Drug Overdose
-27107,Norman,2021,6,NA,Nonfatal Drug Overdose
-27107,Norman,2022,NA,NA,Nonfatal Drug Overdose
-27087,Mahnomen,2016,60,13,Nonfatal Drug Overdose
-27087,Mahnomen,2017,43,9.2,Nonfatal Drug Overdose
-27087,Mahnomen,2018,30,6.2,Nonfatal Drug Overdose
-27087,Mahnomen,2019,31,6,Nonfatal Drug Overdose
-27087,Mahnomen,2020,42,9.1,Nonfatal Drug Overdose
-27087,Mahnomen,2021,46,9.8,Nonfatal Drug Overdose
-27087,Mahnomen,2022,25,NA,Nonfatal Drug Overdose
 99,Minnesota,2016,8957,1.6,Nonfatal Drug Overdose
 99,Minnesota,2017,9494,1.7,Nonfatal Drug Overdose
 99,Minnesota,2018,8702,1.6,Nonfatal Drug Overdose
@@ -27,3 +6,38 @@ fips,location,year,valueCount,age_adjustedRatePer1000,category
 99,Minnesota,2020,10860,1.9,Nonfatal Drug Overdose
 99,Minnesota,2021,11506,2,Nonfatal Drug Overdose
 99,Minnesota,2022,8359,NA,Nonfatal Drug Overdose
+27069,Kittson,2016,NA,NA,Nonfatal Drug Overdose
+27069,Kittson,2017,NA,NA,Nonfatal Drug Overdose
+27069,Kittson,2018,NA,NA,Nonfatal Drug Overdose
+27069,Kittson,2019,6,NA,Nonfatal Drug Overdose
+27069,Kittson,2020,NA,NA,Nonfatal Drug Overdose
+27069,Kittson,2021,NA,NA,Nonfatal Drug Overdose
+27069,Kittson,2022,NA,NA,Nonfatal Drug Overdose
+27089,Marshall,2016,13,NA,Nonfatal Drug Overdose
+27089,Marshall,2017,9,NA,Nonfatal Drug Overdose
+27089,Marshall,2018,NA,NA,Nonfatal Drug Overdose
+27089,Marshall,2019,6,NA,Nonfatal Drug Overdose
+27089,Marshall,2020,7,NA,Nonfatal Drug Overdose
+27089,Marshall,2021,11,NA,Nonfatal Drug Overdose
+27089,Marshall,2022,NA,NA,Nonfatal Drug Overdose
+27113,Pennington,2016,23,1.6,Nonfatal Drug Overdose
+27113,Pennington,2017,22,1.6,Nonfatal Drug Overdose
+27113,Pennington,2018,23,1.7,Nonfatal Drug Overdose
+27113,Pennington,2019,15,NA,Nonfatal Drug Overdose
+27113,Pennington,2020,25,1.8,Nonfatal Drug Overdose
+27113,Pennington,2021,25,1.9,Nonfatal Drug Overdose
+27113,Pennington,2022,11,NA,Nonfatal Drug Overdose
+27125,Red Lake,2016,NA,NA,Nonfatal Drug Overdose
+27125,Red Lake,2017,NA,NA,Nonfatal Drug Overdose
+27125,Red Lake,2018,NA,NA,Nonfatal Drug Overdose
+27125,Red Lake,2019,NA,NA,Nonfatal Drug Overdose
+27125,Red Lake,2020,NA,NA,Nonfatal Drug Overdose
+27125,Red Lake,2021,NA,NA,Nonfatal Drug Overdose
+27125,Red Lake,2022,NA,NA,Nonfatal Drug Overdose
+27135,Roseau,2016,17,NA,Nonfatal Drug Overdose
+27135,Roseau,2017,19,NA,Nonfatal Drug Overdose
+27135,Roseau,2018,17,NA,Nonfatal Drug Overdose
+27135,Roseau,2019,19,NA,Nonfatal Drug Overdose
+27135,Roseau,2020,11,NA,Nonfatal Drug Overdose
+27135,Roseau,2021,15,NA,Nonfatal Drug Overdose
+27135,Roseau,2022,6,NA,Nonfatal Drug Overdose

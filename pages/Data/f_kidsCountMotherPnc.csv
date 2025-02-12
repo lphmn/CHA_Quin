@@ -1,33 +1,49 @@
-"location","year","dataFormat","data","fips"
-"Minnesota",2015,"Percent","0.093",99
-"Minnesota",2016,"Percent","0.088",99
-"Minnesota",2017,"Percent","0.081",99
-"Minnesota",2018,"Percent","0.075",99
-"Minnesota",2019,"Percent","0.071",99
-"Minnesota",2020,"Percent","0.067",99
-"Minnesota",2021,"Percent","0.056",99
-"Minnesota",2022,"Percent","0.044",99
-"Mahnomen",2015,"Percent","0.489",27119
-"Mahnomen",2016,"Percent","0.151",27119
-"Mahnomen",2017,"Percent","0.455",27119
-"Mahnomen",2018,"Percent","0.489",27119
-"Mahnomen",2019,"Percent","0.418",27119
-"Mahnomen",2020,"Percent","0.359",27119
-"Mahnomen",2021,"Percent","0.418",27119
-"Mahnomen",2022,"Percent","0.326",27119
-"Norman",2015,"Percent","0.135",27107
-"Norman",2016,"Percent","0.11",27107
-"Norman",2017,"Percent","NA",27107
-"Norman",2018,"Percent","NA",27107
-"Norman",2019,"Percent","NA",27107
-"Norman",2020,"Percent","NA",27107
-"Norman",2021,"Percent","NA",27107
-"Norman",2022,"Percent","NA",27107
-"Polk",2015,"Percent","0.163",27087
-"Polk",2016,"Percent","0.116",27087
-"Polk",2017,"Percent","0.124",27087
-"Polk",2018,"Percent","0.097",27087
-"Polk",2019,"Percent","0.114",27087
-"Polk",2020,"Percent","0.105",27087
-"Polk",2021,"Percent","0.083",27087
-"Polk",2022,"Percent","0.059",27087
+location,year,dataFormat,data,fips
+Minnesota,2015,Percent,0.045,99
+Minnesota,2016,Percent,0.109,99
+Minnesota,2017,Percent,0.096,99
+Minnesota,2018,Percent,0.092,99
+Minnesota,2019,Percent,0.095,99
+Minnesota,2020,Percent,0.098,99
+Minnesota,2021,Percent,0.087,99
+Minnesota,2022,Percent,0.094,99
+Kittson,2015,Percent,0.05,27069
+Kittson,2016,Percent,0.05,27069
+Kittson,2017,Percent,NA,27069
+Kittson,2018,Percent,NA,27069
+Kittson,2019,Percent,NA,27069
+Kittson,2020,Percent,NA,27069
+Kittson,2021,Percent,NA,27069
+Kittson,2022,Percent,NA,27069
+Marshall,2015,Percent,0.019,27089
+Marshall,2016,Percent,0.047,27089
+Marshall,2017,Percent,NA,27089
+Marshall,2018,Percent,NA,27089
+Marshall,2019,Percent,NA,27089
+Marshall,2020,Percent,NA,27089
+Marshall,2021,Percent,NA,27089
+Marshall,2022,Percent,NA,27089
+Pennington,2015,Percent,0.013,27113
+Pennington,2016,Percent,0.08,27113
+Pennington,2017,Percent,NA,27113
+Pennington,2018,Percent,NA,27113
+Pennington,2019,Percent,NA,27113
+Pennington,2020,Percent,NA,27113
+Pennington,2021,Percent,NA,27113
+Pennington,2022,Percent,NA,27113
+Red Lake,2015,Percent,NA,27125
+Red Lake,2016,Percent,0.188,27125
+Red Lake,2017,Percent,NA,27125
+Red Lake,2018,Percent,NA,27125
+Red Lake,2019,Percent,NA,27125
+Red Lake,2020,Percent,NA,27125
+Red Lake,2021,Percent,NA,27125
+Red Lake,2022,Percent,NA,27125
+Roseau,2015,Percent,0.037,27135
+Roseau,2016,Percent,0.076,27135
+Roseau,2017,Percent,NA,27135
+Roseau,2018,Percent,NA,27135
+Roseau,2019,Percent,NA,27135
+Roseau,2020,Percent,NA,27135
+Roseau,2021,Percent,NA,27135
+Roseau,2022,Percent,NA,27135

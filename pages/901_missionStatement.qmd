@@ -1,13 +1,17 @@
-# Together We Can Prevent. Promote. Protect.
+# Preliminary.
 
 Please reach out if you have any questions. Below are some extra community resources.
 
 ::: {#fig-ctyPopulationProfile layout-ncol="3"}
-[![](Attachments/mnMap_polk.png)](https://allumacares.org/resources/client-forms/polk-county-resource-directory/)
+[![](Attachments/mnMap_kittson.png)](https://allumacares.org/resources/client-forms/kittson-county-resource-directory/)
 
-[![](Attachments/mnMap_norman.png)](https://allumacares.org/mahnomen-county-resource-directory/)
+[![](Attachments/mnMap_marshall.png)](https://allumacares.org/marshall-county-resource-directory/)
 
-[![](Attachments/mnMap_mahnomen.png)](https://allumacares.org/norman-county-resource-directory/)
+[![](Attachments/mnMap_pennington.png)](https://allumacares.org/pennington-county-resource-directory/)
+
+[![](Attachments/mnMap_redlake.png)](https://allumacares.org/red-lake-resource-directory/)
+
+[![](Attachments/mnMap_roseau.png)](https://allumacares.org/roseau-county-resource-directory/)
 
 Please click anywhere on the county map to go to a resource page regarding the following topics.\
 - Housing Instability\

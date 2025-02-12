@@ -15,71 +15,59 @@ if (file.exists("pages/Global/gb.R")) {
 }
 ```
 
-Addressing chronic health conditions is crucial for improving the overall well-being of our communities. Heart disease, cancer, sexually transmitted infections (STIs) including HIV, obesity, and diabetes are among the most significant health challenges we face today. These conditions not only impact individual health but also place a substantial burden on healthcare systems and society as a whole. Health conditions related to a mental health related condition(s) are not discussed in the mental health section.
-
-Heart disease and cancer are the leading causes of death in Minnesota. Cancer, with its various forms, continues to affect many lives, highlighting the importance of early detection and treatment. STIs, including HIV, pose serious health risks and require comprehensive education and prevention strategies.
-
-Obesity is a growing concern, contributing to numerous other health issues such as diabetes and heart disease. Diabetes itself is a major public health challenge, with both type 1 and type 2 diabetes requiring effective management to prevent complications.
-
-By focusing on these key health conditions, we can develop targeted interventions and support systems to improve health outcomes and enhance the quality of life for individuals in our communities.
+Addressing chronic health conditions is vital for community well-being. Heart disease, cancer, STIs (including HIV), obesity, and diabetes are major health challenges, impacting individuals and burdening healthcare systems. Heart disease and cancer are the leading causes of death in Minnesota, highlighting the need for early detection and treatment. Obesity contributes to diabetes and heart disease, while effective management of diabetes is crucial to prevent complications. Focusing on these conditions can lead to targeted interventions and improved health outcomes, enhancing community quality of life.
 
 ## Heart Disease
 
-Heart disease is a health concern that impacts our communities. The age-adjusted number of deaths per 100,000 residents due to heart disease from 2018 to 2022 varies across different locations. Mahnomen County has the highest rate at 196 deaths per 100,000 residents, which is notably higher than the state average for Minnesota at 121 deaths per 100,000 residents. Polk and Norman counties also report elevated rates, with 153 and 160 deaths per 100,000 residents, respectively.
+Heart disease is a critical health concern affecting communities, with significant variations in age-adjusted death rates per 100,000 residents from 2019 to 2023. Roseau County stands out with the highest rate at 175 deaths per 100,000 residents, far exceeding the Minnesota state average of 121. Pennington County also surpasses the state average, highlighting a pressing issue. Although Kittson, Marshall, and Red Lake counties are not statistically higher, their age-adjusted prevalence rates still exceed the state average, underscoring the widespread impact of heart disease in these areas.
 
-+-------------+---------------+
-| Location    | Heart Disease |
-+:===========:+:=============:+
-| Minnesota   | 121           |
-+-------------+---------------+
-| Polk        | 153           |
-+-------------+---------------+
-| Norman      | 160           |
-+-------------+---------------+
-| Mahnomen    | 196           |
-+-------------+---------------+
+|  Location  | Heart Disease | Confidence Interval |
+|:----------:|:-------------:|:-------------------:|
+| Minnesota  |      120      |       119-121       |
+|  Kittson   |      138      |       102-173       |
+|  Marshall  |      137      |       110-163       |
+| Pennington |      158      |       134-182       |
+|  Red Lake  |      144      |       103-185       |
+|   Roseau   |      175      |       150-200       |
 
-: Age Adjusted Number of Deaths per 100,000 due to Heart Disease (2018-2022)
+: Age Adjusted Number of Deaths per 100,000 due to Heart Disease (2019-2023)
 
 @mdhHeartDisease
 
 ## Cancer
 
-Cancer remains a significant public health challenge, affecting many individuals and communities. As of January 1, 2021, an estimated 316,110 Minnesota residents were living with a history of malignant cancer, representing 5.5% of the state's population. In our local counties, the prevalence is even higher. Polk County has 1,880 individuals (6.1% of the population) living with a history of cancer, Norman County has 470 individuals (7.3%), and Mahnomen County has 370 individuals (6.9%).
+Cancer remains a significant public health challenge, affecting many individuals and communities. As of January 1, 2021, 316,110 Minnesota residents (5.5% of the population) were living with a history of malignant cancer. Quin counties have even higher prevalence rates: Kittson (7.4%), Marshall (7.9%), Pennington (6.0%), Red Lake (7.4%), and Roseau (5.6%). These statistics underscore the widespread impact of cancer and the critical need for ongoing support and resources. Additionally, specific cancers like lung and breast cancer further illustrate this burden, with Kittson County having the highest lung cancer rate at 68.3 per 100,000 people, and Roseau County having the highest breast cancer rate at 144.3 per 100,000 people. Addressing these challenges requires targeted interventions and continuous support for those affected.
 
-These statistics highlight the widespread impact of cancer and the importance of ongoing support and resources for those affected. Additionally, the age-adjusted rates of specific cancers, such as lung and breast cancer, provide further insight into the burden of this disease. For example, Mahnomen County has the highest age-adjusted rate of lung cancer at 62.7 per 100,000 people, while Polk County has the highest rate of breast cancer at 146.3 per 100,000 people.
-
-By understanding the prevalence and impact of cancer in our communities, we can better tailor our efforts to support those affected and work towards reducing the incidence and mortality associated with this disease.
-
-+--------------+-----------------------------+------------------------------+
-| Location     | Number of Persons Living    | Percent of Population Living |
-|              |                             |                              |
-|              | with a History of of Cancer | with a History of Cancer     |
-+:============:+:===========================:+:============================:+
-| Minnesota    | 3,16,110                    | 5.5%                         |
-+--------------+-----------------------------+------------------------------+
-| Polk         | 1,880                       | 6.1%                         |
-+--------------+-----------------------------+------------------------------+
-| Norman       | 470                         | 7.3%                         |
-+--------------+-----------------------------+------------------------------+
-| Mahnomen     | 370                         | 6.9%                         |
-+--------------+-----------------------------+------------------------------+
++---------------+-----------------------------+------------------------------+
+| Location      | Number of Persons Living    | Percent of Population Living |
+|               |                             |                              |
+|               | with a History of of Cancer | with a History of Cancer     |
++:=============:+:===========================:+:============================:+
+| Minnesota     | 3,16,110                    | 5.5%                         |
++---------------+-----------------------------+------------------------------+
+| Kittson       | 310                         | 7.4%                         |
++---------------+-----------------------------+------------------------------+
+| Marshall      | 710                         | 7.9%                         |
++---------------+-----------------------------+------------------------------+
+| Pennington    | 830                         | 6.0%                         |
++---------------+-----------------------------+------------------------------+
+| Red Lake      | 290                         | 7.4%                         |
++---------------+-----------------------------+------------------------------+
+| Roseau        | 860                         | 5.6%                         |
++---------------+-----------------------------+------------------------------+
 
 : Persons living with a history of of cancer by Location
 
 @mdhCancerPrevalence
 
-+-------------+-------------+---------------+
-| Location    | Lung Cancer | Breast Cancer |
-+:===========:+:===========:+:=============:+
-| Minnesota   | 52          | 136           |
-+-------------+-------------+---------------+
-| Polk        | 57.8        | 146.3         |
-+-------------+-------------+---------------+
-| Norman      | 49.3        | 109.2         |
-+-------------+-------------+---------------+
-| Mahnomen    | 62.7        | 133.7         |
-+-------------+-------------+---------------+
+|  Location  | Lung Cancer | Breast Cancer |
+|:----------:|:-----------:|:-------------:|
+| Minnesota  |    55.6     |     135.7     |
+|  Kittson   |    68.3     |     120.9     |
+|  Marshall  |    66.8     |     133.7     |
+| Pennington |    58.1     |     137.3     |
+|  Red Lake  |    53.3     |     141.6     |
+|   Roseau   |    58.8     |     144.3     |
 
 : Cancer Age Adjusted Rate per 100,000 people 2015-2019
 
@@ -87,19 +75,16 @@ By understanding the prevalence and impact of cancer in our communities, we can 
 
 ## Dementia
 
-Dementia is a growing public health concern, particularly among older adults. In Minnesota, 11.9% of beneficiaries are living with dementia. This prevalence is slightly higher in Polk and Norman counties, where 12% of beneficiaries are affected. Mahnomen County has a slightly lower rate at 11.5%. These percentages highlight the impact of dementia on our communities. Addressing the needs of individuals with dementia and their caregivers is crucial for improving quality of life and providing adequate support. By focusing on early detection, effective management, and community resources, we can better support those affected by dementia and work towards reducing its burden.
+Dementia is a growing concern, especially among older adults. In Minnesota, 11.9% of Medicare beneficiaries have dementia. This rate is slightly lower in Kittson (10.0%), Marshall (10.2%), and Pennington (10.3%) counties, with even lower rates in Red Lake (9.5%) and Roseau (7.6%) counties. While these rates are lower than the state average, they still pose a concern due to potential limited access to resources in these areas. Early detection, effective management, and community resources are crucial for support and reducing the burden of dementia.
 
-+---------------+----------------------------------------+
-| Location      | Percent of Beneficiaries with Dementia |
-+:=============:+:======================================:+
-| Minnesota     | 11.9%                                  |
-+---------------+----------------------------------------+
-| Polk          | 12%                                    |
-+---------------+----------------------------------------+
-| Norman        | 12%                                    |
-+---------------+----------------------------------------+
-| Mahnomen      | 11.5%                                  |
-+---------------+----------------------------------------+
+|  Location  | Percent of Beneficiaries with Dementia |
+|:----------:|:--------------------------------------:|
+| Minnesota  |                 11.9%                  |
+|  Kittson   |                 10.0%                  |
+|  Marshall  |                 10.2%                  |
+| Pennington |                 10.3%                  |
+|  Red Lake  |                  9.5%                  |
+|   Roseau   |                  7.6%                  |
 
 : Prevalence of Dementia
 
@@ -107,14 +92,11 @@ Dementia is a growing public health concern, particularly among older adults. In
 
 ## Diabetes
 
-The age-adjusted prevalence for diabetes is similar between Minnesota, Norman, and Polk. However, Mahnomen does have a higher prevalence of diabetes than Polk County and Norman County. The hope would be that all three counties would be doing reasonably well in the optimal diabetic care. However, we are lower compared to Minnesota.
-
-Optimal diabetic care consists of controlling ones blood pressure (less than 140/90 mmHg), maintaining ones HbA1c ( \< 8.0 mg/dL), taking a statin if its tollorated, a non-tobacco user, and being on a daily aspirin if the patient has ischemic vascular disease [@mdhPublicUseFiles2022]. This care is specifically targeted at patients aged 18-75.
-
-Similarly, the pattern observed in obesity among adults mirror those seen in diabetes prevalence. Mahnomen County, in particular, has a higher age-adjusted prevalence of no leisure-time physical activity and obesity compared to the rest of the group.
+The age-adjusted prevalence of diabetes is similar between Minnesota and the five Quin counties. However, Kittson, Marshall, Red Lake, and Roseau counties have lower rates of optimal diabetic care compared to the state. Optimal care includes controlling blood pressure, maintaining HbA1c levels, taking statins if tolerated, avoiding tobacco, and using daily aspirin for those with ischemic vascular disease [@mdhPublicUseFiles2022]. This care is intended for patients aged 18-75. While the prevalence of a disease like diabetes cannot be fully-controlled and the reasons for lower optimal care rates in these counties remain unclear, improving community outreach programs could promote better prevention and care outcomes, which can be influenced by local efforts.
 
 ::: {#fig-conditionDiabetes}
 ```{r}
+#| label: f_places2022Diabetes
 #| warning: false
 #| include: false
 
@@ -128,17 +110,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -169,33 +145,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -215,7 +187,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -224,8 +196,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -239,6 +210,7 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ::: {#fig-pufOdc}
 ```{r}
+#| label: f_pufOdc
 #| warning: false
 #| include: false
 
@@ -339,10 +311,11 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Obesity
 
-Examining obesity is crucial because it is a major risk factor for numerous chronic diseases, including heart disease, diabetes, and certain cancers. Understanding the prevalence of obesity helps in developing targeted interventions to promote healthier lifestyles and prevent these conditions. Additionally, addressing obesity can improve overall quality of life and reduce healthcare costs for individuals and communities.
+Examining obesity is crucial due to its link to chronic diseases like heart disease, diabetes, and certain cancers. While Minnesota and the five Quin counties have statistically similar obesity rates, Kittson and Marshall counties' higher prevalence rates indicate a possible need for targeted interventions, and Pennington County's lower prevalence rate suggests effective strategies that should continue.
 
 ::: {#fig-conditionObesity}
 ```{r}
+#| label: f_places2022Obesity
 #| warning: false
 #| include: false
 
@@ -356,17 +329,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -397,33 +364,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -443,7 +406,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -452,8 +415,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -467,30 +429,29 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ## Influenza
 
-Several influenza surveillance methods are used across the state of Minnesota. Data is summarized by influenza season (October -- April), rather than calendar year. Please refer to page 2 Hospital Influenza Cases by Season and page 3 Deaths associated with influenza by season [in this MDD Summery report](https://www.health.state.mn.us/diseases/flu/stats/2022summary.pdf).
+Minnesota uses several influenza surveillance methods, summarizing data by influenza season (October -- April), rather than calendar year. Please refer to page 2 Hospital Influenza Cases by Season and page 4 Deaths associated with influenza by season [in this MDH Summery report](https://www.health.mn.gov/diseases/flu/stats/2022summary.pdf).
 
 ## STI/HIV
 
-As we continue to address these behavioral factors, it's also crucial to focus on sexually transmitted infections (STIs) and HIV. These public health concerns require our attention to ensure effective prevention, testing, and treatment strategies. Let's now examine the data on STIs and HIV in our counties to understand their impact and how we can improve health outcomes in this area.
-
-Chlamydia, Gonorrhea, and Syphilis data in this report should only be compared to the county it pertains to since these are counts. What is also difficult with counts even when looking at the impact internally, is counts don't factor in population growth or decline. However, counts do provide us with insight of the actual impact for if someone gets an STI or HIV. Polk County experienced an increase in Chlamydia cases from 2022 to 2023. Norman and Mahnomen nearly had no cases of gonorrhea in 2023. Syphilis, we see a decline in Polk County and an increase in Mahnomen County.
+Addressing behavioral factors is crucial, but it's equally important to focus on STIs and HIV, which require effective prevention, testing, and treatment strategies. Chlamydia, Gonorrhea, and Syphilis data in this report should be compared within the same county for the same year since the data values are counts and do not factor in population change. In 2023, Kittson reported 7 Chlamydia cases, Marshall 18, Pennington 31, Red Lake 6, and Roseau 17. Gonorrhea cases were minimal, with Kittson, Marshall, and Red Lake reporting zero cases, Pennington 6, and Roseau 2. Syphilis cases were also low, with Kittson reporting zero, Marshall 1, Pennington 2, Red Lake 2, and Roseau zero. These counts must be interpreted carefully, but low counts provide knowledge that community efforts are being effective. While individuals can contract HIV/AIDS through various means, the low counts in the five Quin counties also point to effective community efforts in education about safe sex and prevention.
 
 ::: {#fig-chlamydia}
 ```{r}
+#| label: f_stiHIVChlamydia
 #| warning: false
 #| include: false
 
 # Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
 filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "Chlamydia Count", fips != 27000) |>  #Count data gets overwhelmed by state |> 
+  dplyr::filter(indicator == "Chlamydia New & Old Cases", fips != 27000) |>  #New & Old Cases data gets overwhelmed by state |> 
   dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
     toolTipTextHeader1 = "Year: "
     , toolTipTextValue1 = year
     , toolTipTextHeader2 = "\nLocation: "
     , toolTipTextValue2 = location
     , toolTipTextHeader3 = "\nChlamydia Cases: "
-    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(valueCount)
+    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(ctValue)
   )
 
 minYr <- unique(min(filtered_data$year))
@@ -500,7 +461,7 @@ maxYr <- unique(max(filtered_data$year))
 filtered_dataTbl <- filtered_data |> 
   dplyr::filter(year == maxYr)  |>
   dplyr::arrange(fips, year) |>
-  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(valueCount)) |>   
+  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(ctValue)) |>   
   dplyr::select(year, location, placeholder) # Ensure fields are ordered as desired.  
 
 
@@ -515,7 +476,7 @@ colList <- list("Year", "Location", "Chlamydia Cases Count") # Using a list acco
 
 #Define the plot here so it is only wrote once
 p <- gbFun_plotTrendPDF(
-    filtered_data, "year", "valueCount", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    filtered_data, "year", "ctValue", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
     "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
     plotXCaption, "", minYr, maxYr, scaleYContinuous,
     gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
@@ -576,20 +537,21 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-gonorrhea}
 ```{r}
+#| label: f_stiHIVGonorrhea
 #| warning: false
 #| include: false
 
 # Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
 filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "Gonorrhea Count", fips != 27000) |>  #Count data gets overwhelmed by state |> 
+  dplyr::filter(indicator == "Gonorrhea New & Old Cases", fips != 27000) |>  #New & Old Cases data gets overwhelmed by state |> 
   dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
     toolTipTextHeader1 = "Year: "
     , toolTipTextValue1 = year
     , toolTipTextHeader2 = "\nLocation: "
     , toolTipTextValue2 = location
     , toolTipTextHeader3 = "\nGonorrhea Cases: "
-    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(valueCount)
+    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(ctValue)
   )
 
 minYr <- unique(min(filtered_data$year))
@@ -599,7 +561,7 @@ maxYr <- unique(max(filtered_data$year))
 filtered_dataTbl <- filtered_data |> 
   dplyr::filter(year == maxYr)  |>
   dplyr::arrange(fips, year) |>
-  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(valueCount)) |>   
+  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(ctValue)) |>   
   dplyr::select(year, location, placeholder) # Ensure fields are ordered as desired.  
 
 
@@ -614,7 +576,7 @@ colList <- list("Year", "Location", "Gonorrhea Cases Count") # Using a list acco
 
 #Define the plot here so it is only wrote once
 p <- gbFun_plotTrendPDF(
-    filtered_data, "year", "valueCount", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    filtered_data, "year", "ctValue", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
     "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
     plotXCaption, "", minYr, maxYr, scaleYContinuous,
     gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
@@ -675,20 +637,21 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-syphilis}
 ```{r}
+#| label: f_stiHIVSyphilis
 #| warning: false
 #| include: false
 
 # Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
 filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "Syphilis Count", fips != 27000) |>  #Count data gets overwhelmed by state |> 
+  dplyr::filter(indicator == "Syphilis New & Old Cases", fips != 27000) |>  #New & Old Cases data gets overwhelmed by state |> 
   dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
     toolTipTextHeader1 = "Year: "
     , toolTipTextValue1 = year
     , toolTipTextHeader2 = "\nLocation: "
     , toolTipTextValue2 = location
     , toolTipTextHeader3 = "\nSyphilis Cases: "
-    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(valueCount)
+    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(ctValue)
   )
 
 minYr <- unique(min(filtered_data$year))
@@ -698,7 +661,7 @@ maxYr <- unique(max(filtered_data$year))
 filtered_dataTbl <- filtered_data |> 
   dplyr::filter(year == maxYr)  |>
   dplyr::arrange(fips, year) |>
-  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(valueCount)) |>   
+  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(ctValue)) |>   
   dplyr::select(year, location, placeholder) # Ensure fields are ordered as desired.  
 
 
@@ -713,7 +676,7 @@ colList <- list("Year", "Location", "Syphilis Cases Count") # Using a list accom
 
 #Define the plot here so it is only wrote once
 p <- gbFun_plotTrendPDF(
-    filtered_data, "year", "valueCount", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    filtered_data, "year", "ctValue", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
     "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
     plotXCaption, "", minYr, maxYr, scaleYContinuous,
     gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
@@ -774,20 +737,21 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-HIVAidsPrevalence}
 ```{r}
+#| label: f_stiHIVHivAidsPrevalence
 #| warning: false
 #| include: false
 
 # Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
 filtered_data <- f_stiHIV |> 
-  dplyr::filter(indicator == "HIV & Aids Prevalence", fips != 27000) |>  #Count data gets overwhelmed by state |> 
+  dplyr::filter(indicator == "HIV & Aids New & Old Cases", fips != 27000) |>  #New & Old Cases data gets overwhelmed by state |> 
   dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
     toolTipTextHeader1 = "Year: "
     , toolTipTextValue1 = year
     , toolTipTextHeader2 = "\nLocation: "
     , toolTipTextValue2 = location
-    , toolTipTextHeader3 = "\nPrevalence: "
-    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(valueCount)
+    , toolTipTextHeader3 = "\nHIV & Aids Cases: "
+    , toolTipTextValue3 = scales::label_comma(accuracy = .01)(ctValue)
   )
 
 minYr <- unique(min(filtered_data$year))
@@ -797,22 +761,22 @@ maxYr <- unique(max(filtered_data$year))
 filtered_dataTbl <- filtered_data |> 
   dplyr::filter(year == maxYr)  |>
   dplyr::arrange(fips, year) |>
-  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(valueCount)) |>   
+  dplyr::mutate(placeholder = scales::label_comma(accuracy = .01)(ctValue)) |>   
   dplyr::select(year, location, placeholder) # Ensure fields are ordered as desired.  
 
 
-figCap_plotTitle <- "HIV & Aids Prevalence"
+figCap_plotTitle <- "HIV & Aids Cases"
 figSubcap <- "Data Source: @mdhStiStatistics"
 plotXCaption <- paste("Data Source:", mdhStiStatistics) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
 
 # Plot
 scaleYContinuous = scales::label_comma()  # Format y-axis values with geography
 #Table
-colList <- list("Year", "Location", "Prevalence") # Using a list accommodates tables with different column lengths.
+colList <- list("Year", "Location", "HIV & Aids Cases Count") # Using a list accommodates tables with different column lengths.
 
 #Define the plot here so it is only wrote once
 p <- gbFun_plotTrendPDF(
-    filtered_data, "year", "valueCount", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
+    filtered_data, "year", "ctValue", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
     "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", figCap_plotTitle,
     plotXCaption, "", minYr, maxYr, scaleYContinuous,
     gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
@@ -873,19 +837,17 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Asthma
 
-Asthma is a chronic disease of the airways that makes breathing difficult. Asthma causes inflammation or swelling, and a narrowing of the airways making it more difficult to breathe. Irritated cells in the airways make more mucus than usual narrowing the tiny airways. Mucus is a normally a protective, sticky liquid that helps shield your lungs from irritants like dust, bacteria and smoke.
+Asthma is a chronic disease that causes inflammation and narrowing of the airways, making breathing difficult. During an asthma attack, the airway lining swells, muscles tighten, and thick mucus clogs the airways. Asthma can affect people of all ages but often starts in childhood. With people spending up to 90% of their time indoors, the home environment is crucial for reducing asthma triggers. Common indoor triggers include pet dander, mold, pests, scented cleaning products, and secondhand smoke [@mdhAsthma]. All Quin counties had a lower age-adjusted asthma emergency visit prevalence per 10,000 residents for 2019-2021 compared to Minnesota, with Roseau County being the closest at 26.7.
 
-During normal breathing, air flows freely in and out of the lungs. However, during an asthma attack or episode, swelling of the airway's lining increases, muscles surrounding the airways tighten, and thick mucus clogs the tiny airways making it difficult to breathe. Asthma affects people of all ages and while it can start in adulthood, it most often starts during childhood.
-
-Children, teens, and adults now spend up to 90% of their time indoors, and at least 50% of that time is spent in their home. Because of the large amount of time spent indoors, the home environment is an important focus for reducing exposures to triggers of asthma. Triggers of asthma found in the home include allergens such as pet dander, mold, or pests as well as irritants such as scented cleaning products and second hand smoke. @mdhAsthma
-
-| Location  | Age-Adjusted |
-|-----------|--------------|
-| Minnesota | 29.8         |
-| Polk      | 21.3         |
-| Norman    | 14.0         |
-| Mahnonmen | 42.6         |
+| Location   | Age-Adjusted |
+|------------|--------------|
+| Minnesota  | 29.8         |
+| Kittson    | 8.2\*        |
+| Marshall   | 23.4         |
+| Pennington | 18.4         |
+| Red Lake   | 21.7         |
+| Roseau     | 26.7         |
 
 : Asthma ED Visit Age-Adjusted Rates for 2019-2021 by County (per 10,000 Residents)
 
-@mdhPHDAPAsthma
+-   Unstable Rate Data Source: @mdhPHDAPAsthma

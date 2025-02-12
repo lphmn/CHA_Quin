@@ -1,197 +1,295 @@
-fips,location,valueCount,indicator,year
-27087,Mahnomen,38,Chlamydia Count,2017
-27087,Mahnomen,42,Chlamydia Count,2018
-27087,Mahnomen,32,Chlamydia Count,2019
-27087,Mahnomen,22,Chlamydia Count,2020
-27087,Mahnomen,21,Chlamydia Count,2021
-27087,Mahnomen,23,Chlamydia Count,2022
-27087,Mahnomen,31,Chlamydia Count,2023
-27000,Minnesota,23528,Chlamydia Count,2017
-27000,Minnesota,23564,Chlamydia Count,2018
-27000,Minnesota,24535,Chlamydia Count,2019
-27000,Minnesota,21942,Chlamydia Count,2020
-27000,Minnesota,22578,Chlamydia Count,2021
-27000,Minnesota,22079,Chlamydia Count,2022
-27000,Minnesota,21767,Chlamydia Count,2023
-27107,Norman,12,Chlamydia Count,2017
-27107,Norman,4,Chlamydia Count,2018
-27107,Norman,12,Chlamydia Count,2019
-27107,Norman,16,Chlamydia Count,2020
-27107,Norman,14,Chlamydia Count,2021
-27107,Norman,14,Chlamydia Count,2022
-27107,Norman,13,Chlamydia Count,2023
-27119,Polk,60,Chlamydia Count,2017
-27119,Polk,70,Chlamydia Count,2018
-27119,Polk,67,Chlamydia Count,2019
-27119,Polk,54,Chlamydia Count,2020
-27119,Polk,59,Chlamydia Count,2021
-27119,Polk,61,Chlamydia Count,2022
-27119,Polk,87,Chlamydia Count,2023
-27087,Mahnomen,20,Gonorrhea Count,2017
-27087,Mahnomen,17,Gonorrhea Count,2018
-27087,Mahnomen,19,Gonorrhea Count,2019
-27087,Mahnomen,10,Gonorrhea Count,2020
-27087,Mahnomen,10,Gonorrhea Count,2021
-27087,Mahnomen,8,Gonorrhea Count,2022
-27087,Mahnomen,2,Gonorrhea Count,2023
-27000,Minnesota,6519,Gonorrhea Count,2017
-27000,Minnesota,7542,Gonorrhea Count,2018
-27000,Minnesota,8063,Gonorrhea Count,2019
-27000,Minnesota,10217,Gonorrhea Count,2020
-27000,Minnesota,9671,Gonorrhea Count,2021
-27000,Minnesota,8161,Gonorrhea Count,2022
-27000,Minnesota,7717,Gonorrhea Count,2023
-27107,Norman,0,Gonorrhea Count,2017
-27107,Norman,0,Gonorrhea Count,2018
-27107,Norman,1,Gonorrhea Count,2019
-27107,Norman,6,Gonorrhea Count,2020
-27107,Norman,3,Gonorrhea Count,2021
-27107,Norman,3,Gonorrhea Count,2022
-27107,Norman,1,Gonorrhea Count,2023
-27119,Polk,4,Gonorrhea Count,2017
-27119,Polk,17,Gonorrhea Count,2018
-27119,Polk,22,Gonorrhea Count,2019
-27119,Polk,18,Gonorrhea Count,2020
-27119,Polk,21,Gonorrhea Count,2021
-27119,Polk,21,Gonorrhea Count,2022
-27119,Polk,14,Gonorrhea Count,2023
-27087,Mahnomen,NA,Syphilis Count,2017
-27087,Mahnomen,NA,Syphilis Count,2018
-27087,Mahnomen,2,Syphilis Count,2019
-27087,Mahnomen,6,Syphilis Count,2020
-27087,Mahnomen,10,Syphilis Count,2021
-27087,Mahnomen,9,Syphilis Count,2022
-27087,Mahnomen,12,Syphilis Count,2023
-27000,Minnesota,NA,Syphilis Count,2017
-27000,Minnesota,NA,Syphilis Count,2018
-27000,Minnesota,1105,Syphilis Count,2019
-27000,Minnesota,1088,Syphilis Count,2020
-27000,Minnesota,1447,Syphilis Count,2021
-27000,Minnesota,1859,Syphilis Count,2022
-27000,Minnesota,1723,Syphilis Count,2023
-27107,Norman,NA,Syphilis Count,2017
-27107,Norman,NA,Syphilis Count,2018
-27107,Norman,0,Syphilis Count,2019
-27107,Norman,0,Syphilis Count,2020
-27107,Norman,1,Syphilis Count,2021
-27107,Norman,0,Syphilis Count,2022
-27107,Norman,0,Syphilis Count,2023
-27119,Polk,NA,Syphilis Count,2017
-27119,Polk,NA,Syphilis Count,2018
-27119,Polk,2,Syphilis Count,2019
-27119,Polk,2,Syphilis Count,2020
-27119,Polk,1,Syphilis Count,2021
-27119,Polk,5,Syphilis Count,2022
-27119,Polk,2,Syphilis Count,2023
-27087,Mahnomen,0,HIV Incidence,2017
-27087,Mahnomen,0,HIV Incidence,2018
-27087,Mahnomen,1,HIV Incidence,2019
-27087,Mahnomen,1,HIV Incidence,2020
-27087,Mahnomen,0,HIV Incidence,2021
-27087,Mahnomen,0,HIV Incidence,2022
-27087,Mahnomen,1,HIV Incidence,2023
-27000,Minnesota,284,HIV Incidence,2017
-27000,Minnesota,286,HIV Incidence,2018
-27000,Minnesota,275,HIV Incidence,2019
-27000,Minnesota,226,HIV Incidence,2020
-27000,Minnesota,298,HIV Incidence,2021
-27000,Minnesota,262,HIV Incidence,2022
-27000,Minnesota,324,HIV Incidence,2023
-27107,Norman,0,HIV Incidence,2017
-27107,Norman,1,HIV Incidence,2018
-27107,Norman,0,HIV Incidence,2019
-27107,Norman,0,HIV Incidence,2020
-27107,Norman,0,HIV Incidence,2021
-27107,Norman,0,HIV Incidence,2022
-27107,Norman,0,HIV Incidence,2023
-27119,Polk,3,HIV Incidence,2017
-27119,Polk,0,HIV Incidence,2018
-27119,Polk,1,HIV Incidence,2019
-27119,Polk,0,HIV Incidence,2020
-27119,Polk,1,HIV Incidence,2021
-27119,Polk,1,HIV Incidence,2022
-27119,Polk,1,HIV Incidence,2023
-27087,Mahnomen,0,HIV Non Aids Prevalence,2017
-27087,Mahnomen,0,HIV Non Aids Prevalence,2018
-27087,Mahnomen,1,HIV Non Aids Prevalence,2019
-27087,Mahnomen,1,HIV Non Aids Prevalence,2020
-27087,Mahnomen,1,HIV Non Aids Prevalence,2021
-27087,Mahnomen,1,HIV Non Aids Prevalence,2022
-27087,Mahnomen,1,HIV Non Aids Prevalence,2023
-27000,Minnesota,4751,HIV Non Aids Prevalence,2017
-27000,Minnesota,4937,HIV Non Aids Prevalence,2018
-27000,Minnesota,5094,HIV Non Aids Prevalence,2019
-27000,Minnesota,5247,HIV Non Aids Prevalence,2020
-27000,Minnesota,5475,HIV Non Aids Prevalence,2021
-27000,Minnesota,5615,HIV Non Aids Prevalence,2022
-27000,Minnesota,5767,HIV Non Aids Prevalence,2023
-27107,Norman,2,HIV Non Aids Prevalence,2017
-27107,Norman,3,HIV Non Aids Prevalence,2018
-27107,Norman,1,HIV Non Aids Prevalence,2019
-27107,Norman,1,HIV Non Aids Prevalence,2020
-27107,Norman,2,HIV Non Aids Prevalence,2021
-27107,Norman,5,HIV Non Aids Prevalence,2022
-27107,Norman,5,HIV Non Aids Prevalence,2023
-27119,Polk,8,HIV Non Aids Prevalence,2017
-27119,Polk,9,HIV Non Aids Prevalence,2018
-27119,Polk,10,HIV Non Aids Prevalence,2019
-27119,Polk,9,HIV Non Aids Prevalence,2020
-27119,Polk,11,HIV Non Aids Prevalence,2021
-27119,Polk,15,HIV Non Aids Prevalence,2022
-27119,Polk,19,HIV Non Aids Prevalence,2023
-27087,Mahnomen,0,Aids Prevalence,2017
-27087,Mahnomen,0,Aids Prevalence,2018
-27087,Mahnomen,0,Aids Prevalence,2019
-27087,Mahnomen,0,Aids Prevalence,2020
-27087,Mahnomen,0,Aids Prevalence,2021
-27087,Mahnomen,0,Aids Prevalence,2022
-27087,Mahnomen,1,Aids Prevalence,2023
-27000,Minnesota,4738,Aids Prevalence,2017
-27000,Minnesota,4044,Aids Prevalence,2018
-27000,Minnesota,4099,Aids Prevalence,2019
-27000,Minnesota,4175,Aids Prevalence,2020
-27000,Minnesota,4221,Aids Prevalence,2021
-27000,Minnesota,4190,Aids Prevalence,2022
-27000,Minnesota,4229,Aids Prevalence,2023
-27107,Norman,0,Aids Prevalence,2017
-27107,Norman,0,Aids Prevalence,2018
-27107,Norman,1,Aids Prevalence,2019
-27107,Norman,1,Aids Prevalence,2020
-27107,Norman,1,Aids Prevalence,2021
-27107,Norman,1,Aids Prevalence,2022
-27107,Norman,1,Aids Prevalence,2023
-27119,Polk,11,Aids Prevalence,2017
-27119,Polk,10,Aids Prevalence,2018
-27119,Polk,12,Aids Prevalence,2019
-27119,Polk,10,Aids Prevalence,2020
-27119,Polk,11,Aids Prevalence,2021
-27119,Polk,10,Aids Prevalence,2022
-27119,Polk,11,Aids Prevalence,2023
-27087,Mahnomen,0,HIV & Aids Prevalence,2017
-27087,Mahnomen,0,HIV & Aids Prevalence,2018
-27087,Mahnomen,1,HIV & Aids Prevalence,2019
-27087,Mahnomen,1,HIV & Aids Prevalence,2020
-27087,Mahnomen,1,HIV & Aids Prevalence,2021
-27087,Mahnomen,1,HIV & Aids Prevalence,2022
-27087,Mahnomen,2,HIV & Aids Prevalence,2023
-27000,Minnesota,9489,HIV & Aids Prevalence,2017
-27000,Minnesota,8981,HIV & Aids Prevalence,2018
-27000,Minnesota,9193,HIV & Aids Prevalence,2019
-27000,Minnesota,9422,HIV & Aids Prevalence,2020
-27000,Minnesota,9696,HIV & Aids Prevalence,2021
-27000,Minnesota,9805,HIV & Aids Prevalence,2022
-27000,Minnesota,9996,HIV & Aids Prevalence,2023
-27107,Norman,2,HIV & Aids Prevalence,2017
-27107,Norman,3,HIV & Aids Prevalence,2018
-27107,Norman,2,HIV & Aids Prevalence,2019
-27107,Norman,2,HIV & Aids Prevalence,2020
-27107,Norman,3,HIV & Aids Prevalence,2021
-27107,Norman,6,HIV & Aids Prevalence,2022
-27107,Norman,6,HIV & Aids Prevalence,2023
-27119,Polk,19,HIV & Aids Prevalence,2017
-27119,Polk,19,HIV & Aids Prevalence,2018
-27119,Polk,22,HIV & Aids Prevalence,2019
-27119,Polk,19,HIV & Aids Prevalence,2020
-27119,Polk,22,HIV & Aids Prevalence,2021
-27119,Polk,25,HIV & Aids Prevalence,2022
-27119,Polk,30,HIV & Aids Prevalence,2023
+fips,location,ctValue,indicator,year
+27000,Minnesota,23528,Chlamydia New & Old Cases,2017
+27000,Minnesota,23564,Chlamydia New & Old Cases,2018
+27000,Minnesota,24535,Chlamydia New & Old Cases,2019
+27000,Minnesota,21942,Chlamydia New & Old Cases,2020
+27000,Minnesota,22578,Chlamydia New & Old Cases,2021
+27000,Minnesota,22079,Chlamydia New & Old Cases,2022
+27000,Minnesota,21767,Chlamydia New & Old Cases,2023
+27000,Minnesota,6519,Gonorrhea New & Old Cases,2017
+27000,Minnesota,7542,Gonorrhea New & Old Cases,2018
+27000,Minnesota,8063,Gonorrhea New & Old Cases,2019
+27000,Minnesota,10217,Gonorrhea New & Old Cases,2020
+27000,Minnesota,9671,Gonorrhea New & Old Cases,2021
+27000,Minnesota,8161,Gonorrhea New & Old Cases,2022
+27000,Minnesota,7717,Gonorrhea New & Old Cases,2023
+27000,Minnesota,NA,Syphilis New & Old Cases,2017
+27000,Minnesota,NA,Syphilis New & Old Cases,2018
+27000,Minnesota,1105,Syphilis New & Old Cases,2019
+27000,Minnesota,1088,Syphilis New & Old Cases,2020
+27000,Minnesota,1447,Syphilis New & Old Cases,2021
+27000,Minnesota,1859,Syphilis New & Old Cases,2022
+27000,Minnesota,1723,Syphilis New & Old Cases,2023
+27000,Minnesota,284,HIV New Cases,2017
+27000,Minnesota,286,HIV New Cases,2018
+27000,Minnesota,275,HIV New Cases,2019
+27000,Minnesota,226,HIV New Cases,2020
+27000,Minnesota,298,HIV New Cases,2021
+27000,Minnesota,262,HIV New Cases,2022
+27000,Minnesota,324,HIV New Cases,2023
+27000,Minnesota,4751,HIV Non Aids New & Old Cases,2017
+27000,Minnesota,4937,HIV Non Aids New & Old Cases,2018
+27000,Minnesota,5094,HIV Non Aids New & Old Cases,2019
+27000,Minnesota,5247,HIV Non Aids New & Old Cases,2020
+27000,Minnesota,5475,HIV Non Aids New & Old Cases,2021
+27000,Minnesota,5615,HIV Non Aids New & Old Cases,2022
+27000,Minnesota,5767,HIV Non Aids New & Old Cases,2023
+27000,Minnesota,4738,Aids New & Old Cases,2017
+27000,Minnesota,4044,Aids New & Old Cases,2018
+27000,Minnesota,4099,Aids New & Old Cases,2019
+27000,Minnesota,4175,Aids New & Old Cases,2020
+27000,Minnesota,4221,Aids New & Old Cases,2021
+27000,Minnesota,4190,Aids New & Old Cases,2022
+27000,Minnesota,4229,Aids New & Old Cases,2023
+27000,Minnesota,9489,HIV & Aids New & Old Cases,2017
+27000,Minnesota,8981,HIV & Aids New & Old Cases,2018
+27000,Minnesota,9193,HIV & Aids New & Old Cases,2019
+27000,Minnesota,9422,HIV & Aids New & Old Cases,2020
+27000,Minnesota,9696,HIV & Aids New & Old Cases,2021
+27000,Minnesota,9805,HIV & Aids New & Old Cases,2022
+27000,Minnesota,9996,HIV & Aids New & Old Cases,2023
+27069,Kittson,7,Chlamydia New & Old Cases,2017
+27069,Kittson,7,Chlamydia New & Old Cases,2018
+27069,Kittson,4,Chlamydia New & Old Cases,2019
+27069,Kittson,8,Chlamydia New & Old Cases,2020
+27069,Kittson,2,Chlamydia New & Old Cases,2021
+27069,Kittson,4,Chlamydia New & Old Cases,2022
+27069,Kittson,7,Chlamydia New & Old Cases,2023
+27069,Kittson,0,Gonorrhea New & Old Cases,2017
+27069,Kittson,0,Gonorrhea New & Old Cases,2018
+27069,Kittson,2,Gonorrhea New & Old Cases,2019
+27069,Kittson,1,Gonorrhea New & Old Cases,2020
+27069,Kittson,1,Gonorrhea New & Old Cases,2021
+27069,Kittson,0,Gonorrhea New & Old Cases,2022
+27069,Kittson,0,Gonorrhea New & Old Cases,2023
+27069,Kittson,NA,Syphilis New & Old Cases,2017
+27069,Kittson,NA,Syphilis New & Old Cases,2018
+27069,Kittson,0,Syphilis New & Old Cases,2019
+27069,Kittson,0,Syphilis New & Old Cases,2020
+27069,Kittson,0,Syphilis New & Old Cases,2021
+27069,Kittson,1,Syphilis New & Old Cases,2022
+27069,Kittson,0,Syphilis New & Old Cases,2023
+27069,Kittson,0,HIV New Cases,2017
+27069,Kittson,0,HIV New Cases,2018
+27069,Kittson,0,HIV New Cases,2019
+27069,Kittson,0,HIV New Cases,2020
+27069,Kittson,0,HIV New Cases,2021
+27069,Kittson,0,HIV New Cases,2022
+27069,Kittson,0,HIV New Cases,2023
+27069,Kittson,1,HIV Non Aids New & Old Cases,2017
+27069,Kittson,0,HIV Non Aids New & Old Cases,2018
+27069,Kittson,0,HIV Non Aids New & Old Cases,2019
+27069,Kittson,0,HIV Non Aids New & Old Cases,2020
+27069,Kittson,0,HIV Non Aids New & Old Cases,2021
+27069,Kittson,0,HIV Non Aids New & Old Cases,2022
+27069,Kittson,0,HIV Non Aids New & Old Cases,2023
+27069,Kittson,2,Aids New & Old Cases,2017
+27069,Kittson,3,Aids New & Old Cases,2018
+27069,Kittson,3,Aids New & Old Cases,2019
+27069,Kittson,3,Aids New & Old Cases,2020
+27069,Kittson,3,Aids New & Old Cases,2021
+27069,Kittson,2,Aids New & Old Cases,2022
+27069,Kittson,2,Aids New & Old Cases,2023
+27069,Kittson,3,HIV & Aids New & Old Cases,2017
+27069,Kittson,3,HIV & Aids New & Old Cases,2018
+27069,Kittson,3,HIV & Aids New & Old Cases,2019
+27069,Kittson,3,HIV & Aids New & Old Cases,2020
+27069,Kittson,3,HIV & Aids New & Old Cases,2021
+27069,Kittson,2,HIV & Aids New & Old Cases,2022
+27069,Kittson,2,HIV & Aids New & Old Cases,2023
+27089,Marshall,7,Chlamydia New & Old Cases,2017
+27089,Marshall,15,Chlamydia New & Old Cases,2018
+27089,Marshall,11,Chlamydia New & Old Cases,2019
+27089,Marshall,10,Chlamydia New & Old Cases,2020
+27089,Marshall,10,Chlamydia New & Old Cases,2021
+27089,Marshall,14,Chlamydia New & Old Cases,2022
+27089,Marshall,18,Chlamydia New & Old Cases,2023
+27089,Marshall,2,Gonorrhea New & Old Cases,2017
+27089,Marshall,0,Gonorrhea New & Old Cases,2018
+27089,Marshall,5,Gonorrhea New & Old Cases,2019
+27089,Marshall,1,Gonorrhea New & Old Cases,2020
+27089,Marshall,1,Gonorrhea New & Old Cases,2021
+27089,Marshall,2,Gonorrhea New & Old Cases,2022
+27089,Marshall,0,Gonorrhea New & Old Cases,2023
+27089,Marshall,NA,Syphilis New & Old Cases,2017
+27089,Marshall,NA,Syphilis New & Old Cases,2018
+27089,Marshall,2,Syphilis New & Old Cases,2019
+27089,Marshall,2,Syphilis New & Old Cases,2020
+27089,Marshall,0,Syphilis New & Old Cases,2021
+27089,Marshall,1,Syphilis New & Old Cases,2022
+27089,Marshall,1,Syphilis New & Old Cases,2023
+27089,Marshall,1,HIV New Cases,2017
+27089,Marshall,0,HIV New Cases,2018
+27089,Marshall,0,HIV New Cases,2019
+27089,Marshall,0,HIV New Cases,2020
+27089,Marshall,0,HIV New Cases,2021
+27089,Marshall,0,HIV New Cases,2022
+27089,Marshall,0,HIV New Cases,2023
+27089,Marshall,2,HIV Non Aids New & Old Cases,2017
+27089,Marshall,2,HIV Non Aids New & Old Cases,2018
+27089,Marshall,2,HIV Non Aids New & Old Cases,2019
+27089,Marshall,2,HIV Non Aids New & Old Cases,2020
+27089,Marshall,2,HIV Non Aids New & Old Cases,2021
+27089,Marshall,1,HIV Non Aids New & Old Cases,2022
+27089,Marshall,1,HIV Non Aids New & Old Cases,2023
+27089,Marshall,0,Aids New & Old Cases,2017
+27089,Marshall,0,Aids New & Old Cases,2018
+27089,Marshall,0,Aids New & Old Cases,2019
+27089,Marshall,0,Aids New & Old Cases,2020
+27089,Marshall,0,Aids New & Old Cases,2021
+27089,Marshall,0,Aids New & Old Cases,2022
+27089,Marshall,0,Aids New & Old Cases,2023
+27089,Marshall,2,HIV & Aids New & Old Cases,2017
+27089,Marshall,2,HIV & Aids New & Old Cases,2018
+27089,Marshall,2,HIV & Aids New & Old Cases,2019
+27089,Marshall,2,HIV & Aids New & Old Cases,2020
+27089,Marshall,2,HIV & Aids New & Old Cases,2021
+27089,Marshall,1,HIV & Aids New & Old Cases,2022
+27089,Marshall,1,HIV & Aids New & Old Cases,2023
+27113,Pennington,24,Chlamydia New & Old Cases,2017
+27113,Pennington,46,Chlamydia New & Old Cases,2018
+27113,Pennington,46,Chlamydia New & Old Cases,2019
+27113,Pennington,27,Chlamydia New & Old Cases,2020
+27113,Pennington,38,Chlamydia New & Old Cases,2021
+27113,Pennington,30,Chlamydia New & Old Cases,2022
+27113,Pennington,31,Chlamydia New & Old Cases,2023
+27113,Pennington,8,Gonorrhea New & Old Cases,2017
+27113,Pennington,7,Gonorrhea New & Old Cases,2018
+27113,Pennington,1,Gonorrhea New & Old Cases,2019
+27113,Pennington,5,Gonorrhea New & Old Cases,2020
+27113,Pennington,10,Gonorrhea New & Old Cases,2021
+27113,Pennington,10,Gonorrhea New & Old Cases,2022
+27113,Pennington,6,Gonorrhea New & Old Cases,2023
+27113,Pennington,NA,Syphilis New & Old Cases,2017
+27113,Pennington,NA,Syphilis New & Old Cases,2018
+27113,Pennington,5,Syphilis New & Old Cases,2019
+27113,Pennington,0,Syphilis New & Old Cases,2020
+27113,Pennington,0,Syphilis New & Old Cases,2021
+27113,Pennington,3,Syphilis New & Old Cases,2022
+27113,Pennington,2,Syphilis New & Old Cases,2023
+27113,Pennington,0,HIV New Cases,2017
+27113,Pennington,2,HIV New Cases,2018
+27113,Pennington,0,HIV New Cases,2019
+27113,Pennington,0,HIV New Cases,2020
+27113,Pennington,0,HIV New Cases,2021
+27113,Pennington,0,HIV New Cases,2022
+27113,Pennington,0,HIV New Cases,2023
+27113,Pennington,3,HIV Non Aids New & Old Cases,2017
+27113,Pennington,4,HIV Non Aids New & Old Cases,2018
+27113,Pennington,5,HIV Non Aids New & Old Cases,2019
+27113,Pennington,4,HIV Non Aids New & Old Cases,2020
+27113,Pennington,4,HIV Non Aids New & Old Cases,2021
+27113,Pennington,2,HIV Non Aids New & Old Cases,2022
+27113,Pennington,4,HIV Non Aids New & Old Cases,2023
+27113,Pennington,2,Aids New & Old Cases,2017
+27113,Pennington,3,Aids New & Old Cases,2018
+27113,Pennington,4,Aids New & Old Cases,2019
+27113,Pennington,4,Aids New & Old Cases,2020
+27113,Pennington,4,Aids New & Old Cases,2021
+27113,Pennington,4,Aids New & Old Cases,2022
+27113,Pennington,4,Aids New & Old Cases,2023
+27113,Pennington,5,HIV & Aids New & Old Cases,2017
+27113,Pennington,7,HIV & Aids New & Old Cases,2018
+27113,Pennington,9,HIV & Aids New & Old Cases,2019
+27113,Pennington,8,HIV & Aids New & Old Cases,2020
+27113,Pennington,8,HIV & Aids New & Old Cases,2021
+27113,Pennington,6,HIV & Aids New & Old Cases,2022
+27113,Pennington,8,HIV & Aids New & Old Cases,2023
+27125,Red Lake,2,Chlamydia New & Old Cases,2017
+27125,Red Lake,9,Chlamydia New & Old Cases,2018
+27125,Red Lake,9,Chlamydia New & Old Cases,2019
+27125,Red Lake,8,Chlamydia New & Old Cases,2020
+27125,Red Lake,12,Chlamydia New & Old Cases,2021
+27125,Red Lake,15,Chlamydia New & Old Cases,2022
+27125,Red Lake,6,Chlamydia New & Old Cases,2023
+27125,Red Lake,1,Gonorrhea New & Old Cases,2017
+27125,Red Lake,0,Gonorrhea New & Old Cases,2018
+27125,Red Lake,4,Gonorrhea New & Old Cases,2019
+27125,Red Lake,2,Gonorrhea New & Old Cases,2020
+27125,Red Lake,3,Gonorrhea New & Old Cases,2021
+27125,Red Lake,2,Gonorrhea New & Old Cases,2022
+27125,Red Lake,0,Gonorrhea New & Old Cases,2023
+27125,Red Lake,NA,Syphilis New & Old Cases,2017
+27125,Red Lake,NA,Syphilis New & Old Cases,2018
+27125,Red Lake,0,Syphilis New & Old Cases,2019
+27125,Red Lake,4,Syphilis New & Old Cases,2020
+27125,Red Lake,0,Syphilis New & Old Cases,2021
+27125,Red Lake,0,Syphilis New & Old Cases,2022
+27125,Red Lake,2,Syphilis New & Old Cases,2023
+27125,Red Lake,0,HIV New Cases,2017
+27125,Red Lake,1,HIV New Cases,2018
+27125,Red Lake,0,HIV New Cases,2019
+27125,Red Lake,0,HIV New Cases,2020
+27125,Red Lake,0,HIV New Cases,2021
+27125,Red Lake,0,HIV New Cases,2022
+27125,Red Lake,0,HIV New Cases,2023
+27125,Red Lake,0,HIV Non Aids New & Old Cases,2017
+27125,Red Lake,0,HIV Non Aids New & Old Cases,2018
+27125,Red Lake,0,HIV Non Aids New & Old Cases,2019
+27125,Red Lake,0,HIV Non Aids New & Old Cases,2020
+27125,Red Lake,0,HIV Non Aids New & Old Cases,2021
+27125,Red Lake,0,HIV Non Aids New & Old Cases,2022
+27125,Red Lake,1,HIV Non Aids New & Old Cases,2023
+27125,Red Lake,1,Aids New & Old Cases,2017
+27125,Red Lake,2,Aids New & Old Cases,2018
+27125,Red Lake,2,Aids New & Old Cases,2019
+27125,Red Lake,2,Aids New & Old Cases,2020
+27125,Red Lake,2,Aids New & Old Cases,2021
+27125,Red Lake,2,Aids New & Old Cases,2022
+27125,Red Lake,2,Aids New & Old Cases,2023
+27125,Red Lake,1,HIV & Aids New & Old Cases,2017
+27125,Red Lake,2,HIV & Aids New & Old Cases,2018
+27125,Red Lake,2,HIV & Aids New & Old Cases,2019
+27125,Red Lake,2,HIV & Aids New & Old Cases,2020
+27125,Red Lake,2,HIV & Aids New & Old Cases,2021
+27125,Red Lake,2,HIV & Aids New & Old Cases,2022
+27125,Red Lake,3,HIV & Aids New & Old Cases,2023
+27135,Roseau,15,Chlamydia New & Old Cases,2017
+27135,Roseau,17,Chlamydia New & Old Cases,2018
+27135,Roseau,17,Chlamydia New & Old Cases,2019
+27135,Roseau,24,Chlamydia New & Old Cases,2020
+27135,Roseau,16,Chlamydia New & Old Cases,2021
+27135,Roseau,19,Chlamydia New & Old Cases,2022
+27135,Roseau,17,Chlamydia New & Old Cases,2023
+27135,Roseau,3,Gonorrhea New & Old Cases,2017
+27135,Roseau,4,Gonorrhea New & Old Cases,2018
+27135,Roseau,3,Gonorrhea New & Old Cases,2019
+27135,Roseau,5,Gonorrhea New & Old Cases,2020
+27135,Roseau,8,Gonorrhea New & Old Cases,2021
+27135,Roseau,4,Gonorrhea New & Old Cases,2022
+27135,Roseau,2,Gonorrhea New & Old Cases,2023
+27135,Roseau,NA,Syphilis New & Old Cases,2017
+27135,Roseau,NA,Syphilis New & Old Cases,2018
+27135,Roseau,0,Syphilis New & Old Cases,2019
+27135,Roseau,1,Syphilis New & Old Cases,2020
+27135,Roseau,5,Syphilis New & Old Cases,2021
+27135,Roseau,0,Syphilis New & Old Cases,2022
+27135,Roseau,0,Syphilis New & Old Cases,2023
+27135,Roseau,0,HIV New Cases,2017
+27135,Roseau,0,HIV New Cases,2018
+27135,Roseau,0,HIV New Cases,2019
+27135,Roseau,0,HIV New Cases,2020
+27135,Roseau,0,HIV New Cases,2021
+27135,Roseau,0,HIV New Cases,2022
+27135,Roseau,2,HIV New Cases,2023
+27135,Roseau,0,HIV Non Aids New & Old Cases,2017
+27135,Roseau,0,HIV Non Aids New & Old Cases,2018
+27135,Roseau,0,HIV Non Aids New & Old Cases,2019
+27135,Roseau,0,HIV Non Aids New & Old Cases,2020
+27135,Roseau,0,HIV Non Aids New & Old Cases,2021
+27135,Roseau,0,HIV Non Aids New & Old Cases,2022
+27135,Roseau,2,HIV Non Aids New & Old Cases,2023
+27135,Roseau,0,Aids New & Old Cases,2017
+27135,Roseau,0,Aids New & Old Cases,2018
+27135,Roseau,0,Aids New & Old Cases,2019
+27135,Roseau,0,Aids New & Old Cases,2020
+27135,Roseau,1,Aids New & Old Cases,2021
+27135,Roseau,1,Aids New & Old Cases,2022
+27135,Roseau,2,Aids New & Old Cases,2023
+27135,Roseau,0,HIV & Aids New & Old Cases,2017
+27135,Roseau,0,HIV & Aids New & Old Cases,2018
+27135,Roseau,0,HIV & Aids New & Old Cases,2019
+27135,Roseau,0,HIV & Aids New & Old Cases,2020
+27135,Roseau,1,HIV & Aids New & Old Cases,2021
+27135,Roseau,1,HIV & Aids New & Old Cases,2022
+27135,Roseau,4,HIV & Aids New & Old Cases,2023

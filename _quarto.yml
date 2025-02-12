@@ -4,13 +4,13 @@ project:
 
 
 book:
-  title: "2022-2024 Community Health Assessment"
-  subtitle: "Polk-Norman-Mahnomen Community Health Services" #Only used for HTML output Subtitle PDF defined in in before-body.tex
+  title: "2023-2025 Community Health Assessment Preliminary"
+  subtitle: "Quin County Community Health Services" #Only used for HTML output Subtitle PDF defined in in before-body.tex
   date: last-modified
   downloads: [pdf]
   search: TRUE
   sidebar:
-    logo: "pages/Attachments/logo_PNM.png"
+    logo: "pages/Attachments/logo_Quin.png"
   chapters:
     - index.qmd
     - pages/010_understandingCHA.qmd
@@ -24,7 +24,7 @@ book:
     - pages/090_environmentalHealth.qmd
     - pages/900_references.qmd
     - pages/901_missionStatement.qmd
-    
+
 bibliography: references.bib
 
 format:
@@ -60,8 +60,10 @@ format:
     #keep-tex: TRUE
     
   html:
-    # subtitle: "Polk-Norman-Mahnomen Community Health Services" If uncommented here it will display on every page
+    # subtitle: "Quin County Community Health Services" If uncommented here it will display on every page
     theme: cosmo
+    toc: true
+    toc-depth: 3
     # title-block-banner: "#00295D"
     # title-block-banner-color: "#A9B849"
     # title-block-style: plain
@@ -79,4 +81,7 @@ toc-title: "Table of Contents"
 
 editor: visual
 
-# Thank you mcanouil for your great online feedback for subcaptions and captions design was based on this dicussion https://github.com/quarto-dev/quarto-cli/discussions/7308  
+# Thank you mcanouil for your great online feedback for subcaptions and captions design was based on this dicussion https://github.com/quarto-dev/quarto-cli/discussions/7308
+# Thank you Cameron Patrick for your great tutorial on customizing Quarto Title pages https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/#title-page
+# Thank you nmfs-opensci for explaining how to comment in Pandoc and Latex. My .tex files had lines that I thought I commented out but were running and its because I required both syntaxs to create a comment https://nmfs-opensci.github.io/quarto_titlepages_v1/05-pandoc-templates.html
+# THank you to the developer's who converted this to english https://komascript.de/%7Emkohm/scrguide-en.pdf

@@ -1,5 +1,6 @@
 
 
+
 # Naming convention -------------------------------------------------------
 
 # gb is short for global
@@ -10,9 +11,11 @@
 
 # Defined color scheme so it can be used for entire report
 gbVal_colorScheme <- c(
-  #Dark2 scheme Required for metrics that have more than 12 options
-  "#00295D", "#A9B849", "#D8C6A9", "#24ACE4", "#231f20",  "#831532",  
+  # P-N-M
+  # "#00295D", "#A9B849", "#D8C6A9", "#24ACE4", "#231f20",  "#831532",  
   
+  
+  #Dark2 scheme Required for metrics that have more than 12 options
   "#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#e6ab02",
   "#a6761d", 
   
@@ -38,11 +41,29 @@ gbVal_shapeScheme <- c(
   , 21 #Circle with a border (can be filled with a color)
   , 23 # Diamond with a border (can be filled with a color)
   , 24 #Triangle with a border (can be filled with a color)
+  , 26 # Filled star
+  , 0 # Square
+  , 1 # Circle
+  , 2 # Triangle
+  , 3 # Plus
+  , 4 # Cross
+  , 5 # Diamond
+  , 6 # Inverted triangle
+  , 7 # Square cross
+  , 8 # Star
+  , 9 # Diamond plus
+  , 10 # Circle plus
+  , 11 # Triangles up-down
+  , 12 # Square plus
+  , 13 # Circle cross
+  , 14 # Square triangle
+  , 15 # Filled square
+  
 )
 
-gbVal_chbExpLbl <- "Polk-Norman-Mahnomen Community Health Services (CHS)" # More detailed label
-gbVal_chbExpNoParLbl <- "Polk-Norman-Mahnomen Community Health Services" # Used in subtitle for ggplot function
-gbVal_chbAbbrLbl <- "Polk-Norman-Mahnomen CHS" # Less detailed label
+gbVal_chbExpLbl <- "Quin County Community Health Services (CHS)" # More detailed label
+gbVal_chbExpNoParLbl <- "Quin County Community Health Services" # Used in subtitle for ggplot function
+gbVal_chbAbbrLbl <- "Quin County CHS" # Less detailed label
 
 # This is where I define what county(ies) are the drivers for this CHA process
 # It is based off the MN County FIPS code
@@ -53,9 +74,11 @@ gbVal = c(
   9 # Defined by Patrick Olson for this report this is for US totals 
   , 99 #Defined by Patrick Olson for this report this is for State totals
   , 999 #Defined by Patrick Olson this is for CHB totals
-  , 27087  #Mahnomen
-  , 27107  #Norman
-  , 27119   #Polk
+  , 27069	# Kittson
+  , 27089	# Marshall
+  , 27113	# Pennington
+  , 27125	# Red Lake
+  , 27135	# Roseau
 )
 
 
@@ -315,9 +338,10 @@ gbFun_tableHTML <- function(par_data, par_colList, par_DownloadCaption) {
           text = 'Download Table',
           filename = par_DownloadCaption
         )
-      ),
+      )
+      , pageLength = -1  # Show all rows
       #Makes header lighgrey and centers header elements
-      headerCallback = DT::JS(
+      , headerCallback = DT::JS(
         "function(thead, data, start, end, display){",
         "  $(thead).find('th').css({ 'text-align': 'center', 'background-color': 'lightgrey' });",
         "}"

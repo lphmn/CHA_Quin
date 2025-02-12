@@ -15,50 +15,14 @@ if (file.exists("pages/Global/gb.R")) {
 }
 ```
 
-## Polk-Norman-Mahnomen Community Health Survey (2022)
+## Preliminary
 
-`{r} gbVal_chbExpLbl` conducted a survey consisting of questions related to general, mental, oral health, access to health care, impact of COVID-19 on health and quality of life, substance use and community wellbeing. The survey was completed by 855 adult individuals. Out of the 855 survey responses, 821 were included in the analysis as the remaining 34 respondents were not from the PNM region. Please see the summary below.
-
--   "Poor" health status was primarily reported by White and Black or African American population.
--   About 26% of people experienced delay in seeking professional help for mental health during the pandemic and this was mainly because the mental health care was expensive, or they did not think that the problem was serious enough.
--   Most reported reason for delay in obtaining oral health care were expense, unable to get an appointment and lack of insurance coverage.
--   47% of survey respondents consume alcohol, tobacco, or illegal drugs. Stress (16%) and boredom (13%) are the primary reason for the increase in substance use since March 2020.
--   Majority of respondents received health information from social media, family, friends, health officials or county media website and television news. However, about 37.63% doubted whether the source was trustworthy. 19% of people also had issue with understanding medical terms and about 12% did not know where to find health information.
--   People with an annual income less than \$20,000 and between \$35,000-\$49,999 mainly reported worsening of financial situation.
--   About 8% of survey respondents faced transportation issues and they reported to be from 25-44 years of age.
-
-::: {.content-visible when-format="html"}
-![](Attachments/localInput/surveyExeSummary.png)
-:::
-
-::: {.content-visible when-format="pdf"}
-![](Attachments/localInput/surveyExeSummary.png){fig-align="center" width="174"}
-:::
-
-## Community Heath Needs Assessment & Community Needs Assessments Partner Inventory (2024)
-
-This is an accumulation of most recent Community Health Needs Assessments (healthcare partners) and Community Needs Assessments (Community Action agencies) of our partners. It is not intended to be all encompassing; partners continue to have current and emerging priorities in response to the needs of community.
-
-::: {.content-visible when-format="html"}
-![](Attachments/localInput/cHNACNAPartnerInventory.png)
-:::
-
-::: {.content-visible when-format="pdf"}
-![](Attachments/localInput/cHNACNAPartnerInventory.png){fig-align="center" width="300"}
-:::
-
-## Polk-Norman-Mahnomen (CHS) Risk Assessment (2024)
-
-The Polk-Norman-Mahnomen (PNM) Public Health Risk Assessment (2024) was conducted to identify and prioritize the most significant public health threats facing Polk, Norman, and Mahnomen Counties. The purpose of this assessment is to guide health and emergency response efforts, ensuring communities are better prepared for future hazards. The assessment combined quantitative data from a variety of sources, with qualitative insights gathered from stakeholder surveys and facilitated discussions. This dual approach ensures that both data and frontline perspectives inform public health strategies to strengthen resilience. Partners - The assessment was made possible through the collaboration of key stakeholders, including healthcare providers, long-term care facilities, behavioral health organizations, county and city emergency services, and emergency managers. Their expertise provided critical insights into the diverse challenges impacting the region.
-
-Top 5 Public Health Hazards - Based on the survey results and facilitated discussions, the top five public health threats identified for Polk, Norman, and Mahnomen Counties are:
-
-1.  Critical Healthcare Staff Shortage -- This hazard poses a significant challenge to the availability and delivery of healthcare services, especially in rural areas.
-2.  Behavioral Health Crisis (including Anxiety and Depression) -- Rising rates of mental health issues require expanded resources to meet increasing demand.
-3.  Substance Abuse -- Opioid and alcohol misuse continues to be a critical concern, with gaps in current resources and treatment options.
-4.  Ice Storm/Blizzard (including Extreme Cold) -- Severe winter weather presents ongoing risks to infrastructure, transportation, and public safety.
-5.  Cyber Threats -- Increasing cyberattacks on healthcare and public systems demand stronger cybersecurity measures to protect critical infrastructure.
+Quin County Community Health Services is gearing up to start our community health assessment for 2025. As we focus on our internal priorities, we have decided to share the data we've gathered from publicly available sources. This document will be updated with new information as it becomes available throughout the upcoming year.
 
 ## Minnesota Student Survey
 
-The Minnesota Student Survey (MSS) is an important source of information about the health, wellbeing, safety, and academic success of Minnesota's youth. The anonymous and confidential statewide school-based survey is administered every three years to students in grades 5, 8, 9 and 11. The survey includes questions about a wide variety of youth behaviors, including risk behaviors such as physical activity, nutrition, alcohol, tobacco and other drug use, mental health, school safety, relationships and sexual activity, as well as positive behaviors and connection to family, school and community. Most Minnesota school districts actively participate in the MSS. While some schools or certain grades in Polk, Norman, and Mahnomen Counties were not involved in the 2022 MSS, many others contributed to its success. We encourage and invite all schools in Polk, Norman, and Mahnomen Counties to participate in the upcoming 2025 MSS. The survey results help bring the voices of young people into decisions about policy, programming, and services for our students.
+The Minnesota Student Survey (MSS) is a vital tool for gathering insights into the health, well-being, safety, and academic success of Minnesota's youth. Conducted every three years, this anonymous and confidential survey targets students in grades 5, 8, 9, and 11 across the state. It covers a broad range of topics, including physical activity, nutrition, substance use, mental health, school safety, relationships, sexual activity, and positive behaviors, as well as connections to family, school, and community.
+
+Most school districts in Minnesota participate in the MSS. Although there was a drop in participation statewide in 2022 and some schools or specific grades in Kittson, Marshall, Pennington, Red Lake, and Roseau Counties did not take part in the 2022 survey. We strongly encourage all schools in these counties to join the upcoming 2025 MSS.
+
+The results of the MSS are crucial for incorporating the perspectives of young people into policy-making, program development, and service provision for students. Your participation helps ensure that the voices of our youth are heard and considered in decisions that affect their lives.

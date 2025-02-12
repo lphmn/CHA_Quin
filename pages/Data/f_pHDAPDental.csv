@@ -1,37 +1,55 @@
-"fips","geography","year","age","programGroup","enrolleesNumber","enrolleesPercent","dentalServiceNumber","dentalServicePercent","ci"
-27087,"Mahnomen",2012,"All age groups combined","All Programs",2592,"n/a",935,0.361,"(34.2-37.9)"
-27087,"Mahnomen",2013,"All age groups combined","All Programs",2668,"n/a",912,0.342,"(32.4-36.0)"
-27087,"Mahnomen",2014,"All age groups combined","All Programs",2666,"n/a",902,0.338,"(31.7-36.0)"
-27087,"Mahnomen",2015,"All age groups combined","All Programs",2810,"n/a",937,0.333,"(31.6-35.1)"
-27087,"Mahnomen",2016,"All age groups combined","All Programs",2964,"n/a",874,0.295,"(27.8-31.1)"
-27087,"Mahnomen",2017,"All age groups combined","All Programs",2967,"n/a",973,0.328,"(30.6-35.0)"
-27087,"Mahnomen",2018,"All age groups combined","All Programs",2996,"n/a",1028,0.343,"(32.6-36.0)"
-27087,"Mahnomen",2019,"All age groups combined","All Programs",3046,"n/a",1012,0.332,"(31.6-34.9)"
-27087,"Mahnomen",2020,"All age groups combined","All Programs",2894,"n/a",889,0.307,"(29.0-30.7)"
-27107,"Norman",2012,"All age groups combined","All Programs",1870,"n/a",613,0.328,"(30.7-34.9)"
-27107,"Norman",2013,"All age groups combined","All Programs",1897,"n/a",627,0.331,"(30.9-35.2)"
-27107,"Norman",2014,"All age groups combined","All Programs",1982,"n/a",603,0.304,"(28.3-32.5)"
-27107,"Norman",2015,"All age groups combined","All Programs",2223,"n/a",649,0.292,"(27.3-31.1)"
-27107,"Norman",2016,"All age groups combined","All Programs",2299,"n/a",658,0.286,"(26.8-30.5)"
-27107,"Norman",2017,"All age groups combined","All Programs",2320,"n/a",707,0.305,"(28.4-32.6)"
-27107,"Norman",2018,"All age groups combined","All Programs",2228,"n/a",763,0.342,"(32.3-36.2)"
-27107,"Norman",2019,"All age groups combined","All Programs",2142,"n/a",780,0.364,"(34.4-38.5)"
-27107,"Norman",2020,"All age groups combined","All Programs",1966,"n/a",639,0.325,"(30.4-32.5)"
-27119,"Polk",2012,"All age groups combined","All Programs",8230,"n/a",2879,0.35,"(34.0-36.0)"
-27119,"Polk",2013,"All age groups combined","All Programs",8136,"n/a",2716,0.334,"(32.4-34.4)"
-27119,"Polk",2014,"All age groups combined","All Programs",8629,"n/a",2614,0.303,"(28.2-32.4)"
-27119,"Polk",2015,"All age groups combined","All Programs",9519,"n/a",2867,0.301,"(29.2-31.0)"
-27119,"Polk",2016,"All age groups combined","All Programs",10251,"n/a",2983,0.291,"(28.2-30.0)"
-27119,"Polk",2017,"All age groups combined","All Programs",10078,"n/a",3148,0.312,"(29.1-33.4)"
-27119,"Polk",2018,"All age groups combined","All Programs",10157,"n/a",3254,0.32,"(31.1-32.9)"
-27119,"Polk",2019,"All age groups combined","All Programs",9888,"n/a",3130,0.317,"(30.7-32.6)"
-27119,"Polk",2020,"All age groups combined","All Programs",9401,"n/a",2497,0.266,"(25.7-26.6)"
-99,"Minnesota",2012,"All age groups combined","All Programs",1080566,"n/a",381201,0.353,"(35.2-35.4)"
-99,"Minnesota",2013,"All age groups combined","All Programs",1083945,"n/a",384856,0.355,"(35.4-35.6)"
-99,"Minnesota",2014,"All age groups combined","All Programs",1242998,"n/a",418979,0.337,"(33.6-33.8)"
-99,"Minnesota",2015,"All age groups combined","All Programs",1416026,"n/a",459373,0.324,"(32.4-32.5)"
-99,"Minnesota",2016,"All age groups combined","All Programs",1495571,"n/a",463405,0.31,"(30.9-31.1)"
-99,"Minnesota",2017,"All age groups combined","All Programs",1445174,"n/a",468819,0.324,"(30.3-34.6)"
-99,"Minnesota",2018,"All age groups combined","All Programs",1442580,"n/a",483315,0.335,"(33.4-33.6)"
-99,"Minnesota",2019,"All age groups combined","All Programs",1411742,"n/a",476702,0.338,"(33.7-33.8)"
-99,"Minnesota",2020,"All age groups combined","All Programs",1368245,"n/a",376489,0.275,"(27.4-27.6)"
+fips,geography,year,age,programGroup,enrolleesNumber,enrolleesPercent,dentalServiceNumber,dentalServicePercent,ci
+27069,Kittson,2012,All age groups combined,All Programs,969,n/a,320,0.33,(30.1-36.0)
+27069,Kittson,2013,All age groups combined,All Programs,1006,n/a,342,0.34,(31.1-36.9)
+27069,Kittson,2014,All age groups combined,All Programs,1025,n/a,303,0.296,(27.5-31.7)
+27069,Kittson,2015,All age groups combined,All Programs,1129,n/a,336,0.298,(27.1-32.4)
+27069,Kittson,2016,All age groups combined,All Programs,1177,n/a,352,0.299,(27.3-32.5)
+27069,Kittson,2017,All age groups combined,All Programs,1136,n/a,365,0.321,(30.0-34.3)
+27069,Kittson,2018,All age groups combined,All Programs,1135,n/a,378,0.333,(30.6-36.0)
+27069,Kittson,2019,All age groups combined,All Programs,1125,n/a,368,0.327,(30.0-35.5)
+27069,Kittson,2020,All age groups combined,All Programs,1076,n/a,255,0.237,(21.2-23.7)
+27089,Marshall,2012,All age groups combined,All Programs,1597,n/a,495,0.31,(28.7-33.3)
+27089,Marshall,2013,All age groups combined,All Programs,1511,n/a,482,0.319,(29.5-34.2)
+27089,Marshall,2014,All age groups combined,All Programs,1716,n/a,503,0.293,(27.2-31.4)
+27089,Marshall,2015,All age groups combined,All Programs,1956,n/a,525,0.268,(24.9-28.8)
+27089,Marshall,2016,All age groups combined,All Programs,2057,n/a,567,0.276,(25.6-29.5)
+27089,Marshall,2017,All age groups combined,All Programs,2106,n/a,648,0.308,(28.6-32.9)
+27089,Marshall,2018,All age groups combined,All Programs,1993,n/a,578,0.29,(27.0-31.0)
+27089,Marshall,2019,All age groups combined,All Programs,1992,n/a,554,0.278,(25.8-29.8)
+27089,Marshall,2020,All age groups combined,All Programs,1878,n/a,436,0.232,(21.3-23.2)
+27113,Pennington,2012,All age groups combined,All Programs,3015,n/a,888,0.295,(27.8-31.1)
+27113,Pennington,2013,All age groups combined,All Programs,2831,n/a,850,0.3,(28.3-31.7)
+27113,Pennington,2014,All age groups combined,All Programs,2875,n/a,816,0.284,(26.3-30.5)
+27113,Pennington,2015,All age groups combined,All Programs,3144,n/a,941,0.299,(28.3-31.5)
+27113,Pennington,2016,All age groups combined,All Programs,3217,n/a,857,0.266,(25.1-28.2)
+27113,Pennington,2017,All age groups combined,All Programs,3158,n/a,878,0.278,(25.7-29.9)
+27113,Pennington,2018,All age groups combined,All Programs,3012,n/a,832,0.276,(26.0-29.2)
+27113,Pennington,2019,All age groups combined,All Programs,2932,n/a,789,0.269,(25.3-28.5)
+27113,Pennington,2020,All age groups combined,All Programs,2798,n/a,648,0.232,(21.6-23.2)
+27125,Red Lake,2012,All age groups combined,All Programs,902,n/a,249,0.276,(24.7-30.5)
+27125,Red Lake,2013,All age groups combined,All Programs,862,n/a,260,0.302,(27.1-33.2)
+27125,Red Lake,2014,All age groups combined,All Programs,889,n/a,246,0.277,(25.6-29.7)
+27125,Red Lake,2015,All age groups combined,All Programs,987,n/a,266,0.27,(24.2-29.7)
+27125,Red Lake,2016,All age groups combined,All Programs,976,n/a,262,0.268,(24.1-29.6)
+27125,Red Lake,2017,All age groups combined,All Programs,996,n/a,278,0.279,(25.8-30.0)
+27125,Red Lake,2018,All age groups combined,All Programs,1012,n/a,279,0.276,(24.8-30.3)
+27125,Red Lake,2019,All age groups combined,All Programs,1016,n/a,273,0.269,(24.1-29.6)
+27125,Red Lake,2020,All age groups combined,All Programs,990,n/a,255,0.258,(23.0-25.8)
+27135,Roseau,2012,All age groups combined,All Programs,2514,n/a,855,0.34,(32.2-35.9)
+27135,Roseau,2013,All age groups combined,All Programs,2563,n/a,824,0.321,(30.3-34.0)
+27135,Roseau,2014,All age groups combined,All Programs,2835,n/a,977,0.345,(32.3-36.7)
+27135,Roseau,2015,All age groups combined,All Programs,3297,n/a,1020,0.309,(29.4-32.5)
+27135,Roseau,2016,All age groups combined,All Programs,3550,n/a,1087,0.306,(29.1-32.1)
+27135,Roseau,2017,All age groups combined,All Programs,3449,n/a,1130,0.328,(30.6-34.9)
+27135,Roseau,2018,All age groups combined,All Programs,3373,n/a,1076,0.319,(30.3-33.5)
+27135,Roseau,2019,All age groups combined,All Programs,3316,n/a,1078,0.325,(30.9-34.1)
+27135,Roseau,2020,All age groups combined,All Programs,3236,n/a,778,0.24,(22.6-24.1)
+27000,Minnesota,2012,All age groups combined,All Programs,1080566,n/a,381201,0.353,(35.2-35.4)
+27000,Minnesota,2013,All age groups combined,All Programs,1083945,n/a,384856,0.355,(35.4-35.6)
+27000,Minnesota,2014,All age groups combined,All Programs,1242998,n/a,418979,0.337,(33.6-33.8)
+27000,Minnesota,2015,All age groups combined,All Programs,1416026,n/a,459373,0.324,(32.4-32.5)
+27000,Minnesota,2016,All age groups combined,All Programs,1495571,n/a,463405,0.31,(30.9-31.1)
+27000,Minnesota,2017,All age groups combined,All Programs,1445174,n/a,468819,0.324,(30.3-34.6)
+27000,Minnesota,2018,All age groups combined,All Programs,1442580,n/a,483315,0.335,(33.4-33.6)
+27000,Minnesota,2019,All age groups combined,All Programs,1411742,n/a,476702,0.338,(33.7-33.8)
+27000,Minnesota,2020,All age groups combined,All Programs,1368245,n/a,376489,0.275,(27.4-27.6)

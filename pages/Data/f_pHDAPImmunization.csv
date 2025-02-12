@@ -1,361 +1,541 @@
-"indicator","year","fips","location","age","vaccine","percent","population","percentPartiallyVaccinated","percentNonMedicalExemption","percentMedicalExemption","percentDiseaseHistory"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","DTap",0.678,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Hep A",0.33,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Hep B",0.789,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Hib",0.75,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","MMR",0.785,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","PCV",0.751,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Polio",0.816,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.678,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.59,73691,"null","null","null","null"
-"Childhood immunizations",2015,99,"Minnesota","Childhood (24-35 months)","Varicella",0.806,73691,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","DTap",0.677,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Hep A",0.35,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Hep B",0.788,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Hib",0.753,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","MMR",0.784,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","PCV",0.751,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Polio",0.805,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.675,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.601,74776,"null","null","null","null"
-"Childhood immunizations",2016,99,"Minnesota","Childhood (24-35 months)","Varicella",0.801,74776,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","DTap",0.679,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Hep A",0.367,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Hep B",0.799,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Hib",0.777,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","MMR",0.799,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","PCV",0.761,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Polio",0.809,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.677,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.609,74406,"null","null","null","null"
-"Childhood immunizations",2017,99,"Minnesota","Childhood (24-35 months)","Varicella",0.825,74406,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","DTap",0.733,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Hep A",0.406,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Hep B",0.809,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Hib",0.85,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","MMR",0.85,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","PCV",0.809,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Polio",0.851,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.722,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.678,74717,"null","null","null","null"
-"Childhood immunizations",2018,99,"Minnesota","Childhood (24-35 months)","Varicella",0.855,74717,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","DTap",0.745,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Hep A",0.427,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Hep B",0.861,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Hib",0.814,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","MMR",0.838,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","PCV",0.819,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Polio",0.866,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.743,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.692,72494,"null","null","null","null"
-"Childhood immunizations",2019,99,"Minnesota","Childhood (24-35 months)","Varicella",0.862,72494,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","DTap",0.747,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Hep A",0.424,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Hep B",0.86,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Hib",0.814,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","MMR",0.835,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","PCV",0.817,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Polio",0.866,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.755,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.696,70871,"null","null","null","null"
-"Childhood immunizations",2020,99,"Minnesota","Childhood (24-35 months)","Varicella",0.856,70871,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","DTap",0.69,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Hep A",0.395,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Hep B",0.837,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Hib",0.758,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","MMR",0.787,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","PCV",0.766,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Polio",0.839,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.75,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.632,70508,"null","null","null","null"
-"Childhood immunizations",2021,99,"Minnesota","Childhood (24-35 months)","Varicella",0.798,70508,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","DTap",0.694,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Hep A",0.413,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Hep B",0.84,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Hib",0.783,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","MMR",0.794,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","PCV",0.78,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Polio",0.838,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.715,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.633,67912,"null","null","null","null"
-"Childhood immunizations",2022,99,"Minnesota","Childhood (24-35 months)","Varicella",0.813,67912,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","DTap",0.688,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Hep A",0.392,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Hep B",0.822,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Hib",0.767,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","MMR",0.787,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","PCV",0.761,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Polio",0.824,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Rotavirus",0.698,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Seven vaccine series",0.63,66478,"null","null","null","null"
-"Childhood immunizations",2023,99,"Minnesota","Childhood (24-35 months)","Varicella",0.801,66478,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.605,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.289,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.855,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.737,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.776,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.763,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.829,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.487,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.539,76,"null","null","null","null"
-"Childhood immunizations",2015,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.803,76,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.644,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.333,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.878,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.789,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.8,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.756,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.833,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.467,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.644,90,"null","null","null","null"
-"Childhood immunizations",2016,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.822,90,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.714,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.429,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.934,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.868,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.879,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.901,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.901,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.56,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.692,91,"null","null","null","null"
-"Childhood immunizations",2017,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.901,91,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.667,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.382,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.853,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.931,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.902,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.863,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.892,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.5,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.657,93,"null","null","null","null"
-"Childhood immunizations",2018,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.951,93,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.732,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.371,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.938,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.845,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.897,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.887,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.897,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.588,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.722,97,"null","null","null","null"
-"Childhood immunizations",2019,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.949,97,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.73,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.486,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.919,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.892,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.932,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.932,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.892,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.527,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.73,74,"null","null","null","null"
-"Childhood immunizations",2020,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.932,74,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.703,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.33,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.934,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.802,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.879,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.868,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.901,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.725,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.67,91,"null","null","null","null"
-"Childhood immunizations",2021,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.89,91,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.707,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.463,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.878,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.817,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.854,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.829,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.842,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.61,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.695,82,"null","null","null","null"
-"Childhood immunizations",2022,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.854,82,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","DTap",0.649,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Hep A",0.338,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Hep B",0.87,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Hib",0.766,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","MMR",0.779,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","PCV",0.753,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Polio",0.818,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Rotavirus",0.571,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Seven vaccine series",0.623,77,"null","null","null","null"
-"Childhood immunizations",2023,27087,"Mahnomen","Childhood (24-35 months)","Varicella",0.753,77,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","DTap",0.602,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Hep A",0.239,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Hep B",0.75,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Hib",0.67,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","MMR",0.83,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","PCV",0.807,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Polio",0.852,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.682,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.511,88,"null","null","null","null"
-"Childhood immunizations",2015,27107,"Norman","Childhood (24-35 months)","Varicella",0.864,88,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","DTap",0.522,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Hep A",0.207,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Hep B",0.609,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Hib",0.641,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","MMR",0.609,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","PCV",0.598,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Polio",0.663,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.5,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.478,92,"null","null","null","null"
-"Childhood immunizations",2016,27107,"Norman","Childhood (24-35 months)","Varicella",0.641,92,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","DTap",0.838,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Hep A",0.353,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Hep B",0.882,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Hib",0.897,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","MMR",0.956,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","PCV",0.926,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Polio",0.941,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.735,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.779,68,"null","null","null","null"
-"Childhood immunizations",2017,27107,"Norman","Childhood (24-35 months)","Varicella",0.985,68,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","DTap",0.747,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Hep A",0.354,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Hep B",0.823,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Hib",0.911,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","MMR",0.886,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","PCV",0.848,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Polio",0.924,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.709,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.722,78,"null","null","null","null"
-"Childhood immunizations",2018,27107,"Norman","Childhood (24-35 months)","Varicella",0.886,78,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","DTap",0.811,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Hep A",0.405,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Hep B",0.905,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Hib",0.865,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","MMR",0.892,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","PCV",0.878,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Polio",0.905,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.77,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.797,74,"null","null","null","null"
-"Childhood immunizations",2019,27107,"Norman","Childhood (24-35 months)","Varicella",0.878,74,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","DTap",0.783,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Hep A",0.42,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Hep B",0.957,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Hib",0.899,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","MMR",0.942,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","PCV",0.913,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Polio",0.971,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.812,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.725,69,"null","null","null","null"
-"Childhood immunizations",2020,27107,"Norman","Childhood (24-35 months)","Varicella",0.957,69,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","DTap",0.817,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Hep A",0.507,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Hep B",0.845,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Hib",0.831,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","MMR",0.873,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","PCV",0.873,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Polio",0.901,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.732,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.761,71,"null","null","null","null"
-"Childhood immunizations",2021,27107,"Norman","Childhood (24-35 months)","Varicella",0.873,71,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","DTap",0.812,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Hep A",0.594,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Hep B",0.899,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Hib",0.884,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","MMR",0.913,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","PCV",0.899,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Polio",0.942,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.812,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.768,69,"null","null","null","null"
-"Childhood immunizations",2022,27107,"Norman","Childhood (24-35 months)","Varicella",0.899,69,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","DTap",0.731,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Hep A",0.582,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Hep B",0.896,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Hib",0.776,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","MMR",0.881,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","PCV",0.866,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Polio",0.925,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Rotavirus",0.791,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Seven vaccine series",0.687,67,"null","null","null","null"
-"Childhood immunizations",2023,27107,"Norman","Childhood (24-35 months)","Varicella",0.851,67,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","DTap",0.714,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Hep A",0.256,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Hep B",0.831,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Hib",0.751,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","MMR",0.815,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","PCV",0.772,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Polio",0.857,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.615,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.636,426,"null","null","null","null"
-"Childhood immunizations",2015,27119,"Polk","Childhood (24-35 months)","Varicella",0.8,426,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","DTap",0.715,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Hep A",0.365,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Hep B",0.817,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Hib",0.786,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","MMR",0.831,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","PCV",0.811,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Polio",0.851,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.617,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.65,449,"null","null","null","null"
-"Childhood immunizations",2016,27119,"Polk","Childhood (24-35 months)","Varicella",0.833,449,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","DTap",0.738,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Hep A",0.394,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Hep B",0.823,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Hib",0.795,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","MMR",0.818,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","PCV",0.797,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Polio",0.849,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.653,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.67,424,"null","null","null","null"
-"Childhood immunizations",2017,27119,"Polk","Childhood (24-35 months)","Varicella",0.847,424,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","DTap",0.735,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Hep A",0.407,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Hep B",0.804,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Hib",0.846,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","MMR",0.827,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","PCV",0.813,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Polio",0.87,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.657,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.669,399,"null","null","null","null"
-"Childhood immunizations",2018,27119,"Polk","Childhood (24-35 months)","Varicella",0.83,399,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","DTap",0.733,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Hep A",0.407,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Hep B",0.855,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Hib",0.793,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","MMR",0.828,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","PCV",0.807,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Polio",0.848,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.671,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.692,435,"null","null","null","null"
-"Childhood immunizations",2019,27119,"Polk","Childhood (24-35 months)","Varicella",0.851,435,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","DTap",0.751,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Hep A",0.404,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Hep B",0.845,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Hib",0.801,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","MMR",0.806,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","PCV",0.801,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Polio",0.853,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.679,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.704,361,"null","null","null","null"
-"Childhood immunizations",2020,27119,"Polk","Childhood (24-35 months)","Varicella",0.823,361,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","DTap",0.646,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Hep A",0.356,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Hep B",0.796,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Hib",0.696,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","MMR",0.751,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","PCV",0.749,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Polio",0.809,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.691,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.583,362,"null","null","null","null"
-"Childhood immunizations",2021,27119,"Polk","Childhood (24-35 months)","Varicella",0.782,362,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","DTap",0.639,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Hep A",0.434,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Hep B",0.687,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Hib",0.787,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","MMR",0.776,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","PCV",0.787,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Polio",0.798,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.628,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.512,371,"null","null","null","null"
-"Childhood immunizations",2022,27119,"Polk","Childhood (24-35 months)","Varicella",0.793,371,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","DTap",0.684,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Hep A",0.37,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Hep B",0.71,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Hib",0.766,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","MMR",0.784,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","PCV",0.758,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Polio",0.82,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Rotavirus",0.692,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Seven vaccine series",0.54,389,"null","null","null","null"
-"Childhood immunizations",2023,27119,"Polk","Childhood (24-35 months)","Varicella",0.805,389,"null","null","null","null"
+indicator,year,fips,location,age,vaccine,percent,population,percentPartiallyVaccinated,percentNonMedicalExemption,percentMedicalExemption,percentDiseaseHistory
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),DTap,0.678,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Hep A,0.33,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Hep B,0.789,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Hib,0.75,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),MMR,0.785,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),PCV,0.751,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Polio,0.816,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.678,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.59,73691,null,null,null,null
+Childhood immunizations,2015,27000,Minnesota,Childhood (24-35 months),Varicella,0.806,73691,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),DTap,0.677,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Hep A,0.35,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Hep B,0.788,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Hib,0.753,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),MMR,0.784,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),PCV,0.751,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Polio,0.805,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.675,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.601,74776,null,null,null,null
+Childhood immunizations,2016,27000,Minnesota,Childhood (24-35 months),Varicella,0.801,74776,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),DTap,0.679,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Hep A,0.367,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Hep B,0.799,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Hib,0.777,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),MMR,0.799,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),PCV,0.761,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Polio,0.809,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.677,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.609,74406,null,null,null,null
+Childhood immunizations,2017,27000,Minnesota,Childhood (24-35 months),Varicella,0.825,74406,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),DTap,0.733,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Hep A,0.406,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Hep B,0.809,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Hib,0.85,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),MMR,0.85,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),PCV,0.809,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Polio,0.851,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.722,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.678,74717,null,null,null,null
+Childhood immunizations,2018,27000,Minnesota,Childhood (24-35 months),Varicella,0.855,74717,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),DTap,0.745,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Hep A,0.427,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Hep B,0.861,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Hib,0.814,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),MMR,0.838,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),PCV,0.819,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Polio,0.866,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.743,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.692,72494,null,null,null,null
+Childhood immunizations,2019,27000,Minnesota,Childhood (24-35 months),Varicella,0.862,72494,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),DTap,0.747,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Hep A,0.424,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Hep B,0.86,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Hib,0.814,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),MMR,0.835,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),PCV,0.817,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Polio,0.866,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.755,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.696,70871,null,null,null,null
+Childhood immunizations,2020,27000,Minnesota,Childhood (24-35 months),Varicella,0.856,70871,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),DTap,0.69,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Hep A,0.395,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Hep B,0.837,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Hib,0.758,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),MMR,0.787,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),PCV,0.766,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Polio,0.839,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.75,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.632,70508,null,null,null,null
+Childhood immunizations,2021,27000,Minnesota,Childhood (24-35 months),Varicella,0.798,70508,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),DTap,0.694,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Hep A,0.413,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Hep B,0.84,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Hib,0.783,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),MMR,0.794,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),PCV,0.78,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Polio,0.838,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.715,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.633,67912,null,null,null,null
+Childhood immunizations,2022,27000,Minnesota,Childhood (24-35 months),Varicella,0.813,67912,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),DTap,0.688,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Hep A,0.392,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Hep B,0.822,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Hib,0.767,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),MMR,0.787,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),PCV,0.761,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Polio,0.824,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Rotavirus,0.698,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Seven vaccine series,0.63,66478,null,null,null,null
+Childhood immunizations,2023,27000,Minnesota,Childhood (24-35 months),Varicella,0.801,66478,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),DTap,0.628,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Hep A,0.302,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Hep B,0.814,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Hib,0.767,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),MMR,0.791,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),PCV,0.814,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Polio,0.837,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Rotavirus,0.651,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.581,43,null,null,null,null
+Childhood immunizations,2015,27069,Kittson,Childhood (24-35 months),Varicella,0.86,43,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),DTap,0.8,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Hep A,0.443,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Hep B,0.929,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Hib,0.871,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),MMR,0.943,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),PCV,0.914,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Polio,0.929,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Rotavirus,0.757,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.786,70,null,null,null,null
+Childhood immunizations,2016,27069,Kittson,Childhood (24-35 months),Varicella,0.943,70,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),DTap,0.755,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Hep A,0.469,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Hep B,0.878,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Hib,0.837,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),MMR,0.878,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),PCV,0.857,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Polio,0.898,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Rotavirus,0.673,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.694,49,null,null,null,null
+Childhood immunizations,2017,27069,Kittson,Childhood (24-35 months),Varicella,0.898,49,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),DTap,0.651,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Hep A,0.372,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Hep B,0.814,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Hib,0.814,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),MMR,0.837,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),PCV,0.814,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Polio,0.837,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Rotavirus,0.698,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.651,47,null,null,null,null
+Childhood immunizations,2018,27069,Kittson,Childhood (24-35 months),Varicella,0.814,47,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),DTap,0.581,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Hep A,0.395,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Hep B,0.791,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Hib,0.721,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),MMR,0.767,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),PCV,0.767,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Polio,0.861,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Rotavirus,0.558,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.558,43,null,null,null,null
+Childhood immunizations,2019,27069,Kittson,Childhood (24-35 months),Varicella,0.791,43,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),DTap,0.758,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Hep A,0.545,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Hep B,0.833,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Hib,0.803,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),MMR,0.818,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),PCV,0.773,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Polio,0.833,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Rotavirus,0.712,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.727,66,null,null,null,null
+Childhood immunizations,2020,27069,Kittson,Childhood (24-35 months),Varicella,0.803,66,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),DTap,0.733,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Hep A,0.467,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Hep B,0.8,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Hib,0.778,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),MMR,0.8,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),PCV,0.778,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Polio,0.822,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Rotavirus,0.667,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.711,45,null,null,null,null
+Childhood immunizations,2021,27069,Kittson,Childhood (24-35 months),Varicella,0.8,45,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),DTap,0.674,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Hep A,0.413,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Hep B,0.783,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Hib,0.717,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),MMR,0.696,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),PCV,0.674,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Polio,0.761,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Rotavirus,0.717,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.652,46,null,null,null,null
+Childhood immunizations,2022,27069,Kittson,Childhood (24-35 months),Varicella,0.717,46,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),DTap,0.775,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Hep A,0.475,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Hep B,0.825,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Hib,0.8,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),MMR,0.8,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),PCV,0.825,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Polio,0.825,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Rotavirus,0.75,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Seven vaccine series,0.75,40,null,null,null,null
+Childhood immunizations,2023,27069,Kittson,Childhood (24-35 months),Varicella,0.8,40,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),DTap,0.83,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Hep A,0.528,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Hep B,0.925,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Hib,0.877,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),MMR,0.953,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),PCV,0.943,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Polio,0.953,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Rotavirus,0.849,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.802,106,null,null,null,null
+Childhood immunizations,2015,27089,Marshall,Childhood (24-35 months),Varicella,0.953,106,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),DTap,0.776,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Hep A,0.48,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Hep B,0.92,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Hib,0.872,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),MMR,0.912,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),PCV,0.928,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Polio,0.92,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Rotavirus,0.728,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.744,125,null,null,null,null
+Childhood immunizations,2016,27089,Marshall,Childhood (24-35 months),Varicella,0.928,125,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),DTap,0.805,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Hep A,0.551,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Hep B,0.907,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Hib,0.907,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),MMR,0.932,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),PCV,0.898,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Polio,0.932,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Rotavirus,0.797,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.737,118,null,null,null,null
+Childhood immunizations,2017,27089,Marshall,Childhood (24-35 months),Varicella,0.924,118,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),DTap,0.836,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Hep A,0.543,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Hep B,0.897,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Hib,0.922,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),MMR,0.922,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),PCV,0.914,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Polio,0.931,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Rotavirus,0.741,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.819,122,null,null,null,null
+Childhood immunizations,2018,27089,Marshall,Childhood (24-35 months),Varicella,0.914,122,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),DTap,0.78,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Hep A,0.509,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Hep B,0.89,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Hib,0.822,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),MMR,0.881,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),PCV,0.89,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Polio,0.915,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Rotavirus,0.746,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.754,118,null,null,null,null
+Childhood immunizations,2019,27089,Marshall,Childhood (24-35 months),Varicella,0.898,118,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),DTap,0.825,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Hep A,0.608,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Hep B,0.938,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Hib,0.887,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),MMR,0.907,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),PCV,0.897,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Polio,0.918,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Rotavirus,0.804,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.814,97,null,null,null,null
+Childhood immunizations,2020,27089,Marshall,Childhood (24-35 months),Varicella,0.897,97,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),DTap,0.817,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Hep A,0.569,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Hep B,0.936,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Hib,0.817,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),MMR,0.917,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),PCV,0.899,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Polio,0.945,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Rotavirus,0.872,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.789,109,null,null,null,null
+Childhood immunizations,2021,27089,Marshall,Childhood (24-35 months),Varicella,0.908,109,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),DTap,0.73,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Hep A,0.451,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Hep B,0.892,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Hib,0.82,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),MMR,0.874,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),PCV,0.847,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Polio,0.901,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Rotavirus,0.784,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.721,111,null,null,null,null
+Childhood immunizations,2022,27089,Marshall,Childhood (24-35 months),Varicella,0.865,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),DTap,0.73,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Hep A,0.432,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Hep B,0.82,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Hib,0.793,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),MMR,0.82,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),PCV,0.811,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Polio,0.847,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Rotavirus,0.766,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Seven vaccine series,0.694,111,null,null,null,null
+Childhood immunizations,2023,27089,Marshall,Childhood (24-35 months),Varicella,0.802,111,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),DTap,0.683,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Hep A,0.446,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Hep B,0.844,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Hib,0.71,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),MMR,0.849,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),PCV,0.833,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Polio,0.849,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Rotavirus,0.72,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.608,186,null,null,null,null
+Childhood immunizations,2015,27113,Pennington,Childhood (24-35 months),Varicella,0.871,186,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),DTap,0.674,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Hep A,0.483,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Hep B,0.884,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Hib,0.75,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),MMR,0.872,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),PCV,0.843,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Polio,0.89,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Rotavirus,0.686,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.645,172,null,null,null,null
+Childhood immunizations,2016,27113,Pennington,Childhood (24-35 months),Varicella,0.89,172,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),DTap,0.696,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Hep A,0.464,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Hep B,0.845,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Hib,0.758,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),MMR,0.856,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),PCV,0.845,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Polio,0.902,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Rotavirus,0.742,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.639,194,null,null,null,null
+Childhood immunizations,2017,27113,Pennington,Childhood (24-35 months),Varicella,0.845,194,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),DTap,0.692,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Hep A,0.508,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Hep B,0.741,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Hib,0.865,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),MMR,0.86,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),PCV,0.832,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Polio,0.876,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Rotavirus,0.724,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.638,189,null,null,null,null
+Childhood immunizations,2018,27113,Pennington,Childhood (24-35 months),Varicella,0.843,189,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),DTap,0.731,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Hep A,0.525,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Hep B,0.894,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Hib,0.794,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),MMR,0.881,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),PCV,0.869,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Polio,0.906,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Rotavirus,0.731,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.706,160,null,null,null,null
+Childhood immunizations,2019,27113,Pennington,Childhood (24-35 months),Varicella,0.863,160,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),DTap,0.746,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Hep A,0.548,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Hep B,0.893,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Hib,0.797,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),MMR,0.853,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),PCV,0.859,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Polio,0.887,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Rotavirus,0.763,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.734,177,null,null,null,null
+Childhood immunizations,2020,27113,Pennington,Childhood (24-35 months),Varicella,0.864,177,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),DTap,0.795,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Hep A,0.576,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Hep B,0.954,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Hib,0.848,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),MMR,0.907,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),PCV,0.907,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Polio,0.96,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Rotavirus,0.828,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.762,151,null,null,null,null
+Childhood immunizations,2021,27113,Pennington,Childhood (24-35 months),Varicella,0.907,151,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),DTap,0.763,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Hep A,0.564,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Hep B,0.891,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Hib,0.808,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),MMR,0.859,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),PCV,0.865,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Polio,0.917,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Rotavirus,0.795,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.724,156,null,null,null,null
+Childhood immunizations,2022,27113,Pennington,Childhood (24-35 months),Varicella,0.859,156,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),DTap,0.643,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Hep A,0.429,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Hep B,0.836,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Hib,0.729,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),MMR,0.814,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),PCV,0.821,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Polio,0.864,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Rotavirus,0.729,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Seven vaccine series,0.593,140,null,null,null,null
+Childhood immunizations,2023,27113,Pennington,Childhood (24-35 months),Varicella,0.807,140,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),DTap,0.719,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Hep A,0.266,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Hep B,0.797,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Hib,0.781,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),MMR,0.906,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),PCV,0.859,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Polio,0.875,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.609,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.625,64,null,null,null,null
+Childhood immunizations,2015,27125,Red Lake,Childhood (24-35 months),Varicella,0.891,64,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),DTap,0.569,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Hep A,0.314,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Hep B,0.804,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Hib,0.627,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),MMR,0.706,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),PCV,0.706,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Polio,0.765,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.549,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.529,51,null,null,null,null
+Childhood immunizations,2016,27125,Red Lake,Childhood (24-35 months),Varicella,0.745,51,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),DTap,0.673,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Hep A,0.327,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Hep B,0.8,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Hib,0.745,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),MMR,0.873,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),PCV,0.855,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Polio,0.873,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.618,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.618,55,null,null,null,null
+Childhood immunizations,2017,27125,Red Lake,Childhood (24-35 months),Varicella,0.873,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),DTap,0.746,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Hep A,0.441,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Hep B,0.814,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Hib,0.848,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),MMR,0.864,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),PCV,0.864,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Polio,0.881,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.797,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.695,55,null,null,null,null
+Childhood immunizations,2018,27125,Red Lake,Childhood (24-35 months),Varicella,0.915,55,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),DTap,0.73,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Hep A,0.487,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Hep B,0.784,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Hib,0.784,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),MMR,0.811,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),PCV,0.784,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Polio,0.838,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.595,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.703,37,null,null,null,null
+Childhood immunizations,2019,27125,Red Lake,Childhood (24-35 months),Varicella,0.811,37,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),DTap,0.841,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Hep A,0.5,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Hep B,0.932,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Hib,0.841,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),MMR,0.932,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),PCV,0.932,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Polio,0.955,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.886,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.818,44,null,null,null,null
+Childhood immunizations,2020,27125,Red Lake,Childhood (24-35 months),Varicella,0.955,44,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),DTap,0.739,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Hep A,0.413,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Hep B,0.826,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Hib,0.739,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),MMR,0.761,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),PCV,0.783,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Polio,0.826,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.761,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.717,46,null,null,null,null
+Childhood immunizations,2021,27125,Red Lake,Childhood (24-35 months),Varicella,0.783,46,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),DTap,0.833,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Hep A,0.524,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Hep B,0.881,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Hib,0.881,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),MMR,0.905,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),PCV,0.905,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Polio,0.881,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.691,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.786,42,null,null,null,null
+Childhood immunizations,2022,27125,Red Lake,Childhood (24-35 months),Varicella,0.857,42,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),DTap,0.702,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Hep A,0.386,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Hep B,0.877,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Hib,0.754,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),MMR,0.842,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),PCV,0.79,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Polio,0.842,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Rotavirus,0.772,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Seven vaccine series,0.667,57,null,null,null,null
+Childhood immunizations,2023,27125,Red Lake,Childhood (24-35 months),Varicella,0.842,57,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),DTap,0.572,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Hep A,0.261,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Hep B,0.86,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Hib,0.644,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),MMR,0.793,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),PCV,0.644,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Polio,0.86,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Rotavirus,0.122,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.482,222,null,null,null,null
+Childhood immunizations,2015,27135,Roseau,Childhood (24-35 months),Varicella,0.802,222,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),DTap,0.612,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Hep A,0.419,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Hep B,0.863,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Hib,0.722,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),MMR,0.806,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),PCV,0.771,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Polio,0.881,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Rotavirus,0.115,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.577,227,null,null,null,null
+Childhood immunizations,2016,27135,Roseau,Childhood (24-35 months),Varicella,0.815,227,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),DTap,0.541,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Hep A,0.437,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Hep B,0.831,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Hib,0.617,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),MMR,0.831,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),PCV,0.754,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Polio,0.852,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Rotavirus,0.175,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.497,183,null,null,null,null
+Childhood immunizations,2017,27135,Roseau,Childhood (24-35 months),Varicella,0.842,183,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),DTap,0.693,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Hep A,0.58,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Hep B,0.761,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Hib,0.818,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),MMR,0.824,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),PCV,0.778,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Polio,0.875,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Rotavirus,0.159,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.614,176,null,null,null,null
+Childhood immunizations,2018,27135,Roseau,Childhood (24-35 months),Varicella,0.83,176,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),DTap,0.605,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Hep A,0.514,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Hep B,0.822,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Hib,0.681,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),MMR,0.827,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),PCV,0.751,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Polio,0.865,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Rotavirus,0.135,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.584,185,null,null,null,null
+Childhood immunizations,2019,27135,Roseau,Childhood (24-35 months),Varicella,0.822,185,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),DTap,0.537,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Hep A,0.47,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Hep B,0.826,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Hib,0.617,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),MMR,0.792,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),PCV,0.732,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Polio,0.859,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Rotavirus,0.302,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.517,149,null,null,null,null
+Childhood immunizations,2020,27135,Roseau,Childhood (24-35 months),Varicella,0.819,149,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),DTap,0.626,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Hep A,0.52,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Hep B,0.771,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Hib,0.659,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),MMR,0.799,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),PCV,0.71,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Polio,0.821,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Rotavirus,0.402,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.581,179,null,null,null,null
+Childhood immunizations,2021,27135,Roseau,Childhood (24-35 months),Varicella,0.771,179,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),DTap,0.608,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Hep A,0.528,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Hep B,0.767,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Hib,0.699,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),MMR,0.773,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),PCV,0.767,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Polio,0.807,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Rotavirus,0.46,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.591,176,null,null,null,null
+Childhood immunizations,2022,27135,Roseau,Childhood (24-35 months),Varicella,0.778,176,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),DTap,0.568,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Hep A,0.509,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Hep B,0.722,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Hib,0.633,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),MMR,0.74,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),PCV,0.704,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Polio,0.787,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Rotavirus,0.444,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Seven vaccine series,0.509,169,null,null,null,null
+Childhood immunizations,2023,27135,Roseau,Childhood (24-35 months),Varicella,0.722,169,null,null,null,null

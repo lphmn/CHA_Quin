@@ -1,217 +1,361 @@
-"location","measure","rawValue","year","fips"
-"Mahnomen","Child",766,2022,27087
-"Norman","Child",338,2022,27107
-"Polk","Child",4404,2022,27119
-"Mahnomen","Child",412,2021,27087
-"Norman","Child",313,2021,27107
-"Polk","Child",2609,2021,27119
-"Mahnomen","Child",1151,2020,27087
-"Norman","Child",826,2020,27107
-"Polk","Child",3086,2020,27119
-"Mahnomen","Child",1645,2019,27087
-"Norman","Child",787,2019,27107
-"Polk","Child",5151,2019,27119
-"Mahnomen","Child",1578,2018,27087
-"Norman","Child",694,2018,27107
-"Polk","Child",5890,2018,27119
-"Mahnomen","Child",1727,2017,27087
-"Norman","Child",809,2017,27107
-"Polk","Child",6524,2017,27119
-"Mahnomen","Child",1565,2016,27087
-"Norman","Child",768,2016,27107
-"Polk","Child",7161,2016,27119
-"Mahnomen","Child",1493,2015,27087
-"Norman","Child",756,2015,27107
-"Polk","Child",7543,2015,27119
-"Mahnomen","Child",1483,2014,27087
-"Norman","Child",907,2014,27107
-"Polk","Child",7799,2014,27119
-"Mahnomen","Child",1320,2013,27087
-"Norman","Child",1027,2013,27107
-"Polk","Child",7653,2013,27119
-"Mahnomen","Child",353,2012,27087
-"Norman","Child",1020,2012,27107
-"Polk","Child",7268,2012,27119
-"Mahnomen","Child",1420,2011,27087
-"Norman","Child",789,2011,27107
-"Polk","Child",7323,2011,27119
-"Mahnomen","Adult",746,2022,27087
-"Norman","Adult",676,2022,27107
-"Polk","Adult",7524,2022,27119
-"Mahnomen","Adult",444,2021,27087
-"Norman","Adult",618,2021,27107
-"Polk","Adult",4338,2021,27119
-"Mahnomen","Adult",1139,2020,27087
-"Norman","Adult",1158,2020,27107
-"Polk","Adult",4567,2020,27119
-"Mahnomen","Adult",1722,2019,27087
-"Norman","Adult",967,2019,27107
-"Polk","Adult",8101,2019,27119
-"Mahnomen","Adult",1621,2018,27087
-"Norman","Adult",848,2018,27107
-"Polk","Adult",8867,2018,27119
-"Mahnomen","Adult",1690,2017,27087
-"Norman","Adult",956,2017,27107
-"Polk","Adult",9271,2017,27119
-"Mahnomen","Adult",1440,2016,27087
-"Norman","Adult",911,2016,27107
-"Polk","Adult",10266,2016,27119
-"Mahnomen","Adult",1293,2015,27087
-"Norman","Adult",1050,2015,27107
-"Polk","Adult",10870,2015,27119
-"Mahnomen","Adult",1360,2014,27087
-"Norman","Adult",1058,2014,27107
-"Polk","Adult",11519,2014,27119
-"Mahnomen","Adult",1128,2013,27087
-"Norman","Adult",1145,2013,27107
-"Polk","Adult",10778,2013,27119
-"Mahnomen","Adult",302,2012,27087
-"Norman","Adult",1069,2012,27107
-"Polk","Adult",11547,2012,27119
-"Mahnomen","Adult",1308,2011,27087
-"Norman","Adult",1027,2011,27107
-"Polk","Adult",11486,2011,27119
-"Mahnomen","Senior",123,2022,27087
-"Norman","Senior",207,2022,27107
-"Polk","Senior",1743,2022,27119
-"Mahnomen","Senior",57,2021,27087
-"Norman","Senior",191,2021,27107
-"Polk","Senior",1332,2021,27119
-"Mahnomen","Senior",109,2020,27087
-"Norman","Senior",389,2020,27107
-"Polk","Senior",1515,2020,27119
-"Mahnomen","Senior",196,2019,27087
-"Norman","Senior",207,2019,27107
-"Polk","Senior",1538,2019,27119
-"Mahnomen","Senior",144,2018,27087
-"Norman","Senior",99,2018,27107
-"Polk","Senior",1651,2018,27119
-"Mahnomen","Senior",134,2017,27087
-"Norman","Senior",112,2017,27107
-"Polk","Senior",1474,2017,27119
-"Mahnomen","Senior",247,2016,27087
-"Norman","Senior",71,2016,27107
-"Polk","Senior",1539,2016,27119
-"Mahnomen","Senior",300,2015,27087
-"Norman","Senior",128,2015,27107
-"Polk","Senior",1593,2015,27119
-"Mahnomen","Senior",325,2014,27087
-"Norman","Senior",38,2014,27107
-"Polk","Senior",1179,2014,27119
-"Mahnomen","Senior",298,2013,27087
-"Norman","Senior",30,2013,27107
-"Polk","Senior",1119,2013,27119
-"Mahnomen","Senior",55,2012,27087
-"Norman","Senior",31,2012,27107
-"Polk","Senior",1075,2012,27119
-"Mahnomen","Senior",258,2011,27087
-"Norman","Senior",42,2011,27107
-"Polk","Senior",1367,2011,27119
-"Mahnomen","Individual",1635,2022,27087
-"Norman","Individual",1221,2022,27107
-"Polk","Individual",13671,2022,27119
-"Mahnomen","Individual",913,2021,27087
-"Norman","Individual",1122,2021,27107
-"Polk","Individual",8279,2021,27119
-"Mahnomen","Individual",2399,2020,27087
-"Norman","Individual",2373,2020,27107
-"Polk","Individual",9168,2020,27119
-"Mahnomen","Individual",3563,2019,27087
-"Norman","Individual",1961,2019,27107
-"Polk","Individual",14790,2019,27119
-"Mahnomen","Individual",3343,2018,27087
-"Norman","Individual",1641,2018,27107
-"Polk","Individual",16408,2018,27119
-"Mahnomen","Individual",3551,2017,27087
-"Norman","Individual",1877,2017,27107
-"Polk","Individual",17269,2017,27119
-"Mahnomen","Individual",3252,2016,27087
-"Norman","Individual",1750,2016,27107
-"Polk","Individual",18966,2016,27119
-"Mahnomen","Individual",3086,2015,27087
-"Norman","Individual",1934,2015,27107
-"Polk","Individual",20006,2015,27119
-"Mahnomen","Individual",3168,2014,27087
-"Norman","Individual",2003,2014,27107
-"Polk","Individual",20497,2014,27119
-"Mahnomen","Individual",2746,2013,27087
-"Norman","Individual",2202,2013,27107
-"Polk","Individual",19550,2013,27119
-"Mahnomen","Individual",710,2012,27087
-"Norman","Individual",2120,2012,27107
-"Polk","Individual",19890,2012,27119
-"Mahnomen","Individual",2986,2011,27087
-"Norman","Individual",1858,2011,27107
-"Polk","Individual",20176,2011,27119
-"Mahnomen","Household",476,2022,27087
-"Norman","Household",439,2022,27107
-"Polk","Household",5054,2022,27119
-"Mahnomen","Household",269,2021,27087
-"Norman","Household",426,2021,27107
-"Polk","Household",3183,2021,27119
-"Mahnomen","Household",618,2020,27087
-"Norman","Household",769,2020,27107
-"Polk","Household",3423,2020,27119
-"Mahnomen","Household",933,2019,27087
-"Norman","Household",620,2019,27107
-"Polk","Household",5465,2019,27119
-"Mahnomen","Household",901,2018,27087
-"Norman","Household",518,2018,27107
-"Polk","Household",5673,2018,27119
-"Mahnomen","Household",904,2017,27087
-"Norman","Household",565,2017,27107
-"Polk","Household",5745,2017,27119
-"Mahnomen","Household",858,2016,27087
-"Norman","Household",548,2016,27107
-"Polk","Household",6021,2016,27119
-"Mahnomen","Household",854,2015,27087
-"Norman","Household",573,2015,27107
-"Polk","Household",6875,2015,27119
-"Mahnomen","Household",826,2014,27087
-"Norman","Household",593,2014,27107
-"Polk","Household",6881,2014,27119
-"Mahnomen","Household",923,2013,27087
-"Norman","Household",644,2013,27107
-"Polk","Household",6044,2013,27119
-"Mahnomen","Household",316,2012,27087
-"Norman","Household",592,2012,27107
-"Polk","Household",7013,2012,27119
-"Mahnomen","Household",1010,2011,27087
-"Norman","Household",579,2011,27107
-"Polk","Household",6782,2011,27119
-"Mahnomen","Pounds",38858,2022,27087
-"Norman","Pounds",30373,2022,27107
-"Polk","Pounds",459773,2022,27119
-"Mahnomen","Pounds",21520,2021,27087
-"Norman","Pounds",22795,2021,27107
-"Polk","Pounds",303074,2021,27119
-"Mahnomen","Pounds",51129,2020,27087
-"Norman","Pounds",42308,2020,27107
-"Polk","Pounds",306054,2020,27119
-"Mahnomen","Pounds",78258,2019,27087
-"Norman","Pounds",37404,2019,27107
-"Polk","Pounds",338993,2019,27119
-"Mahnomen","Pounds",81494,2018,27087
-"Norman","Pounds",27772,2018,27107
-"Polk","Pounds",336961,2018,27119
-"Mahnomen","Pounds",78117,2017,27087
-"Norman","Pounds",30534,2017,27107
-"Polk","Pounds",377990,2017,27119
-"Mahnomen","Pounds",73288,2016,27087
-"Norman","Pounds",33249,2016,27107
-"Polk","Pounds",372434,2016,27119
-"Mahnomen","Pounds",73451,2015,27087
-"Norman","Pounds",41892,2015,27107
-"Polk","Pounds",456482,2015,27119
-"Mahnomen","Pounds",66191,2014,27087
-"Norman","Pounds",30100,2014,27107
-"Polk","Pounds",627742,2014,27119
-"Mahnomen","Pounds",45505,2013,27087
-"Norman","Pounds",29410,2013,27107
-"Polk","Pounds",662770,2013,27119
-"Mahnomen","Pounds",11400,2012,27087
-"Norman","Pounds",29636,2012,27107
-"Polk","Pounds",603563,2012,27119
-"Mahnomen","Pounds",49590,2011,27087
-"Norman","Pounds",24156,2011,27107
-"Polk","Pounds",481198,2011,27119
+location,measure,rawValue,year,fips
+Kittson,Child,417,2022,27069
+Kittson,Child,282,2021,27069
+Kittson,Child,559,2020,27069
+Kittson,Child,643,2019,27069
+Kittson,Child,757,2018,27069
+Kittson,Child,330,2017,27069
+Kittson,Child,403,2016,27069
+Kittson,Child,417,2015,27069
+Kittson,Child,444,2014,27069
+Kittson,Child,102,2013,27069
+Kittson,Child,132,2012,27069
+Kittson,Child,221,2011,27069
+Kittson,Adult,1035,2022,27069
+Kittson,Adult,716,2021,27069
+Kittson,Adult,1182,2020,27069
+Kittson,Adult,1135,2019,27069
+Kittson,Adult,1056,2018,27069
+Kittson,Adult,938,2017,27069
+Kittson,Adult,934,2016,27069
+Kittson,Adult,794,2015,27069
+Kittson,Adult,633,2014,27069
+Kittson,Adult,235,2013,27069
+Kittson,Adult,324,2012,27069
+Kittson,Adult,434,2011,27069
+Kittson,Senior,410,2022,27069
+Kittson,Senior,258,2021,27069
+Kittson,Senior,255,2020,27069
+Kittson,Senior,240,2019,27069
+Kittson,Senior,313,2018,27069
+Kittson,Senior,201,2017,27069
+Kittson,Senior,192,2016,27069
+Kittson,Senior,149,2015,27069
+Kittson,Senior,102,2014,27069
+Kittson,Senior,32,2013,27069
+Kittson,Senior,47,2012,27069
+Kittson,Senior,47,2011,27069
+Kittson,Individual,1862,2022,27069
+Kittson,Individual,1256,2021,27069
+Kittson,Individual,1996,2020,27069
+Kittson,Individual,2018,2019,27069
+Kittson,Individual,2126,2018,27069
+Kittson,Individual,1469,2017,27069
+Kittson,Individual,1529,2016,27069
+Kittson,Individual,1360,2015,27069
+Kittson,Individual,1179,2014,27069
+Kittson,Individual,369,2013,27069
+Kittson,Individual,503,2012,27069
+Kittson,Individual,702,2011,27069
+Kittson,Household,920,2022,27069
+Kittson,Household,612,2021,27069
+Kittson,Household,915,2020,27069
+Kittson,Household,1005,2019,27069
+Kittson,Household,994,2018,27069
+Kittson,Household,684,2017,27069
+Kittson,Household,680,2016,27069
+Kittson,Household,649,2015,27069
+Kittson,Household,421,2014,27069
+Kittson,Household,140,2013,27069
+Kittson,Household,213,2012,27069
+Kittson,Household,274,2011,27069
+Kittson,Pounds,73912,2022,27069
+Kittson,Pounds,36514,2021,27069
+Kittson,Pounds,53031,2020,27069
+Kittson,Pounds,43282,2019,27069
+Kittson,Pounds,42071,2018,27069
+Kittson,Pounds,32532,2017,27069
+Kittson,Pounds,34021,2016,27069
+Kittson,Pounds,37801,2015,27069
+Kittson,Pounds,31550,2014,27069
+Kittson,Pounds,8959,2013,27069
+Kittson,Pounds,14103,2012,27069
+Kittson,Pounds,18479,2011,27069
+Marshall,Child,899,2022,27089
+Marshall,Child,591,2021,27089
+Marshall,Child,801,2020,27089
+Marshall,Child,909,2019,27089
+Marshall,Child,932,2018,27089
+Marshall,Child,1053,2017,27089
+Marshall,Child,1006,2016,27089
+Marshall,Child,1718,2015,27089
+Marshall,Child,1909,2014,27089
+Marshall,Child,2009,2013,27089
+Marshall,Child,2197,2012,27089
+Marshall,Child,2478,2011,27089
+Marshall,Adult,1574,2022,27089
+Marshall,Adult,1462,2021,27089
+Marshall,Adult,1565,2020,27089
+Marshall,Adult,2106,2019,27089
+Marshall,Adult,1968,2018,27089
+Marshall,Adult,2078,2017,27089
+Marshall,Adult,1936,2016,27089
+Marshall,Adult,2799,2015,27089
+Marshall,Adult,3302,2014,27089
+Marshall,Adult,3406,2013,27089
+Marshall,Adult,3557,2012,27089
+Marshall,Adult,3981,2011,27089
+Marshall,Senior,516,2022,27089
+Marshall,Senior,470,2021,27089
+Marshall,Senior,517,2020,27089
+Marshall,Senior,503,2019,27089
+Marshall,Senior,578,2018,27089
+Marshall,Senior,715,2017,27089
+Marshall,Senior,870,2016,27089
+Marshall,Senior,973,2015,27089
+Marshall,Senior,975,2014,27089
+Marshall,Senior,1156,2013,27089
+Marshall,Senior,1449,2012,27089
+Marshall,Senior,1493,2011,27089
+Marshall,Individual,2989,2022,27089
+Marshall,Individual,2523,2021,27089
+Marshall,Individual,2883,2020,27089
+Marshall,Individual,3518,2019,27089
+Marshall,Individual,3478,2018,27089
+Marshall,Individual,3846,2017,27089
+Marshall,Individual,3812,2016,27089
+Marshall,Individual,5490,2015,27089
+Marshall,Individual,6186,2014,27089
+Marshall,Individual,6571,2013,27089
+Marshall,Individual,7203,2012,27089
+Marshall,Individual,7952,2011,27089
+Marshall,Household,1220,2022,27089
+Marshall,Household,1156,2021,27089
+Marshall,Household,1256,2020,27089
+Marshall,Household,1579,2019,27089
+Marshall,Household,1577,2018,27089
+Marshall,Household,1732,2017,27089
+Marshall,Household,1664,2016,27089
+Marshall,Household,2188,2015,27089
+Marshall,Household,2426,2014,27089
+Marshall,Household,2530,2013,27089
+Marshall,Household,3023,2012,27089
+Marshall,Household,3307,2011,27089
+Marshall,Pounds,90182,2022,27089
+Marshall,Pounds,88075,2021,27089
+Marshall,Pounds,87611,2020,27089
+Marshall,Pounds,89324,2019,27089
+Marshall,Pounds,90743,2018,27089
+Marshall,Pounds,95367,2017,27089
+Marshall,Pounds,99713,2016,27089
+Marshall,Pounds,97178,2015,27089
+Marshall,Pounds,126862,2014,27089
+Marshall,Pounds,132691,2013,27089
+Marshall,Pounds,140359,2012,27089
+Marshall,Pounds,150997,2011,27089
+Pennington,Child,2116,2022,27113
+Pennington,Child,1386,2021,27113
+Pennington,Child,3332,2020,27113
+Pennington,Child,2405,2019,27113
+Pennington,Child,2908,2018,27113
+Pennington,Child,3129,2017,27113
+Pennington,Child,1788,2016,27113
+Pennington,Child,1344,2015,27113
+Pennington,Child,1751,2014,27113
+Pennington,Child,2125,2013,27113
+Pennington,Child,2818,2012,27113
+Pennington,Child,3395,2011,27113
+Pennington,Adult,3776,2022,27113
+Pennington,Adult,2473,2021,27113
+Pennington,Adult,5220,2020,27113
+Pennington,Adult,4819,2019,27113
+Pennington,Adult,4944,2018,27113
+Pennington,Adult,5220,2017,27113
+Pennington,Adult,3030,2016,27113
+Pennington,Adult,2552,2015,27113
+Pennington,Adult,3661,2014,27113
+Pennington,Adult,3938,2013,27113
+Pennington,Adult,4266,2012,27113
+Pennington,Adult,5491,2011,27113
+Pennington,Senior,1186,2022,27113
+Pennington,Senior,557,2021,27113
+Pennington,Senior,1296,2020,27113
+Pennington,Senior,897,2019,27113
+Pennington,Senior,1044,2018,27113
+Pennington,Senior,959,2017,27113
+Pennington,Senior,511,2016,27113
+Pennington,Senior,378,2015,27113
+Pennington,Senior,580,2014,27113
+Pennington,Senior,724,2013,27113
+Pennington,Senior,535,2012,27113
+Pennington,Senior,585,2011,27113
+Pennington,Individual,7078,2022,27113
+Pennington,Individual,4416,2021,27113
+Pennington,Individual,9848,2020,27113
+Pennington,Individual,8121,2019,27113
+Pennington,Individual,8896,2018,27113
+Pennington,Individual,9308,2017,27113
+Pennington,Individual,5329,2016,27113
+Pennington,Individual,4274,2015,27113
+Pennington,Individual,5992,2014,27113
+Pennington,Individual,6787,2013,27113
+Pennington,Individual,7619,2012,27113
+Pennington,Individual,9471,2011,27113
+Pennington,Household,1706,2022,27113
+Pennington,Household,908,2021,27113
+Pennington,Household,2335,2020,27113
+Pennington,Household,1917,2019,27113
+Pennington,Household,2750,2018,27113
+Pennington,Household,3720,2017,27113
+Pennington,Household,2461,2016,27113
+Pennington,Household,1938,2015,27113
+Pennington,Household,2748,2014,27113
+Pennington,Household,2433,2013,27113
+Pennington,Household,2585,2012,27113
+Pennington,Household,3296,2011,27113
+Pennington,Pounds,288909,2022,27113
+Pennington,Pounds,131272,2021,27113
+Pennington,Pounds,591853,2020,27113
+Pennington,Pounds,302794,2019,27113
+Pennington,Pounds,257992,2018,27113
+Pennington,Pounds,202006,2017,27113
+Pennington,Pounds,142561,2016,27113
+Pennington,Pounds,101867,2015,27113
+Pennington,Pounds,152881,2014,27113
+Pennington,Pounds,155819,2013,27113
+Pennington,Pounds,135415,2012,27113
+Pennington,Pounds,259220,2011,27113
+Red Lake,Child,451,2022,27125
+Red Lake,Child,216,2021,27125
+Red Lake,Child,380,2020,27125
+Red Lake,Child,615,2019,27125
+Red Lake,Child,526,2018,27125
+Red Lake,Child,562,2017,27125
+Red Lake,Child,617,2016,27125
+Red Lake,Child,668,2015,27125
+Red Lake,Child,816,2014,27125
+Red Lake,Child,410,2013,27125
+Red Lake,Child,363,2012,27125
+Red Lake,Child,409,2011,27125
+Red Lake,Adult,910,2022,27125
+Red Lake,Adult,487,2021,27125
+Red Lake,Adult,706,2020,27125
+Red Lake,Adult,1095,2019,27125
+Red Lake,Adult,955,2018,27125
+Red Lake,Adult,1007,2017,27125
+Red Lake,Adult,1039,2016,27125
+Red Lake,Adult,914,2015,27125
+Red Lake,Adult,966,2014,27125
+Red Lake,Adult,498,2013,27125
+Red Lake,Adult,417,2012,27125
+Red Lake,Adult,401,2011,27125
+Red Lake,Senior,345,2022,27125
+Red Lake,Senior,198,2021,27125
+Red Lake,Senior,246,2020,27125
+Red Lake,Senior,290,2019,27125
+Red Lake,Senior,175,2018,27125
+Red Lake,Senior,157,2017,27125
+Red Lake,Senior,145,2016,27125
+Red Lake,Senior,104,2015,27125
+Red Lake,Senior,69,2014,27125
+Red Lake,Senior,29,2013,27125
+Red Lake,Senior,42,2012,27125
+Red Lake,Senior,27,2011,27125
+Red Lake,Individual,1706,2022,27125
+Red Lake,Individual,901,2021,27125
+Red Lake,Individual,1332,2020,27125
+Red Lake,Individual,2000,2019,27125
+Red Lake,Individual,1656,2018,27125
+Red Lake,Individual,1726,2017,27125
+Red Lake,Individual,1801,2016,27125
+Red Lake,Individual,1686,2015,27125
+Red Lake,Individual,1851,2014,27125
+Red Lake,Individual,937,2013,27125
+Red Lake,Individual,822,2012,27125
+Red Lake,Individual,837,2011,27125
+Red Lake,Household,787,2022,27125
+Red Lake,Household,443,2021,27125
+Red Lake,Household,601,2020,27125
+Red Lake,Household,859,2019,27125
+Red Lake,Household,716,2018,27125
+Red Lake,Household,752,2017,27125
+Red Lake,Household,739,2016,27125
+Red Lake,Household,584,2015,27125
+Red Lake,Household,584,2014,27125
+Red Lake,Household,371,2013,27125
+Red Lake,Household,265,2012,27125
+Red Lake,Household,251,2011,27125
+Red Lake,Pounds,74132,2022,27125
+Red Lake,Pounds,32644,2021,27125
+Red Lake,Pounds,87583,2020,27125
+Red Lake,Pounds,51597,2019,27125
+Red Lake,Pounds,38223,2018,27125
+Red Lake,Pounds,38338,2017,27125
+Red Lake,Pounds,33906,2016,27125
+Red Lake,Pounds,29026,2015,27125
+Red Lake,Pounds,30004,2014,27125
+Red Lake,Pounds,15800,2013,27125
+Red Lake,Pounds,9121,2012,27125
+Red Lake,Pounds,9895,2011,27125
+Roseau,Child,1273,2022,27135
+Roseau,Child,1011,2021,27135
+Roseau,Child,1528,2020,27135
+Roseau,Child,1854,2019,27135
+Roseau,Child,1925,2018,27135
+Roseau,Child,2158,2017,27135
+Roseau,Child,2479,2016,27135
+Roseau,Child,2465,2015,27135
+Roseau,Child,3169,2014,27135
+Roseau,Child,2282,2013,27135
+Roseau,Child,2053,2012,27135
+Roseau,Child,2183,2011,27135
+Roseau,Adult,1563,2022,27135
+Roseau,Adult,1403,2021,27135
+Roseau,Adult,2297,2020,27135
+Roseau,Adult,2600,2019,27135
+Roseau,Adult,2515,2018,27135
+Roseau,Adult,2449,2017,27135
+Roseau,Adult,2800,2016,27135
+Roseau,Adult,3008,2015,27135
+Roseau,Adult,4866,2014,27135
+Roseau,Adult,3199,2013,27135
+Roseau,Adult,2964,2012,27135
+Roseau,Adult,3000,2011,27135
+Roseau,Senior,328,2022,27135
+Roseau,Senior,225,2021,27135
+Roseau,Senior,433,2020,27135
+Roseau,Senior,421,2019,27135
+Roseau,Senior,412,2018,27135
+Roseau,Senior,381,2017,27135
+Roseau,Senior,387,2016,27135
+Roseau,Senior,377,2015,27135
+Roseau,Senior,478,2014,27135
+Roseau,Senior,351,2013,27135
+Roseau,Senior,325,2012,27135
+Roseau,Senior,420,2011,27135
+Roseau,Individual,3164,2022,27135
+Roseau,Individual,2639,2021,27135
+Roseau,Individual,4258,2020,27135
+Roseau,Individual,4875,2019,27135
+Roseau,Individual,4852,2018,27135
+Roseau,Individual,4988,2017,27135
+Roseau,Individual,5666,2016,27135
+Roseau,Individual,5850,2015,27135
+Roseau,Individual,8513,2014,27135
+Roseau,Individual,5832,2013,27135
+Roseau,Individual,5342,2012,27135
+Roseau,Individual,5603,2011,27135
+Roseau,Household,976,2022,27135
+Roseau,Household,830,2021,27135
+Roseau,Household,1340,2020,27135
+Roseau,Household,1568,2019,27135
+Roseau,Household,1629,2018,27135
+Roseau,Household,1593,2017,27135
+Roseau,Household,1750,2016,27135
+Roseau,Household,1825,2015,27135
+Roseau,Household,2651,2014,27135
+Roseau,Household,1831,2013,27135
+Roseau,Household,1876,2012,27135
+Roseau,Household,2140,2011,27135
+Roseau,Pounds,83577,2022,27135
+Roseau,Pounds,90010,2021,27135
+Roseau,Pounds,100932,2020,27135
+Roseau,Pounds,117160,2019,27135
+Roseau,Pounds,94517,2018,27135
+Roseau,Pounds,99534,2017,27135
+Roseau,Pounds,98633,2016,27135
+Roseau,Pounds,103771,2015,27135
+Roseau,Pounds,217839,2014,27135
+Roseau,Pounds,93682,2013,27135
+Roseau,Pounds,93204,2012,27135
+Roseau,Pounds,96114,2011,27135

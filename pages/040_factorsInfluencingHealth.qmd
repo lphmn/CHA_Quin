@@ -15,15 +15,13 @@ if (file.exists("pages/Global/gb.R")) {
 }
 ```
 
-Health starts in our homes, schools, workplaces, neighborhoods, and communities. We know that taking care of ourselves requires hard work and smart lifestyle choices. Health is also determined in part by access to social and economic opportunities; the resources and supports available in our homes, neighborhoods and communities; the quality of our schooling; the safety of our workplaces; the cleanliness of our water, food, and air; and the nature of our social interactions and relationships. These factors influencing health are also called the social determinants of health. The conditions in which we live explain in part why some individuals are healthier. Factors influencing our health have a major impact on people's health, well-being, and quality of life. The importance of all community members having equal opportunity to make choices that lead them to good health.
+Health is influenced by various factors, including the quality of our education, workplace safety, and the cleanliness of our water, food, and air. Social interactions and relationships also play a crucial role. Health begins in our homes, schools, workplaces, neighborhoods, and communities. Taking care of ourselves involves dedication and making smart lifestyle choices. Access to social and economic opportunities, as well as the resources and support available in our environments, significantly impacts our health, well-being, and quality of life. It's essential for everyone in the community to have equal opportunities to make choices that promote good health.
 
 ### Social Vulnerability Index (SVI)
 
-Social Vulnerability is the potential negative effects on communities caused by external stresses on human health. Such stresses include natural or human-causes, disasters, or disease outbreaks. Reducing social vulnerability can decrease both human suffering and economic loss. The CDC Social Vulnerability Index (SVI) groups fifteen census-derived factors into four themes that summarize the extent to which the area is socially vulnerable to disaster. The factors include economic data as well as data regarding education, family characteristics, housing, language ability, ethnicity, and vehicle access. The SVI scale is 0 to 1 with 1 being the highest vulnerability.
+Social vulnerability describes the potential adverse effects on communities from external stresses on human health, such as natural or human-made disasters and disease outbreaks. Mitigating social vulnerability can reduce both human suffering and economic losses. The CDC's Social Vulnerability Index (SVI) organizes fifteen census-derived factors into four themes to measure an area's social vulnerability. These factors include economic data, education, family characteristics, housing, language proficiency, ethnicity, and vehicle access. The SVI scale ranges from 0 to 1, with 1 representing the highest vulnerability. The Healthy People 2030 initiative focuses on enhancing social and community support. By working together, partners can ideally offer services and resources that help achieve a low vulnerability status.
 
-Healthy People 2030 Goal: Increase social and community support. Ideally partners can work towards having the services and supports available to be considered a low vulnerability area.
-
-`{r} f_cdcSvi2022$county[3]` County has several notable statistics regarding its population and housing. There are approximately `{r} f_cdcSvi2022$e_pov150[3]` individuals below poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[3]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated `{r} f_cdcSvi2022$e_nohsdp[3]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[3]` County has about `{r} f_cdcSvi2022$e_uninsur[3]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[3]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[3]` households have more people than rooms available.
+`{r} f_cdcSvi2022$county[3]` County has approximately `{r} f_cdcSvi2022$e_pov150[3]` individuals below poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[3]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated `{r} f_cdcSvi2022$e_nohsdp[3]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[3]` County has about `{r} f_cdcSvi2022$e_uninsur[3]` uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[3]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[3]` households have more people than rooms available.
 
 | Category                          | Score                            |
 |-----------------------------------|----------------------------------|
@@ -35,14 +33,9 @@ Healthy People 2030 Goal: Increase social and community support. Ideally partner
 
 : `{r} f_cdcSvi2022$county[3]` County's SVI Scores
 
-`{r} f_cdcSvi2022$county[3]` County Interpretation:
+`{r} f_cdcSvi2022$county[3]` County Interpretation: `{r} f_cdcSvi2022$county[3]` County's high score in the Housing Type and Transportation category suggests that these are significant areas of concern. Despite the overall low social vulnerability score, the high index in this category highlights the need for targeted interventions to improve housing conditions and transportation access. Addressing these issues can help reduce the overall vulnerability of the community and improve residents' quality of life.
 
--   High Housing Cost Burden: A significant portion of households with incomes under \$75,000 are spending more than 30% on housing, indicating financial strain.
--   Education and Insurance Gaps: A notable number of residents lack a high school diploma and health insurance, which can limit economic opportunities and access to healthcare.
--   Aging Population: With a large number of residents aged 65 and older, there may be increased demand for healthcare and senior services.
--   High SVI Scores: The high scores in Housing Type/Transportation and Racial and Ethnic Minority Status suggest challenges in housing stability and potential disparities affecting minority groups.
-
-`{r} f_cdcSvi2022$county[4]` County also presents several key statistics. There are approximately `{r} f_cdcSvi2022$e_pov150[4]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[4]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated `{r} f_cdcSvi2022$e_nohsdp[4]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[4]`County also has about `{r} f_cdcSvi2022$e_uninsur[4]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[4]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[4]` households have more people than rooms available.
+`{r} f_cdcSvi2022$county[4]` County has approximately `{r} f_cdcSvi2022$e_pov150[4]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[4]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated `{r} f_cdcSvi2022$e_nohsdp[4]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[4]` County also has about `{r} f_cdcSvi2022$e_uninsur[4]` uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[4]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[4]` households have more people than rooms available.
 
 | Category                          | Score                            |
 |-----------------------------------|----------------------------------|
@@ -54,13 +47,9 @@ Healthy People 2030 Goal: Increase social and community support. Ideally partner
 
 : `{r} f_cdcSvi2022$county[4]` County's SVI Scores
 
-`{r} f_cdcSvi2022$county[4]` County Interpretation:
+`{r} f_cdcSvi2022$county[4]` County Interpretation: `{r} f_cdcSvi2022$county[4]` County has an overall low social vulnerability index, but there are significant concerns regarding household characteristics. The high score in household characteristics indicates that many residents face challenges related to family structure, disability, and single-parent households. Addressing these issues is crucial for improving the overall well-being of the community.
 
--   Moderate Vulnerabilities: The scores indicate moderate levels of socioeconomic and housing vulnerabilities.
--   Education and Insurance Needs: Similar to Polk County, there are gaps in education and health insurance coverage.
--   Aging Population: The presence of a significant elderly population highlights the need for age-related services and support.
-
-`{r} f_cdcSvi2022$county[5]` County statistics are also noteworthy. There are approximately `{r} f_cdcSvi2022$e_pov150[5]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[5]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated`{r} f_cdcSvi2022$e_nohsdp[5]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[5]` County also has about `{r} f_cdcSvi2022$e_uninsur[5]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[5]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[5]` households have more people than rooms available.
+`{r} f_cdcSvi2022$county[5]` County approximately has `{r} f_cdcSvi2022$e_pov150[5]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[5]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated`{r} f_cdcSvi2022$e_nohsdp[5]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[5]` County also has about `{r} f_cdcSvi2022$e_uninsur[5]` uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[5]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[5]` households have more people than rooms available.
 
 | Category                          | Score                            |
 |-----------------------------------|----------------------------------|
@@ -72,26 +61,49 @@ Healthy People 2030 Goal: Increase social and community support. Ideally partner
 
 : `{r} f_cdcSvi2022$county[5]` County's SVI Scores
 
-`{r} f_cdcSvi2022$county[5]` County Interpretation:
+`{r} f_cdcSvi2022$county[5]` County Interpretation: `{r} f_cdcSvi2022$county[5]` County has a low to medium overall social vulnerability, with the highest score in the housing type and transportation category. This high score underscores the need for focused interventions in this area. By addressing these specific vulnerabilities, `{r} f_cdcSvi2022$county[5]` County can work towards enhancing the well-being and resilience of its residents.
 
--   High Vulnerability: The highest SVI scores across all categories indicate severe vulnerabilities, particularly in socioeconomic status and racial/ethnic minority status.
--   Significant Education and Insurance Gaps: A high number of residents lack a high school diploma and health insurance, exacerbating economic and health challenges.
--   Aging Population: The elderly population, combined with other vulnerabilities, suggests a need for comprehensive support services.
+`{r} f_cdcSvi2022$county[6]` County has approximately `{r} f_cdcSvi2022$e_pov150[6]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[6]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated`{r} f_cdcSvi2022$e_nohsdp[6]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[6]` County also has about `{r} f_cdcSvi2022$e_uninsur[6]` uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[6]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[6]` households have more people than rooms available.
 
-The SVI project is a great start at figuring out what areas to invest in related to socioeconomic factors [@cdc2022Svi]. However, it is not the only area we looked at.
+| Category                          | Score                            |
+|-----------------------------------|----------------------------------|
+| Overall SVI                       | `{r} f_cdcSvi2022$rpl_themes[6]` |
+| Socioeconomic Status              | `{r} f_cdcSvi2022$rpl_theme1[6]` |
+| Household Characteristics         | `{r} f_cdcSvi2022$rpl_theme2[6]` |
+| Racial and Ethnic Minority Status | `{r} f_cdcSvi2022$rpl_theme3[6]` |
+| Housing Type/Transportation       | `{r} f_cdcSvi2022$rpl_theme4[6]` |
+
+: `{r} f_cdcSvi2022$county[6]` County's SVI Scores
+
+`{r} f_cdcSvi2022$county[6]` County Interpretation: `{r} f_cdcSvi2022$county[6]` County exhibits low overall social vulnerability, with the highest score in the household characteristics category. This indicates a need for targeted interventions in this area. By addressing these specific vulnerabilities, `{r} f_cdcSvi2022$county[6]` County can improve the well-being and resilience of its residents.
+
+`{r} f_cdcSvi2022$county[7]` County has approximately `{r} f_cdcSvi2022$e_pov150[7]` individuals below the poverty line. Among occupied housing units with an annual income of less than \$75,000, around `{r} f_cdcSvi2022$e_hburd[7]` are considered cost-burdened, spending more than 30% on their income on housing costs. Additionally, an estimated`{r} f_cdcSvi2022$e_nohsdp[7]` residents aged 25 and older do not have a high school diploma. `{r} f_cdcSvi2022$county[7]` County also has about `{r} f_cdcSvi2022$e_uninsur[7]`uninsured individuals within the total civilian noninstitutionalized population. There are approximately `{r} f_cdcSvi2022$e_age65[7]` residents aged 65 and older. Lastly, around `{r} f_cdcSvi2022$e_crowd[7]` households have more people than rooms available.
+
+| Category                          | Score                            |
+|-----------------------------------|----------------------------------|
+| Overall SVI                       | `{r} f_cdcSvi2022$rpl_themes[7]` |
+| Socioeconomic Status              | `{r} f_cdcSvi2022$rpl_theme1[7]` |
+| Household Characteristics         | `{r} f_cdcSvi2022$rpl_theme2[7]` |
+| Racial and Ethnic Minority Status | `{r} f_cdcSvi2022$rpl_theme3[7]` |
+| Housing Type/Transportation       | `{r} f_cdcSvi2022$rpl_theme4[7]` |
+
+: `{r} f_cdcSvi2022$county[7]` County's SVI Scores
+
+`{r} f_cdcSvi2022$county[7]` County Interpretation: `{r} f_cdcSvi2022$county[7]` County exhibits medium to high overall social vulnerability, with all categories except racial and ethnic minority status falling into the medium to high-risk range. The scores for socioeconomic status, household characteristics, and housing type/transportation highlight areas that could benefit from focused efforts. These aspects emphasize the value of targeted interventions to enhance the well-being and resilience of `{r} f_cdcSvi2022$county[7]` County's residents. By addressing these specific challenges, the county can work towards creating a more supportive and sustainable community.
+
+The SVI project is an excellent starting point for identifying areas to invest in related to socioeconomic factors [@cdc2022Svi]. However, it is not the only area we explored.
 
 ### Education
 
-Education can be an important predictor of lifelong health. Graduating from high school is an important personal achievement and essential for an individual's social and economic advancement. Poverty may also increase the risk of developing chronic diseases, which can lead to an even lower income.
+Education is a key predictor of lifelong health. Graduating from high school is a significant personal achievement and crucial for an individual's social and economic progress. Poverty can increase the risk of developing chronic diseases, which may further reduce income. A Healthy People 2030 goal is to increase educational opportunities and support children and adolescents in excelling at school. Higher educational attainment is linked to higher incomes, better employment options, increased social support, and more opportunities for healthier choices---all of which can improve health outcomes and extend life expectancy. Conversely, lower education levels are associated with low health literacy and higher levels of risky behaviors.
 
-Healthy People 2030 Goal: Increase educational opportunities and help children and adolescents do well in school. Higher educational attainment is associated with; higher incomes, better employment options, increased social supports, and greater opportunities for healthier choices, all factors that can improve health outcomes and increase life expectancy. Lower education levels are associated with; low health literacy and higher levels of risky behaviors.
+From 2022 to 2023, Minnesota and Roseau saw a decline in reading proficiency among third graders. In contrast, Marshall County experienced the largest gain in reading proficiency during this period. Red Lake, Kittson, and Pennington also showed notable improvements in reading proficiency. Regarding math proficiency, Roseau had a slight decline, while Minnesota, Kittson, Marshall, Pennington, and Red Lake all demonstrated positive improvements from 2022 to 2023. Red Lake had the largest increase, followed closely by Kittson. Each county has unique needs, and even small positive improvements are encouraging [@mdeThirdGradeProficiency].
 
-Minnesota, Norman, and Polk experienced a decline in reading proficiency from 2022 to 2023 for third graders. Mahnomen County's data was suppressed due to small counts, but the negative percentage change in the 'not proficient' reading status indicates improvement in this area. Although interpreting a double negative is not as straight forward as interpreting being proficient, it suggests that Mahnomen has made progress in reading proficiency from 2022 to 2023. In terms of math proficiency, Minnesota, Polk, Norman, and Mahnomen all showed positive improvement from 2022 to 2023. Norman County had the largest increase, followed by Mahnomen. Each county has unique needs, and even small positive improvements is encouraging [@mdeThirdGradeProficiency].
-
-In Norman County, the four-year graduation rate was 94.6% in 2021 and 91.6% in 2022. Polk County had graduation rates of 83.3% in 2021 and 84.3% in 2022. Mahnomen County's high school graduation rates were 62.8% in 2021 and 55.9% in 2022 [@kidsCountGraduation]. High graduation rates are crucial as they reflect the effectiveness of the education system in preparing students for future success. Graduating from high school opens up more opportunities for higher education and employment, which can lead to better economic stability and overall quality of life. Lower graduation rates highlight areas where additional support and resources may be needed to help students succeed.
+All five Quin counties had higher graduation rates than the state of Minnesota. Kittson, Marshall, and Red Lake counties achieved graduation rates of 90% or more in both 2021 and 2022. Pennington County reached a graduation rate of 92.2% in 2022. Although Roseau County experienced a slight decline from 2021 to 2022, its graduation rate remained relatively high. High graduation rates are crucial because they demonstrate how well the education system prepares students for future success. Completing high school provides more opportunities for higher education and employment, which can lead to greater economic stability and an improved quality of life. Conversely, lower graduation rates indicate areas where additional support and resources may be necessary to help students thrive.
 
 ::: {#fig-thirdGradeProReading}
 ```{r}
+#| label: f_mdeThirdGradeProficientReading
 #| warning: false
 #| include: false
 
@@ -201,6 +213,7 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-thirdGradeProMath}
 ```{r}
+#| label: f_mdeThirdGradeProficientMath
 #| warning: false
 #| include: false
 
@@ -308,16 +321,30 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 `{r} figCap_plotTitle`
 :::
 
+|  Location  | 2021  | 2022  |
+|:----------:|:-----:|:-----:|
+| Minnesota  | 83.3% | 83.6% |
+|  Kittson   | 93.6% | 95.1% |
+|  Marshall  | 94.4% | 92.5% |
+| Pennington | 89.7% | 92.2% |
+|  Red Lake  | 100%  | 92.9% |
+|   Roseau   | 86.6% | 85.4% |
+
+: Graduation Rate
+
+@kidsCountGraduation
+
 ### Economic Stability
 
-According to Healthy People 2030, people with steady employment are more likely to be healthy, but many people have trouble finding and keeping a job. People with disabilities, injuries, or physical conditions may be especially limited in their ability to work. In addition, many people with steady work still do not earn enough to afford the things they need to stay healthy (Healthy People 2030). Income shapes where we live, how stable our living arrangements are, what condition our home is in, what schools we attend, what types of recreation we take part in, and what kinds of foods we eat and more.
+According to @healthyPeople2023EconomicStability, individuals with stable employment tend to be healthier. However, many people face challenges in finding and maintaining jobs. Those with disabilities, injuries, or physical conditions may find it particularly difficult to work. Additionally, even those with steady employment often do not earn enough to afford essential items for maintaining their health. Income influences various aspects of our lives, including our living conditions, the stability of our housing, the quality of our homes, the schools we attend, the recreational activities we engage in, and the types of food we consume.
 
-Overall, the changes in unemployment rates between 2022 and 2023 are minimal, with most areas showing a slight increase of 0.1% or no change at all [@mnDeedUnemploymentRate]. This stability suggests a relatively steady job market in our counties. For instance, Minnesota's unemployment rate increased marginally from 2.7% in 2022 to 2.8% in 2023, while Mahnomen's rate remained unchanged at 4.7%. Similarly, Norman and Polk counties experienced slight increases of 0.1%, indicating minor fluctuations in employment levels.
+The unemployment rates between 2022 and 2023 have shown minimal changes. Marshall and Roseau counties experienced increases of 0.4%, Kittson County rose by 0.3%, Red Lake increased by 0.2%, and both Pennington County and Minnesota saw a 0.1% increase [@mnDeedUnemploymentRate]. These values indicate a relatively stable job market for the five Quin counties. However, four out of five Quin counties (Marshall 4.2%, Kittson 3.0%, Red Lake 3.9%, and Pennington 3.3%) have higher unemployment rates compared to the state of Minnesota (2.8%) in 2023. This suggests that while the rates over time are more stable, there is still room for improvement.
 
-It's important to note that there was a increase in unemployment rates in 2020, likely due to the economic impact of the COVID-19 pandemic. The pandemic led to widespread job losses and economic disruptions, which were reflected in higher unemployment rates across many regions. Since then, the job market has been gradually recovering, as evidenced by the relatively stable rates in recent years.
+In 2020, unemployment rates saw a significant rise, likely due to the economic fallout from the COVID-19 pandemic. The pandemic triggered widespread job losses and economic disruptions, resulting in higher unemployment rates across many regions. Since then, the job market has been on a gradual path to recovery, as reflected in the relatively stable rates observed in recent years.
 
 ::: {#fig-unemploymentRate}
 ```{r}
+#| label: f_unemploymentRateDEED
 #| warning: false
 #| include: false
 
@@ -430,44 +457,53 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Child Care
 
-Critical to promoting livable communities and promoting development needs for children. Quality child care is a critical component in helping our most vulnerable children get a good start in life, and allow parents/guardians to stay working. Through various community conversations, child care gaps exist in access, availability, and affordability of care. The Minnesota Department of Employment and Economic Development has a comprehensive report detailing these gaps. Refer to figures 4 & 5 on page 3 and tables 3 & 4 on page 4 [in the MN DEED report](https://mn.gov/deed/assets/Northwest-Minnesota-New_tcm1045-631741.pdf).
+High-quality child care is crucial for building thriving communities and supporting children's growth. It ensures that our most vulnerable children receive a strong start in life while allowing parents and guardians to maintain their employment. Community discussions have identified significant gaps in child care access, availability, and affordability. The Minnesota Department of Employment and Economic Development (DEED) has a detailed report outlining these gaps. For further details, refer to figures 4 and 5 on page 3 and tables 3 and 4 on page 4 [in the MN DEED report](https://mn.gov/deed/assets/Northwest-Minnesota-New_tcm1045-631741.pdf).
 
 ## County Profiles (More Information)
 
-The Department of Employment and Economic Development offers a comprehensive breakdown of additional data on population, education, labor force, income and cost of living, industry employment, and commuting patterns. These profiles provide valuable insights into the economic landscape of our three counties, aiding in effective planning. According to the profiles, all three counties---Polk, Norman, and Mahnomen---are projected to experience a decline in labor force from 2025 to 2035 [@mnDeedCountyProfiles].
+DEED provides a detailed analysis of data on population, education, labor force, income and cost of living, industry employment, and commuting patterns. These profiles offer valuable insights into the economic landscape of Quin's five-county jurisdiction, aiding in effective planning. According to the profiles, the entire region is projected to experience a decline in labor force from 2025 to 2035 [@mnDeedCountyProfiles].
 
 ::: {#fig-ctyProfile layout-ncol="3"}
-[![](Attachments/mnMap_polk.png)](https://mn.gov/deed/assets/101824_polk_tcm1045-407501.pdf)
+[![](Attachments/mnMap_kittson.png)](https://mn.gov/deed/assets/012725_kittson_tcm1045-407493.pdf)
 
-[![](Attachments/mnMap_norman.png)](https://mn.gov/deed/assets/101824_norman_tcm1045-407498.pdf)
+[![](Attachments/mnMap_marshall.png)](https://mn.gov/deed/assets/012725_marshall_tcm1045-407496.pdf)
 
-[![](Attachments/mnMap_mahnomen.png)](https://mn.gov/deed/assets/101824_mahnomen_tcm1045-407495.pdf)
+[![](Attachments/mnMap_pennington.png)](https://mn.gov/deed/assets/012725_pennington_tcm1045-407500.pdf)
+
+[![](Attachments/mnMap_redlake.png)](https://mn.gov/deed/assets/012725_redlake_tcm1045-407503.pdf)
+
+[![](Attachments/mnMap_roseau.png)](https://mn.gov/deed/assets/012725_roseau_tcm1045-407504.pdf)
 
 For detailed county profiles, please click on the corresponding map above.
 :::
 
 ## Transportation and Crashes
 
-The Office of Traffic Safety, a Division of the Minnesota Department of Public Safety, produces MN Motor Vehicle Crash Facts. Minnesota TZD is the state's cornerstone traffic safety program with an interdisciplinary approach to reducing traffic crashes, injuries, and deaths on Minnesota roads. There are TZD Coalitions in Polk and Norman Counties.
-
-It is important to know any potential high crash areas in our counties. It is very encouraging that we don't see any red, purple, or blue on the maps developed by [@tzdCrashSite2023]. It is even for a five-year time period, and we still don't see alarming signs of concern resulting in serious injury or death. This may reflect the effectiveness of our local road safety measures and community awareness. Continuing to prioritize safe driving practices will help maintain and improve these outcomes. The following maps show the location of fatal and serious injury crashes in each county. Information was put together by the Center for Transportation Studies at the University of Minnesota, as a part of MN Toward Zero Deaths (TZD).
+Over a five-year period, none of the five Quin counties showed red, purple, or blue on the maps developed by [@tzdCrashSite2023], which is a positive indicator. The absence of these colors suggests that there have been no areas with extremely high crash rates or severe injuries, reflecting effective traffic safety measures and safer roads. Marshall and Pennington counties are the only counties among the five that recorded three deaths or serious injuries (dark orange) within their borders; Pennington County had this occur in multiple locations. Minnesota Toward Zero Deaths (TZD) is the state's leading traffic safety program, using an interdisciplinary approach to reduce traffic crashes, injuries, and fatalities on Minnesota roads. The Office of Traffic Safety, part of the Minnesota Department of Public Safety, publishes MN Motor Vehicle Crash Facts. Identifying potential high-crash areas in our counties is crucial.
 
 ::: {#fig-seriousCrash layout-ncol="3"}
-[![](Attachments/popEnvironmentalHealth/countyMahnomenMap_crashes2019_2023.png){fig-align="center" width="288"}](https://www.minnesotatzd.org/regions/westcentral)
+[![](Attachments/040_factorsInfluencingHealth/countyKittsonMap_crashes2019_2023.png){width="218"}](https://www.minnesotatzd.org/regions/northwest)
 
-[![](Attachments\popEnvironmentalHealth\countyNormanMap_crashes2019_2023.png){fig-align="center" width="288"}](https://www.minnesotatzd.org/regions/northwest)
+[![](Attachments/040_factorsInfluencingHealth/countyMarshallMap_crashes2019_2023.png){width="218"}](https://www.minnesotatzd.org/regions/northwest)
 
-[![](Attachments\popEnvironmentalHealth\countypolkMap_crashes2019_2023.png){fig-align="center" width="288"}](https://www.minnesotatzd.org/regions/northwest)
+[![](Attachments/040_factorsInfluencingHealth/countyPenningtonMap_crashes2019_2023.png){width="218"}](https://www.minnesotatzd.org/regions/northwest)
 
-For more resources, please click anywhere on any of the maps
+[![](Attachments/040_factorsInfluencingHealth/countyRedLakeMap_crashes2019_2023.png){width="218"}](https://www.minnesotatzd.org/regions/northwest)
+
+[![](Attachments/040_factorsInfluencingHealth/countyRoseauMap_crashes2019_2023.png){width="218"}](https://www.minnesotatzd.org/regions/northwest)
+
+For additional resources, simply click on any of the maps
 :::
 
 ## Housing Insecurity
 
-Housing instability is a critical issue affecting many individuals and families. It encompasses a range of challenges, including difficulty paying rent, overcrowding, frequent moves, and the threat of eviction. These conditions can have profound impacts on physical and mental health, educational outcomes, and overall well-being. Addressing house insecurity is essential for creating stable, healthy communities and ensuring that everyone has a safe, affordable place to call home. The house insecurity age-adjusted prevalence highlight the disparities in house insecurity across our three counties and the state of Minnesota. Mahnomen County has the highest disparity with about 1 in every 5 people having a house insecurity where Minnesota, Polk, and Norman have about 1 in every 10 people.
+Housing instability is a pressing issue that affects countless individuals and families. It includes a spectrum of challenges such as struggling to pay rent, living in overcrowded conditions, frequent relocations, and the looming threat of eviction. These hardships can deeply impact physical and mental health, educational success, and overall well-being. Tackling housing insecurity is vital for fostering stable, healthy communities and ensuring everyone has a safe, affordable place to call home.
+
+The age-adjusted prevalence of housing insecurity reveals some variations across our counties and the state of Minnesota. In Minnesota, the prevalence is 10.4% (CI: 9.3-11.7%), while the Quin CHS region has a slightly higher rate at 10.6% (CI: 9.3-12.0%). Among the counties, Kittson has a prevalence of 9.4% (CI: 8.3-10.8%), Marshall stands at 10.7% (CI: 9.4-12.2%), Pennington at 11.0% (CI: 9.6-12.4%), Red Lake at 10.5% (CI: 9.2-11.9%), and Roseau at 10.5% (CI: 9.3-11.9%). While these figures show some differences, the overlapping confidence intervals suggest that these variations are not statistically significant. This indicates that housing insecurity rates are relatively similar across the counties and the state of Minnesota.
 
 ::: {#fig-socialNeedHouseInsecurity}
 ```{r}
+#| label: f_places2022HosueInsecurity
 #| warning: false
 #| include: false
 
@@ -481,17 +517,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -522,33 +552,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -568,7 +594,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -577,8 +603,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -592,10 +617,11 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ## Food Access
 
-Food access is a fundamental aspect of community health and well-being. It refers to the availability and affordability of nutritious food for all individuals, regardless of their socioeconomic status. Adequate food access ensures that people can obtain the necessary nutrients to maintain a healthy lifestyle, which is crucial for physical and mental health, academic performance, and overall quality of life. However, many communities face significant barriers to food access, including food deserts, economic constraints, and limited transportation options. Addressing these challenges is essential to promote equity and ensure that everyone has the opportunity to lead a healthy, fulfilling life. Mahnomen County had significantly higher age-adjusted prevalence for food insecurity and food stamp usage in the past 12 months among adults compared to Polk County, Norman County, and the state of Minnesota. Polk County, Norman County, and Minnesota were similar.
+Ensuring access to nutritious food is essential for physical and mental health, academic performance, and overall quality of life. It involves making healthy food available and affordable for everyone, regardless of socioeconomic status. However, many communities face barriers like food deserts, economic constraints, and limited transportation. Addressing these challenges is crucial to promote equity and enable everyone to lead a healthy, fulfilling life. The five Quin counties have statstically similar levels of food insecurity and food stamp usage as the rest of Minnesota.
 
 ::: {#fig-socialNeedFoodInsecurity}
 ```{r}
+#| label: f_places2022FoodInsecurity
 #| warning: false
 #| include: false
 
@@ -609,17 +635,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,1), " (", formattable::comma(low_confidence_limit,1), "-", formattable::comma(high_confidence_limit,1), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -651,33 +671,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -697,7 +713,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -706,8 +722,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -721,6 +736,7 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ::: {#fig-socialNeedFoodStamp}
 ```{r}
+#| label: f_places2022FoodStamp
 #| warning: false
 #| include: false
 
@@ -734,17 +750,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -773,31 +783,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -816,7 +824,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -825,8 +833,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -840,32 +847,33 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ## Healthcare and Dental Access
 
-Access to comprehensive health care services, including primary care and dental care, is essential for maintaining overall health and well-being. Primary care providers play a critical role in early detection, prevention, and management of various health conditions. They offer a wide range of services, from routine check-ups and immunizations to managing chronic diseases and coordinating specialist care.
-
-Similarly, dental services are vital for preventing and treating oral health issues, which can significantly impact overall health. Regular dental check-ups and cleanings help prevent cavities, gum disease, and other oral health problems. Dentists also provide essential education on maintaining good oral hygiene practices.
-
-Improving access to these services can lead to better health outcomes for our communities. Efforts to increase the availability of primary care providers and dentists, especially in underserved regions, are crucial. This includes initiatives to attract and retain healthcare professionals in rural areas, expanding telehealth services, and ensuring affordable care for all residents. Through a partnership with Blue Cross Blue Shield of Minnesota/Blue Plus, the PNM Dental Innovation Coordinator works on population based dental access innovations and helps residents seeking dental services. As part of this initiative, locations across the three counties now partner with Children's Dental Services (CDS), a non profit dental health clinic, that offers onsite dental hygiene services. Increasing access to comprehensive, high-quality health care is a Healthy People 2030 Goal.
+Access to comprehensive health care, including primary and dental care, is crucial for overall well-being. Primary care providers detect, prevent, and manage health conditions through check-ups, immunizations, chronic disease management, and specialist coordination. Dental services are essential for preventing and treating oral health issues, which affect overall health. Regular check-ups and cleanings prevent cavities and gum disease, while dentists educate on good oral hygiene. Improving access to these services can lead to better health outcomes for our communities. Efforts to increase the availability of primary care providers and dentists, especially in underserved regions, are crucial. This includes initiatives to attract and retain healthcare professionals in rural areas, expanding telehealth services, and ensuring affordable care for all residents. Increasing access to comprehensive, high-quality health care is a Healthy People 2030 Goal.
 
 **Population per Primary Care Provider (2022)** - Minnesota: 1,133 people per primary care provider.
 
--   Norman County: Data not available (NA).
--   Polk County: 1,809 people per primary care provider.
--   Mahnomen County: 5,414 people per primary care provider.
+-   Kittson County: Data not available (NA)
+-   Marshall County: 8,988 people per primary care provider
+-   Pennington County: 1,252 people per primary care provider
+-   Red Lake County: Data not available (NA)
+-   Roseau County: 1,907 people per primary care provider
 
-This indicates that, on average, Minnesota has 1,133 people per primary care provider, which suggests relatively good access to primary care across the state. Polk County has a higher ratio of 1,809 people per provider, indicating less access compared to the state average. Mahnomen County has the highest ratio with 5,414 people per provider, suggesting significantly less access to primary care services.
+Pennington County has the closest average to the state of Minnesota, with 1,252 people per primary care provider compared to the state average of 1,133 people per provider. Roseau County has a higher ratio of 1,907 people per provider, indicating less access than the state average. Marshall County has the highest ratio among the counties with available data, with 8,988 people per provider, suggesting significantly less access to primary care services. Data for Kittson and Red Lake counties was not available.
 
 **Population per Dentist (2022)** - Minnesota: 1,287 people per dentist
 
--   Mahnomen County: Data not available (NA)
--   Norman County: 1,594 people per dentist
--   Polk County: 2,195 people per dentist
+-   Kittson County: 2,029 people per dentist
+-   Marshall County: 4,430 people per dentist
+-   Pennington County: 1,730 people per dentist
+-   Red Lake County: Data not available (NA)
+-   Roseau County: 1,699 people per dentist
 
-This data suggests that, on average, Minnesota has 1,287 people per dentist, indicating relatively good access to dental care across the state. Norman County has a slightly higher ratio of 1,594 people per dentist, suggesting less access compared to the state average. Polk County has the highest ratio with 2,195 people per dentist, indicating significantly less access to dental care services.
+Roseau County has the closest average to the state of Minnesota, with 1,699 people per dentist compared to the state average of 1,287 people per dentist, indicating relatively good access. Pennington County has a higher ratio of 1,730 people per dentist, indicating less access to dental care and Kittson County shows even less acess to dental care with 2,029 people per dentist. Marshall County has the highest ratio among the counties with available data, with 4,430 people per dentist, suggesting significantly less access to dental services. Data for Red Lake County is not available.
 
-Even with potentially less access to primary care providers, the age-adjusted prevalence for having routine checkups is similar to the state average in Minnesota. About 3 out of 4 people are predicted to get their routine checkups. However, the consistency is not as strong for Medicaid beneficiaries receiving dental services. Assessing current performance is challenging due to lagging data and significant fluctuations in historical data.
+Despite potentially less access to primary care providers, the estimated rate of routine checkups is similar to the Minnesota state average, with about 3 out of 4 people predicted to get their checkups. However, Medicaid beneficiaries show less consistency in receiving dental services. Assessing current performance is difficult due to lagging and fluctuating data.
 
 ::: {#fig-yearPrimaryCarePhysiciansRatio}
 ```{r}
+#| label: f_CHRR2024PrimaryCarePhysician
 #| warning: false
 #| include: false
 
@@ -969,6 +977,7 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-yearDentistRatio}
 ```{r}
+#| label: f_CHRR2024Dentist
 #| warning: false
 #| include: false
 
@@ -1071,6 +1080,7 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-preventionRoutineCheckup}
 ```{r}
+#| label: f_places2022PrentionCheckup
 #| warning: false
 #| include: false
 
@@ -1084,17 +1094,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -1123,31 +1127,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -1166,7 +1168,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -1175,8 +1177,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -1190,6 +1191,7 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ::: {#fig-medicaidDentalService}
 ```{r}
+#| label: f_pHDAPMedicaidDentalService
 #| warning: false
 #| include: false
 
@@ -1298,14 +1300,11 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Years of Potential Lost
 
-A good measure for how our communities are doing is **years of potential life lost (YPLL)**. Premature death is defined as dying before the age of 75. When we look at potential life years lost (dying before 75), Mahnomen County's rate is almost three times higher than those of Polk County, Norman County, and the state of Minnesota.
-
-There can be multiple reasons for why this is significantly higher in Mahnomen County. Factors such as access to healthcare, socioeconomic status, prevalence of chronic diseases, and lifestyle choices all play a role. Additionally, disparities in education, employment opportunities, and environmental conditions can contribute to higher rates of premature death.
-
-The main point is that Mahnomen County's YPLL is alarmingly high, indicating a critical need for targeted interventions. Improving healthcare access, promoting healthy lifestyles, and addressing social determinants of health are essential steps to reduce premature deaths and improve overall community well-being. Addressing these issues requires a collaborative effort from local governments, healthcare providers, and community organizations. By focusing on preventive measures, early detection, and effective treatment of chronic conditions, we can work towards reducing the years of potential life lost and enhancing the quality of life for all of our residents.
+**Years of potential life lost (YPLL)** is a key measure of community health, indicating premature deaths before age 75. Roseau County has a significantly higher YPLL compared to Minnesota, unlike Kittson County, which, despite a higher prevalence, isn't significantly above the state average. Reducing YPLL and enhancing residents' quality of life necessitates collaboration among local governments, healthcare providers, and community organizations. By prioritizing preventive measures, early detection, effective treatment of chronic conditions, promoting healthy lifestyles, and addressing social determinants of health, these goals can be achieved easier together.
 
 ::: {#fig-yearsPotentialLifeLost}
 ```{r}
+#| label: f_CHRR2024PrematureDeath
 #| warning: false
 #| include: false
 
@@ -1411,9 +1410,9 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Adverse Childhood Experiences
 
-Adverse Childhood Experiences, or ACEs, are preventable, potentially traumatic events that occur in childhood (0-17 years) such as neglect, experiencing or witnessing violence, and having a family member attempt or die by suicide. Also included are aspects of a child's environment that can undermine their sense of safety, stability, and bonding, such as growing up in a household with substance use; mental health problems; or instability due to parental separation or incarceration of a parent, sibling or other member of the household. (CDC, 2019; Felitti et al.,) Adverse childhood experiences can increase a person's risk for chronic stress and adverse coping mechanisms and result in lifelong chronic illness such as depression, heart disease, obesity and substance abuse.
+Adverse Childhood Experiences (ACEs) are preventable, potentially traumatic events occurring in childhood (0-17 years), such as neglect, witnessing violence, or having a family member attempt or die by suicide. They also include environmental factors that undermine a child's sense of safety, stability, and bonding, like living with substance abuse, mental health issues, or experiencing parental separation or incarceration. ACEs can increase the risk of chronic stress, adverse coping mechanisms, and lifelong illnesses such as depression, heart disease, obesity, and substance abuse \[\@cdcAces\].
 
-We were able to obtain ACE's data from Minnesota's Department of Education Minnesota Student Survey Reports 2013-2022 tool. The ACE'S data consisted of the following questions:
+Data on ACEs was obtained from the Minnesota Student Survey Reports (2013-2022) by the Minnesota Department of Education. The survey included questions such as:
 
 1.  Do you live with anyone who drinks too much alcohol? See @tbl-ACES_1.
 2.  Do you live with anyone who is depressed or has any other mental health issues? See @tbl-ACES_2.
@@ -1424,232 +1423,292 @@ We were able to obtain ACE's data from Minnesota's Department of Education Minne
 7.  Has anyone who was not a relative/family member ever pressured, tricked, or forced you to do something sexual or done something sexual to you against your wishes? @tbl-ACES_7
 8.  Have your parents or other adults in your home ever slapped, hit, kicked, punched or beat each other up? See @tbl-ACES_8.
 
-Polk County's data remained fairly consistent when comparing 2019 to 2022 for the same grade levels. However, @tbl-ACES_5 indicates an increase in 11th graders living with someone who has mental health issues from 2019 to 2022. Interpreting this change is challenging. On one hand, preventing mental health issues is crucial. On the other hand, increased openness and reduced stigma around mental health might explain the rise, suggesting a more supportive environment.
-
-Interpreting the data for Norman County and Mahnomen County is challenging due to their smaller populations. As noted in the "Understanding Our CHA" section, low data totals can complicate analysis. To address this, we can either combine grades or aggregate data across multiple years. However, due to limited time and data, we were unable to take this next step.
-
 ::: {.content-visible when-format="html" layout-ncol="1"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   8.9%    |   10.2%   |    9.2%    |
-|   Polk County   | 2022 |   9.2%    |   10.0%   |   11.6%    |
-|  Norman County  | 2019 |  15.2%\*  |     0     |  18.5%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  10.9%\*  |  6.5%\*   |  18.9%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  12.9%\*  |   0.0%    |   7.4%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  12.9%\*  |    \_\_    |
+|  Marshall County  | 2022 |  11.8%\*  |  19.0%\*  |    0.0%    |
+| Pennington County | 2019 |  6.2%\*   |   13.7%   |  12.4%\*   |
+| Pennington County | 2022 |  14.0%\*  |   16.8%   |   16.0%    |
+|  Red Lake County  | 2019 |  7.5%\*   |  14.5%\*  |   4.7%\*   |
+|  Red Lake County  | 2022 |  12.9%\*  |  3.8%\*   |   7.1%\*   |
+|   Roseau County   | 2019 |   12.3%   |   13.0%   |  11.7%\*   |
+|   Roseau County   | 2022 |  16.7%\*  |  8.2%\*   |  12.2%\*   |
 
 : Percent who lives with anyone who drinks too much alcohol {#tbl-ACES_1}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   22.9%   |    25%    |   27.3%    |
-|   Polk County   | 2022 |   21.5%   |   26.0%   |   35.3%    |
-|  Norman County  | 2019 |   34.3%   |     0     |  33.3%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  21.8%\*  |   39.0%   |  29.7%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  19.4%\*  |  20.8%\*  |  29.6%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  22.6%\*  |    \_\_    |
+|  Marshall County  | 2022 |  21.2%\*  |  47.6%\*  |  33.3%\*   |
+| Pennington County | 2019 |    31%    |   30.8%   |   33.3%    |
+| Pennington County | 2022 |   35.2%   |   36.6%   |   42.5%    |
+|  Red Lake County  | 2019 |  13.2%\*  |  18.2%\*  |  16.7%\*   |
+|  Red Lake County  | 2022 |  12.9%\*  |  32.0%\*  |  14.3%\*   |
+|   Roseau County   | 2019 |   21.7%   |   24.1%   |   27.9%    |
+|   Roseau County   | 2022 |   23.6%   |   26.2%   |   33.3%    |
 
 : Percent living with someone with mental health issues {#tbl-ACES_2}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |  5.4%\*   |  5.3%\*   |    8.1%    |
-|   Polk County   | 2022 |  2.2%\*   |  4.4%\*   |   4.2%\*   |
-|  Norman County  | 2019 |  7.7%\*   |     0     |     0      |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  3.7%\*   |  12.0%\*  |  10.8%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  6.5%\*   |   0.0%    |   3.7%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  3.2%\*   |    \_\_    |
+|  Marshall County  | 2022 |  2.9%\*   |  9.5%\*   |   4.2%\*   |
+| Pennington County | 2019 |  3.4%\*   |  8.3%\*   |   6.7%\*   |
+| Pennington County | 2022 |  3.7%\*   |  3.1%\*   |   6.6%\*   |
+|  Red Lake County  | 2019 |   0.0%    |  7.3%\*   |   4.8%\*   |
+|  Red Lake County  | 2022 |   3.2%    |  3.8%\*   |   7.1%\*   |
+|   Roseau County   | 2019 |  5.0%\*   |  4.1%\*   |   6.4%\*   |
+|   Roseau County   | 2022 |  2.8%\*   |  1.6%\*   |  10.2%\*   |
 
 : Percent Who Lives with Anyone Using Illegal or Abusing Prescription Drugs {#tbl-ACES_3}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   14.1%   |   16.5%   |   13.7%    |
-|   Polk County   | 2022 |   12.8%   |   14.1%   |   14.2%    |
-|  Norman County  | 2019 |  14.9%\*  |     0     |   22.2%    |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  23.2%\*  |   23.4%   |  10.8%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  9.7%\*   |  4.2%\*   |  14.8%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  25.8%\*  |    \_\_    |
+|  Marshall County  | 2022 |  23.5%\*  |  23.8%\*  |  25.0%\*   |
+| Pennington County | 2019 |   15.8%   |   19.5%   |   16.2%    |
+| Pennington County | 2022 |   25.2%   |   24.4%   |   21.7%    |
+|  Red Lake County  | 2019 |  7.5%\*   |  20.4%\*  |  11.9%\*   |
+|  Red Lake County  | 2022 |  12.9%\*  |  11.5%\*  |   3.6%\*   |
+|   Roseau County   | 2019 |   15.6%   |   14.5%   |   18.8%    |
+|   Roseau County   | 2022 |  13.9%\*  |  23.3%\*  |  18.4%\*   |
 
 : Percent with Verbally Abusive Adults at Home {#tbl-ACES_4}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   11.9%   |   10.2%   |   11.1%    |
-|   Polk County   | 2022 |   10.6%   |   11.6%   |   8.4%\*   |
-|  Norman County  | 2019 |  19.7%\*  |     0     |  11.5%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |   11.5%   |   14.7%   |   13.5%    |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  9.7%\*   |  8.7%\*   |  22.2%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  12.9%\*  |    \_\_    |
+|  Marshall County  | 2022 |  11.8%\*  |  4.8%\*   |   8.3%\*   |
+| Pennington County | 2019 |   11.0%   |   16.0%   |   9.5%\*   |
+| Pennington County | 2022 |   15.7%   |   14.5%   |   17.9%    |
+|  Red Lake County  | 2019 |  13.2%\*  |  9.1%\*   |   4.7%\*   |
+|  Red Lake County  | 2022 |  3.2%\*   |   0.0%    |  10.7%\*   |
+|   Roseau County   | 2019 |  10.8%\*  |   15.8%   |   9.2%\*   |
+|   Roseau County   | 2022 |  6.9%\*   |  13.3%\*  |    6.3%    |
 
 : Percent Physically Hurt by Household Adults {#tbl-ACES_5}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |  1.6%\*   |  3.9%\*   |   4.1%\*   |
-|   Polk County   | 2022 |  2.6%\*   |  4.0%\*   |   3.2%\*   |
-|  Norman County  | 2019 |  3.1%\*   |     0     |  15.4%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |     0     |  4.1%\*   |   5.4%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  6.5%\*   |  4.2%\*   |    0.0%    |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  6.5%\*   |    \_\_    |
+|  Marshall County  | 2022 |   0.0%    |  10.0%\*  |   8.3%\*   |
+| Pennington County | 2019 |  0.7%\*   |  3.1%\*   |   1.9%\*   |
+| Pennington County | 2022 |  6.5%\*   |  6.9%\*   |   4.7%\*   |
+|  Red Lake County  | 2019 |   0.0%    |  7.3%\*   |    0.0%    |
+|  Red Lake County  | 2022 |  12.9%\*  |  3.8%\*   |   3.6%\*   |
+|   Roseau County   | 2019 |  3.6%\*   |  1.4%\*   |   1.8%\*   |
+|   Roseau County   | 2022 |  4.2%\*   |  1.6%\*   |    8.3%    |
 
 : Percent With Family Member Who Pressured or Forced Sexual Activity {#tbl-ACES_6}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |  3.8%\*   |  6.0%\*   |   7.4%\*   |
-|   Polk County   | 2022 |   8.4%    |   10.4%   |   7.9%\*   |
-|  Norman County  | 2019 |  1.5%\*   |     0     |   7.4\*    |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |   2%\*    |   8%\*    |   8.1%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  3.2%\*   |   0.0%    |  14.8%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  6.5%\*   |    \_\_    |
+|  Marshall County  | 2022 |   0.0%    |  14.3%\*  |   8.3%\*   |
+| Pennington County | 2019 |  4.1%\*   |  3.9%\*   |   6.8%\*   |
+| Pennington County | 2022 |  4.7%\*   |  4.6%\*   |   8.4%\*   |
+|  Red Lake County  | 2019 |  0.0%\*   |  5.5%\*   |   4.7%\*   |
+|  Red Lake County  | 2022 |  3.2%\*   |   0.0%    |    0.0%    |
+|   Roseau County   | 2019 |  6.5%\*   |  4.1%\*   |   6.6%\*   |
+|   Roseau County   | 2022 |  6.9%\*   |  6.6%\*   |  16.7%\*   |
 
 : Percent With Non-Relative Who Pressured or Forced Sexual Activity. {#tbl-ACES_7}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   7.7%    |   6.7%    |    8.5%    |
-|   Polk County   | 2022 |   7.9%    |  6.8%\*   |  11.1%\*   |
-|  Norman County  | 2019 |  16.7%\*  |     0     |  22.2%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  14.8%\*  |  14.5%\*  |  13.5%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  12.9%\*  |   0.0%    |   7.4%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  9.7%\*   |    \_\_    |
+|  Marshall County  | 2022 |  5.9%\*   |  4.8%\*   |   4.2%\*   |
+| Pennington County | 2019 |  8.9%\*   |  10.9%\*  |   7.6%\*   |
+| Pennington County | 2022 |  11.2%\*  |   14.5%   |  12.3%\*   |
+|  Red Lake County  | 2019 |  5.8%\*   |  5.5%\*   |   2.3%\*   |
+|  Red Lake County  | 2022 |  9.7%\*   |   0.0%    |   7.1%\*   |
+|   Roseau County   | 2019 |  7.2%\*   |  8.8%\*   |   7.1%\*   |
+|   Roseau County   | 2022 |  6.9%\*   |  3.3%\*   |   6.1%\*   |
 
 : Percent with Parents/Adults in Home Who Physically Fought {#tbl-ACES_8}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   8.9%    |   10.2%   |    9.2%    |
-|   Polk County   | 2022 |   9.2%    |   10.0%   |   11.6%    |
-|  Norman County  | 2019 |  15.2%\*  |     0     |  18.5%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  10.9%\*  |  6.5%\*   |  18.9%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  12.9%\*  |   0.0%    |   7.4%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  12.9%\*  |    \_\_    |
+|  Marshall County  | 2022 |  11.8%\*  |  19.0%\*  |    0.0%    |
+| Pennington County | 2019 |  6.2%\*   |   13.7%   |  12.4%\*   |
+| Pennington County | 2022 |  14.0%\*  |   16.8%   |   16.0%    |
+|  Red Lake County  | 2019 |  7.5%\*   |  14.5%\*  |   4.7%\*   |
+|  Red Lake County  | 2022 |  12.9%\*  |  3.8%\*   |   7.1%\*   |
+|   Roseau County   | 2019 |   12.3%   |   13.0%   |  11.7%\*   |
+|   Roseau County   | 2022 |  16.7%\*  |  8.2%\*   |  12.2%\*   |
 
 : Percent Who Lives with Anyone Who Drinks too much Alcohol {#tbl-ACES_1}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   22.9%   |    25%    |   27.3%    |
-|   Polk County   | 2022 |   21.5%   |   26.0%   |   35.3%    |
-|  Norman County  | 2019 |   34.3%   |     0     |  33.3%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  21.8%\*  |   39.0%   |  29.7%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  19.4%\*  |  20.8%\*  |  29.6%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  22.6%\*  |    \_\_    |
+|  Marshall County  | 2022 |  21.2%\*  |  47.6%\*  |  33.3%\*   |
+| Pennington County | 2019 |   31.0%   |   30.8%   |   33.3%    |
+| Pennington County | 2022 |   35.2%   |   36.6%   |   42.5%    |
+|  Red Lake County  | 2019 |  13.2%\*  |  18.2%\*  |  16.7%\*   |
+|  Red Lake County  | 2022 |  12.9%\*  |  32.0%\*  |  14.3%\*   |
+|   Roseau County   | 2019 |   21.7%   |   24.1%   |   27.9%    |
+|   Roseau County   | 2022 |   23.6%   |   26.2%   |   33.3%    |
 
 : Percent Living with Someone with Mental Health Issues {#tbl-ACES_2}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |  5.4%\*   |  5.3%\*   |    8.1%    |
-|   Polk County   | 2022 |  2.2%\*   |  4.4%\*   |   4.2%\*   |
-|  Norman County  | 2019 |   7.7%    |     0     |     0      |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  3.7%\*   |  12.0%\*  |  10.8%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  6.5%\*   |   0.0%    |   3.7%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  3.2%\*   |    \_\_    |
+|  Marshall County  | 2022 |  2.9%\*   |  9.5%\*   |   4.2%\*   |
+| Pennington County | 2019 |  3.4%\*   |  8.3%\*   |   6.7%\*   |
+| Pennington County | 2022 |  3.7%\*   |  3.1%\*   |   6.6%\*   |
+|  Red Lake County  | 2019 |   0.0%    |  7.3%\*   |   4.8%\*   |
+|  Red Lake County  | 2022 |  3.2%\*   |  3.8%\*   |   7.1%\*   |
+|   Roseau County   | 2019 |  5.0%\*   |  4.1%\*   |   6.4%\*   |
+|   Roseau County   | 2022 |  2.8%\*   |   1.6%    |  10.2%\*   |
 
 : Percent Who Lives with Anyone Using Illegal /Abusing Prescription Drugs {#tbl-ACES_3}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   14.1%   |   16.5%   |   13.7%    |
-|   Polk County   | 2022 |   12.8%   |   14.1%   |   14.2%    |
-|  Norman County  | 2019 |  14.9%\*  |     0     |   22.2%    |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  23.2%\*  |   23.4%   |  10.8%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  9.7%\*   |  4.2%\*   |  14.8%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  25.8%\*  |    \_\_    |
+|  Marshall County  | 2022 |  23.5%\*  |  23.8%\*  |  25.0%\*   |
+| Pennington County | 2019 |   15.8%   |   19.5%   |   16.2%    |
+| Pennington County | 2022 |   25.2%   |   24.4%   |   21.7%    |
+|  Red Lake County  | 2019 |  7.5%\*   |  20.4%\*  |  11.9%\*   |
+|  Red Lake County  | 2022 |  12.9%\*  |  11.5%\*  |   3.6%\*   |
+|   Roseau County   | 2019 |   15.6%   |   14.5%   |   18.8%    |
+|   Roseau County   | 2022 |  13.9%\*  |  23.3%\*  |  18.4%\*   |
 
 : Percent with Verbally Abusive Adults at Home {#tbl-ACES_4}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   11.9%   |   10.2%   |   11.1%    |
-|   Polk County   | 2022 |   10.6%   |   11.6%   |   8.4%\*   |
-|  Norman County  | 2019 |  19.7%\*  |     0     |  11.5%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |   11.5%   |   14.7%   |   13.5%    |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  9.7%\*   |  8.7%\*   |  22.2%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  12.9%\*  |    \_\_    |
+|  Marshall County  | 2022 |  11.8%\*  |  4.8%\*   |   8.3%\*   |
+| Pennington County | 2019 |   11.0%   |   16.0%   |   9.5%\*   |
+| Pennington County | 2022 |   15.7%   |   14.5%   |   17.9%    |
+|  Red Lake County  | 2019 |  13.2%\*  |  9.1%\*   |   4.7%\*   |
+|  Red Lake County  | 2022 |  3.2%\*   |   0.0%    |  10.7%\*   |
+|   Roseau County   | 2019 |  10.8%\*  |   15.8%   |   9.2%\*   |
+|   Roseau County   | 2022 |  6.9%\*   |  13.3%\*  |   6.3%\*   |
 
 : Percent Physically Hurt by Household Adults {#tbl-ACES_5}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |  1.6%\*   |  3.9%\*   |   4.1%\*   |
-|   Polk County   | 2022 |  2.6%\*   |  4.0%\*   |   3.2%\*   |
-|  Norman County  | 2019 |  3.1%\*   |     0     |  15.4%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |     0     |  4.1%\*   |   5.4%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  6.5%\*   |  4.2%\*   |    0.0%    |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  6.5%\*   |    \_\_    |
+|  Marshall County  | 2022 |   0.0%    |  10.0%\*  |   8.3%\*   |
+| Pennington County | 2019 |  0.7%\*   |  3.1%\*   |   1.9%\*   |
+| Pennington County | 2022 |  6.5%\*   |  6.9%\*   |   4.7%\*   |
+|  Red Lake County  | 2019 |   0.0%    |  7.3%\*   |    0.0%    |
+|  Red Lake County  | 2022 |  12.9%\*  |  3.8%\*   |   3.6%\*   |
+|   Roseau County   | 2019 |  3.6%\*   |  1.4%\*   |   1.8%\*   |
+|   Roseau County   | 2022 |  4.2%\*   |  1.6%\*   |   8.3%\*   |
 
 : Percent With Family Member Who Pressured or Forced Sexual Activity {#tbl-ACES_6}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |  3.8%\*   |  6.0%\*   |   7.4%\*   |
-|   Polk County   | 2022 |   8.4%    |   10.4%   |   7.9%\*   |
-|  Norman County  | 2019 |  1.5%\*   |     0     |   7.4\*    |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |   2%\*    |   8%\*    |   8.1%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  3.2%\*   |   0.0%    |  14.8%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  6.5%\*   |    \_\_    |
+|  Marshall County  | 2022 |   0.0%    |  14.3%\*  |   8.3%\*   |
+| Pennington County | 2019 |  4.1%\*   |  3.9%\*   |   6.8%\*   |
+| Pennington County | 2022 |  4.7%\*   |  4.6%\*   |   8.4%\*   |
+|  Red Lake County  | 2019 |   0.0%    |  5.5%\*   |   4.7%\*   |
+|  Red Lake County  | 2022 |  3.2%\*   |   0.0%    |    0.0%    |
+|   Roseau County   | 2019 |  6.5%\*   |  4.1%\*   |   6.3%\*   |
+|   Roseau County   | 2022 |  6.9%\*   |  6.6%\*   |  16.7%\*   |
 
 : Percent With Non-Relative Who Pressured or Forced Sexual Activity. {#tbl-ACES_7}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::
 
 ::: {.content-visible when-format="pdf"}
-|    Location     | Year | 8th Grade | 9th Grade | 11th Grade |
-|:---------------:|:----:|:---------:|:---------:|:----------:|
-|   Polk County   | 2019 |   7.7%    |   6.7%    |    8.5%    |
-|   Polk County   | 2022 |   7.9%    |  6.8%\*   |  11.1%\*   |
-|  Norman County  | 2019 |  16.7%\*  |     0     |  22.2%\*   |
-|  Norman County  | 2022 |   \_\_    |   \_\_    |    \_\_    |
-| Mahnomen County | 2019 |  14.8%\*  |  14.5%\*  |  13.5%\*   |
-| Mahnomen County | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|     Location      | Year | 8th Grade | 9th Grade | 11th Grade |
+|:-----------------:|:----:|:---------:|:---------:|:----------:|
+|  Kittson County   | 2019 |  12.9%\*  |   0.0%    |   7.4%\*   |
+|  Kittson County   | 2022 |   \_\_    |   \_\_    |    \_\_    |
+|  Marshall County  | 2019 |   \_\_    |  9.7%\*   |    \_\_    |
+|  Marshall County  | 2022 |  5.9%\*   |  4.8%\*   |   4.2%\*   |
+| Pennington County | 2019 |  8.9%\*   |  10.9%\*  |   7.6%\*   |
+| Pennington County | 2022 |  11.2%\*  |   14.5%   |  12.3%\*   |
+|  Red Lake County  | 2019 |  5.8%\*   |  5.5%\*   |   2.3%\*   |
+|  Red Lake County  | 2022 |  9.7%\*   |   0.0%    |   7.1%\*   |
+|   Roseau County   | 2019 |  7.2%\*   |  8.8%\*   |   7.1%\*   |
+|   Roseau County   | 2022 |  6.9%\*   |  3.3%\*   |   6.1%\*   |
 
 : Percent with Parents/Adults in Home Who Physically Fought {#tbl-ACES_8}
 
-\*Count \< 18 \_\_ No data available
+\*Count \< 16 \_\_ No data available
 :::

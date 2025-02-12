@@ -8,29 +8,30 @@ $if(title)$
 \thispagestyle{empty}
 
 % Define colors
-\newcommand{\headerfooterbg}{\textcolor[HTML]{00295D}}
+\newcommand{\headerfooterbg}{\textcolor[HTML]{1b9e77}}
 \newcommand{\blackColor}{\textcolor[rgb]{1,1,1}}
 
-\newcommand{\pmnGreen}{\textcolor[HTML]{A9B849}}
-\newcommand{\pmnBlue}{\textcolor[HTML]{00295D}}
+\newcommand{\pmnGreen}{\textcolor[HTML]{d95f02}}
+\newcommand{\pmnBlue}{\textcolor[HTML]{1b9e77}}
 
-\newfontfamily\titleFooterFont{Segoe Script} % Footer font defined here
+\newfontfamily\titleFooterFont{Times New Roman} % Footer font defined here
 
 % Define a green color Commenting requires extra % $-- because it is latex and pandoc I'm keeping the code below if I 
 % ever need to create a box around a single line text 
 % $-- \newcommand{\greenbox}[1]{\setlength{\fboxrule}{2pt}\textcolor[HTML]{A9B849}{\fbox{\textcolor[HTML]{00295D}{#1}}}}
 
 % The greenbox was developed with the help of MS Copilot December 31 2024
-\newcommand{\greenbox}[4]{%
+\newcommand{\chbcolorbox}[5]{%
   \setlength{\fboxrule}{2pt}%                                 % Set the thickness of the frame box rule to 2 points
-  \textcolor[HTML]{A9B849}{%                                  % Set the text color to green using its HTML hex code
+  \textcolor[HTML]{d95f02}{%                                  % Set the text color to green using its HTML hex code
     \fbox{%                                                   % Create a framed box around the content
       \begin{minipage}{0.35\textwidth}%                       % Create a minipage with a width of 35% of the text width
         \centering%                                           % Center the content within the minipage
-        \textcolor[HTML]{00295D}{#1}\\%                       % Center the first argument and set its color to blue
-        \textcolor[HTML]{00295D}{#2}\\%                       % Center the second argument and set its color to blue
-        \textcolor[HTML]{00295D}{#3}\\%                       % Center the third argument and set its color to blue
-        \textcolor[HTML]{00295D}{#4}%                         % Center the fourth argument and set its color to blue
+        \textcolor[HTML]{1b9e77}{#1}\\%                       % Center the first argument and set its color to blue
+        \textcolor[HTML]{1b9e77}{#2}\\%                       % Center the second argument and set its color to blue
+        \textcolor[HTML]{1b9e77}{#3}\\%                       % Center the third argument and set its color to blue
+        \textcolor[HTML]{1b9e77}{#4}\\%                       % Center the fourth argument and set its color to blue
+        \textcolor[HTML]{1b9e77}{#5}%                         % Center the fourth argument and set its color to blue
       \end{minipage}%                                         % End the minipage environment
     }%
   }%
@@ -44,7 +45,7 @@ $if(title)$
 % Custom footer layout
 \newcommand{\myFooter}{%
     \noindent\hspace*{-2cm}\makebox[0pt][l]{\pmnBlue{\rule{\paperwidth + 4cm}{2cm}}}
-    \noindent\hspace*{2cm}\makebox[\textwidth]{\raisebox{0.75cm}{\blackColor{\hfill\Huge\bfseries\fontspec{Times New Roman} TOGETHER WE CAN\hfill}}\hspace{0.5cm}\raisebox{0.5cm}{\blackColor{\hfill\Huge\titleFooterFont{Prevent. Promote. Protect.} \hfill}}}
+    \noindent\hspace*{2cm}\makebox[\textwidth]{\raisebox{0.75cm}{\blackColor{\hfill\Huge\bfseries\fontspec{Times New Roman} Preliminary\hfill}}\hspace{0.5cm}\raisebox{0.5cm}{\blackColor{\hfill\Huge\titleFooterFont{Preliminary.} \hfill}}}
 }
 
 % Header for Title Page
@@ -53,12 +54,12 @@ $if(title)$
 {\centering
 \vspace*{6cm} % Adjust this value to move the title closer to the top
 
-{\Huge\bfseries Polk-Norman-Mahnomen\par}
+{\Huge\bfseries Quin County\par}
 {\Huge\bfseries Community Health Services\par}
 \vspace{3ex}
 
 % Use the greenbox command to create a green-bordered rectangle around each argument
-\Huge\bfseries\greenbox{2022-2024}{COMMUNITY}{HEALTH}{ASSESSMENT}
+\Huge\bfseries\chbcolorbox{2023-2025}{PRELIMINARY}{COMMUNITY}{HEALTH}{ASSESSMENT}
 
 
 $for(by-author)$
@@ -73,11 +74,11 @@ $endfor$
 \begin{minipage}{1\textwidth}
   \begin{minipage}[t]{0.3\textwidth}
     \centering
-    \includegraphics[width=6cm, height=6cm]{pages/Attachments/logo_PNM.png}
+    \includegraphics[width=6cm, height=6cm]{pages/Attachments/logo_Quin.png}
   \end{minipage}
   \begin{minipage}[t]{0.7\textwidth}
     \centering
-    {\huge\bfseries\pmnBlue{FOR IMPLEMENTATION IN 2025-2029} \par}
+    {\huge\bfseries\pmnBlue{FOR IMPLEMENTATION IN 2026-2030} \par}
   \end{minipage}
 \end{minipage}
 

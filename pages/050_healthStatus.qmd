@@ -15,18 +15,21 @@ if (file.exists("pages/Global/gb.R")) {
 }
 ```
 
-Health status is a comprehensive measure of the overall well-being of a community, encompassing various indicators that reflect the physical and mental health of its residents. Key factors in assessing health status include the rate of natural increase, prescription rates, child and teen checkups, prenatal care, and child immunizations.
+Identifying health challenges and developing targeted interventions to improve community health outcomes is crucial. Health status, which measures a community's overall well-being, includes various indicators of physical and mental health. Key factors are the rate of natural increase, Prescription Drug Monitoring Program (PDMP) prescription rates, child and teen checkups, prenatal care, and child immunizations.
 
-The rate of natural increase provides insight into population growth and demographic trends, which can influence healthcare needs and resource allocation. Prescription rates can indicate the prevalence of chronic conditions and the community's access to necessary medications. Regular child and teen checkups are essential for early detection and prevention of health issues, ensuring that young individuals receive the care they need to thrive.
-
-Prenatal care is crucial for the health of both mothers and babies, reducing the risk of complications during pregnancy and childbirth. Child immunizations are vital for preventing the spread of infectious diseases and protecting public health. By monitoring these indicators, we can better understand the health challenges facing our community and develop targeted interventions to improve health outcomes for all residents.
+-   Rate of natural increase: Reflects population growth and healthcare needs.
+-   PDMP prescription rates: helps identify misuse, monitor prescribing, and ensure safe medication use.
+-   Child and teen checkups: Essential for early detection and prevention of health issues.
+-   Prenatal care: Crucial for reducing pregnancy and childbirth complications.
+-   Child immunizations: Vital for preventing infectious diseases and protecting public health.
 
 ## General, Physical and Mental Distress
 
-Understanding the general, physical, and mental health status of a community is essential for identifying health needs and implementing effective interventions. This section provides an overview of the health status in Minnesota, with a focus on Polk, Norman, and Mahnomen counties. The data includes age-adjusted and crude prevalence rates for general health, physical health, and mental health, sourced from the CDC Places project. Mahnomen County has the highest prevalence in all three categories general, physical, and mental distress. Polk County and Norman County are similar to the state of Minnesota. About 1 in every 7 residents of Polk County or Norman County has poor or fair health while about 1 in every 4 Mahnomen residents have poor or fair health.
+Red Lake County had the highest estimated crude and age-adjusted prevalence rates for fair or poor self-rated health status. Kittson County had the highest estimated crude and age-adjusted prevalence rates for physical distress. Marshall and Pennington counties had the highest estimated crude prevalence rates, while Kittson and Marshall had the highest estimated age-adjusted prevalence rates. However, these rates were not significantly different from the state average or other counties. There were significant differences for Minnesota and all five Quin counties regarding age-adjusted rates for general health and mental distress when compared to physical distress. These were results were significantly higher which suggests that focusing on improving general health and mental well-being in these areas would be beneficial for these communities.
 
 ::: {#fig-healthGeneral}
 ```{r}
+#| label: f_places2022GeneralHealth
 #| warning: false
 #| include: false
 
@@ -40,17 +43,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -80,33 +77,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -126,7 +119,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -135,8 +128,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -150,6 +142,7 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ::: {#fig-healthPhysical}
 ```{r}
+#| label: f_places2022PhysicalHealth
 #| warning: false
 #| include: false
 
@@ -163,17 +156,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -203,33 +190,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -249,7 +232,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -258,8 +241,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -273,6 +255,7 @@ gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
 
 ::: {#fig-disabilityMental}
 ```{r}
+#| label: f_places2022MentalHealth
 #| warning: false
 #| include: false
 
@@ -286,17 +269,11 @@ filtered_data <- f_places2022 |>
     , toolTipTextValue2 = paste0(formattable::comma(data_value,0), " (", formattable::comma(low_confidence_limit,0), "-", formattable::comma(high_confidence_limit,0), ")")
   )
 
-filtered_ageAdjustedTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "AgeAdjPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Age-Adjusted") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
-
-filtered_crudeTbl <- filtered_data |> 
-    dplyr::filter(datavaluetypeid == "CrdPrv") |> 
-    dplyr::arrange(locationid, year) |>
-    dplyr::mutate(PrevalenceType = "Crude") |> 
-    dplyr::select(PrevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit)
+filtered_dataTbl <- filtered_data |> 
+    dplyr::arrange(locationid, year) |> 
+    dplyr::mutate(prevalenceType = ifelse(datavaluetypeid == "CrdPrv", "Crude", "Age-Adjusted"),
+                  tab = ifelse(datavaluetypeid == "CrdPrv", "Crude Prevalence", "Age-Adjusted Prevalence")) |> 
+    dplyr::select(prevalenceType, locationname, low_confidence_limit, data_value, high_confidence_limit, tab)
   
 figCap_plotTitle <- paste(filtered_data$measure[1], filtered_data$brfssYr[1])
 figSubcap <- "Data Source: @cdc2024Places"
@@ -326,33 +303,29 @@ gbFun_plotHTML(p, figCap_plotTitle)
 }
 ```
 
-::: panel-tabset
-#### Age Adjusted Prevalence
-
 ```{r}
 #| tbl-width: 8
 #| tbl-height: 4
 #| warning: false
-
+#| results: asis
 if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_ageAdjustedTbl, colList, figCap_plotTitle)
+  
+  split_data <- split(filtered_dataTbl, filtered_dataTbl$tab)
+  
+# Generate tabset panels
+  cat("::: {.panel-tabset}\n")
+     for (tab in names(split_data)) {
+       cat(sprintf("## %s\n\n", tab))
+       
+       # Remove the 'tab' column from the current subset of data
+       current_data <- split_data[[tab]][, !names(split_data[[tab]]) %in% "tab"]
+       
+       print(htmltools::tagList(gbFun_tableHTML(current_data, colList, figCap_plotTitle)))
+     }
+  cat(":::\n")
+
 }
 ```
-
-#### Crude Prevalence
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-
-if (knitr::is_html_output()) {
-  #Tables shouldn't be printed because the HTML table will display
-  gbFun_tableHTML(filtered_crudeTbl, colList, figCap_plotTitle)
-}
-```
-:::
 :::
 
 ::: {.content-visible when-format="pdf" layout="[[1],[1, 1]]"}
@@ -372,7 +345,7 @@ print(p)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-gbFun_tablePDF(filtered_crudeTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Crude") |> dplyr::select(-tab), colList)
 }
 ```
 
@@ -381,8 +354,7 @@ gbFun_tablePDF(filtered_crudeTbl, colList)
 #| tbl-height: 3
 #| warning: false
 if (!knitr::is_html_output()) {
-# Plots have to be printed
-gbFun_tablePDF(filtered_ageAdjustedTbl, colList)
+  gbFun_tablePDF(filtered_dataTbl |> dplyr::filter(prevalenceType == "Age-Adjusted") |> dplyr::select(-tab), colList)
 }
 ```
 :::
@@ -400,90 +372,76 @@ The birth rate and death rate are fundamental demographic indicators that provid
 
 Natural increase is a crucial component of population change, but it does not account for the movement of people into or out of a region. Migration can significantly impact population size and composition, often overshadowing natural increase. For instance, a region with a high birth rate and low death rate might still experience population decline if a large number of people move away. Conversely, areas with low natural increase might grow rapidly due to high levels of immigration.
 
-In 2020, Polk County, Norman County, and Mahnomen County all experienced a natural decrease, likely due to the impact of COVID-19. The pandemic has significantly influenced both birth and death rates, with increased mortality and potential delays in births due to economic and health uncertainties.
+In 2020, four out of the five Quin counties experienced a natural decrease, likely due to the impact of COVID-19. The pandemic significantly influenced both birth and death rates, with increased mortality and potential delays in births due to economic and health uncertainties. Kittson County saw the most notable natural decrease, with a rate of -13.1, the highest among the Quin counties. Roseau County had the second largest natural decrease, with a rate of -3.8, marking a significant shift from previous years. Marshall County and Pennington County both experienced a natural decrease of -1.2, a change from the generally positive natural increase observed in previous years. Red Lake County was the only Quin county to have a natural increase in 2020, with a rate of 3.2, continuing the trend of positive natural increase seen in prior years [@mdhCountyHealthTables].
 
-Among these counties, Mahnomen consistently has the highest birth rate, reflecting a younger population or higher fertility rates. In contrast, Norman County has the highest death rate, which could be attributed to an older population or other health factors.
+Looking ahead,
 
-Over the years, Mahnomen County has generally maintained a positive natural increase, while Polk and Norman Counties have struggled with higher death rates [@mdhCountyHealthTables]. These trends highlight the need for targeted public health interventions and policies to support population growth and health in these regions.
-
-Looking ahead, it will be important to monitor these trends and implement measures to mitigate the long-term impacts of the pandemic. Public health initiatives, economic support, and healthcare improvements could help stabilize and improve the natural increase rates in these counties.
-
-::: {.content-visible when-format="html" layout-ncol="1"}
-| Birth Rate | Death Rate | Natural Increase | Year |
-|:----------:|:----------:|:----------------:|:----:|
-|    13.2    |    11.4    |       1.8        | 2015 |
-|    14.2    |    11.4    |       2.8        | 2016 |
-|    13.7    |    10.8    |       2.9        | 2017 |
-|    13.8    |    11.6    |       2.2        | 2018 |
-|    11.7    |    11.8    |       -0.1       | 2019 |
-|    12.1    |    13.7    |       -1.6       | 2020 |
-
-: Polk County Natural Rate of Increase
+With the significant impact COVID-19 had on communities and the lag in this data (new data should be available in Q1 2025), it is challenging to predict the lasting effects of the pandemic. It will be crucial to monitor these trends and implement measures to mitigate the long-term impacts. Public health initiatives, economic support, and healthcare improvements could help stabilize and improve the natural increase rates in these counties. Prior to the COVID-19, Kittson County has seen a natural decrease, highlighting the need for targeted public health interventions and policies to support population growth and health in Kittson County.
 
 | Birth Rate | Death Rate | Natural Increase | Year |
 |:----------:|:----------:|:----------------:|:----:|
-|    11.1    |    15.6    |       -4.5       | 2015 |
-|    11.2    |    15.6    |       -4.4       | 2016 |
-|    12.6    |    17.4    |       -4.8       | 2017 |
-|    12.5    |    16.1    |       -3.6       | 2018 |
-|    10.8    |    13.8    |        -3        | 2019 |
-|    9.5     |    12.3    |       -2.8       | 2020 |
+|    8.8     |    12.9    |       -4.1       | 2015 |
+|    8.1     |    12.9    |       -4.8       | 2016 |
+|    15.1    |    18.1    |       -3.1       | 2017 |
+|    12.5    |    13.4    |       -0.9       | 2018 |
+|    10.5    |     14     |       -3.5       | 2019 |
+|    7.6     |    20.6    |      -13.1       | 2020 |
 
-: Norman County Natural Rate of Increase
-
-| Birth Rate | Death Rate | Natural Increase | Year |
-|:----------:|:----------:|:----------------:|:----:|
-|    17.2    |    11.2    |        6         | 2015 |
-|    20.9    |    11.2    |       9.7        | 2016 |
-|    17.7    |    14.3    |       3.4        | 2017 |
-|    16.3    |    12.7    |       3.6        | 2018 |
-|    17.7    |    11.9    |       5.8        | 2019 |
-|    14.3    |    14.4    |       -0.1       | 2020 |
-
-: Mahnomen County Natural Rate of Increase
-:::
-
-::: {.content-visible when-format="pdf" layout-ncol="1"}
-| Birth Rate | Death Rate | Natural Increase | Year |
-|:----------:|:----------:|:----------------:|:----:|
-|    17.2    |    11.2    |        6         | 2015 |
-|    20.9    |    11.2    |       9.7        | 2016 |
-|    17.7    |    14.3    |       3.4        | 2017 |
-|    16.3    |    12.7    |       3.6        | 2018 |
-|    17.7    |    11.9    |       5.8        | 2019 |
-|    14.3    |    14.4    |       -0.1       | 2020 |
-
-: Mahnomen County Natural Rate of Increase
+: Kittson County Natural Rate of Increase
 
 | Birth Rate | Death Rate | Natural Increase | Year |
 |:----------:|:----------:|:----------------:|:----:|
-|    11.1    |    15.6    |       -4.5       | 2015 |
-|    11.2    |    15.6    |       -4.4       | 2016 |
-|    12.6    |    17.4    |       -4.8       | 2017 |
-|    12.5    |    16.1    |       -3.6       | 2018 |
-|    10.8    |    13.8    |        -3        | 2019 |
-|    9.5     |    12.3    |       -2.8       | 2020 |
+|    13.3    |    9.7     |       3.6        | 2015 |
+|    11.4    |    9.7     |       1.7        | 2016 |
+|     14     |    8.9     |       5.1        | 2017 |
+|    14.5    |    10.5    |        4         | 2018 |
+|    8.6     |    8.7     |       -0.1       | 2019 |
+|    10.4    |    11.6    |       -1.2       | 2020 |
 
-: Norman County Natural Rate of Increase
+: Marshall County Natural Rate of Increase
 
 | Birth Rate | Death Rate | Natural Increase | Year |
 |:----------:|:----------:|:----------------:|:----:|
-|    13.2    |    11.4    |       1.8        | 2015 |
-|    14.2    |    11.4    |       2.8        | 2016 |
-|    13.7    |    10.8    |       2.9        | 2017 |
-|    13.8    |    11.6    |       2.2        | 2018 |
-|    11.7    |    11.8    |       -0.1       | 2019 |
-|    12.1    |    13.7    |       -1.6       | 2020 |
+|    13.3    |    8.7     |       4.6        | 2015 |
+|    11.9    |    8.7     |       3.2        | 2016 |
+|    11.9    |    9.9     |        2         | 2017 |
+|    11.8    |    9.9     |       1.9        | 2018 |
+|    10.6    |    10.2    |       0.4        | 2019 |
+|    8.9     |    10.1    |       -1.2       | 2020 |
 
-: Polk County Natural Rate of Increase
-:::
+: Pennington County Natural Rate of Increase
+
+| Birth Rate | Death Rate | Natural Increase | Year |
+|:----------:|:----------:|:----------------:|:----:|
+|    11.6    |    6.2     |       5.4        | 2015 |
+|    10.5    |    6.2     |       4.3        | 2016 |
+|    10.2    |    7.9     |       2.2        | 2017 |
+|    10.8    |    9.8     |        1         | 2018 |
+|    11.3    |    8.9     |       2.5        | 2019 |
+|    10.9    |    7.7     |       3.2        | 2020 |
+
+: Red Lake County Natural Rate of Increase
+
+| Birth Rate | Death Rate | Natural Increase | Year |
+|:----------:|:----------:|:----------------:|:----:|
+|    11.6    |    8.8     |       2.9        | 2015 |
+|    11.5    |    8.8     |       2.8        | 2016 |
+|    11.5    |    9.3     |       2.3        | 2017 |
+|    11.4    |    8.3     |       3.1        | 2018 |
+|    10.7    |     10     |       0.7        | 2019 |
+|    9.1     |     13     |       -3.8       | 2020 |
+
+: Roseau County Natural Rate of Increase
 
 ## Prescription Rate
 
-Polk, Norman, and Mahnmoen did not experience a big change from 2022 to 2023 in prescription rates per 1,000 residents[@mnBoardOfPharmacyPMPDashboard]. Prescription rates enable us to compare how our counties measure up against each other. Out of the three counties, Mahnomen has the highest prescription rate per 1,000 residents.
+Kittson, Marshall, Pennington, Red Lake, and Roseau counties did not experience large changes in prescription rates per 1,000 residents from 2022 to 2023, according to the @mnBoardOfPharmacyPMPDashboard. Prescription rates allow for comparisons between counties. Among the five counties, Marshall County was the only one to see a slight increase in the prescription rate per 1,000 residents during this period.
+
+Several factors can influence changes in prescription rates and why one county may have higher rates than another. These factors include population demographics (such as older populations with higher chronic pain conditions), access to healthcare, variations in healthcare provider prescribing practices, and public health initiatives. A high prescription rate in a county is not necessarily a bad thing; rather, it provides an opportunity to communicate with our local partners to further understand if the prescription rates accurately reflect the needs of the population.
 
 ::: {#fig-prescriptionRate}
 ```{r}
+#| label: f_boardOfPharmacyPmpPrescriptionRate
 #| warning: false
 #| include: false
 
@@ -586,243 +544,25 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Child and Teen Checkup Outreach
 
-PNM CHS provides outreach for the preventive healthcare program Child and Teen Checkups. Child and Teen Checkups include well-child medical exams and dental care, at no cost to eligible children and teens. These checkups include specific screening components to improve the health of children and teens, and limit long-term outcomes of undetected health problems. Children and teens, birth through age 20 years, and enrolled in Medical Assistance (MA) are eligible to participate.
-
-::: {#fig-childTeenCheck020}
-```{r}
-#| warning: false
-#| include: false
-
-# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
-
-filtered_data <- f_cTcPnm |> 
-  dplyr::filter(ageGroup == "0-20") |> 
-  dplyr::group_by(location, fips) |> 
-  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
-      toolTipTextHeader1 = "Year: "
-      , toolTipTextValue1 = year
-      , toolTipTextHeader2 = "\nLocation: "
-      , toolTipTextValue2 = location
-      , toolTipTextHeader3 = "\n0-20 Year Olds Percentage: "
-      , toolTipTextValue3 = scales::label_percent(accuracy= 0.01)(pct)
-     ) |> 
-  dplyr::ungroup()
-
-minYr <- unique(min(filtered_data$year))
-maxYr <- unique(max(filtered_data$year))
-
-# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
-filtered_dataTbl <- filtered_data |> 
-  dplyr::filter(year >= maxYr-1)  |>
-  dplyr::arrange(fips, year) |>
-  dplyr::mutate(placeholder = scales::label_percent(accuracy= 0.01)(pct)) |>  #I wanted to use formattable but DT strips format when converted to HTML Table 
-  dplyr::group_by(fips) |>
-  dplyr::mutate(percentageChange = dplyr::case_when(
-      year == maxYr ~ scales::label_percent(accuracy= 0.01)((pct) - dplyr::first(pct)) #Since there is only 2, most recent - next
-      , TRUE ~ ""
-    )
-    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
-  ) |>
-  dplyr::ungroup() |>
-  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired. 
-
-figCap_plotTitle <- "Child & Teen Check-Up / EPSDT Schedule (0-20 Year Olds)"
-figSubcap <- "Data Source: @pnmChildTeenCheckup"
-plotXCaption <- paste("Data Source:",pnmChildTeenCheckup) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
-
-# Plot
-scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
-#Table
-colList <- list("Year", "Location", "Percent", "% Change") # Using a list accommodates tables with different column lengths.
-
-
-#Define the plot here so it is only wrote once
-p <- gbFun_plotTrendPDF(
-    filtered_data, "year", "pct", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
-    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", 
-    figCap_plotTitle, plotXCaption, "",  minYr, maxYr, scaleYContinuous, 
-    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
-    )
-
-```
-
-<div>
-
-::: {.content-visible when-format="html"}
-```{r}
-#| fig-width: 8
-#| fig-height: 5
-#| warning: false
-if (knitr::is_html_output()) {
-  # Create the ggplot plot ggplot and then its wrapped within plotly function
-  gbFun_plotHTML(p, figCap_plotTitle)
-}
-```
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-if (knitr::is_html_output()) {
-  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
-}
-```
-:::
-
-::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
-```{r}
-#| warning: false
-#| fig-width: 9
-#| fig-height: 5
-if (!knitr::is_html_output()) {
-# Plots have to be printed
-print(p)
-}
-```
-
-```{r}
-#| warning: false
-#| tbl-width: 2
-#| tbl-height: 5
-if (!knitr::is_html_output()) {
-#Tables shouldn't be printed because the HTML table will display
-gbFun_tablePDF(filtered_dataTbl, colList)
-}
-```
-:::
-
-`{r} figSubcap`
-
-</div>
-
-`{r} figCap_plotTitle`
-:::
-
-::: {#fig-childTeenCheck320}
-```{r}
-#| warning: false
-#| include: false
-
-# Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
-
-filtered_data <- f_cTcPnm |> 
-  dplyr::filter(ageGroup == "3-20") |> 
-  dplyr::group_by(location, fips) |> 
-  dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
-      toolTipTextHeader1 = "Year: "
-      , toolTipTextValue1 = year
-      , toolTipTextHeader2 = "\nLocation: "
-      , toolTipTextValue2 = location
-      , toolTipTextHeader3 = "\n3-20 Year Olds Percentage:: "
-      , toolTipTextValue3 = scales::label_percent(accuracy= 0.01)(pct)
-     ) |> 
-  dplyr::ungroup()
-
-minYr <- unique(min(filtered_data$year))
-maxYr <- unique(max(filtered_data$year))
-
-# Filtering data here handles table variations better and is easier to maintain than filtering in the function.
-filtered_dataTbl <- filtered_data |> 
-  dplyr::filter(year >= maxYr-1)  |>
-  dplyr::arrange(fips, year) |>
-  dplyr::mutate(placeholder = scales::label_percent(accuracy= 0.01)(pct)) |>  #I wanted to use formattable but DT strips format when converted to HTML Table 
-  dplyr::group_by(fips) |>
-  dplyr::mutate(percentageChange = dplyr::case_when(
-      year == maxYr ~ scales::label_percent(accuracy= 0.01)((pct) - dplyr::first(pct)) #Since there is only 2, most recent - next
-      , TRUE ~ ""
-    )
-    , percentageChange = ifelse(is.na(percentageChange), "--", percentageChange)
-  ) |>
-  dplyr::ungroup() |>
-  dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired. 
-
-figCap_plotTitle <- "Child and Teen Check−Up / EPSDT Schedule (3−20  Years Old)"
-figSubcap <- "Data Source: @pnmChildTeenCheckup"
-plotXCaption <- paste("Data Source:",pnmChildTeenCheckup) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
-
-# Plot
-scaleYContinuous = scales::label_percent()  # Format y-axis values with geography
-#Table
-colList <- list("Year", "Location", "Percent", "% Change") # Using a list accommodates tables with different column lengths.
-
-
-#Define the plot here so it is only wrote once
-p <- gbFun_plotTrendPDF(
-    filtered_data, "year", "pct", "location", "fips", "toolTipTextHeader1", "toolTipTextValue1", 
-    "toolTipTextHeader2", "toolTipTextValue2", "toolTipTextHeader3", "toolTipTextValue3", 
-    figCap_plotTitle, plotXCaption, "",  minYr, maxYr, scaleYContinuous, 
-    gbVal_colorScheme, gbVal_shapeScheme, ifelse(knitr::is_html_output(), 10, 14)
-    )
-```
-
-<div>
-
-::: {.content-visible when-format="html"}
-```{r}
-#| fig-width: 8
-#| fig-height: 5
-#| warning: false
-if (knitr::is_html_output()) {
-  # Create the ggplot plot ggplot and then its wrapped within plotly function
-  gbFun_plotHTML(p, figCap_plotTitle)
-}
-```
-
-```{r}
-#| tbl-width: 8
-#| tbl-height: 4
-#| warning: false
-if (knitr::is_html_output()) {
-  gbFun_tableHTML(filtered_dataTbl, colList, figCap_plotTitle)
-}
-```
-:::
-
-::: {.content-visible when-format="pdf" layout="[[1, 1], [1]]"}
-```{r}
-#| warning: false
-#| fig-width: 9
-#| fig-height: 5
-if (!knitr::is_html_output()) {
-# Plots have to be printed
-print(p)
-}
-```
-
-```{r}
-#| warning: false
-#| tbl-width: 2
-#| tbl-height: 5
-if (!knitr::is_html_output()) {
-#Tables shouldn't be printed because the HTML table will display
-gbFun_tablePDF(filtered_dataTbl, colList)
-}
-```
-:::
-
-`{r} figSubcap`
-
-</div>
-
-`{r} figCap_plotTitle`
-:::
+Do we have data on this section?? Polk-Norman-Mahnomen did but it was their local data!!
 
 ## Prenatal Care
 
 Prenatal care is essential for ensuring the health and well-being of both mothers and their babies. Adequate prenatal care helps to monitor the progress of the pregnancy, identify and manage potential health issues, and provide important health education to expectant mothers.
 
-The state of Minnesota saw a decrease in the percentage of mothers receiving late or inadequate prenatal care, from 5.6% in 2021 to 4.4% in 2022, representing a 1.2% improvement. Polk County also experienced a significant improvement, with the rate decreasing from 8.3% in 2021 to 5.9% in 2022, a 2.4% improvement.Data for Norman County is not available for both years. This may be due to suppression rules for not having enough data since the majority of Norman County births happen out of state more than likely in North Dakota. Mahnomen County had the highest rates of late or inadequate prenatal care, but it also saw the most substantial improvement, decreasing from 41.8% in 2021 to 32.6% in 2022, a 9.2% improvement [@kidsCountPreNatalCare].
+Data should be available in Q1 2025 [@kidsCountPreNatalCare].
 
 Ensuring that all expectant mothers receive timely and adequate prenatal care is crucial for the health of both mothers and their babies. Continued efforts to improve access to and the quality of prenatal care will help further reduce these rates and improve health outcomes across our communities.
 
 ::: {#fig-kidsCountPNC}
 ```{r}
+#| label: f_kidsCountMotherPnc
 #| warning: false
 #| include: false
 
 # Data Wrangling so it can just be referenced in the PDF and HTML output instead of writing it twice
 
-filtered_data <- f_kidsCountMothersMoke |> 
+filtered_data <- f_kidsCountMotherPnc |> 
   dplyr::filter(year > 2017, year >= max(year) -5) |>  #PNC measure change at 2017 
   dplyr::group_by(location, fips) |> 
   dplyr::mutate(#Passed into ggplot (PDF Plot) but displayed in plotly (HMTL Plot)
@@ -926,20 +666,29 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Childhood Immunizations
 
-According to Minnesota Department of Health, childhood and adolescent vaccination rates decreased during the COVID-19 pandemic. Healthy People (HP) 2030 Goal is to increase vaccination rates. Infants and children need to get vaccinated to prevent diseases like hepatitis, measles, and pertussis. Teaching people about the importance of vaccines, sending vaccination reminders, and making it easier to get vaccines can help increase vaccination rates in children, adolescents, and adults. The following map and the next plot/table use the same data but just display it differently.
+Teaching people about the importance of vaccines, sending vaccination reminders, and making it easier to get vaccines can help increase vaccination rates in children, adolescents, and adults. According to Minnesota Department of Health, childhood and adolescent vaccination rates decreased during the COVID-19 pandemic and a Healthy People (HP) 2030 goal is to increase vaccination rates. Infants and children need to get vaccinated to prevent diseases like hepatitis, measles, and pertussis.
 
-Minnesota, Norman County, and Mahnomen County all experienced declines in vaccination rates for the seven vaccine series, DTaP, Hep A, Hep B, Hib, MMR, PCV, Polio, Rotovirus, and Varicella. Polk County improved their vaccination rate for Varicella, Rotovirus, Polio, MMR, Hep B, DTaP, and the seven vaccine series.
+**Kittson County**: In 2023, Kittson County had higher immunization rates than the Minnesota state averages for DTaP, Hep A, Hep B, Hib, MMR, PCV, Polio, Rotavirus, and Varicella. The county saw improvements across all vaccines, with the highest increases in DTaP (+10.10%), MMR (+10.40%), and PCV (+15.10%).
+
+**Marshall County**: In 2023, Marshall County had higher immunization rates than the Minnesota state averages for DTaP, Hep A, Hib, MMR, PCV, Polio, Rotavirus, and Varicella. Marshall County was lower for Hep B. The county saw the highest declines in Hep B (-7.20%), MMR (-5.40%), Polio (-5.40%), and Varicella (-6.30%).
+
+**Pennington County**: In 2023, Pennington County had higher immunization rates than the Minnesota state averages for Hep A, Hep B, MMR, PCV, Polio, Rotavirus, and Varicella. Pennington County was lower for DTaP and Hib. The county saw its largest declines in DTaP (-12.00%), Hep A (-13.50%), and Hib (-7.90%).
+
+**Red Lake County**: In 2023, Red Lake County had higher immunization rates than the Minnesota state averages for DTaP, Hep B, MMR, PCV, Polio, Rotavirus, and Varicella. Red Lake County was lower for Hep A, and Hib. The county saw an increase in Rotavirus (+8.10%) but experienced the largest declines in DTaP (-13.10%), Hep A (-13.80%), and Hib (-12.70%).
+
+**Roseau County**: In 2023, Roseau County had higher immunization rate than the Minnesota state average for Hep A. However, Roseau County was not only lower than the state average but also had the lowest immunization rates compared to its Quin partners for DTaP, Hep B, Hib, MMR, PCV, Polio, Rotavirus, and Varicella. The county's largest declines were for Hib (-6.60%), PCV (-6.30%), and Varicella (-5.60%).
 
 ::: {.content-visible when-format="html"}
-[![](Attachments/healthIndicators/mnMap_countyImmunization.png){fig-align="center" width="322"}](https://data.web.health.state.mn.us/web/mndata/immunization_basic#countymap)
+[![](Attachments/050_healthStatus/mnMap_countyImmunization.png){fig-align="center" width="322"}](https://data.web.health.state.mn.us/web/mndata/immunization_basic#countymap)
 :::
 
 ::: {.content-visible when-format="pdf"}
-[![](Attachments/healthIndicators/mnMap_countyImmunization.png){fig-align="center" width="373"}](https://data.web.health.state.mn.us/web/mndata/immunization_basic#countymap)
+[![](Attachments/050_healthStatus/mnMap_countyImmunization.png){fig-align="center" width="373"}](https://data.web.health.state.mn.us/web/mndata/immunization_basic#countymap)
 :::
 
 ::: {#fig-immunizationSevenVaccineSeries}
 ```{r}
+#| label: f_pHDAPImmunization7Series
 #| warning: false
 #| include: false
 
@@ -976,7 +725,7 @@ filtered_dataTbl <- filtered_data |>
   dplyr::ungroup() |>
   dplyr::select(year, location, placeholder, percentageChange) # Ensure fields are ordered as desired. 
 
-figCap_plotTitle <- "Percentage of Polk, Norman, Mahnomen County\nChildren Ages 24−35 Months for the Seven-Vaccine Series"
+figCap_plotTitle <- "Percentage of Children Ages 24−35 Months for the Seven-Vaccine Series"
 figSubcap <- "Data Source: @mdhPHDAPImmuizations"
 plotXCaption <- paste("Data Source:",mdhPHDAPImmuizations) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
 # Plot
@@ -1049,6 +798,7 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ::: {#fig-immunizationDTapHepAHepBHibMMR}
 ```{r}
+#| label: f_pHDAPImmunizationDTapHepAHepBHibMmr
 #| warning: false
 #| include: false
 
@@ -1087,11 +837,11 @@ filtered_dataTbl <- filtered_data |>
 
 #split table into two groups for pdf output
 filtered_dataTblMM <- filtered_dataTbl |> 
-    dplyr::filter(location %in% c("Minnesota", "Mahnomen"))  # two locations
+    dplyr::filter(location %in% c("Minnesota", "Kittson", "Marshall"))  # two locations
 filtered_dataTblNP <- filtered_dataTbl |> 
-    dplyr::filter(location %in% c("Norman", "Polk")) #split table into two groups with two locations
+    dplyr::filter(location %in% c("Pennington", "Red Lake", "Roseau")) #split table into two groups with two locations
 
-figCap_plotTitle <- "Percentage of Polk, Norman, Mahnomen County\nChildren Ages 24−35 Months for DTap, Hep A, Hep B, Hib, & MMR"
+figCap_plotTitle <- "Percentage of Children Ages 24−35 Months for DTap, Hep A, Hep B, Hib, & MMR"
 figSubcap <- "Data Source: @mdhPHDAPImmuizations"
 plotXCaption <- paste("Data Source:",mdhPHDAPImmuizations) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
 # Plot
@@ -1108,10 +858,10 @@ p <- gbFun_plotTrendPDF(
     ) + # Adding a facet to my function
   ggplot2::facet_wrap(~vaccine, ncol = 2) +
   ggplot2::theme(
-    panel.margin = ggplot2::unit(3, "lines") # creates space for the facets
+    panel.margin = ggplot2::unit(2, "lines") # creates space for the facets
     , strip.position = "bottom"  # Moves the facet strips to the bottom of each facet
-    , strip.text = ggplot2::element_text(margin = ggplot2::margin(t = 10, b = 10))  # Adds top and bottom margins to the strip text for more space
-    , axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 20))  # Adds a top margin to the x-axis text to prevent overlap
+    , strip.text = ggplot2::element_text(margin = ggplot2::margin(t = 5, b = 5))  # Adds top and bottom margins to the strip text for more space
+    , axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 10))  # Adds a top margin to the x-axis text to prevent overlap
     )
 ```
 
@@ -1165,7 +915,7 @@ print(p)
 ```{r}
 #| warning: false
 #| tbl-width: 2
-#| tbl-height: 5
+#| tbl-height: 10
 if (!knitr::is_html_output()) {
 #Tables shouldn't be printed because the HTML table will display
   
@@ -1176,13 +926,12 @@ gbFun_tablePDF(filtered_dataTblMM, colList)
 ```{r}
 #| warning: false
 #| tbl-width: 2
-#| tbl-height: 5
+#| tbl-height: 10
 if (!knitr::is_html_output()) {
 #Tables shouldn't be printed because the HTML table will display
 gbFun_tablePDF(filtered_dataTblNP, colList)
 }
 ```
-
 :::
 :::
 
@@ -1193,8 +942,9 @@ gbFun_tablePDF(filtered_dataTblNP, colList)
 `{r} figCap_plotTitle`
 :::
 
-::: {#fig-immunizationPCVPolioRotavirusVaricella1}
+::: {#fig-immunizationPCVPolioRotavirusVaricella}
 ```{r}
+#| label: f_pHDAPImmunizationPCVPolioRotavirusVaricella
 #| warning: false
 #| include: false
 
@@ -1233,11 +983,11 @@ filtered_dataTbl <- filtered_data |>
 
 #split table into two groups for pdf output
 filtered_dataTblMM <- filtered_dataTbl |> 
-    dplyr::filter(location %in% c("Minnesota", "Mahnomen"))  # two locations
+    dplyr::filter(location %in% c("Minnesota", "Kittson", "Marshall"))  # two locations
 filtered_dataTblNP <- filtered_dataTbl |> 
-    dplyr::filter(location %in% c("Norman", "Polk")) #split table into two groups with two locations
+    dplyr::filter(location %in% c("Pennington", "Red Lake", "Roseau")) #split table into two groups with two locations
 
-figCap_plotTitle <- "Percentage of Polk, Norman, Mahnomen County\nChildren Ages 24−35 Months for PCV, Polio, Rotavirus, & Varicella"
+figCap_plotTitle <- "Percentage of Children Ages 24−35 Months for PCV, Polio, Rotavirus, & Varicella"
 figSubcap <- "Data Source: @mdhPHDAPImmuizations"
 plotXCaption <- paste("Data Source:",mdhPHDAPImmuizations) #Since the x axis is passed into plotly, I am defining the x axis for the plot with the data source so when/if people use the plot in their work the data source is referenced ggplot does a a caption argument but it does not pass into plotly. If the caption should be after the legend, then ggplot caption can be used for the pdf version and annotation can be used in plotly, I'll just have to pass an extra argument into the plotly function.
 # Plot
@@ -1254,10 +1004,10 @@ p <- gbFun_plotTrendPDF(
     ) + # Adding a facet to my function
   ggplot2::facet_wrap(~vaccine, ncol = 2) +
   ggplot2::theme(
-    panel.margin = ggplot2::unit(3, "lines") # creates space for the facets
+    panel.margin = ggplot2::unit(2, "lines") # creates space for the facets
     , strip.position = "bottom"  # Moves the facet strips to the bottom of each facet
-    , strip.text = ggplot2::element_text(margin = ggplot2::margin(t = 10, b = 10))  # Adds top and bottom margins to the strip text for more space
-    , axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 20))  # Adds a top margin to the x-axis text to prevent overlap
+    , strip.text = ggplot2::element_text(margin = ggplot2::margin(t = 5, b = 5))  # Adds top and bottom margins to the strip text for more space
+    , axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 10))  # Adds a top margin to the x-axis text to prevent overlap
     )
 ```
 
@@ -1300,7 +1050,7 @@ if (knitr::is_html_output()) {
 ```{r}
 #| warning: false
 #| fig-width: 11
-#| fig-height: 7
+#| fig-height: 5
 if (!knitr::is_html_output()) {
 # Plots have to be printed
 print(p)
@@ -1311,7 +1061,7 @@ print(p)
 ```{r}
 #| warning: false
 #| tbl-width: 2
-#| tbl-height: 5
+#| tbl-height: 10
 if (!knitr::is_html_output()) {
 #Tables shouldn't be printed because the HTML table will display
   
@@ -1322,13 +1072,12 @@ gbFun_tablePDF(filtered_dataTblMM, colList)
 ```{r}
 #| warning: false
 #| tbl-width: 2
-#| tbl-height: 5
+#| tbl-height: 10
 if (!knitr::is_html_output()) {
 #Tables shouldn't be printed because the HTML table will display
 gbFun_tablePDF(filtered_dataTblNP, colList)
 }
 ```
-
 :::
 :::
 

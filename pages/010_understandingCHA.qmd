@@ -1,6 +1,4 @@
-<!-- I am not a fan of putting unnumbered here but for it to appear in a pdf header {.unnumbered} is required  -->
-
-# Understanding Our CHA {.unnumbered}
+# Understanding Our CHA
 
 ## Rationale Behind Our Choices
 
@@ -14,32 +12,23 @@ We used the most up-to-date publicly available data for the following reasons:
 -   **Transparency**: Using publicly available data allows us to be as transparent as possible.
 -   **Efficiency**: By using publicly available data, we can save time and resources for our federal and state data stewards.
 
-An important note for our CHA is that, due to the small populations in our three counties, we can't always examine multiple factors at the same time. We know that health is affected by many things, but we don't always have detailed information or enough people to break down the data in many ways. For example, if we wanted to study lung cancer and compare it between men and women, we might not have enough data to do this accurately because there aren't enough people. While we might have enough data to look at rates of lung cancer for each county, we might not be able to analyze lung cancer rates by birth sex.
+An important note for our CHA is that, due to the small populations in our five counties, we can't always examine multiple factors at the same time. We know that health is affected by many things, but we don't always have detailed information or enough people to break down the data in many ways. For example, if we wanted to study lung cancer and compare it between men and women, we might not have enough data to do this accurately because there aren't enough people. While we might have enough data to look at rates of lung cancer for each county, we might not be able to analyze lung cancer rates by birth sex.
 
 ## Public Health NW8 Hub
 
-The Public Health NW8 Hub is a collective consortium between the CHBs of Quin and Polk-Norman-Mahnomen, working towards intergovernmental agreements to test an innovative shared service delivery model, a regional "Hub". The regional Hub provides coordinated foundational public health capability resources to consortium members where content expertise would lend support to regional efforts and local organizational professionals. The Data Analyst gathered secondary quantitative data obtained from national, state and local data sources. Data sources included, but were not limited to, the U.S. Census, Centers for Disease and Control Prevention (CDC), the Behavioral Risk Factor Survey (BRFSS), the Minnesota Student Survey and County Health Rankings. Local data obtained came from partners, such as healthcare and community action agency assessments and reports. Community health assessment data was utilized by Public Health to identify 50 community health issues. Community partners then were asked to select 1) what they considered to be the top ten issues currently impacting the community's health; 2) how they defined community; and 3) an example or story of an asset, resource or service in community that supports health and well-being in a survey emailed out by Public Health staff.
+The Public Health NW8 Hub is a collaborative consortium involving the Community Health Boards (CHBs) of Quin and Polk-Norman-Mahnomen. This consortium is working on intergovernmental agreements to pilot an innovative shared service delivery model, known as the regional "Hub." The Hub offers coordinated foundational public health resources to its members, providing content expertise to support regional initiatives and local professionals. A Data Analyst collected secondary quantitative data from various national, state, and local sources, including the U.S. Census, Centers for Disease Control and Prevention (CDC), the Behavioral Risk Factor Surveillance System (BRFSS), the Minnesota Student Survey, and County Health Rankings.
+
+We are starting the planning phase for gathering local data and the top 10 priorities have not been identified yet.
 
 **Top 10 Priority Health Issues:**
 
-1.  Poverty
-2.  Access to mental health care
-3.  Mental health & well-being
-4.  Drug use/misuse & addiction
-5.  Chronic stress, anxiety and/or depression
-6.  Access to dental care
-7.  Employment & livable wages
-8.  Transportation options -multimodal
-9.  Access to affordable foods
-10. Alcohol use/misuse and addiction
-
 ## Data Interpretation
 
-When looking at data, it's easy to assume one event causes another. For example, a rooster crowing doesn't cause the sun to rise; they're just associated. This is similar to health risk factors and medical conditions. Just because two things happen together doesn't mean one causes the other.
+When we look at data, it's easy to think that one thing causes another. For example, a rooster crowing doesn't make the sun rise; they just happen at the same time. This is similar to health risk factors and medical conditions. Just because two things happen together doesn't mean one causes the other.
 
-In health, many factors can influence conditions. For example, high rates of a health condition don't mean one specific factor is the cause. It could be due to a combination of lifestyle, environment, and genetics. By assessing how we are doing regarding multiple risk factors as well as the condition on interest, we can gain a comprehensive understanding and make better health decisions for our community.
+In health, many things can affect conditions. High rates of a health problem don't mean one specific thing is the cause. It could be a mix of lifestyle, environment, and genetics. By looking at different risk factors and the health problem together, we can understand better and make good health choices for our community.
 
-Just like the rooster and the sun, health risk factors might be associated with certain conditions, but they don't necessarily cause them directly. Recognizing these associations helps us develop more effective health strategies with our communities. By examining our community's health from quanitative and qualitative data sources, we can understand the factors and stand behind the data elaborate, identify opportunities, and strategies that are locally relevant. The following terms help in navigating and understanding the report more effectively.
+Just like the rooster and the sun, health risk factors might be linked to certain conditions, but they don't directly cause them. Knowing these links helps us create better health plans with our communities. By looking at our community's health using different types of data, we can understand the factors, find opportunities, and make strategies that fit our local needs. The following terms should help you understand the report better.
 
 ## Data Terms/Definitions
 
@@ -64,11 +53,12 @@ Age-adjusted prevalence allows fair comparisons by considering age differences i
 
 CIs can be interpreted in two main ways.
 
-1.  When looking at only one community. If a community had a CI of 5%-8%, this would mean we are 95% sure that the true number is as low as 5% and as high as 8% or somewhere in between.
-2.  When comparing two communities.
+1.  When looking at only one community.
+    -   If a community had a 95% CI of 5%-8%, this would mean we are 95% sure that the true number is as low as 5% and as high as 8% or somewhere in between.
 
--   If a community has a CI of 5%-8% and another community has a CI of 6%-9% for the same topic, these two communities are similar, and we cannot say one is definitely higher or lower than the other because the values overlap (6% falls between 5%-8%)
--   If a community has a CI of 5%-8% and another community has a CI of 10%-15%, these two communities would be significantly different because the values don't overlap (5%-8% and 10%-15%) so we can say with 95% confidence that these values are different.
+2.  When comparing two communities.
+    -   If a community has a 95% CI of 5%-8% and another community has a 95% CI of 6%-9% for the same topic, these two communities are similar, and we cannot say one is definitely higher or lower than the other because the values overlap (6% falls between 5%-8%)
+    -   If a community has a 95% CI of 5%-8% and another community has a 95% CI of 10%-15%, these two communities would be significantly different because the values don't overlap (5%-8% and 10%-15%) so we can say with 95% confidence that these values are different.
 
 ## CHA Layout
 

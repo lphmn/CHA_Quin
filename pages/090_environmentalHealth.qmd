@@ -15,40 +15,60 @@ if (file.exists("pages/Global/gb.R")) {
 }
 ```
 
-Certain environments can contain factors that impact our health. We may be unaware of the potential risks in our homes, workplaces, schools, or other areas in our communities, which could increase our chances of developing medical conditions. Lack of awareness can be detrimental to our health. The following environmental indicators are not meant to alarm but to educate us about the environmental factors we may encounter in our communities, helping us become more informed and proactive.
+Certain environments can impact people's health, and they may be unaware of the risks in their homes, workplaces, schools, or communities. This lack of awareness can be detrimental. The following environmental indicators aim to educate about potential risks, helping individuals become more informed and proactive.
 
 ### Tickborne Disease Risk
 
-As shown on the following map, Polk, Norman, and Mahnomen are identified as high-risk areas for tickborne diseases, including Lyme disease. During tick season, we should be proactive in preventative measures, such as using tick repellents and performing regular tick checks, to reduce the risk of infection. Our high-risk area underscores the importance of awareness to be proactive in our health practices. By staying informed and vigilant, we can better protect ourselves and our communities. Remember, early detection and prompt removal of ticks can lower the chances of disease transmission.
+Kittson, Marshall, Pennington, and Red Lake counties are high-risk areas for tickborne diseases like Lyme disease. Roseau County is medium risk. During tick season, tick repellents should be encouraged and regular tick checks to reduce infection risk should be performed. Awareness and proactive health practices are crucial. Early detection and prompt removal of ticks can lower disease transmission chances.
 
 ::: {#fig-tickborneRisk}
-[![](Attachments/popEnvironmentalHealth/mnMap_countyTickBorneRisk.png){fig-align="center" width="351"}](https://www.health.state.mn.us/diseases/lyme/highrisk.html)
+[![](Attachments/090_environmentalHealth/mnMap_countyTickBorneRisk.png){fig-align="center" width="351"}](https://www.health.state.mn.us/diseases/lyme/highrisk.html)
 
 For more resources, please click anywhere on the map
 :::
 
 ### Arsenic
 
-Arsenic can be found in drinking water. Testing is vital in learning if your water has arsenic. The MDH recommendation is to test a private well at least once for arsenic. Chronic arsenic exposure has shown to be a risk factor for some cancers and also can impact a child's development .
+Arsenic can be found in drinking water. Testing is vital in learning if your water has arsenic. The MDH recommendation is to test a private well at least once for arsenic. Chronic arsenic exposure has shown to be a risk factor for some cancers and also can impact a child's development. in both arsenic concentration categories (\> 2 µg/L and \> 10 µg/L), Pennington County was the only QUin county that had lower percentages of wells with arsenic compared to the state average for Minnesota.
 
-From 2008 to 2021, 58.9% (399 out of 465) of wells tested in Polk County had arsenic levels greater than 2 µg/L, and 20.8% (141 out of 465) exceeded 10 µg/L. Norman County had higher percentages, with 73.6% (131 out of 178) of wells testing above 2 µg/L and 42.7% (76 out of 178) exceeding 10 µg/L. Mahnomen County showed similar results to Norman County, with 77.5% of wells testing above 2 µg/L and 41.9% exceeding 10 µg/L, based on a total of 267 tests [@mdhArsenic2008_2021].
+|  Location  | Percentage of Wells \> 2 µg/L | Percentage of Wells \> 10 µg/L |
+|:--------------:|:--------------------------:|:---------------------------:|
+| Minnesota  |    48.6% (34,920 / 71,831)    |     11.5% (8,264 / 71,831)     |
+|  Kittson   |        44.1% (15 / 34)        |         14.7% (5 / 34)         |
+|  Marshall  |       43.4% (98 / 226)        |        14.2% (32 / 226)        |
+| Pennington |       35.5% (102 / 287)       |        11.1% (32 / 287)        |
+|  Red Lake  |       52.8% (67 / 127)        |        14.2% (18 / 127)        |
+|   Roseua   |       55.8% (300 / 538)       |        16.0% (86 / 538)        |
+
+: Private Wells Tested 2008-2021
+
+@mdhArsenic2008_2021
 
 ::: {#fig-privateWellsAs}
-[![](Attachments/popEnvironmentalHealth/mnMap_countyAs10ugLDML.png){fig-align="center" width="351"}](https://mndatamaps.web.health.state.mn.us/interactive/wells.html)
+[![](Attachments/090_environmentalHealth/mnMap_countyAs10ugLDML.png){fig-align="center" width="351"}](https://mndatamaps.web.health.state.mn.us/interactive/wells.html)
 
 For more resources, please click anywhere on the map
 :::
 
 ### Radon
 
-Radon levels are measured in picocuries per liter (pCi/L). There is no safe level of exposure. According to the EPA, the lifetime risk of lung cancer death from radon exposure at the action level of 4 picocuries per liter (pCi/L) is estimated to be 7 deaths per 1,000 people for never-smokers, and 62 deaths per 1,000 people for current smokers. The only way to know if you have a radon problem is to test for radon.
+Radon levels are measured in picocuries per liter (pCi/L), and there is no safe level of exposure. The EPA estimates that at 4 pCi/L, the lifetime risk of lung cancer death is 7 per 1,000 for never-smokers and 62 per 1,000 for current smokers. Testing is the only way to know if you have a radon problem. All five Quin counties had lower property radon testing rates than the state of Minnesota. However, Marshall, Pennington, and Red Lake counties had higher percentages of properties with radon concentrations above 2 pCi/L and 4 pCi/L compared to the state average.
 
-From 2010 to 2020 [@mdhRadon], Minnesota averaged 93.5 radon tests per 10,000 properties each year. In comparison, Mahnomen had 28.8 tests, Norman had 50.4, and Polk had 38.7 tests per 10,000 properties annually.
+|  Location  | Properties Tested per 10,000 Properties | \% of Properties Tested with \> 2 pCi/L | \% of Properties Tested with \> 4 pCi/L |
+|:------------:|:-----------------------------:|:---------------------------:|:------------------------------:|
+| Minnesota  |                  93.5                   |                  71.2%                  |                  40.3%                  |
+|  Kittson   |                  18.5                   |                  60.4%                  |                 27.1%\*                 |
+|  Marshall  |                  37.3                   |                  76.3%                  |                  53.3%                  |
+| Pennington |                  27.5                   |                  80.0%                  |                  58.8%                  |
+|  Red Lake  |                  32.4                   |                  72.0%                  |                  42.0%                  |
+|   Roseua   |                  13.5                   |                  64.4%                  |                  29.7%                  |
 
-Regarding radon levels, 40.3% of properties tested in Minnesota had radon levels of 4 pCi/L or higher. In Polk, 70% of properties tested had high radon levels, while Norman had 56.6%, and Mahnomen had 57.7%.
+: Property Tested for Radon 2010-2020
+
+\* Unstable Rate \@mdhRadon
 
 ::: {#fig-radon}
-[![](Attachments/popEnvironmentalHealth/mnMap_countyRn4pCiL.png){fig-align="center" width="351"}](https://mndatamaps.web.health.state.mn.us/interactive/radon.html)
+[![](Attachments/090_environmentalHealth/mnMap_countyRn4pCiL.png){fig-align="center" width="351"}](https://mndatamaps.web.health.state.mn.us/interactive/radon.html)
 
 For more resources, please click anywhere on the map
 :::
