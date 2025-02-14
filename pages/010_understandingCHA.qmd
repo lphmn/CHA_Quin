@@ -55,7 +55,6 @@ CIs can be interpreted in two main ways.
 
 1.  When looking at only one community.
     -   If a community had a 95% CI of 5%-8%, this would mean we are 95% sure that the true number is as low as 5% and as high as 8% or somewhere in between.
-
 2.  When comparing two communities.
     -   If a community has a 95% CI of 5%-8% and another community has a 95% CI of 6%-9% for the same topic, these two communities are similar, and we cannot say one is definitely higher or lower than the other because the values overlap (6% falls between 5%-8%)
     -   If a community has a 95% CI of 5%-8% and another community has a 95% CI of 10%-15%, these two communities would be significantly different because the values don't overlap (5%-8% and 10%-15%) so we can say with 95% confidence that these values are different.

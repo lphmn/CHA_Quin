@@ -571,4 +571,4 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 Suicide is a complex issue with no single cause, but prevention efforts show that most suicides are preventable, mental illness is treatable, and recovery is possible. In 2022, 860 Minnesotans died by suicide, the highest total ever, with preliminary data indicating 815 deaths in 2023. This translates to age-adjusted rates of 14.8 and 14.1 per 100,000, respectively. Males had higher suicide rates than females, and American Indian or Alaska Natives had higher rates than other racial or ethnic groups. In 2023, 47% of suicide deaths involved firearms, and rural areas continued to have higher rates than urban areas [Suicide 2021 data brief](https://www.health.state.mn.us/communities/suicide/documents/2023suicidedatabrief.pdf).
 
-**I will add more here**
+**More data coming soon.**

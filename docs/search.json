@@ -4,9 +4,49 @@
     "href": "index.html",
     "title": "2023-2025 Community Health Assessment Preliminary",
     "section": "",
-    "text": "Introduction\nThe Quin County Community Health Board (Quin CHB), governed by five members, is a multi-county community health services (CHS) entity responsible for providing local governmental public health services. Through delegation and sharing agreements, all powers and duties are delegated to the health departments of Kittson County Public Health, Marshall County Public Health, Pennington-Red Lake County Public Health, and Roseau County Public Health. We are pleased to share the 2023-2025 preliminary Community Health Assessment (CHA) to gain deeper insights into the health challenges affecting these communities..\nQuin CHB is going to utilized an adapted version of the Community Health Improvement Framework, “Mobilizing Action for Planning and Partnership” (MAPP), to collect information and create a Community Health Assessment (CHA) that highlights the most critical health needs within the service area. The data collection process faced limitations due to the availability of county-level data, community input, survey responses, and time constraints. This framework facilitated structured and focused discussions, incorporating data analysis, participant feedback, potential solutions, and agreed-upon future strategies among community health partners.\nThe CHA findings are instrumental in pinpointing, developing, and targeting strategies to address health challenges within the community. Guided by public health leaders and strategists, this framework, combined with Results Based Accountability, enables communities to apply strategic thinking to prioritize public health issues and identify community-driven solutions and resources for collective action. The Community Health Assessment is designed to be a living document, updated as new data becomes available. We encourage using this assessment as a foundation for understanding our communities’ health, enhancing well-being, and planning for the future.\n\n\nWe extend our heartfelt gratitude to all the individuals, organizations, and partners who have contributed to the health assessment and planning process. A special acknowledgment goes to Patrick Olson, Data Analyst, for his invaluable assistance in gathering data from various state and national sources. His efforts have been crucial in developing a comprehensive CHA that meets public health accreditation standards and measures, enhances our Assessment and Surveillance Foundational Public Health capability, and informs meaningful local action.\nWe also thank the community members and partners from Kittson, Marshall, Pennington, Red Lake, and Roseau counties for their participation in the community health surveys and conversations.\nYour continued feedback and engagement are greatly appreciated. For any comments or questions regarding this report, please contact Jodi Flaagan, Quin County CHS Administrator, at 218-653-1210.",
+    "text": "Welcome",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "2023-2025 Community Health Assessment Preliminary",
+    "section": "Introduction",
+    "text": "Introduction\nThe Quin County Community Health Board (Quin CHB), governed by five members, is a multi-county community health services (CHS) entity responsible for providing local governmental public health services. Through delegation and sharing agreements, all powers and duties are delegated to the health departments of Kittson County Public Health, Marshall County Public Health, Pennington-Red Lake County Public Health, and Roseau County Public Health. We are pleased to share the 2023-2025 preliminary Community Health Assessment (CHA) to gain deeper insights into the health challenges affecting these communities..\nQuin CHB is going to utilized an adapted version of the Community Health Improvement Framework, “Mobilizing Action for Planning and Partnership” (MAPP), to collect information and create a Community Health Assessment (CHA) that highlights the most critical health needs within the service area. The data collection process faced limitations due to the availability of county-level data, community input, survey responses, and time constraints. This framework facilitated structured and focused discussions, incorporating data analysis, participant feedback, potential solutions, and agreed-upon future strategies among community health partners.\nThe CHA findings are instrumental in pinpointing, developing, and targeting strategies to address health challenges within the community. Guided by public health leaders and strategists, this framework, combined with Results Based Accountability, enables communities to apply strategic thinking to prioritize public health issues and identify community-driven solutions and resources for collective action. The Community Health Assessment is designed to be a living document, updated as new data becomes available. We encourage using this assessment as a foundation for understanding our communities’ health, enhancing well-being, and planning for the future.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowlegements",
+    "href": "index.html#acknowlegements",
+    "title": "2023-2025 Community Health Assessment Preliminary",
+    "section": "Acknowlegements",
+    "text": "Acknowlegements\nWe extend our heartfelt gratitude to all the individuals, organizations, and partners who have contributed to the health assessment and planning process. A special acknowledgment goes to Patrick Olson, Data Analyst, for his invaluable assistance in gathering data from various state and national sources. His efforts have been crucial in developing a comprehensive CHA that meets public health accreditation standards and measures, enhances our Assessment and Surveillance Foundational Public Health capability, and informs meaningful local action.\nWe also thank the community members and partners from Kittson, Marshall, Pennington, Red Lake, and Roseau counties for their participation in the community health surveys and conversations.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#disclaimer",
+    "href": "index.html#disclaimer",
+    "title": "2023-2025 Community Health Assessment Preliminary",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nThe information in this report is for general purposes only. We are not the primary data stewards for most of the data used in this report, which is why we cannot warrant the completeness, reliability, or suitability of the information. However, we will do our best to ensure its accuracy. If you have any concerns with this report, please let us know, and we will work with the primary data stewards to address your concerns.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "2023-2025 Community Health Assessment Preliminary",
+    "section": "Contact",
+    "text": "Contact\nYour continued feedback and engagement are greatly appreciated. For any comments or questions regarding this report, please contact Jodi Flaagan, Quin County CHS Administrator, at 218-653-1210.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]
   },
   {
@@ -284,7 +324,7 @@
     "href": "pages/050_healthStatus.html#child-and-teen-checkup-outreach",
     "title": "Health Status",
     "section": "Child and Teen Checkup Outreach",
-    "text": "Child and Teen Checkup Outreach\nDo we have data on this section?? Polk-Norman-Mahnomen did but it was their local data!!",
+    "text": "Child and Teen Checkup Outreach\nPotential Topic",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Health Status</span>"
     ]
@@ -494,7 +534,7 @@
     "href": "pages/080_mentalHealth.html#suicide",
     "title": "Mental Health",
     "section": "Suicide",
-    "text": "Suicide\nSuicide is a complex issue with no single cause, but prevention efforts show that most suicides are preventable, mental illness is treatable, and recovery is possible. In 2022, 860 Minnesotans died by suicide, the highest total ever, with preliminary data indicating 815 deaths in 2023. This translates to age-adjusted rates of 14.8 and 14.1 per 100,000, respectively. Males had higher suicide rates than females, and American Indian or Alaska Natives had higher rates than other racial or ethnic groups. In 2023, 47% of suicide deaths involved firearms, and rural areas continued to have higher rates than urban areas Suicide 2021 data brief.\nI will add more here\n\n\n\n\nCenters for Disease Control and Prevention. 2024. “PLACES: Local Data for Better Health.” https://www.cdc.gov/places.\n\n\nMinnesota Department of Education. 2013-2022. “Minnesota Student Survey Tables 2013-2022.” https://public.education.mn.gov/MDEAnalytics/DataTopic.jsp?TOPICID=11.\n\n\nMinnesota Department of Health. 2018-2022. “Minnesota Statewide Quality Reporting and Measurement System Public Use File.” https://www.health.state.mn.us/data/hcquality/pufs.html.",
+    "text": "Suicide\nSuicide is a complex issue with no single cause, but prevention efforts show that most suicides are preventable, mental illness is treatable, and recovery is possible. In 2022, 860 Minnesotans died by suicide, the highest total ever, with preliminary data indicating 815 deaths in 2023. This translates to age-adjusted rates of 14.8 and 14.1 per 100,000, respectively. Males had higher suicide rates than females, and American Indian or Alaska Natives had higher rates than other racial or ethnic groups. In 2023, 47% of suicide deaths involved firearms, and rural areas continued to have higher rates than urban areas Suicide 2021 data brief.\nMore data coming soon.\n\n\n\n\nCenters for Disease Control and Prevention. 2024. “PLACES: Local Data for Better Health.” https://www.cdc.gov/places.\n\n\nMinnesota Department of Education. 2013-2022. “Minnesota Student Survey Tables 2013-2022.” https://public.education.mn.gov/MDEAnalytics/DataTopic.jsp?TOPICID=11.\n\n\nMinnesota Department of Health. 2018-2022. “Minnesota Statewide Quality Reporting and Measurement System Public Use File.” https://www.health.state.mn.us/data/hcquality/pufs.html.",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Mental Health</span>"
     ]

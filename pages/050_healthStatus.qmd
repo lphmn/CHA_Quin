@@ -544,7 +544,7 @@ gbFun_tablePDF(filtered_dataTbl, colList)
 
 ## Child and Teen Checkup Outreach
 
-Do we have data on this section?? Polk-Norman-Mahnomen did but it was their local data!!
+Potential Topic
 
 ## Prenatal Care
 
